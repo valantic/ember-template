@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'ember-sandbox',
+    podModulePrefix: 'ember-sandbox/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

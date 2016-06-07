@@ -8,9 +8,10 @@ A short introduction of this app could easily go here.
 This project is a playground to get know ember and define best practices before we start our first client project
 
 ## Installation notes
-*node version: 6.2.1
-*npm version: 3.8.0
-*pods are active [more about pods](http://www.programwitherik.com/ember-pods/)
+
+* node version: 6.2.1
+* npm version: 3.8.0
+* pods are active [more about pods](http://www.programwitherik.com/ember-pods/)
 
 ## Prerequisites
 

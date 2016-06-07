@@ -55,7 +55,7 @@ TBD Specify what it takes to deploy your app.
 
 ## Contributing
 
-See <CONTRIBUTING.md>
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Further Reading / Useful Links
 

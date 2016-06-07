@@ -2,7 +2,7 @@
 
 *Thanks for joining in on testing out the Ember Framework in this _sandbox_!*
 
-Start by checking out the [README.md](./README.md) file to get a general introduction and learn how-to-work with the project.
+Start by checking out the [README.md](README.md) file to get a general introduction and learn how-to-work with the project.
 
 This "contributing" document explains you how to extend and improve upon the framework.
 

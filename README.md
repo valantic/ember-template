@@ -3,6 +3,10 @@
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
+## Project purpose
+
+This project is a playground to get know ember and define best practices before we start our first client project
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.

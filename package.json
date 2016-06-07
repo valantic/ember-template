@@ -1,7 +1,7 @@
 {
   "name": "ember-sandbox",
   "version": "0.0.0",
-  "description": "Small description for ember-sandbox goes here",
+  "description": "This project is a playground to get know ember and define best practices before we start our first client project",
   "private": true,
   "directories": {
     "doc": "doc",

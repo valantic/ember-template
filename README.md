@@ -9,7 +9,8 @@ This project is a playground to get know ember and define best practices before 
 
 ## Installation notes
 
-* node version: 6.2.1
+* ember-cli version 2.5.1
+* node version: 6.2.1 (There is a warning in ember-cli, but no restriction at package.json. It seems to work. "WARNING: Node v6.2.1 has currently not been tested against Ember CLI and may result in unexpected behaviour")
 * npm version: 3.8.0
 * pods are active [more about pods](http://www.programwitherik.com/ember-pods/)
 

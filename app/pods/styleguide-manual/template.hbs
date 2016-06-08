@@ -1,27 +1,41 @@
 <h1>Manually maintained style-guide</h1>
-<h2>Buttons</h2>
-<p>Hint: Tag 'button' is configured in component.js</p>
-<h3>c-button with title</h3>
-<p>this button contains a title in the helper</p>
-{{c-button class="btn btn-primary" title="clicke me!"}}
-<h3>c-button with yield content</h3>
-<p>this button contains html inside</p>
-{{#c-button class="btn btn-primary"}}
-    <strong>my yield content</strong>
-{{/c-button}}
 
-<h2>Products</h2>
-<h3>c-product-tile</h3>
-<p>A product tile displays a listing for a product with a title, image, description, ration and price in a give unit.</p>
-<p>It depends on the c-button component to display the "buy" button.</p>
-{{c-product-tile
-    title="Cavendish bananas"
-    image="https://upload.wikimedia.org/wikipedia/commons/4/44/Bananas_white_background_DS.jpg"
-    description="Cavendish bananas are the most common dessert bananas sold."
-    rating=4.5
-    price=2.49
-    unit="kg"
-    currency="€"
-}}
+<section>
+    {{#c-section-title}}Buttons{{/c-section-title}}
+    <p>Hint: Tag 'button' is configured in component.js</p>
+    <h3>c-button with title</h3>
+    <p>this button contains a title in the helper</p>
+    {{c-button class="btn btn-primary" title="clicke me!"}}
+    <h3>c-button with yield content</h3>
+    <p>this button contains html inside</p>
+    {{#c-button class="btn btn-primary"}}
+        <strong>my yield content</strong>
+    {{/c-button}}
+</section>
+
+<section>
+    {{#c-section-title}}Products{{/c-section-title}}
+    
+    <h3>c-product-tile</h3>
+    <p>A product tile displays a listing for a product with a title, image, description, ration and price in a give unit.</p>
+    <p>It depends on the c-button component to display the "buy" button.</p>
+    {{c-product-tile
+        title="Cavendish bananas"
+        image="https://upload.wikimedia.org/wikipedia/commons/4/44/Bananas_white_background_DS.jpg"
+        description="Cavendish bananas are the most common dessert bananas sold."
+        rating=4.5
+        price=2.49
+        unit="kg"
+        currency="€"
+    }}
+
+</section>
+
+<section>
+    <h2>Page elements</h2>
+    <h3>c-section-title</h3>
+    <p>Generates a title for a section</p>
+    {{#c-section-title}}A section Title{{/c-section-title}}
+</section>
 
 {{outlet}}

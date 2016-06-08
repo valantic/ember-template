@@ -1,4 +1,12 @@
 <h1>Manual maintained style-guide</h1>
-<h2>c-button</h2>
-{{c-button title="Example Button"}}
+<h2>Buttons</h2>
+<p>Hint: Tag 'button' is configured in component.js</p>
+<h3>c-button with title</h3>
+<p>this button contains a title in the helper</p>
+{{c-button class="btn btn-primary" title="clicke me!"}}
+<h3>c-button with yield content</h3>
+<p>this button contains html inside</p>
+{{#c-button class="btn btn-primary"}}
+    <strong>my yield content</strong>
+{{/c-button}}
 {{outlet}}

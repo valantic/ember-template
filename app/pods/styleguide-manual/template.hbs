@@ -30,24 +30,9 @@
     }}
 
     <h3>Product list</h3>
-
-    <div class="list-page">
-        <ul class="list-page__content product-list">
-            {{#each model as |product|}}
-            <li class="list-page__item">
-                {{c-product-tile
-                    title=product.title
-                    image=product.image
-                    description=product.description
-                    rating=product.rating
-                    price=product.price
-                    unit=product.unit
-                    currency=product.currency
-                }}
-            </li>
-            {{/each}}
-        </ul>
-    </div>
+    <p>A product list generates a list of products.</p>
+    <p>It depends on the c-product-tile and c-button components.</p>
+    {{c-product-list products=model}}
 
 </section>
 

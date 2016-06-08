@@ -49,6 +49,10 @@
         {{!-- So the unit test does not fail --}}
         {{yield}}
 
+        {{#if title}}
+        {{c-button title="buy"}}
+        {{/if}}
+
     </div>
 
 </div>

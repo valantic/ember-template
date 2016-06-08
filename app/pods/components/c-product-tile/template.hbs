@@ -1,57 +1,52 @@
-{{!-- Basing this on the TR16-impo "product-item" component --}}
-<div class="product-item {{classes}}">
+{{!-- THUMBNAIL start --}}
+<a class="product-listing__thumbnail" href="dummy-url-product-detail.html">
+    
+    {{!-- Responsive image --}}
+    <img src="{{image}}" alt="{{title}}" width="200">
 
-    {{!-- THUMBNAIL start --}}
-    <a class="product-listing__thumbnail" href="dummy-url-product-detail.html">
-        
-        {{!-- Responsive image --}}
-        <img src="{{image}}" alt="{{title}}" width="200">
+</a>
+{{!-- THUMBNAIL end --}}
 
-    </a>
-    {{!-- THUMBNAIL end --}}
+<div class="product-item__details">
 
-    <div class="product-item__details">
+    {{!-- PRODUCT INFO start --}}
 
-        {{!-- PRODUCT INFO start --}}
+    {{!-- title --}}
+    {{#if title}}
+    <h4 class="product-item__name">
+        <a href="#">{{title}}</a>
+    </h4>
+    {{/if}}
 
-        {{!-- title --}}
-        {{#if title}}
-        <h4 class="product-item__name">
-            <a href="#">{{title}}</a>
-        </h4>
-        {{/if}}
-
-        {{!-- description --}}
-        {{#if description}}
-        <div class="product-item__description">
-            {{description}}
-        </div>
-        {{/if}}
-
-        {{!-- reviews --}}
-        {{#if rating}}
-        <div class="product-item__rating">
-            {{rating}} / 5
-        </div>
-        {{/if}}
-
-        {{!-- PRODUCT INFO end --}}
-
-        {{!-- PRODUCT PRICING start --}}
-        {{#if price}}
-        <div class="product-item__pricing">
-            {{currency}} {{price}} / {{if unit unit "Stück"}}
-        </div>
-        {{/if}}    
-        {{!-- PRODUCT PRICING end --}}
-        
-        {{!-- So the unit test does not fail --}}
-        {{yield}}
-
-        {{#if title}}
-        {{c-button title="buy"}}
-        {{/if}}
-
+    {{!-- description --}}
+    {{#if description}}
+    <div class="product-item__description">
+        {{description}}
     </div>
+    {{/if}}
+
+    {{!-- reviews --}}
+    {{#if rating}}
+    <div class="product-item__rating">
+        {{rating}} / 5
+    </div>
+    {{/if}}
+
+    {{!-- PRODUCT INFO end --}}
+
+    {{!-- PRODUCT PRICING start --}}
+    {{#if price}}
+    <div class="product-item__pricing">
+        {{currency}} {{price}} / {{if unit unit "Stück"}}
+    </div>
+    {{/if}}    
+    {{!-- PRODUCT PRICING end --}}
+    
+    {{!-- So the unit test does not fail --}}
+    {{yield}}
+
+    {{#if title}}
+    {{c-button title="buy"}}
+    {{/if}}
 
 </div>

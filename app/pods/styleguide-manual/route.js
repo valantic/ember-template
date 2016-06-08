@@ -11,7 +11,8 @@ export default Ember.Route.extend({
                 rating: 4.5,
                 price: 2.49,
                 unit: 'kg',
-                currency: '€'
+                currency: '€',
+                isDiscounted: true
             },
             {
                 title: 'Conference Pears',

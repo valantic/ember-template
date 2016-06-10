@@ -1,11 +1,12 @@
+<h1>Ember Sandbox</h1>
 <nav>
     <ul>
         <li>{{#link-to "index"}}Index{{/link-to}}</li>
         <li>{{#link-to "styleguide-manual"}}Styleguide (manually maintained){{/link-to}}
             <ul>
-                <li>{{#link-to "styleguide-manual.buttons"}}Buttons{{/link-to}}</li>
-                <li>{{#link-to "styleguide-manual.sections"}}Sections{{/link-to}}</li>
-                <li>{{#link-to "styleguide-manual.products"}}Products{{/link-to}}</li>
+                {{#each navService.links as |link|}}
+                <li>{{#link-to link.url}}{{link.label}}{{/link-to}}</li>
+                {{/each}}
             </ul>
         </li>
     </ul>

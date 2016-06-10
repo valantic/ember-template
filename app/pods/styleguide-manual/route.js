@@ -22,9 +22,6 @@ let products = [{
 ];
 
 export default Ember.Route.extend({
-    renderTemplate() {
-        this.render({ outlet: 'styleguide' });
-    },
     model() {
         return products;
     }

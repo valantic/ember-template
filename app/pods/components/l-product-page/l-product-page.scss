@@ -1,0 +1,21 @@
+.list-page:before,
+.list-page:after {
+    content: " ";
+    display: table;
+}
+
+.list-page:after {
+    clear: both;
+}
+
+.list-page__content {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.list-page__item {
+    width: 40vw;
+}

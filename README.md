@@ -65,3 +65,47 @@ See [CONTRIBUTING.md](CONTRIBUTING.md)
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+
+## Switching layouts
+
+Wrapping elements in a specific layout can be done using [Ember Components](https://guides.emberjs.com/v2.5.0/components/defining-a-component/) applied as block-level elements.
+The layout components are basically element containers. In short, change the layout component, change the page layout.
+
+### How Layout Components work
+
+### Routes define main templates
+
+When a route renders a page with a specific layout generate a new layout component.
+Add the new layout component to the "template.hbs" file of the route by using the block notation.
+The HTML content is therefor [wrapped within the component](https://guides.emberjs.com/v2.5.0/components/wrapping-content-in-a-component/).
+
+### Create a new layout
+
+Use ``ember-cli``:
+
+```
+ember g component l-my-new-layout
+```
+
+### Naming layouts
+
+Layout components should be prefixed with the string "l-".
+
+For example: _l-default-page_ or _l-product-page_ are good layout component names.
+
+### Example layout
+
+```
+{{#l-default-page}}
+<h1>Hello!</h1>
+<p>Welcome to our ember-sandbox project!</p>
+{{outlet}}
+{{/l-default-page}}
+```
+
+The "default layout" page is currently nothing more than a "yield output", with the required HTML to define a specific layout:
+
+```
+<em>Default layout</em>
+{{yield}}
+```

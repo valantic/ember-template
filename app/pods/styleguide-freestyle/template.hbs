@@ -1,76 +1,20 @@
-{{#freestyle-guide
-title='Ember Freestyle'
-subtitle='Living Style Guide'
-}}
+{{#freestyle-guide title='Ember Freestyle' subtitle='Living Style Guide'}}
 
     {{#freestyle-section name='Visual Style' as |section|}}
 
-        {{#freestyle-subsection name='Typography' section=section}}
+        {{partial "styleguide-freestyle/subsection-typography"}}
 
-            {{#freestyle-usage 'typography-times' title='Times New Roman'}}
-                {{freestyle-typeface fontFamily='Times New Roman'}}
-            {{/freestyle-usage}}
-
-            {{#freestyle-usage 'typography-helvetica' title='Helvetica'}}
-                {{freestyle-typeface fontFamily='Helvetica'}}
-            {{/freestyle-usage}}
-
-        {{/freestyle-subsection}}
-
-        {{#freestyle-subsection name='Color' section=section}}
-
-            {{#freestyle-usage 'fp' title='Freestyle Palette' usageTitle='Usage'}}
-                {{freestyle-palette
-                colorPalette=colorPalette
-                title='Dummy App Color Palette'
-                description='This component displays the color palette specified in freestyle/palette.json'
-                }}
-            {{/freestyle-usage}}
-
-        {{/freestyle-subsection}}
+        {{partial "styleguide-freestyle/subsection-color"}}
 
     {{/freestyle-section}}
-
-    {{!-- COMPONENTS --}}
 
     {{#freestyle-section name='Components' as |section|}}
 
-        {{#freestyle-subsection name='Buttons' section=section}}
+        {{partial "styleguide-freestyle/subsection-buttons"}}
 
-            {{#freestyle-usage "c-button1" title="Default Button"}}
-                {{c-button title="My Button"}}
-            {{/freestyle-usage}}
-
-            {{#freestyle-usage "c-button-@block" title="Button as block component"}}
-                {{#c-button}}
-                    <strong>Block</strong> content <!-- can contain HTML -->
-                {{/c-button}}
-            {{/freestyle-usage}}
-
-        {{/freestyle-subsection}}
-
-        {{#freestyle-subsection name='product-tile' section=section}}
-
-            {{#freestyle-usage "product-tile" title="Product Tile"}}
-                {{c-product-tile
-                    title="My Product"
-                    image="img src"
-                    description="My product description"
-                    rating=0
-                    price="99.85"
-                    unit="kg"
-                    currency="chf"
-                    isDiscounted=false
-                }}
-            {{/freestyle-usage}}
-
-
-
-        {{/freestyle-subsection}}
+        {{partial "styleguide-freestyle/subsection-product-tile"}}
 
     {{/freestyle-section}}
-
-    {{!-- /COMPONENTS --}}
 
 {{/freestyle-guide}}
 

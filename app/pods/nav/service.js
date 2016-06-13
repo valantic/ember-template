@@ -1,14 +1,11 @@
 import Ember from 'ember';
 
 let links = [{
-    'url': 'styleguide-manual.buttons',
-    'label': 'Button'
+    'url': 'index',
+    'label': 'Home'
 },{
-    'url': 'styleguide-manual.sections',
-    'label': 'Section'
-},{
-    'url': 'styleguide-manual.products',
-    'label': 'Products'
+    'url': 'styleguide-freestyle',
+    'label': 'Styleguide'
 }];
 
 export default Ember.Service.extend({

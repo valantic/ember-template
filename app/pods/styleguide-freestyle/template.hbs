@@ -31,6 +31,47 @@ subtitle='Living Style Guide'
 
     {{/freestyle-section}}
 
+    {{!-- COMPONENTS --}}
+
+    {{#freestyle-section name='Components' as |section|}}
+
+        {{#freestyle-subsection name='Buttons' section=section}}
+
+            {{#freestyle-usage "c-button1" title="Default Button"}}
+                {{c-button title="My Button"}}
+            {{/freestyle-usage}}
+
+            {{#freestyle-usage "c-button-@block" title="Button as block component"}}
+                {{#c-button}}
+                    <strong>Block</strong> content <!-- can contain HTML -->
+                {{/c-button}}
+            {{/freestyle-usage}}
+
+        {{/freestyle-subsection}}
+
+        {{#freestyle-subsection name='product-tile' section=section}}
+
+            {{#freestyle-usage "product-tile" title="Product Tile"}}
+                {{c-product-tile
+                    title="My Product"
+                    image="img src"
+                    description="My product description"
+                    rating=0
+                    price="99.85"
+                    unit="kg"
+                    currency="chf"
+                    isDiscounted=false
+                }}
+            {{/freestyle-usage}}
+
+
+
+        {{/freestyle-subsection}}
+
+    {{/freestyle-section}}
+
+    {{!-- /COMPONENTS --}}
+
 {{/freestyle-guide}}
 
 {{outlet}}

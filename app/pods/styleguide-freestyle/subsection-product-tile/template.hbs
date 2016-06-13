@@ -1,18 +1,22 @@
 {{#freestyle-subsection name='product-tile' section=section}}
 
-    {{#freestyle-usage "product-tile" title="Product Tile"}}
+    {{#freestyle-usage 'product-tile' title='Product Tile'}}
         {{c-product-tile
-        title="My Product"
-        image="img src"
-        description="My product description"
+        title='My Product'
+        image='img src'
+        description='My product description'
         rating=0
-        price="99.85"
-        unit="kg"
-        currency="chf"
+        price='99.85'
+        unit='kg'
+        currency='chf'
         isDiscounted=false
         }}
     {{/freestyle-usage}}
 
+    {{#freestyle-note 'product-tile:notes'}}
+    A product tile displays a listing for a product with a title, image, description, ration and price in a give unit.
 
+    It depends on the c-button component to display the "buy" button.
+    {{/freestyle-note}}
 
 {{/freestyle-subsection}}

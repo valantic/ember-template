@@ -1,9 +1,12 @@
-{{#freestyle-subsection name='products' section=section}}
+{{#freestyle-subsection name='products-list' section=section}}
 
-    {{#freestyle-usage "products" title="Products"}}
-
-        {{l-product-page products=products}}
-
+    {{#freestyle-usage 'products-list' title='Products List'}}
+        {{#c-section-title}}Seasonal bestsellers{{/c-section-title}}
+        {{c-product-list products=products}}
     {{/freestyle-usage}}
+
+    {{#freestyle-note 'products-list:notes'}}
+    A product list generates a list of products. It depends on the c-product-tile and c-button components.
+    {{/freestyle-note}}
 
 {{/freestyle-subsection}}

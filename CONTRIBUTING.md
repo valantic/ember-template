@@ -20,12 +20,19 @@ We use Slack and the _#int_frontend_ channel to communicate about this project.
 
 Make sure to use an editor which supports and implies [.editorconfig](http://editorconfig.org/#download) files.
 
+### Editor Configuration
+
+Note for Visual Studio Code: install the official "[vscode-editorconfig](https://github.com/Microsoft/vscode-editorconfig)" extension.
+
+### Code Linting
+
+Make sure to [install eslint](https://www.npmjs.com/package/eslint) and activate linting in your editor of choice.
+
 ## Getting Started with EmberJS
 
 We have gathered Ember JS tutorials and videos which should help you understand how Ember works.
 
 Please make sure to go through [the Ember JS official documentation](https://guides.emberjs.com/v2.5.0/getting-started/quick-start/) at least once.
-
 
 
 

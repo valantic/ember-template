@@ -11,69 +11,69 @@ $section-line-size: 3px;
 $section-line-bottom: 35%;
 
 .section-title {
-    //.clearfix();
-    width: 100%; //NEEDED BY IE9/IE10
-    position: relative;
+  //.clearfix();
+  width: 100%; //NEEDED BY IE9/IE10
+  position: relative;
+  overflow: hidden;
+
+  &__title {
+    float: left;
+    display: block;
+    padding-right: $section-title-spacing-mobile;
+    max-width: $section-max-width-title-mobile;
+    box-sizing: padding-box;
+
+    //@media @screen-desktop-up {
+    //    max-width: @section-max-width-title-desktop;
+    //    padding-right: @section-title-spacing-desktop;
+    //}
+
+    * {
+      //.font-size(@section-title-font-size-mobile);
+      margin: 0;
+      font-weight: 100;
+
+      //@media @screen-desktop-up{
+      //    .font-size(@section-title-font-size-desktop);
+      //}
+
+    }
+
+  }
+
+  &__divider {
     overflow: hidden;
 
-    &__title {
-        float: left;
-        display: block;
-        padding-right: $section-title-spacing-mobile;
-        max-width: $section-max-width-title-mobile;
-        box-sizing: padding-box;
-        
-        //@media @screen-desktop-up {
-        //    max-width: @section-max-width-title-desktop;
-        //    padding-right: @section-title-spacing-desktop;
-        //}
-        
-        * {
-            //.font-size(@section-title-font-size-mobile);
-            margin: 0;
-            font-weight: 100;
-            
-            //@media @screen-desktop-up{
-            //    .font-size(@section-title-font-size-desktop);
-            //}
-            
-        }
-        
-    }
+    &::before {
+      content: "";
+      background: $section-line-color;
+      height: $section-line-size;
+      width: 100%;
+      display: block;
+      position: absolute;
+      bottom: $section-line-bottom;
 
-    &__divider {
-        overflow: hidden;
-
-        &::before {
-            content: "";
-            background: $section-line-color;
-            height: $section-line-size;
-            width: 100%;
-            display: block;
-            position: absolute;
-            bottom: $section-line-bottom;
-        
-            //@media @screen-desktop-up{
-            //    top: 50%;
-            //    bottom:auto;
-            //}
-        }
+      //@media @screen-desktop-up{
+      //    top: 50%;
+      //    bottom:auto;
+      //}
     }
+  }
 
-    &__addition {
-        position: absolute;
-        line-height: 1em;
-        top:15%;
-        //.font-size(@section-title__addition-font-size-mobile);
-        display: block;
-        right: 0;
-        max-width: $section-max-width-addition-mobile;
-        
-        //@media @screen-desktop-up{
-        //    top:0;
-        //   max-width: @section-max-width-addition-desktop;
-        //    .font-size(@section-title__addition-font-size-desktop);
-        //}
-    }
+  &__addition {
+    position: absolute;
+    line-height: 1em;
+    top:15%;
+    //.font-size(@section-title__addition-font-size-mobile);
+    display: block;
+    right: 0;
+    max-width: $section-max-width-addition-mobile;
+
+    //@media @screen-desktop-up{
+    //    top:0;
+    //   max-width: @section-max-width-addition-desktop;
+    //    .font-size(@section-title__addition-font-size-desktop);
+    //}
+  }
 
 }

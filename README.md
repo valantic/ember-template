@@ -44,10 +44,6 @@ You will need the following things properly installed on your computer.
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
 ### Running Tests
 
 * `ember test`
@@ -64,6 +60,12 @@ Make use of the many generators for code, try `ember help generate` for more det
 This EmberJS app will generate the Living StyleGuide based upon "HTML Components" written in [HTMLBars](http://emberjs.com/api/modules/ember-htmlbars.html), the EmberJS templating system based upon [HandleBars JS](http://handlebarsjs.com/).
 
 When generating elements using _ember-cli_, it will create the new files as "pods" in the _/pods_ folder.
+
+## Ember-cli
+
+Make use of the many generators [ember-cli](https://ember-cli.com/user-guide/) offers us.
+
+To get help, enter `ember help generate` on the command line.
 
 ## Getting started with Ember FreeStyle
 

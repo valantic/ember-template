@@ -7,7 +7,8 @@ module.exports = function(defaults) {
     // Add options here
     sassOptions: {
       includePaths: [
-        'app/pods/components'
+        'app/pods/components',
+        'bower_components/bootstrap-sass/assets/stylesheets/'
       ]
     }
   });

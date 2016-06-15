@@ -1,6 +1,18 @@
+{{#if title}}
+<h2>{{title}}</h2>
+{{/if}}
 <ul>
   {{#each nav.links as |link|}}
-  <li>{{#link-to link.url}}{{link.label}}{{/link-to}}</li>
+  <li>
+    {{#link-to link.url}}{{link.label}}{{/link-to}}
+    {{#if link.children.length}}
+    <ul>
+    {{#each link.children as |child|}}
+      <li>{{#link-to child.url}}{{child.label}}{{/link-to}}</li>
+    {{/each}}
+    </ul>
+    {{/if}}
+  </li>
   {{/each}}
 </ul>
 {{yield}}

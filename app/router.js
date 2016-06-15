@@ -8,6 +8,9 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('page-404', { path: '/*wildcard' });
   this.route('styleguide-freestyle');
+  this.route('views', function() {
+    this.route('product-page');
+  });
 });
 
 export default Router;

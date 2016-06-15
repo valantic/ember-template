@@ -1,9 +1,6 @@
-<nav>
-  <ul>
-    {{#each navService.links as |link|}}
-    <li>{{#link-to link.url}}{{link.label}}{{/link-to}}</li>
-    {{/each}}
-  </ul>
-</nav>
-
+<ul>
+  {{#each nav.links as |link|}}
+  <li>{{#link-to link.url}}{{link.label}}{{/link-to}}</li>
+  {{/each}}
+</ul>
 {{yield}}

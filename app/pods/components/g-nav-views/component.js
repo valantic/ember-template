@@ -1,5 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  navService: Ember.inject.service('nav')
+  tagName: 'nav',
+  nav: Ember.inject.service('nav')
 });

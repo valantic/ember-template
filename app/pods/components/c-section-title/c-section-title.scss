@@ -41,6 +41,16 @@ $section-line-bottom: 35%;
 
   }
 
+  &--bold {
+    .section-title {
+      &__title {
+        * {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
   &__divider {
     overflow: hidden;
 

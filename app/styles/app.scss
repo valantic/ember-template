@@ -1,2 +1,11 @@
 @import 'components';
 @import 'ember-freestyle';
+
+body {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.navbar {
+  min-height: 35px;
+}

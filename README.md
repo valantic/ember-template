@@ -198,6 +198,8 @@ Then use the `{{colorPalette}}` variable in your templates, like so:
 }}
 ```
 
+More information can be found in the Ember documentation on the "[Customizing a Component's Element](https://guides.emberjs.com/v2.5.0/components/customizing-a-components-element/)" page.
+
 # Switching layouts
 
 > This technique can be used in case you need new complete page layouts.

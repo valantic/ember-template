@@ -6,6 +6,7 @@ moduleFor('route:views/product-page', 'Unit | Route | views/product page', {
 });
 
 test('it exists', function(assert) {
-  let route = this.subject();
+  const route = this.subject();
+
   assert.ok(route);
 });

@@ -6,6 +6,7 @@ moduleFor('route:views/index', 'Unit | Route | views/index', {
 });
 
 test('it exists', function(assert) {
-  let route = this.subject();
+  const route = this.subject();
+
   assert.ok(route);
 });

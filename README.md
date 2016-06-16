@@ -88,7 +88,7 @@ We've organized the components in two main categories:
 - **freestyle-section _"Visual Style"_** - contains general design and styling like typography and color
 - **freestyle-section _"Components"_** - contains actual page elements
 
-## Creating Components
+## Creating Components and Displaying them in the Living StyleGuide
 
 All styleguide components will be organized in the _components_ folder.
 
@@ -132,6 +132,51 @@ This way we only need to include the files we want to display.
 {{/freestyle-subsection}}
 
 ```
+
+## Customizing a component
+
+Ember will render all component in a default "div" wrapper element. We choose to avoid this wrapper element and define every new component with a `tagName` and optional `classNames` properties defined in the _component.js_ file. 
+
+For instance the component _g-header_ will have this _component.js_ script:
+
+```
+import Ember from 'ember';
+
+export default Ember.Component.extend({
+  tagName: 'header',
+  classNames: ['header']
+});
+```
+
+And this will render the following Ember element:
+
+```
+<header id="ember663" class="ember-view header">
+...
+</header>
+```
+
+It is possible to create components with dynamically switching class names.
+
+For instance the component _g-section-title_'s _component.js_ script looks like this: 
+
+```
+export default Ember.Component.extend({
+  classNames: ['section-title'],
+  tagName: 'div',
+  classNameBindings: ['isBold:section-title--bold'],  // Adds the class name "section-title--bold" when isBold === true
+  isBold: false                                       // default setting
+});
+```
+
+The `isBold` property can be set when the component is used.
+
+```
+{{#c-section-title isBold=true}}Seasonal Products{{/c-section-title}}
+```
+
+This will render the _c-section-title_ component with the class name `section-title--bold` active in the HTML output.
+
 ## Displaying Data in Freestyle Components
 
 The quickest way to add "data" to be used by the components is by setting up an "Ember service".

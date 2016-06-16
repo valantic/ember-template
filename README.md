@@ -132,18 +132,26 @@ This way we only need to include the files we want to display.
 {{/freestyle-subsection}}
 
 ```
-
 ## Displaying Data in Freestyle Components
 
-The quickest way to add "data" to be used by the components is by adding a structure to the "styleguide-freestyle/controller" for now.
+The quickest way to add "data" to be used by the components is by setting up an "Ember service".
 
-In the current set up we have two collections:
+    ember g service colorpalette --pod
 
-- "colorPalette"
-- "products"
+This will create the service in the `/app/services` folder.
+Use this service in the application _components_ by injecting it.
 
-**Note:** We will migrate this controller.js into the "route.js" soon.
-
+```
+colorPalette: inject.service('colorpalette')
+```
+Then use the `{{colorPalette}}` variable in your templates, like so:
+```
+{{freestyle-palette
+  colorPalette=colorPalette.colours
+  title='Dummy App Color Palette'
+  description='This component displays the color palette specified in freestyle/palette.json'
+}}
+```
 
 # Switching layouts
 
@@ -188,9 +196,6 @@ The "default layout" page is currently nothing more than a "yield output", with 
 <em>Default layout</em>
 {{yield}}
 ```
-
-
-
 
 
 # Code Guidelines

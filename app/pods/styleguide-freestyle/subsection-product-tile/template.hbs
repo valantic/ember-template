@@ -2,13 +2,13 @@
 
   {{#freestyle-usage 'product-tile' title='Product Tile'}}
     {{c-product-tile
-    title='My Product'
-    image='img src'
-    description='My product description'
-    rating=0
-    price='99.85'
-    unit='kg'
-    currency='chf'
+    title=products.items.[0].title
+    image=products.items.[0].image
+    description=products.items.[0].description
+    rating=products.items.[0].rating
+    price=products.items.[0].price
+    unit=products.items.[0].unit
+    currency=products.items.[0].currency
     isDiscounted=false
     }}
   {{/freestyle-usage}}

@@ -4,16 +4,19 @@
     {{g-nav-views title="Menu"}}
   </div>
   <div class="col-md-9">
-    {{md-text text="
-# Documentation
+{{!-- This 'md-text' - tag is available through _Remarkable_ which is a dependency of __Ember-Freestyle__. --}}
+{{md-text text="
+# Getting Started
 
 This is a living style guide demonstrating _components_ and _layouts_ used in the project.
 
-The _README.md_ document is a required read so you learn how to work the components and EmberJS.
+The _README.md_ document is a required read so you learn how to work with the components and EmberJS.
 
 This content was written in [Markdown format](https://daringfireball.net/projects/markdown/).
+
+We can use markdown-notation in our components and routes when we apply the `{{md-text}}` tag, offered to use through the _[Ember-Freestyle](https://github.com/chrislopresto/ember-freestyle)_ project.
 "
-    }}
+}}
     {{outlet}}
   </div>
 </div>

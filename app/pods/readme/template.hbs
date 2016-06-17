@@ -4,8 +4,16 @@
     {{g-nav-views title="Menu"}}
   </div>
   <div class="col-md-9">
-    <h1>Documentation</h1>
-    <p>The <em>/README.md</em> document is a required read in this project to learn about how to work with it.</p>
+    {{md-text text="
+# Documentation
+
+This is a living style guide demonstrating _components_ and _layouts_ used in the project.
+
+The _README.md_ document is a required read so you learn how to work the components and EmberJS.
+
+This content was written in [Markdown format](https://daringfireball.net/projects/markdown/).
+"
+    }}
     {{outlet}}
   </div>
 </div>

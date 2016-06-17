@@ -11,8 +11,7 @@ Router.map(function() {
   this.route('views', function() {
     this.route('product-page');
   });
-
-  return this;
+  this.route('readme');
 });
 
 export default Router;

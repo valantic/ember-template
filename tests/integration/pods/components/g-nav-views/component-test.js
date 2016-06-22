@@ -11,7 +11,8 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{g-nav-views}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$().text()
+    .indexOf('Readme') !== -1, true);
 
   // Template block usage:
   this.render(hbs`
@@ -20,5 +21,6 @@ test('it renders', function(assert) {
     {{/g-nav-views}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text()
+    .indexOf('template block text') !== -1, true);
 });

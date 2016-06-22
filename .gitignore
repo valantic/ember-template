@@ -52,6 +52,12 @@ testem.log
 # Mongo Explorer plugin:
 .idea/mongoSettings.xml
 
+# Shelf
+.idea/shelf
+
+# JS Linters
+.idea/jsLinters
+
 ## File-based project format:
 *.iws
 

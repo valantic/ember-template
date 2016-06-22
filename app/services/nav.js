@@ -2,6 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Service.extend({
   links: [{
+    url: 'readme',
+    label: 'Readme'
+  }, {
     url: 'views',
     label: 'Views',
     children: [{

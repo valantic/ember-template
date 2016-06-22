@@ -256,6 +256,7 @@ Note for Visual Studio Code: install the official "[vscode-editorconfig](https:/
 ## Code Linting
 
 Make sure to [install eslint](https://www.npmjs.com/package/eslint) and activate linting in your editor of choice.
+We don't recommend to use other linting tools, because we customize just the eslint config.
 
 
 # Getting Started with EmberJS

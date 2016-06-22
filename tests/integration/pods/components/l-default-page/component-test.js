@@ -11,8 +11,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{l-default-page}}`);
 
-  assert.equal(this.$().text().trim()
-    .indexOf('Default layout') !== -1, true);
+  assert.equal(this.$('.l-default-page').length, 1);
 
   // Template block usage:
   this.render(hbs`
@@ -21,6 +20,6 @@ test('it renders', function(assert) {
     {{/l-default-page}}
   `);
 
-  assert.equal(this.$().text().trim()
+  assert.equal(this.$('.l-default-page').text().trim()
     .indexOf('template block text') !== -1, true);
 });

@@ -55,6 +55,9 @@ testem.log
 # Shelf
 .idea/shelf
 
+# JS Linters
+.idea/jsLinters
+
 ## File-based project format:
 *.iws
 

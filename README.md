@@ -12,7 +12,7 @@ We're gathering all todos and ideas in [the _CodeBaseHQ_ Tickets section](https:
 
 ## Project Communication
 
-We use Slack and the _[#int_frontend](https://movento.slack.com/archives/int_frontend)_ channel to communicate about this project.
+We use Slack and the [_#int_frontend_](https://movento.slack.com/archives/int_frontend) channel to communicate about this project.
 
 ## Installation notes
 

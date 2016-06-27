@@ -6,13 +6,14 @@ moduleForComponent('l-styleguide-page', 'Integration | Component | l styleguide 
 });
 
 test('it renders', function(assert) {
+  assert.expect(2);
+
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
   this.render(hbs`{{l-styleguide-page}}`);
 
-  assert.equal(this.$().text().trim()
-    .indexOf('Styleguide layout') !== -1, true);
+  assert.equal(this.$('.row-fluid').length, 1, 'renders a row-fluid');
 
   // Template block usage:
   this.render(hbs`

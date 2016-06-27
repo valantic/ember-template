@@ -6,13 +6,15 @@ moduleForComponent('l-product-page', 'Integration | Component | l product page',
 });
 
 test('it renders', function(assert) {
+  assert.expect(2);
+
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
   this.render(hbs`{{l-product-page}}`);
 
   assert.equal(this.$().text().trim()
-    .indexOf('Product layout') !== -1, true);
+    .indexOf('Product list') !== -1, true);
 
   // Template block usage:
   this.render(hbs`

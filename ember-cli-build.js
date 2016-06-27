@@ -1,15 +1,20 @@
-/*jshint node:true*/
-/* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
     sassOptions: {
       includePaths: [
         'app/pods/components',
         'bower_components/bootstrap-sass/assets/stylesheets/'
       ]
+    },
+    outputPaths: {
+      app: {
+        css: {
+          // default: 'app': '/assets/project-name.css' has not to be here
+          'style-guide': '/assets/style-guide.css'
+        }
+      }
     }
   });
 

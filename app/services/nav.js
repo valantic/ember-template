@@ -10,7 +10,7 @@ export default Ember.Service.extend({
     children: [{
       url: 'views.product-page',
       label: 'Product Page'
-    },{
+    }, {
       url: 'views.order-list',
       label: 'Order List'
     }]

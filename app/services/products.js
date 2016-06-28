@@ -13,7 +13,8 @@ export default Ember.Service.extend({
   }, {
     title: 'Conference Pears',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Pear_DS.jpg/220px-Pear_DS.jpg',
-    description: 'A sweet yellowish- or brownish-green edible fruit which is narrow at the stalk and wider towards the base.',
+    description: 'A sweet yellowish- or brownish-green edible fruit which'
+                 + ' is narrow at the stalk and wider towards the base.',
     rating: 4.0,
     price: 2.00,
     unit: 'kg',

@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('styleguide-freestyle');
   this.route('views', function() {
     this.route('product-page');
+    this.route('order-list');
   });
   this.route('readme');
 });

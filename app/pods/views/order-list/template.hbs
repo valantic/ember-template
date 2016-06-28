@@ -2,6 +2,7 @@
 <table>
   <thead>
     <td>ID</td>
+    <td>Order Number</td>
     <td>Created at</td>
     <td>Amount of items</td>
     <td>Status code</td>
@@ -10,9 +11,10 @@
   {{#each model as |order|}}
     <tr>
       <td>{{order.id}}</td>
-      <td>{{order.created-at}}</td>
-      <td>{{order.amount-of-line-items}}</td>
-      <td>{{order.status-code}}</td>
+      <td>{{order.orderNumber}}</td>
+      <td>{{order.createdAt}}</td>
+      <td>{{order.amountOfLineItems}}</td>
+      <td>{{order.statusCode}}</td>
     </tr>
   {{/each}}
   </tbody>

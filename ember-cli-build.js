@@ -1,7 +1,8 @@
-var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const isProduction = EmberApp.env() === 'production';
 
 module.exports = function(defaults) {
-  var app = new EmberApp(defaults, {
+  const app = new EmberApp(defaults, {
     sassOptions: {
       includePaths: [
         'app/pods/components',
@@ -17,6 +18,11 @@ module.exports = function(defaults) {
       }
     }
   });
+
+  // Removes the style-guide CSS when building for production
+  if (isProduction) {
+    delete app.options.outputPaths.app.css['style-guide'];
+  }
 
   // Use `app.import` to add additional libraries to the generated
   // output files.

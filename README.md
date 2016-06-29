@@ -41,19 +41,33 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `ember server`
+* `ember server` or `ember s`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Running Tests
+It is also possible to "serve" the production environment.
+
+* `ember server --prod` or `ember s --prod`
+
+## Running Tests
 
 * `ember test`
 * `ember test --server`
 
-### Building
+# Building
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+Ember-cli generates all files in the "/dist" folder by default. It will concantenate and optimize JavaScript and CSS for us.
 
+* `ember build` - this will run the development build
+* `ember build --environment production` or shorter `ember build --prod` - runs the production build
+
+## Production Build
+
+When performing an application build determined for "production" we should run ember-cli build with the option "`--prod`".
+This will make sure that only the actual HTML, CSS and JavaScript for the components which make up the site will be generated.
+We currently have set up the production build to *exclude* all pods in the _/app/pods/styleguide-freestyle_ folder.
+
+Note: At this time the "/dist" folder will still include the CSS from _/app/styles/style-guide.scss_.
+We're working on removing this file for production builds.
 
 # Usage Guide
 
@@ -61,13 +75,13 @@ This EmberJS app will generate the Living StyleGuide based upon "HTML Components
 
 When generating elements using _ember-cli_, it will create the new files as "pods" in the _/pods_ folder.
 
-## Ember-cli
+# Ember-cli
 
 Make use of the many generators [ember-cli](https://ember-cli.com/user-guide/) offers us.
 
 To get help, enter `ember help generate` on the command line.
 
-## Getting started with Ember FreeStyle
+# Getting started with Ember FreeStyle
 
 Here's a simple style guide example using Ember Freestyle where `{{loading-spinner}}` is a hypothetical component in our application:
 
@@ -200,7 +214,7 @@ Then use the `{{colorPalette}}` variable in your templates, like so:
 
 More information can be found in the Ember documentation on the "[Customizing a Component's Element](https://guides.emberjs.com/v2.5.0/components/customizing-a-components-element/)" page.
 
-# Switching layouts
+## Switching layouts
 
 > This technique can be used in case you need new complete page layouts.
 
@@ -221,7 +235,7 @@ Use ``ember-cli``:
 ember g component l-my-new-layout
 ```
 
-### Naming layouts
+## Naming layouts
 
 Layout components should be prefixed with the string "`l-`".
 
@@ -244,7 +258,6 @@ The "default layout" page is currently nothing more than a "yield output", with 
 {{yield}}
 ```
 
-
 # Code Guidelines
 
 **Important:** Make sure to use an editor which supports and applies [.editorconfig](http://editorconfig.org/#download) files!
@@ -257,6 +270,8 @@ Note for Visual Studio Code: install the official "[vscode-editorconfig](https:/
 
 Make sure to [install eslint](https://www.npmjs.com/package/eslint) and activate linting in your editor of choice.
 We don't recommend to use other linting tools, because we customize just the eslint config.
+
+When installing the project for the first time running `npm install`, the system will install our own _eslint-config-movento_ configuration project which includes the required settings for Eslint.
 
 
 # Getting Started with EmberJS

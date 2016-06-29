@@ -62,12 +62,14 @@ Ember-cli generates all files in the "/dist" folder by default. It will concante
 
 ## Production Build
 
-When performing an application build determined for "production" we should run ember-cli build with the option "`--prod`".
+When performing an application build determined for "production" we should run ember-cli build with the option `--prod`.
 This will make sure that only the actual HTML, CSS and JavaScript for the components which make up the site will be generated.
 We currently have set up the production build to *exclude* all pods in the _/app/pods/styleguide-freestyle_ folder.
 
-Note: At this time the "/dist" folder will still include the CSS from _/app/styles/style-guide.scss_.
+Note: At this time the _/dist_ folder will still include the CSS from _/app/styles/style-guide.scss_.
 We're working on removing this file for production builds.
+
+The system which is removing the unnecessary folders and files is set up in the _/lib/addon-styleguide_ [in-repo-addon](https://ember-cli.com/extending/#developing-addons-and-blueprints).
 
 # Usage Guide
 

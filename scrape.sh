@@ -1,5 +1,7 @@
 #!/bin/sh
 # Source: https://medium.com/developers-writing/generating-static-websites-with-ember-cli-and-fastboot-88f0d2db13cb#.462fju17z
+# Note: make sure to have the Ember Fastboot server running
+# $ember fastboot --environment=production --serve-assets
 rm -rf ./scrape-dist
 mkdir scrape-dist
 cd scrape-dist

@@ -283,10 +283,47 @@ We have gathered Ember JS tutorials and videos which should help you understand 
 Please make sure to go through [the Ember JS official documentation](https://guides.emberjs.com/v2.5.0/getting-started/quick-start/) at least once.
 
 
+# Generating static HTML files from the Ember Project
+
+We can apply [Ember Fastboot][] to render the HTML pages including all components and dynamic parts.
+
+The script _scrape.sh_ will apply _wget_ to go through a predefined list of URLS and copy the HTML
+into the _./scrape-dist_ folder.
+
+Steps to render the Ember application to re-usable HTML files:
+
+1. Start Ember Fastboot server: `$ember fastboot --environment=production --serve-assets``
+2. Open another command console (within the project folder) and run `$sh ./scrape.sh`
+3. Check for a static copy of the site in the folder _./scrape-dist_
+
+Make sure to give the _scrape.sh_ file executable rights first:
+
+    chmod u+x scrape.sh
+
+*Important notes:*
+
+- This HTML file rendering will currently only work on mac OSX due to its dependencies on Unix tools.
+- The shell script will remove the output folder before every execution.
+- JavaScript is not executed by _wget_ so only pure static HTML is saved.
+- Currently we need to manually take care of the list of pages to render to HTML.
+- Static assets like CSS and images are also copied to the _./scrape-dist_ folder.
+
+We will be adding zip generation and Git pushes to the script. We will also look into a 
+solution to automatically generate a list of pages to go through.
+
+Thanks goes to [Martin Malinda](https://twitter.com/martinmalindacz) for the idea of using wget and a shell script!
+
+
 # Further Reading / Useful Links
 
 * [ember.js](http://emberjs.com/)
 * [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+* [Ember Fastboot][]
+
+Development Browser Extensions
+
+* [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
+* [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+
+[Ember Fastboot]: https://www.ember-fastboot.com/  

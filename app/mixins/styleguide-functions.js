@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import config from '../config/environment';
 
 export default Ember.Mixin.create({
 
@@ -9,23 +10,9 @@ export default Ember.Mixin.create({
   toggleStylesheet: function(styleGuideIsActive) {
     const styleSheetTag = document.querySelector('head > .project-css');
     const styleSheetStyleguide = 'assets/style-guide.css';
-    let styleSheetOriginal;
-
-    /**
-     * Saves original Stylesheet to a data-attribute for later restore
-     */
-    const saveOriginalStyleSheet = function() {
-      styleSheetOriginal = styleSheetTag.getAttribute('href');
-      styleSheetTag.setAttribute('data-href-original', styleSheetOriginal);
-    };
-
-    /**
-     * Reads the previously saved original stylesheet
-     * @returns {string} Original stylesheet path
-     */
-    const getDefaultStyleSheet = function() {
-      return styleSheetTag.getAttribute('data-href-original', styleSheetOriginal);
-    };
+    // Using the config.modulePrefix makes it possible to make this function a lot simpler
+    // and run consecutive tests.
+    const styleSheetOriginal = `assets/${config.modulePrefix}.css`;
 
     /**
      * Sets the stylesheet path to styleguide if needed, else restore the original value
@@ -36,10 +23,9 @@ export default Ember.Mixin.create({
     };
 
     if (styleGuideIsActive) {
-      saveOriginalStyleSheet();
       setStyleSheet(styleSheetStyleguide);
     } else {
-      setStyleSheet(getDefaultStyleSheet());
+      setStyleSheet(styleSheetOriginal);
     }
   }
 });

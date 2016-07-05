@@ -11,29 +11,42 @@ test('visiting /styleguide-freestyle', (assert) => {
   });
 });
 
-test('toggleStylesheet should work', (assert) => {
+// We need HTML since the code checks for the element at head > .project-css
+// HTML fixture should have an href element with the attribute "data-href-original".
+// Running the test will make sure the HTML is in the DOM so the element querySelectors work.
+
+test('toggleStylesheet should work on styleguide pages', (assert) => {
   let styleSheetTag = '';
   let currentStyleSheet = '';
-  const styleSheetOriginal = 'assets/ember-sandbox.css';
-  const styleSheetStyleguide = 'assets/style-guide.css';
-
-  // We need HTML since the code checks for the element at head > .project-css
-  // HTML fixture should have an href element with the attribute "data-href-original".
-  // Running the test will make sure the HTML is in the DOM so the element querySelectors work.
-
-  // styleGuideIsActive = false
-  visit('/');
-  andThen(() => {
-    styleSheetTag = document.querySelector('head > .project-css');
-    currentStyleSheet = styleSheetTag.getAttribute('href');
-    assert.equal(currentStyleSheet, styleSheetOriginal, 'Stylesheet should be styleSheetOriginal');
-  });
-
+  const expectedStyleSheet = 'assets/style-guide.css';
   // styleGuideIsActive = true
   visit('/styleguide-freestyle');
   andThen(() => {
-    styleSheetTag = document.querySelector('head > .project-css');
+    assert.equal(currentURL(), '/styleguide-freestyle');
+    styleSheetTag = document.querySelector('link.project-css');
     currentStyleSheet = styleSheetTag.getAttribute('href');
-    assert.equal(currentStyleSheet, styleSheetStyleguide, 'Stylesheet should be styleSheetStyleguide');
+    assert.equal(currentStyleSheet, expectedStyleSheet, 'Stylesheet should be styleSheetStyleguide');
+    // Important for consecutive tests
+    visit('/');
+  });
+});
+
+/*
+  Keeping this test alternatively makes the test succeed or fail on reloads. Not sure why.
+  Has probably to do with the visit() call.
+*/
+test('toggleStylesheet should work on regular pages', (assert) => {
+  let styleSheetTag = '';
+  let currentStyleSheet = '';
+  const expectedStyleSheet = 'assets/ember-sandbox.css';
+  // styleGuideIsActive = false
+  visit('/readme');
+  andThen(() => {
+    assert.equal(currentURL(), '/readme');
+    styleSheetTag = document.querySelector('link.project-css');
+    currentStyleSheet = styleSheetTag.getAttribute('href');
+    assert.equal(currentStyleSheet, expectedStyleSheet, 'Stylesheet should be styleSheetOriginal');
+    // Important for consecutive tests
+    visit('/');
   });
 });

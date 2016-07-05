@@ -1,43 +1,11 @@
 import Ember from 'ember';
+import StyleguideFunctions from 'ember-sandbox/mixins/styleguide-functions';
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(StyleguideFunctions, {
   actions: {
-
-    toggleStylesheet(styleGuideIsActive) {
-      const styleSheetTag = document.querySelector('head > .project-css');
-      const styleSheetStyleguide = 'assets/style-guide.css';
-      let styleSheetOriginal;
-
-      /**
-       * Saves original Stylesheet to a data-attribute for later restore
-       */
-      function saveOriginalStyleSheet() {
-        styleSheetOriginal = styleSheetTag.getAttribute('href');
-        styleSheetTag.setAttribute('data-href-original', styleSheetOriginal);
-      }
-
-      /**
-       * Reads the previously saved original stylesheet
-       * @returns {string} Original stylesheet path
-       */
-      function getDefaultStyleSheet() {
-        return styleSheetTag.getAttribute('data-href-original', styleSheetOriginal);
-      }
-
-      /**
-       * Sets the stylesheet path to styleguide if needed, else restore the original value
-       * @param {string} styleSheetPath Stylesheet path
-       */
-      function setStyleSheet(styleSheetPath) {
-        styleSheetTag.setAttribute('href', styleSheetPath);
-      }
-
-      if (styleGuideIsActive) {
-        saveOriginalStyleSheet();
-        setStyleSheet(styleSheetStyleguide);
-      } else {
-        setStyleSheet(getDefaultStyleSheet());
-      }
+    toggleStylesheet: function(styleGuideIsActive) {
+      // See mixin StyleguideFunctions
+      this.toggleStylesheet(styleGuideIsActive);
     },
     didTransition() {
       this.send('toggleStylesheet', true);

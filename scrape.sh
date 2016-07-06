@@ -5,8 +5,8 @@
 rm -rf ./scrape-dist
 mkdir scrape-dist
 cd scrape-dist
-cp -R ../fastboot-dist/assets ./assets
-cp -R ../fastboot-dist/images ./images
+cp -R ../dist/assets ./assets
+cp -R ../dist/images ./images
 base_url="http://localhost:3000/"
 app_name="app"
 scrape(){

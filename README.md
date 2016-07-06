@@ -21,39 +21,65 @@ We use Slack and the [_#int_frontend_](https://movento.slack.com/archives/int_fr
 * npm version: 3.8.0
 * pods are active [more about pods](http://www.programwitherik.com/ember-pods/)
 
-### Prerequisites
+### Developers Prerequisites
 
-You will need the following things properly installed on your computer.
+You will need the following things properly installed on your computer (Mac OSX).
 
+* [Homebrew][]
 * [Git](http://git-scm.com/)
 * [Node.js](http://nodejs.org/) (with NPM)
 * [Bower](http://bower.io/)
 * [Ember CLI](http://ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
 * [EsLint](http://eslint.org)
+* [Watchman](https://ember-cli.com/user-guide/#watchman)
 
-## Installation
+## Quick Getting Started
+
+After installing Ember and all its dependencies you can have the application running locally after executing the following commands.:
 
 * `git clone <repository-url>` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
 
-## Running / Development
+Once the Ember application is completely installed you can start the Ember HTTP server.
 
 * `ember server` or `ember s`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* Visit your app at [http://localhost:4200](http://localhost:4200)
 
-It is also possible to "serve" the production environment.
+It is also possible to "serve" the production environment:
 
 * `ember server --prod` or `ember s --prod`
 
-## Running Tests
+It is possible to have a unit test server active in a separate terminal window. Run the following commands:
 
 * `ember test`
 * `ember test --server`
 
-# Building
+Open a browser window and open the Ember application on http://localhost:4200 
+If the window is blank, check the browser console.
+
+# Getting Started with this Sandbox
+
+This is the explanation on how to access the code for this project so you can locally run it and extend upon it.
+
+## CodebaseHQ Repo
+
+- Get access to the repository
+  - Generate a SSH key ([Github Help](https://help.github.com/articles/generating-an-ssh-key/))
+  - Add SSH key to your repository account
+- Clone the repository to a local folder
+
+## Ivoclar's code Repo
+
+- Get access to the repository
+  - Generate a SSH key ([Github Help](https://help.github.com/articles/generating-an-ssh-key/))
+  - Add SSH key to your repository acccount
+- Clone the repository to a local folder  
+
+
+# Building the Application
 
 Ember-cli generates all files in the "/dist" folder by default. It will concantenate and optimize JavaScript and CSS for us.
 
@@ -73,7 +99,8 @@ The system which is removing the unnecessary folders and files is set up in the 
 
 # Usage Guide
 
-This EmberJS app will generate the Living StyleGuide based upon "HTML Components" written in [HTMLBars](http://emberjs.com/api/modules/ember-htmlbars.html), the EmberJS templating system based upon [HandleBars JS](http://handlebarsjs.com/).
+This EmberJS app will generate the Living StyleGuide based upon "HTML Components" written in [HTMLBars](http://emberjs.com/api/modules/ember-htmlbars.html),
+the EmberJS templating system based upon [HandleBars JS](http://handlebarsjs.com/).
 
 When generating elements using _ember-cli_, it will create the new files as "pods" in the _/pods_ folder.
 
@@ -293,9 +320,9 @@ into the _./scrape-dist_ folder.
 Steps to render the Ember application to re-usable HTML files:
 
 1. Make sure to have *wget* installed on your local OSX machine. Check the [Homebrew][] documentation on how to do this.
-1. Install Ember fastboot: `$ember install ember-cli-fastboot`
-2. Start Ember Fastboot server: `$ember fastboot --environment=production --serve-assets``
-3. Open another command console (within the project folder) and run `$sh ./scrape.sh`
+1. Install Ember fastboot: ``$ember install ember-cli-fastboot``
+2. Start Ember Fastboot server: ``$ember fastboot --environment=production --serve-assets``
+3. Open another command console (within the project folder) and run ``$sh ./scrape.sh``
 4. Check for a static copy of the site in the folder _./scrape-dist_
 
 Make sure to give the _scrape.sh_ file executable rights first:

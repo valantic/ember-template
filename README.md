@@ -292,6 +292,7 @@ into the _./scrape-dist_ folder.
 
 Steps to render the Ember application to re-usable HTML files:
 
+1. Make sure to have *wget* installed on your local OSX machine. Check the [Homebrew][] documentation on how to do this.
 1. Install Ember fastboot: `$ember install ember-cli-fastboot`
 2. Start Ember Fastboot server: `$ember fastboot --environment=production --serve-assets``
 3. Open another command console (within the project folder) and run `$sh ./scrape.sh`
@@ -324,6 +325,7 @@ Thanks goes to [Martin Malinda](https://twitter.com/martinmalindacz) for the ide
 * [ember.js](http://emberjs.com/)
 * [ember-cli](http://ember-cli.com/)
 * [Ember Fastboot][]
+* [Homebrew][]
 
 Development Browser Extensions
 
@@ -331,4 +333,5 @@ Development Browser Extensions
 * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
 
-[Ember Fastboot]: https://www.ember-fastboot.com/  
+[Ember Fastboot]: https://www.ember-fastboot.com/
+[Homebrew]: http://brew.sh/

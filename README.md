@@ -31,7 +31,8 @@ You will need the following things properly installed on your computer (Mac OSX)
 * [Bower](http://bower.io/)
 * [Ember CLI](http://ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
-* [EsLint](http://eslint.org)
+* [ESLint](http://eslint.org)
+* [scss-lint](https://github.com/brigade/scss-lint)
 * [Watchman](https://ember-cli.com/user-guide/#watchman)
 
 ## Quick Getting Started

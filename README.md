@@ -61,39 +61,39 @@ It is possible to have a unit test server active in a separate terminal window. 
 Open a browser window and open the Ember application on http://localhost:4200 
 If the window is blank, check the browser console.
 
-# Code Guidelines
+## Code Guidelines
 
 > **Important:** Make sure to use an editor which supports and applies [.editorconfig](http://editorconfig.org/#download) files!
 
-## Editor Configuration
+### Editor Configuration
 
 Note for Visual Studio Code: install the official "[vscode-editorconfig](https://github.com/Microsoft/vscode-editorconfig)" extension.
 
-## Code Linting
+### Code Linting
 
 Make sure to [install ESLint](https://www.npmjs.com/package/eslint) and activate linting in your editor of choice.
 We don't recommend to use other linting tools, because we customize just the eslint config.
 
 When installing the project for the first time running `npm install`, the system will install our own _eslint-config-movento_ configuration project which includes the required settings for ESLint.
 
-# Getting Started with EmberJS
+## Getting Started with EmberJS
 
 We have gathered Ember JS tutorials and videos which should help you understand how Ember works.
 
 Please make sure to go through [the EmberJS official documentation](https://guides.emberjs.com/v2.5.0/getting-started/quick-start/) at least once.
 
-# Getting Started with this Sandbox
+## Getting Started with this Sandbox
 
 This is the explanation on how to access the code for this project so you can locally run it and extend upon it.
 
-## CodebaseHQ Repo
+### CodebaseHQ Repo
 
 - Get access to the repository
   - Generate a SSH key ([Github Help](https://help.github.com/articles/generating-an-ssh-key/))
   - Add SSH key to your repository account
 - Clone the repository to a local folder
 
-## Ivoclar's code Repo
+### Ivoclar's code Repo
 
 - Get access to the repository
   - Generate a SSH key ([Github Help](https://help.github.com/articles/generating-an-ssh-key/))
@@ -101,14 +101,14 @@ This is the explanation on how to access the code for this project so you can lo
 - Clone the repository to a local folder  
 
 
-# Building the Application
+## Building the Application
 
 Ember-cli generates all files in the "/dist" folder by default. It will concantenate and optimize JavaScript and CSS for us.
 
 * `ember build` - this will run the development build
 * `ember build --environment production` or shorter `ember build --prod` - runs the production build
 
-## Production Build
+### Production Build
 
 When performing an application build determined for "production" we should run ember-cli build with the option `--prod`.
 This will make sure that only the actual HTML, CSS and JavaScript for the components which make up the site will be generated.
@@ -119,14 +119,14 @@ We're working on removing this file for production builds.
 
 The system which is removing the unnecessary folders and files is set up in the _/lib/addon-styleguide_ [in-repo-addon](https://ember-cli.com/extending/#developing-addons-and-blueprints).
 
-# Usage Guide
+## Usage Guide
 
 This EmberJS app will generate the Living StyleGuide based upon "HTML Components" written in [HTMLBars](http://emberjs.com/api/modules/ember-htmlbars.html),
 the EmberJS templating system is based upon [HandleBars JS](http://handlebarsjs.com/).
 
 When generating elements using _ember-cli_, it will create the new files as "pods" in the _/pods_ folder.
 
-# Ember-cli
+## Ember-cli
 
 Make use of the many generators [ember-cli](https://ember-cli.com/user-guide/) offers us.
 
@@ -176,7 +176,7 @@ The `isBold` property can then be set when the component is used.
 
 This will render the _c-section-title_ component with the class name `section-title--bold` active in the HTML output.
 
-# Getting started with Ember Freestyle (living style guide)
+## Getting started with Ember Freestyle (living style guide)
 
 Here's a simple style guide example using Ember Freestyle where `{{loading-spinner}}` is a hypothetical component in our application:
 
@@ -197,7 +197,7 @@ We've organized the components in two main categories:
 - **freestyle-section _"Visual Style"_** - contains general design and styling like typography and color
 - **freestyle-section _"Components"_** - contains actual page elements
 
-## Creating Components and Displaying them in Ember Freestyle
+### Creating Components and Displaying them in Ember Freestyle
 
 All styleguide components will be organized in the _components_ folder.
 
@@ -242,7 +242,7 @@ This way we only need to include the files we want to display.
 
 ```
 
-## Displaying Data in Freestyle Components
+### Displaying Data in Freestyle Components
 
 The quickest way to add "data" to be used by the components is by setting up an "Ember service".
 
@@ -311,7 +311,7 @@ The "default layout" page is currently nothing more than a "yield output", with 
 {{yield}}
 ```
 
-# Generating static HTML files from the Ember Project
+## Generating static HTML files from the Ember Project
 
 We can apply [Ember Fastboot][] to render the HTML pages including all components and dynamic parts.
 
@@ -348,7 +348,7 @@ solution to automatically generate a list of pages to go through.
 
 Thanks goes to [Martin Malinda](https://twitter.com/martinmalindacz) for the idea of using wget and a shell script!
 
-# Further Reading / Useful Links
+## Further Reading / Useful Links
 
 * [ember.js](http://emberjs.com/)
 * [ember-cli](http://ember-cli.com/)

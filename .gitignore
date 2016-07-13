@@ -84,3 +84,5 @@ fastboot-dist/
 
 # Scaper tool
 scrape-dist/
+static-dist/
+deliver/

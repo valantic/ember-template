@@ -1,7 +1,10 @@
 #!/bin/sh
 # Inspired by: https://medium.com/developers-writing/generating-static-websites-with-ember-cli-and-fastboot-88f0d2db13cb#.462fju17z
+
 # Note: make sure to have the Ember Fastboot server running!
 #     $ember fastboot --environment=production --serve-assets
+
+# This script expects to be run in an OSX shell environment!
 
 # Set configuration options for Ember Fastboot and Ember
 base_url="http://localhost:3000/"
@@ -12,6 +15,21 @@ delivery_dir="deliver"
 # Routes to scrape
 # The first "" is the index page
 declare -a routes=("" "readme" "views" "views/product-page" "views/order-list")
+
+# Sanity check
+# Check if wget is installed
+if [ ! $(command -v wget 2>/dev/null) ]; then
+  echo >&2 "error: Required wget is not installed. Aborting."
+  exit 1
+fi
+
+# Check if zip is installed
+if [ ! $(command -v zip 2>/dev/null) ]; then
+  echo >&2 "warning: Required OSX zip is not installed. Continuing without zip."
+  can_zip=false
+else
+  can_zip=true
+fi
 
 # Scrape output will be stored here
 rm -rf ./$output_dir
@@ -66,5 +84,7 @@ do
 done
 
 # Zip it
-cd ../
-zipIt $delivery_dir $output_dir
+if $can_zip; then
+  cd ../
+  zipIt $delivery_dir $output_dir
+fi

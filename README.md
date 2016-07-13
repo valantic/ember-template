@@ -82,24 +82,57 @@ We have gathered Ember JS tutorials and videos which should help you understand 
 
 Please make sure to go through [the EmberJS official documentation](https://guides.emberjs.com/v2.5.0/getting-started/quick-start/) at least once.
 
-## Getting Started with this Sandbox
+## Getting Started with Ember Sandbox
 
-This is the explanation on how to access the code for this project so you can locally run it and extend upon it.
+This is the full explanation on how to access the code for this project so you can locally run it and extend upon it.
 
-### CodebaseHQ Repo
+First of all: make sure to have NodeJS (npm) and bower installed!
 
-- Get access to the repository
-  - Generate a SSH key ([Github Help](https://help.github.com/articles/generating-an-ssh-key/))
-  - Add SSH key to your repository account
-- Clone the repository to a local folder
+Get access to the CodebaseHQ repository:
 
-### Ivoclar's code Repo
+- Generate a SSH key ([Github Help](https://help.github.com/articles/generating-an-ssh-key/))
+- Add SSH key to your repository account throught the CodebaseHQ website.
 
-- Get access to the repository
-  - Generate a SSH key ([Github Help](https://help.github.com/articles/generating-an-ssh-key/))
-  - Add SSH key to your repository acccount
-- Clone the repository to a local folder  
+Clone the repository to a local folder. Open a terminal window and execute this command in your _projects_ local folder:
 
+    git clone git@codebasehq.com:movento2/ember-sandbox/ember-sandbox.git
+
+You should have a new folder "ember-sandbox" in the active folder _cd_ into it.
+
+*Tip* Read through the README.md file (this file) you can find in the folder.
+
+Run the following commands in the terminal window within the new folder:
+
+    npm install
+    bower install
+
+*Tip* This may take a while depending on your computer and internet connection. Perhaps time for a coffee?
+
+When npm and bower are done installing all the dependencies on your machine, it's time to run Ember.
+
+First run the Ember-cli server:
+
+    ember s
+
+The output in the terminal should look something like this:
+
+```
+Livereload server on http://localhost:49152
+Serving on http://localhost:4200/
+Build successful - 18517ms.
+```
+
+Now open a browser and behold the app in all its glory on this URL:
+
+    http://localhost:4200    
+
+When you make changes to the code with server running Ember will refresh the site in your browser (Livereload is taking care of this).
+
+If you haven't read through the Ember Getting Started Guide yet, now is definitely the time.
+
+The app code resides in the _/app_ folder where you now can add your own code.
+
+*Tip* Major changes to the applicatin will require a server restart! For instance changes to services and adding new components.
 
 ## Building the Application
 
@@ -114,7 +147,7 @@ When performing an application build determined for "production" we should run e
 This will make sure that only the actual HTML, CSS and JavaScript for the components which make up the site will be generated.
 We currently have set up the production build to *exclude* all pods in the _/app/pods/styleguide-freestyle_ folder.
 
-Note: At this time the _/dist_ folder will still include the CSS from _/app/styles/style-guide.scss_.
+*Note* At this time the _/dist_ folder will still include the CSS from _/app/styles/style-guide.scss_.
 We're working on removing this file for production builds.
 
 The system which is removing the unnecessary folders and files is set up in the _/lib/addon-styleguide_ [in-repo-addon](https://ember-cli.com/extending/#developing-addons-and-blueprints).
@@ -201,7 +234,7 @@ We've organized the components in two main categories:
 
 All styleguide components will be organized in the _components_ folder.
 
-**Note:** Prefix names of actual components with "`c-`".
+*Note* Prefix names of actual components with "`c-`".
 
 To display the component we need to add it to Ember Freestyle's main _template.hbs_ file.
 
@@ -221,7 +254,7 @@ This way we only need to include the files we want to display.
 {{/freestyle-section}}
 ```
 
-**Note:** Currently this is a manual process by creating a new _template.hbs_ file within the _/app/pods/styleguide-freestyle/_ folder and adding the required "Ember Freestyle" syntax.
+*Note* Currently this is a manual process by creating a new _template.hbs_ file within the _/app/pods/styleguide-freestyle/_ folder and adding the required "Ember Freestyle" syntax.
 
 **Example:** the contents of the _styleguide-freestyle/subsection-buttons/template.hbs_:
 

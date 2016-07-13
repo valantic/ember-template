@@ -365,6 +365,28 @@ Make sure to give the _scrape.sh_ file executable rights first:
 chmod u+x scrape.sh
 ```
 
+If scrape ran successfully you see this file and folder structure:
+
+```
+scrape-dist
+├── assets
+│   ├── ember-sandbox-6b4c4b23e6904e48842c4511fa384c4d.js
+│   ├── ember-sandbox-b10dad43d4f464b79cc187772228206f.css
+│   ├── images
+│   │   └── logo-movento-5ad1b7ed3504328b94aa3c48afba87af.png
+│   ├── vendor-8f89c8afa4a30c46d670e84227771a80.js
+│   └── vendor-d41d8cd98f00b204e9800998ecf8427e.css
+├── index.html
+├── readme
+│   └── index.html
+└── views
+    ├── index.html
+    ├── order-list
+    │   └── index.html
+    └── product-page
+        └── index.html
+```
+
 *Important notes:*
 
 - We are currently using Ember Fastboot version _v1.0.0-beta.4_. Development of Ember Fastboot might break things in future releases.

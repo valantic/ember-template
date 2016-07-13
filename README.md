@@ -315,16 +315,16 @@ The "default layout" page is currently nothing more than a "yield output", with 
 
 We can apply [Ember Fastboot][] to render the HTML pages including all components and dynamic parts.
 
-The script _scrape.sh_ will apply _wget_ to go through a predefined list of URLS and copy the HTML
-into the _./scrape-dist_ folder.
+The script _scrape.sh_ will apply _wget_ to go through a predefined list of URLS and copy the HTML into the _./scrape-dist_ folder.
 
 Steps to render the Ember application to re-usable HTML files:
 
-1. Make sure to have *wget* installed on your local OSX machine. Check the [Homebrew][] documentation on how to do this.
-1. Install Ember fastboot: ``$ember install ember-cli-fastboot``
-2. Start Ember Fastboot server: ``$ember fastboot --environment=production --serve-assets``
-3. Open another command console (within the project folder) and run ``$sh ./scrape.sh``
-4. Check for a static copy of the site in the folder _./scrape-dist_
+1. Make sure to have *wget* installed on your OSX machine. Check the [Homebrew][] documentation on how to do this.
+2. Install Ember fastboot: ``$ember install ember-cli-fastboot``
+3. Start Ember Fastboot server: ``$ember fastboot --environment=production --serve-assets``
+4. Add the Ember application routes to go through which need to be rendered to HTML.
+5. Open another command console (within the project folder) and run ``$sh ./scrape.sh``
+6. Check for a static copy of the site in the folder _./scrape-dist_
 
 Make sure to give the _scrape.sh_ file executable rights first:
 
@@ -338,13 +338,17 @@ chmod u+x scrape.sh
 - The proof-of-concept works with on the current Ember Sandbox project while it is very simple. On more complete, full fledged projects, things might break.
 - This HTML file rendering will currently only work on mac OSX due to its dependencies on Unix tools.
 - The shell script will remove the output folder before every execution.
-- JavaScript is not executed by _wget_ so only pure static HTML is saved.
-- Currently we need to manually take care of the list of pages to render to HTML.
-- Static assets like CSS and images are also copied to the _./scrape-dist_ folder.
+- JavaScript is not executed by _wget_ so only pure static HTML is saved, hence Ember Fastboot.
+- Currently we need to manually take care of the list of pages to render to HTML in the scrape.sh file.
+- Static assets like CSS and images are also copied to the _./scrape-dist_ folder if they are first rendered by ember-cli!
 - There are a couple of important "[Known Limitations](https://github.com/ember-fastboot/ember-cli-fastboot#known-limitations)" regarding rendering Ember apps which we need to take into account.
 
-We will be adding zip generation and Git pushes to the script. We will also look into a 
-solution to automatically generate a list of pages to go through.
+## To do
+
+- Add zip generation to the script to automatize the HTML delivery process.
+- Automatically generate a list of pages to go through.
+
+## Credits
 
 Thanks goes to [Martin Malinda](https://twitter.com/martinmalindacz) for the idea of using wget and a shell script!
 

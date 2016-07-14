@@ -11,7 +11,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{g-header}}`);
 
-  assert.equal(this.$('header').hasClass('header'), true);
+  assert.equal(this.$('header').hasClass('g-header'), true);
 
   // Template block usage:
   this.render(hbs`

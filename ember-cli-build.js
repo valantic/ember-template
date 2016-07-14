@@ -6,6 +6,7 @@ module.exports = function(defaults) {
     sassOptions: {
       includePaths: [
         'app/pods/components',
+        'app/pods/views',
         'bower_components/bootstrap-sass/assets/stylesheets/'
       ]
     },

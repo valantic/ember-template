@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Service.extend({
   items: [{
+    id: 1,
     title: 'Bananas',
     image: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Bananas_white_background_DS.jpg',
     description: 'Cavendish bananas are the most common dessert bananas sold.',
@@ -11,6 +12,7 @@ export default Ember.Service.extend({
     currency: '€',
     isDiscounted: true
   }, {
+    id: 2,
     title: 'Conference Pears',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Pear_DS.jpg/220px-Pear_DS.jpg',
     description: 'A sweet yellowish- or brownish-green edible fruit which'

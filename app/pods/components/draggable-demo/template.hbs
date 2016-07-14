@@ -1,0 +1,32 @@
+
+<div class="available-items">
+  <header>
+    <h4>Items left to add: {{remainingItemsLength}}</h4>
+  </header>
+  <p>
+  {{#each items as |item|}}
+    {{#draggable-item content=item.id}}
+    <span>{{item.title}}</span>
+    {{/draggable-item}}
+  {{else}}
+    There is nothing to add!
+  {{/each}}
+  </p>
+</div>
+
+<div class="controls">
+  <button class="btn" {{action 'addAllItems'}}>Add everything</button>
+  <button class="btn" {{action 'removeallItems'}}>Remove everything</button>
+</div>
+
+<div class="selected-items">
+  {{#draggable-dropzone dropped="addItem"}}
+    <ul class="selected-items-list">
+      {{#each selectedItems as |item|}}
+        <li>{{item.title}}</li>
+      {{/each}}
+    </ul>
+  {{/draggable-dropzone}}
+</div>
+
+{{yield}}

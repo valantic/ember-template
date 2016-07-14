@@ -15,6 +15,7 @@ Router.map(function() {
     this.route('order-list');
   });
   this.route('readme');
+  this.route('draggable');
 });
 
 export default Router;

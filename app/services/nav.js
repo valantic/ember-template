@@ -25,6 +25,9 @@ if (config.environment === 'production') {
   links = [{
     url: 'readme',
     label: 'Readme'
+  }, {
+    url: 'draggable',
+    label: 'Demo: draggable'
   },
   {
     url: 'views',

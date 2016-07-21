@@ -3,7 +3,7 @@
   <header>
     <h4>Items left to add: {{remainingItemsLength}}</h4>
   </header>
-  <p>
+  <div>
   {{#each items as |item|}}
     {{#draggable-item content=item.id}}
     <span>{{item.title}}</span>
@@ -11,7 +11,7 @@
   {{else}}
     There is nothing to add!
   {{/each}}
-  </p>
+  </div>
 </div>
 
 <div class="controls">
@@ -20,10 +20,11 @@
 </div>
 
 <div class="selected-items">
+  {{!-- 'dropped' is the sendAction. Here we're only allowing one add of the item. --}}
   {{#draggable-dropzone dropped="addItem"}}
     <ul class="selected-items-list">
       {{#each selectedItems as |item|}}
-        <li>{{item.title}}</li>
+        <li>{{item.counter}} x {{item.title}}</li>
       {{/each}}
     </ul>
   {{/draggable-dropzone}}

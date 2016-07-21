@@ -23,7 +23,12 @@ export default Ember.Component.extend({
   },
 
   drop(event) {
+    if (event.stopPropagation) {
+      event.stopPropagation();  // Stops some browsers from redirecting.
+    }
+
     // See https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer
+    // HTML5
     const data = event.dataTransfer.getData('text/data');
 
     this.sendAction('dropped', data);

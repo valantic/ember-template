@@ -14,12 +14,19 @@ export default Ember.Component.extend({
   // http://emberjs.com/api/classes/Ember.View.html#toc_event-names
   dragLeave(event) {
     event.preventDefault();
+    console.log('dragLeave', event);
     this.set('dragClass', 'deactivated');
   },
 
   dragOver(event) {
     event.preventDefault();
+    console.log('dragOver', event);
     this.set('dragClass', 'activated');
+  },
+
+  dragEnter(event) {
+    event.preventDefault();
+    console.log('dragEnter', event);
   },
 
   drop(event) {

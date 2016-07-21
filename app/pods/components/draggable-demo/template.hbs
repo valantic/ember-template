@@ -5,7 +5,7 @@
   </header>
   <div>
   {{#each items as |item|}}
-    {{#draggable-item content=item.id}}
+    {{#draggable-item content=item.id dropped="addItem"}}
     <span>{{item.title}}</span>
     {{/draggable-item}}
   {{else}}

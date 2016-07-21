@@ -9,6 +9,10 @@ $black          : #111;
   margin-top: $default-margin * 2;
 }
 
+.controls {
+  margin: $default-margin $default-margin / 4;
+}
+
 .draggableDropzone {
    display: block;
    border: 3px dashed $gray-medium;
@@ -37,5 +41,9 @@ $black          : #111;
    cursor: move;
    &:hover {
      background-color: $gray-medium;
+   }
+   &.activated {
+     background-color: $green;
+     color: $white;
    }
 }

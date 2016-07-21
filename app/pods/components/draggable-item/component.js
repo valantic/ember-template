@@ -8,6 +8,14 @@ export default Ember.Component.extend({
   classNameBindings: ['dragClass'],
   dragClass: 'deactivated',
 
+  click(event) {
+    event.preventDefault();
+    // const content = this.get('content');
+
+    // this.sendAction('dropped', content);
+    console.log('click', event, content);
+  },
+
   dragStart(event) {
     this.set('dragClass', 'activated');
 
@@ -26,8 +34,32 @@ export default Ember.Component.extend({
     return event.dataTransfer.setData('text/data', this.get('content'));
   },
 
-  dragEnd() {
+  dragEnd(event) {
     this.set('dragClass', 'deactivated');
+    console.log('dragEnd', event);
+  },
+
+  touchStart(event) {
+    this.set('dragClass', 'activated');
+    console.log('touchStart', event);
+  },
+
+  touchEnd(event) {
+    this.set('dragClass', 'deactivated');
+    const content = this.get('content');
+
+    this.sendAction('dropped', content);
+    console.log('touchEnd', event);
+  },
+
+  touchCancel(event) {
+    this.set('dragClass', 'deactivated');
+    console.log('touchCancel', event);
+  },
+
+  touchMove(event) {
+    this.set('dragClass', 'activated');
+    console.log('touchMove', event);
   }
 
 });

@@ -13,7 +13,7 @@ export default Ember.Component.extend({
     // const content = this.get('content');
 
     // this.sendAction('dropped', content);
-    console.log('click', event, content);
+    // console.log('click', event, content);
   },
 
   dragStart(event) {
@@ -34,32 +34,32 @@ export default Ember.Component.extend({
     return event.dataTransfer.setData('text/data', this.get('content'));
   },
 
-  dragEnd(event) {
+  dragEnd() {
     this.set('dragClass', 'deactivated');
-    console.log('dragEnd', event);
+    // console.log('dragEnd', event);
   },
 
-  touchStart(event) {
+  touchStart() {
     this.set('dragClass', 'activated');
-    console.log('touchStart', event);
+    // console.log('touchStart', event);
   },
 
-  touchEnd(event) {
+  touchEnd() {
     this.set('dragClass', 'deactivated');
     const content = this.get('content');
 
     this.sendAction('dropped', content);
-    console.log('touchEnd', event);
+    // console.log('touchEnd', event);
   },
 
-  touchCancel(event) {
+  touchCancel() {
     this.set('dragClass', 'deactivated');
-    console.log('touchCancel', event);
+    // console.log('touchCancel', event);
   },
 
-  touchMove(event) {
+  touchMove() {
     this.set('dragClass', 'activated');
-    console.log('touchMove', event);
+    // console.log('touchMove', event);
   }
 
 });

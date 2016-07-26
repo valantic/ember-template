@@ -1,8 +1,12 @@
-const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+/*jshint node:true*/
+/* global require, module */
+var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+
 const isProduction = EmberApp.env() === 'production';
 
 module.exports = function(defaults) {
-  const app = new EmberApp(defaults, {
+  var app = new EmberApp(defaults, {
+    // Add options here
     sassOptions: {
       includePaths: [
         'app/pods/components',

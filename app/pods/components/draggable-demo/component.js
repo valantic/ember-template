@@ -12,7 +12,7 @@ export default Ember.Component.extend({
      * An action which is passed using sendAction.
      * We're only adding the item only once.
      * @param {string} itemId To uniquely identify the item dragged.
-     * @returns {array} An array if the item is already selected, otherwise false.
+     * @returns {Array|Boolean} An array if the item is already selected, otherwise false.
      */
     addItemOnce(itemId) {
       const selectedItems = this.get('selectedItems');
@@ -35,7 +35,7 @@ export default Ember.Component.extend({
      * There is no limit in the amount of times the item is added.
      * Challenge here is that we'll have multiple items with the same ID in the selectedItems object.
      * @param {string} itemId The uniquely identify the item dragged.
-     * @return {array} An array if the item is already selected, otherwise false.
+     * @returns {Array} An array if the item is already selected, otherwise false.
      */
     addItem(itemId) {
       // We want to check how many items we already have

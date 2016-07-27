@@ -11,7 +11,8 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "eslint": "eslint app/ tests/"
+    "eslint": "eslint app/ tests/",
+    "nodengine": "nodengine"
   },
   "repository": "",
   "engines": {

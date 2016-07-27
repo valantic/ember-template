@@ -9,7 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('page-404', { path: '/*wildcard' });
   if (config.environment !== 'production') {
-    this.route('styleguide-freestyle');
+    this.route('styleguide');
   }
 });
 

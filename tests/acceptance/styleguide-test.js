@@ -3,11 +3,11 @@ import moduleForAcceptance from 'ember-sandbox/tests/helpers/module-for-acceptan
 
 moduleForAcceptance('Acceptance | toggle stylesheet');
 
-test('visiting /styleguide-freestyle', (assert) => {
-  visit('/styleguide-freestyle');
+test('visiting /styleguide', (assert) => {
+  visit('/styleguide');
 
   andThen(() => {
-    assert.equal(currentURL(), '/styleguide-freestyle');
+    assert.equal(currentURL(), '/styleguide');
   });
 });
 
@@ -20,9 +20,9 @@ test('toggleStylesheet should work on styleguide pages', (assert) => {
   let currentStyleSheet = '';
   const expectedStyleSheet = 'assets/style-guide.css';
   // styleGuideIsActive = true
-  visit('/styleguide-freestyle');
+  visit('/styleguide');
   andThen(() => {
-    assert.equal(currentURL(), '/styleguide-freestyle');
+    assert.equal(currentURL(), '/styleguide');
     styleSheetTag = document.querySelector('link.project-css');
     currentStyleSheet = styleSheetTag.getAttribute('href');
     assert.equal(currentStyleSheet, expectedStyleSheet, 'Stylesheet should be styleSheetStyleguide');

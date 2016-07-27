@@ -36,8 +36,6 @@ export default Ember.Component.extend({
 ```
   END-FREESTYLE-USAGE */
 
-  colorpalette: inject.service(),
-
-  products: Ember.inject.service()
+  colorpalette: inject.service()
 
 });

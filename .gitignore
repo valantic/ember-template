@@ -30,7 +30,6 @@ testem.log
 .idea/dictionaries
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
-.idea/ember-sandbox.iml
 .idea/misc.xml
 .idea/modules.xml
 .idea/copyright/profiles_settings.xml

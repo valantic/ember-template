@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import StyleguideFunctions from 'ember-sandbox/mixins/styleguide-functions';
+import StyleguideFunctions from 'ember-project-template/mixins/styleguide-functions';
 
 export default Ember.Route.extend(StyleguideFunctions, {
   actions: {

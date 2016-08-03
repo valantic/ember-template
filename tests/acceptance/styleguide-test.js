@@ -1,5 +1,5 @@
 import { test } from 'qunit';
-import moduleForAcceptance from 'ember-sandbox/tests/helpers/module-for-acceptance';
+import moduleForAcceptance from 'ember-project-template/tests/helpers/module-for-acceptance';
 
 moduleForAcceptance('Acceptance | toggle stylesheet');
 
@@ -38,7 +38,7 @@ test('toggleStylesheet should work on styleguide pages', (assert) => {
 test('toggleStylesheet should work on regular pages', (assert) => {
   let styleSheetTag = '';
   let currentStyleSheet = '';
-  const expectedStyleSheet = 'assets/ember-sandbox.css';
+  const expectedStyleSheet = 'assets/ember-project-template.css';
   // styleGuideIsActive = false
   visit('/readme');
   andThen(() => {

@@ -336,7 +336,7 @@ ember g component l-my-new-layout
 ```
 {{#l-default-page}}
   <h1>Hello!</h1>
-  <p>Welcome to our ember-sandbox project!</p>
+  <p>Welcome to our ember project!</p>
   {{outlet}}
 {{/l-default-page}}
 ```

@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import StyleguideFunctionsMixin from 'ember-sandbox/mixins/styleguide-functions';
+import StyleguideFunctionsMixin from 'ember-project-template/mixins/styleguide-functions';
 import { module, test } from 'qunit';
 
 module('Unit | Mixin | styleguide functions');

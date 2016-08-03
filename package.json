@@ -1,7 +1,7 @@
 {
-  "name": "ember-sandbox",
-  "version": "0.0.0",
-  "description": "This project is a playground to get know ember and define best practices before we start our first client project",
+  "name": "ember-project-template",
+  "version": "1.0.0",
+  "description": "Kick starter for ember applications including a living styleguide",
   "private": true,
   "directories": {
     "doc": "doc",

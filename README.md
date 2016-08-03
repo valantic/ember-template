@@ -1,25 +1,16 @@
-# Ember-sandbox
+# Ember Project Template
 
-This project is a playground to get know ember and define best practices before we start our first client project
+This project will get you started developing an Ember application in no time.
 
-This style guide is applying [the Ember Freestyle living styleguide](https://github.com/chrislopresto/ember-freestyle) system for Ember apps.
+The style guide is applying [the Ember Freestyle living styleguide](https://github.com/chrislopresto/ember-freestyle) system for Ember apps.
 
-## Project Planning
+## Requirements
 
-Make sure to check here first to see what we are currently working on and what is still to be done.
+### System requirements
 
-We're gathering all todos and ideas in [the _CodeBaseHQ_ Tickets section](https://movento2.codebasehq.com/projects/ember-sandbox/tickets?report=all).
-
-## Project Communication
-
-We use Slack and the [_#int_frontend_](https://movento.slack.com/archives/int_frontend) channel to communicate about this project.
-
-## Installation notes
-
-* ember-cli version 2.5.1
+* ember-cli version 2.7.0
 * node version: 6.2.1 (There is a warning in ember-cli, but no restriction at package.json. It seems to work. "WARNING: Node v6.2.1 has currently not been tested against Ember CLI and may result in unexpected behaviour")
 * npm version: 3.8.0
-* pods are active [more about pods](http://www.programwitherik.com/ember-pods/)
 
 ### Developers Prerequisites
 
@@ -82,31 +73,44 @@ We have gathered Ember JS tutorials and videos which should help you understand 
 
 Please make sure to go through [the EmberJS official documentation](https://guides.emberjs.com/v2.5.0/getting-started/quick-start/) at least once.
 
-## Getting Started with Ember Sandbox
+## Getting Started
 
 This is the full explanation on how to access the code for this project so you can locally run it and extend upon it.
 
 First of all: make sure to have NodeJS (npm) and bower installed!
 
-Get access to the CodebaseHQ repository:
+Get access to the ember-project-template repository:
 
 - Generate a SSH key ([Github Help](https://help.github.com/articles/generating-an-ssh-key/))
 - Add SSH key to your repository account throught the CodebaseHQ website.
 
-Clone the repository to a local folder. Open a terminal window and execute this command in your _projects_ local folder:
+### Starting with a clean git history
 
-    git clone git@codebasehq.com:movento2/ember-sandbox/ember-sandbox.git
+If you're starting a new project based upon the "ember-project-template", use the following process to get started:
 
-You should have a new folder "ember-sandbox" in the active folder _cd_ into it.
+```
+$ cd my-new-project
+$ git init
+$ git fetch --depth=1 -n git@codebasehq.com:movento2/ember-sandbox/ember-project-template.git
+$ git reset --hard $(git commit-tree FETCH_HEAD^{tree} -m "initial commit")
+```
 
-*Tip* Read through the README.md file (this file) you can find in the folder.
+### Working with the ember-project-template
+
+If you want to make changes to the "ember-project-template", you should follow this process.
+
+Clone the repository to a local folder.
+
+Open a terminal window and execute this command in your _projects_ local folder:
+
+    git clone git@codebasehq.com:movento2/ember-sandbox/ember-project-template.git
+
+You should have a new folder "ember-project-template" in the active folder _cd_ into it.
 
 Run the following commands in the terminal window within the new folder:
 
     npm install
     bower install
-
-*Tip* This may take a while depending on your computer and internet connection. Perhaps time for a coffee?
 
 When npm and bower are done installing all the dependencies on your machine, it's time to run Ember.
 
@@ -169,21 +173,21 @@ To get help, enter `ember help generate` on the command line.
 
 Ember will render all components in a default "div" wrapper element. We choose to avoid this wrapper element and define every new component with a `tagName` and optional `classNames` properties defined in the _component.js_ file. 
 
-For instance the component _g-header_ will have this _component.js_ script:
+For instance the component _c-header_ will have this _component.js_ script:
 
 ```
 import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'header',
-  classNames: ['g-header']
+  classNames: ['c-header']
 });
 ```
 
 And this will render the following Ember element:
 
 ```
-<header id="ember663" class="ember-view g-header">
+<header id="ember663" class="ember-view c-header">
 ...
 </header>
 ```
@@ -298,20 +302,20 @@ Then use the `{{colorPalette}}` variable in your templates, like so:
 }}
 ```
 
-More information can be found in the Ember documentation on the "[Customizing a Component's Element](https://guides.emberjs.com/v2.5.0/components/customizing-a-components-element/)" page.
+More information can be found in the Ember documentation on the "Customizing a Component's Element" page.
 
 ## Switching layouts
 
 > This technique can be used in case you need new complete page layouts.
 
-Wrapping elements in a specific layout can be done using [Ember Components](https://guides.emberjs.com/v2.5.0/components/defining-a-component/) applied as block-level elements.
+Wrapping elements in a specific layout can be done using Ember Components applied as block-level elements.
 The layout components are basically element containers. In short, change the layout component, change the page layout.
 
 ### Routes define main templates
 
 When a route should render a page with a specific layout generate a new layout component.
 Add the new layout component to the "_template.hbs_" file of the route by using the block notation.
-The HTML content is therefor [wrapped within the component](https://guides.emberjs.com/v2.5.0/components/wrapping-content-in-a-component/).
+The HTML content is therefor wrapped within the component.
 
 ### Naming layouts
 

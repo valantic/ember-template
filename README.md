@@ -60,12 +60,18 @@ If the window is blank, check the browser console.
 
 Note for Visual Studio Code: install the official "[vscode-editorconfig](https://github.com/Microsoft/vscode-editorconfig)" extension.
 
-### Code Linting
+### JavaScript Linting
 
 Make sure to [install ESLint](https://www.npmjs.com/package/eslint) and activate linting in your editor of choice.
 We don't recommend to use other linting tools, because we customize just the eslint config.
 
 When installing the project for the first time running `npm install`, the system will install our own _eslint-config-movento_ configuration project which includes the required settings for ESLint.
+
+### SCSS Linting
+
+Currently, there is no working solution to test your *.scss files with the ember-cli. Please use the the ruby gem itself or (if supported) your IDE to validate your SCSS code.
+
+Read here how to [install scss-lint](https://github.com/brigade/scss-lint#installation). The linter is already configured with the `.scss-lint.yml` file inside the project root. Just run `$ scss-lint` from the command line or use your IDE to lint the project style files.
 
 ## Getting Started with EmberJS
 

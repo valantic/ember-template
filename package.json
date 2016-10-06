@@ -16,7 +16,7 @@
   },
   "repository": "",
   "engines": {
-    "node": "5.6.0"
+    "node": "6.7.0"
   },
   "author": "",
   "license": "MIT",

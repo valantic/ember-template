@@ -1,41 +1,19 @@
 import Ember from 'ember';
 import FreestyleController from 'ember-freestyle/controllers/freestyle';
+import config from '../../config/environment';
 
 const { inject } = Ember;
 
 export default FreestyleController.extend({
+  colorpalette: inject.service(),
+  config: config,
   emberFreestyle: inject.service(),
-
-  /* BEGIN-FREESTYLE-USAGE fp:notes
-### A few notes regarding freestyle-palette
-
-- Accepts a colorPalette POJO like the one found in the freestyle.js blueprint controller
-- Looks very nice
-
-And another thing...
-
-###### Markdown note demonstrating prettified code
-
-```
-import Ember from 'ember';
-
-export default Ember.Component.extend({
-  // ...
-  colorPalette: {
-    'primary': {
-      'name': 'cyan',
-      'base': '#00bcd4'
-    },
-    'accent': {
-      'name': 'amber',
-      'base': '#ffc107'
+  labels: {
+    usage: {
+      title: 'Usage Example',
+      hbs: 'template.hbs',
+      js: 'component.js', // eslint-disable-line
+      scss: 'styles.scss'
     }
   }
-  // ...
-});
-```
-  END-FREESTYLE-USAGE */
-
-  colorpalette: inject.service()
-
 });

@@ -20,6 +20,12 @@ module.exports = function(defaults) {
           'style-guide': '/assets/style-guide.css'
         }
       }
+    },
+    'ember-cli-staticboot': {
+      paths: [
+        '/',
+        '/styleguide'
+      ]
     }
   });
 

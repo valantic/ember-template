@@ -327,7 +327,7 @@ The HTML content is therefor wrapped within the component.
 
 Layout components should be prefixed with the string "`l-`".
 
-For example: _l-default-page_ or _l-product-page_ are good layout component names.
+For example: _l-default_ or _l-product-page_ are good layout component names.
 
 ### Create a new layout
 
@@ -340,11 +340,11 @@ ember g component l-my-new-layout
 ### Example layout
 
 ```
-{{#l-default-page}}
+{{#l-default}}
   <h1>Hello!</h1>
   <p>Welcome to our ember project!</p>
   {{outlet}}
-{{/l-default-page}}
+{{/l-default}}
 ```
 
 The "default layout" page is currently nothing more than a "yield output", with the required HTML to define a specific layout:

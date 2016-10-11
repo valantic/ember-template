@@ -9,7 +9,7 @@ export default Ember.Mixin.create({
    */
   toggleStylesheet: function(styleGuideIsActive) {
     const styleSheetTag = document.querySelector('head > .project-css');
-    const styleSheetStyleguide = 'assets/style-guide.css';
+    const styleSheetStyleguide = '/assets/style-guide.css';
     // Using the config.modulePrefix makes it possible to make this function a lot simpler
     // and run consecutive tests.
     const styleSheetOriginal = `assets/${config.modulePrefix}.css`;

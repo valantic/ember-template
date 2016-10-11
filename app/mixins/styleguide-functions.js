@@ -7,7 +7,7 @@ export default Ember.Mixin.create({
    * Switches the main stylesheet in the document.
    * @param {boolean} styleGuideIsActive true when it is
    */
-  toggleStylesheet: function(styleGuideIsActive) {
+  toggleStylesheet(styleGuideIsActive) {
     if (typeof FastBoot === 'undefined') {
       const styleSheetTag = document.querySelector('head > .project-css');
       const styleSheetStyleguide = '/assets/style-guide.css';
@@ -19,7 +19,7 @@ export default Ember.Mixin.create({
        * Sets the stylesheet path to styleguide if needed, else restore the original value
        * @param {string} styleSheetPath Stylesheet path
        */
-      const setStyleSheet = function(styleSheetPath) {
+      const setStyleSheet = (styleSheetPath) => {
         styleSheetTag.setAttribute('href', styleSheetPath);
       };
 

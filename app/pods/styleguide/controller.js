@@ -6,7 +6,7 @@ const { inject } = Ember;
 
 export default FreestyleController.extend({
   colorpalette: inject.service(),
-  config: config,
+  config,
   emberFreestyle: inject.service(),
   labels: {
     usage: {

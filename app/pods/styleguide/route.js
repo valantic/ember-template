@@ -4,7 +4,7 @@ import StyleguideFunctions from 'ember-project-template/mixins/styleguide-functi
 export default Ember.Route.extend(StyleguideFunctions, {
 
   actions: {
-    toggleStylesheet: function(styleGuideIsActive) {
+    toggleStylesheet(styleGuideIsActive) {
       // See mixin StyleguideFunctions
       this.toggleStylesheet(styleGuideIsActive);
     },

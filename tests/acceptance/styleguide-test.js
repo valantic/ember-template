@@ -18,7 +18,7 @@ test('visiting /styleguide', (assert) => {
 test('toggleStylesheet should work on styleguide pages', (assert) => {
   let styleSheetTag = '';
   let currentStyleSheet = '';
-  const expectedStyleSheet = 'assets/style-guide.css';
+  const expectedStyleSheet = '/assets/style-guide.css';
   // styleGuideIsActive = true
   visit('/styleguide');
   andThen(() => {

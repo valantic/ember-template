@@ -11,6 +11,7 @@ Router.map(function() {
   if (config.environment !== 'production') {
     this.route('styleguide');
   }
+  this.route('test-page');
 });
 
 export default Router;

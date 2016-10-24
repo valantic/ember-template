@@ -24,7 +24,8 @@ module.exports = function(defaults) {
     'ember-cli-staticboot': {
       paths: [
         '/',
-        '/styleguide'
+        '/styleguide',
+        '/test-page'
       ]
     }
   });

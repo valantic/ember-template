@@ -7,6 +7,7 @@ const isProduction = EmberApp.env() === 'production';
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
+    storeConfigInMeta: false,
     sassOptions: {
       includePaths: [
         'app/pods/components',

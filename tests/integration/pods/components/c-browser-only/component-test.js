@@ -5,10 +5,22 @@ moduleForComponent('c-browser-only', 'Integration | Component | c browser only',
   integration: true
 });
 
-test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+test('it renders - do not render yield, if fastboot is not present', function(assert) {
+  this.render(hbs`{{c-browser-only isFastBoot=true}}`);
 
+  assert.equal(this.$().text().trim(), '');
+
+  // Template block usage:
+  this.render(hbs`
+    {{#c-browser-only isFastBoot=true}}
+      template block text
+    {{/c-browser-only}}
+  `);
+
+  assert.equal(this.$().text().trim(), '');
+});
+
+test('it renders - render yield content, if fastboot is present', function(assert) {
   this.render(hbs`{{c-browser-only}}`);
 
   assert.equal(this.$().text().trim(), '');

@@ -1,3 +1,24 @@
 <h1>test-page</h1>
 <p>This is a simple test page.</p>
 
+<h2>Ember-islands test output</h2>
+<p>Code exmple</p>
+<code>
+{{!-- HTML entity decoded: https://mothereff.in/html-entities --}}
+&#x3C;div data-component=&#x27;c-ember-islands-test&#x27; data-attrs=&#x27;{&#x22;imgUrl&#x22;: &#x22;http://lorempicsum.com/simpsons/350/200/1&#x22;, &#x22;linkUrl&#x22;: &#x22;http://www.google.com&#x22;}&#x27;&#x3E;&#x3C;/div&#x3E;
+</code>
+
+<p>You can test ember-islands by running following steps</p>
+<ol>
+  <li>Run 'ember staticboot' to generate static html</li>
+  <li>Paste the code exmaple above to the static html (dist/staticboot/test-page/index.html) to get a realistic scenario. Attention! Don't paste inside an ember-view container, see Attention point 2.</li>
+  <li>Execute 'dist/staticboot' with a webserver (f.E. npm package 'http-server'</li>
+</ol>
+
+<h2>Attention at placing ember-islands containers!</h2>
+<p>
+  More informations: <a href="https://movento.atlassian.net/wiki/display/DUF/Static+HTML+Generation#StaticHTMLGeneration-4Placingember-islandscontainers">Common pitfalls documentation</a>
+</p>
+
+
+

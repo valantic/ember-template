@@ -1,3 +1,4 @@
+// Core
 @import 'core/normalize/normalize';
 @import 'core/z-index-stack/z-index-stack';
 @import 'core/grid-system/grid-system';
@@ -6,6 +7,10 @@
 @import 'core/font/font';
 @import 'core/spacing/settings';
 @import 'core/spacing/spacing';
+
+//Elements
+@import 'c-form-control/c-form-control';
+@import 'e-input-text/e-input-text';
 
 
 //IMPORT COMPONENTS HERE

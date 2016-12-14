@@ -14,5 +14,28 @@ export default Ember.Route.extend(StyleguideFunctions, {
     willTransition() {
       this.send('toggleStylesheet', false);
     }
+  },
+
+  model() {
+    return Ember.RSVP.hash({
+      selectOptions: [
+        {
+          label: 'Option 1',
+          value: 'option1',
+          selected: true
+        },
+        {
+          label: 'Option 2',
+          value: 'option2',
+          selected: false
+        },
+        {
+          label: 'Option 3',
+          value: 'option3',
+          selected: false
+        }
+      ]
+    });
   }
+
 });

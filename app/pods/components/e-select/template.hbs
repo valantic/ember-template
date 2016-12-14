@@ -1,0 +1,20 @@
+<select
+  onchange={{action "changed" value="target.value"}}
+  class={{computedClassName}}
+  disabled={{disabled}}
+  id={{id}}
+  multiple={{multiple}}
+  name={{name}}
+  required={{required}}
+  readonly={{readonly}}
+  size={{size}}
+  title={{title}}
+>
+  {{#unless multiple}}
+    <option selected={{if groupValue true false}}>{{placeholder}}</option>
+  {{/unless}}
+
+  {{#each items as |option|}}
+    <option value={{option.value}} selected={{eq option.value groupValue}}>{{option.label}}</option>
+  {{/each}}
+</select>

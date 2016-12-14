@@ -1,0 +1,19 @@
+$FreestyleUsage-maxWidth: 100%;
+
+.FreestyleGuide{
+  .FreestyleGuide-content {
+    max-width: 100%;
+  }
+}
+
+div.FreestyleGuide.ember-view{
+  min-width: initial;
+}
+
+.FreestyleGuide>main.FreestyleGuide-body {
+  background-color: transparent;
+}
+
+body.route--styleguide {
+  background-color: $color-gray-white;
+}

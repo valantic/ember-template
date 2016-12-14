@@ -1,0 +1,14 @@
+{{!-- addon: ember-radio-button --}}
+{{radio-button
+  changed="changed"
+  disabled=disabled
+  groupValue=groupValue
+  name=name
+  radioClass=computedClassName
+  readonly=readonly
+  required=required
+  tabindex=tabindex
+  type="radio"
+  value=value
+}}
+<span class="{{defaultClassName}}__fake-radio {{noInputClassNames}} {{gridClassName}}" data-value="{{value}}">{{#if noInputVisible}}{{text}}{{/if}}</span>

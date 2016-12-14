@@ -7,6 +7,19 @@ const isProduction = EmberApp.env() === 'production';
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
+    svgJar: {
+      strategy: ['symbol', 'inline'],
+
+      symbol: {
+        sourceDirs: ['svgs', 'public/assets/svg/symbol'],
+        outputFile: '/assets/svg/symbol/symbols.svg',
+        includeLoader: true
+      },
+
+      inline: {
+        sourceDirs: ['svgs', 'public/assets/svg/inline']
+      }
+    },
     storeConfigInMeta: false,
     sassOptions: {
       includePaths: [

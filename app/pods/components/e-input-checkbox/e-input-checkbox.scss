@@ -1,0 +1,39 @@
+$e-input-checkbox-border: 2px solid $color-gray-white;
+$e-input-checkbox-size: 1em;
+
+@mixin e-input-checkbox-shadow ($border-size, $color){
+  -webkit-box-shadow: 0 0 0 $border-size $color;
+  -moz-box-shadow: 0 0 0 $border-size $color;
+  box-shadow: 0 0 0 $border-size $color;
+}
+
+.e-input-checkbox {
+  @include c-form-control;
+  display: none;
+}
+
+.e-input-checkbox__fake-checkbox {
+  position: relative;
+  content: '';
+  vertical-align: middle;
+  border-radius: 2px;
+  @include e-input-checkbox-shadow(2px, $color-gray-light);
+  border: $e-input-checkbox-border;
+  background: $color-gray-white;
+  display: inline-block;
+  width: $e-input-checkbox-size;
+  height: $e-input-checkbox-size;
+  cursor: pointer;
+}
+
+.e-input-checkbox:checked + .e-input-checkbox__fake-checkbox {
+  background: $color-primary-dark;
+}
+
+.e-input-checkbox[disabled] + .e-input-checkbox__fake-checkbox {
+  cursor: default;
+}
+
+.e-input-checkbox[disabled]:checked + .e-input-checkbox__fake-checkbox {
+  background: $color-gray-dark;
+}

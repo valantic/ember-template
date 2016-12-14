@@ -1,0 +1,30 @@
+// BEGIN-FREESTYLE-USAGE c-form-control
+$c-form-control-border-radius: 0.15em;
+
+@mixin c-form-control($padding: 0 5px)  {
+  border: 2px solid $color-gray-light;
+  -webkit-border-radius: $c-form-control-border-radius;
+  -moz-border-radius: $c-form-control-border-radius;
+  border-radius: $c-form-control-border-radius;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: $color-gray-dark;
+  background-color: $color-gray-white-opacity-light;
+  padding: $padding;
+  vertical-align: middle;
+  line-height: 1em;
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    background-color: $color-gray-white-opacity-heavy;
+  }
+
+  &[disabled] {
+    color: $color-gray-dark;
+    cursor: default;
+  }
+
+}
+// END-FREESTYLE-USAGE

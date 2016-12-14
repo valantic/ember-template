@@ -20,10 +20,15 @@
 //not used! @import "bootstrap/glyphicons";
 
 // Core CSS
-//not used! @import "bootstrap/scaffolding";
+//@import "bootstrap/scaffolding";
 //not used! @import "bootstrap/type";
 //not used! @import "bootstrap/code";
-@import "bootstrap/grid";
+
+//@import "bootstrap/grid";
+//******
+//WE USE A CUSTOM GRID AT ./bootstrap-grid-custom.scss
+//******
+
 //not used! @import "bootstrap/tables";
 //@import "bootstrap/forms";
 //not used! @import "bootstrap/buttons";

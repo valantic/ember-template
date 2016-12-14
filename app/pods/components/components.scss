@@ -1,4 +1,8 @@
-@import 'core/grid-system/bootstrap-custom';
+@import 'core/grid-system/grid-system';
+@import 'core/media-queries/media-queries.scss';
+@import 'core/color-palette/color-palette';
+@import 'core/font/font';
+
 
 //IMPORT COMPONENTS HERE
 //@import 'c-my-component/c-mycomponent'; //scss file should have the components name to simplify debugging

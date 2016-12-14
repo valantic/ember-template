@@ -1,120 +1,93 @@
+{{! disable all rules for this template }}
+<!-- template-lint disable=true -->
 {{#freestyle-subsection name='grid-system' section=section}}
 
-      <div class="styleguide-grid-system">
+  {{#freestyle-annotation}}
+    <p>We based the media-query and grid system layout upon Bootstrap Sass version 3.3.7.</p>
+  {{/freestyle-annotation}}
 
-          <div class="page-header">
-              <h1>Bootstrap grid examples</h1>
-              <p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
-          </div>
+  {{#freestyle-usage 'mediaqueries' title='Media-queries' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
 
-          <h3>Three equal columns</h3>
-          <p>Get three equal-width columns <strong>starting at desktops and scaling to large desktops</strong>. On mobile devices, tablets and below, the columns will automatically stack.</p>
-          <div class="row">
-              <div class="col-md-4">.col-md-4</div>
-              <div class="col-md-4">.col-md-4</div>
-              <div class="col-md-4">.col-md-4</div>
-          </div>
+    {{#freestyle-annotation}}
+      <p>We can use the following media-queries in the CSS layout. Resize the browser viewport to see them in
+        demo-mode.</p>
+      <p>The media-queries in green are currently active.</p>
+    {{/freestyle-annotation}}
+    <h2>ONE VIEWPORT SIZE ONLY</h2>
+    <div class="example-media example-media--xxs-only">media-xxs-only</div>
+    <div class="example-media example-media--xs-only">media-xs-only</div>
+    <div class="example-media example-media--sm-only">media-sm-only</div>
+    <div class="example-media example-media--md-only">media-md-only</div>
+    <div class="example-media example-media--lg-only">media-lg-only</div>
+    <div class="example-media example-media--xl-only">media-xl-only</div>
+    <h2>MIN VIEWPORT SIZE (VISIBLE FROM CURRENT TO BIGGER)</h2>
+    <div class="example-media example-media--xxs-min">media-xxs-min</div>
+    <div class="example-media example-media--xs-min">media-xs-min</div>
+    <div class="example-media example-media--sm-min">media-sm-min</div>
+    <div class="example-media example-media--md-min">media-md-min</div>
+    <div class="example-media example-media--lg-min">media-lg-min</div>
+    <div class="example-media example-media--xl-min">media-xl-min</div>
+    <h2>MAX VIEWPORT SIZE (VISIBLE FROM CURRENT TO SMALLER)</h2>
+    <div class="example-media example-media--xxs-max">media-xxs-max</div>
+    <div class="example-media example-media--xs-max">media-xs-max</div>
+    <div class="example-media example-media--sm-max">media-sm-max</div>
+    <div class="example-media example-media--md-max">media-md-max</div>
+    <div class="example-media example-media--lg-max">media-lg-max</div>
+    <div class="example-media example-media--xl-max">media-xl-max</div>
 
-          <h3>Three unequal columns</h3>
-          <p>Get three columns <strong>starting at desktops and scaling to large desktops</strong> of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.</p>
-          <div class="row">
-              <div class="col-md-3">.col-md-3</div>
-              <div class="col-md-6">.col-md-6</div>
-              <div class="col-md-3">.col-md-3</div>
-          </div>
+  {{/freestyle-usage}}
 
-          <h3>Two columns</h3>
-          <p>Get two columns <strong>starting at desktops and scaling to large desktops</strong>.</p>
-          <div class="row">
-              <div class="col-md-8">.col-md-8</div>
-              <div class="col-md-4">.col-md-4</div>
-          </div>
+  {{freestyle-usage 'mediaqueries-breakpoints' scssTitle='bootstrap-variables.scss'}}
 
-          <h3>Full width, single column</h3>
-          <p class="text-warning">No grid classes are necessary for full-width elements.</p>
+  {{#freestyle-usage 'gridsystem' title='Bootstrap grid examples' usageTitle=labels.usage.title}}
 
-          <hr>
+    <div class="styleguide-grid-system">
 
-          <h3>Two columns with two nested columns</h3>
-          <p>Per the documentation, nesting is easy—just put a row of columns within an existing column. This gives you two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column.</p>
-          <p>At mobile device sizes, tablets and down, these columns and their nested columns will stack.</p>
-          <div class="row">
-              <div class="col-md-8">
-                  .col-md-8
-                  <div class="row">
-                      <div class="col-md-6">.col-md-6</div>
-                      <div class="col-md-6">.col-md-6</div>
-                  </div>
-              </div>
-              <div class="col-md-4">.col-md-4</div>
-          </div>
-
-          <hr>
-
-          <h3>Mixed: mobile and desktop</h3>
-          <p>The Bootstrap 3 grid system has four tiers of classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops). You can use nearly any combination of these classes to create more dynamic and flexible layouts.</p>
-          <p>Each tier of classes scales up, meaning if you plan on setting the same widths for xs and sm, you only need to specify xs.</p>
-          <div class="row">
-              <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
-              <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-          </div>
-          <div class="row">
-              <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-              <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-              <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-          </div>
-          <div class="row">
-              <div class="col-xs-6">.col-xs-6</div>
-              <div class="col-xs-6">.col-xs-6</div>
-          </div>
-
-          <hr>
-
-          <h3>Mixed: mobile, tablet, and desktop</h3>
-          <p></p>
-          <div class="row">
-              <div class="col-xs-12 col-sm-6 col-lg-8">.col-xs-12 .col-sm-6 .col-lg-8</div>
-              <div class="col-xs-6 col-lg-4">.col-xs-6 .col-lg-4</div>
-          </div>
-          <div class="row">
-              <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-              <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-              <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-          </div>
-
-          <hr>
-
-          <h3>Column clearing</h3>
-          <p><a href="http://getbootstrap.com/css/#grid-responsive-resets">Clear floats</a> at specific breakpoints to prevent awkward wrapping with uneven content.</p>
-          <div class="row">
-              <div class="col-xs-6 col-sm-3">
-                  .col-xs-6 .col-sm-3
-                  <br>
-                  Resize your viewport or check it out on your phone for an example.
-              </div>
-              <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
-
-              {{!-- Add the extra clearfix for only the required viewport --}}
-              <div class="clearfix visible-xs"></div>
-
-              <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
-              <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
-          </div>
-
-          <hr>
-
-          <h3>Offset, push, and pull resets</h3>
-          <p>Reset offsets, pushes, and pulls at specific breakpoints.</p>
-          <div class="row">
-              <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
-              <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
-          </div>
-          <div class="row">
-              <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
-              <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0">.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0</div>
-          </div>
-
-
+      <div class="page-header">
+        <h1>Bootstrap grid examples</h1>
+        <p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
       </div>
+
+      <h2>Different columns for each screensize</h2>
+      <p>XXS: 0px / XS: 480px / SM: 768px / MD: 992px / LG: 1200px / XL: 1600px</p>
+      <div class="row">
+        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">.col-xxs-12<br/>.col-xs-6<br/>.col-sm-4<br/>.col-md-3<br/>.col-lg-2<br/>.col-xl-1</div>
+        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">.col-xxs-12<br/>.col-xs-6<br/>.col-sm-4<br/>.col-md-3<br/>.col-lg-2<br/>.col-xl-1</div>
+        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">.col-xxs-12<br/>.col-xs-6<br/>.col-sm-4<br/>.col-md-3<br/>.col-lg-2<br/>.col-xl-1</div>
+        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">.col-xxs-12<br/>.col-xs-6<br/>.col-sm-4<br/>.col-md-3<br/>.col-lg-2<br/>.col-xl-1</div>
+        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">.col-xxs-12<br/>.col-xs-6<br/>.col-sm-4<br/>.col-md-3<br/>.col-lg-2<br/>.col-xl-1</div>
+        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">.col-xxs-12<br/>.col-xs-6<br/>.col-sm-4<br/>.col-md-3<br/>.col-lg-2<br/>.col-xl-1</div>
+        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">.col-xxs-12<br/>.col-xs-6<br/>.col-sm-4<br/>.col-md-3<br/>.col-lg-2<br/>.col-xl-1</div>
+        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">.col-xxs-12<br/>.col-xs-6<br/>.col-sm-4<br/>.col-md-3<br/>.col-lg-2<br/>.col-xl-1</div>
+        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">.col-xxs-12<br/>.col-xs-6<br/>.col-sm-4<br/>.col-md-3<br/>.col-lg-2<br/>.col-xl-1</div>
+        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">.col-xxs-12<br/>.col-xs-6<br/>.col-sm-4<br/>.col-md-3<br/>.col-lg-2<br/>.col-xl-1</div>
+        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">.col-xxs-12<br/>.col-xs-6<br/>.col-sm-4<br/>.col-md-3<br/>.col-lg-2<br/>.col-xl-1</div>
+        <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">.col-xxs-12<br/>.col-xs-6<br/>.col-sm-4<br/>.col-md-3<br/>.col-lg-2<br/>.col-xl-1</div>
+      </div>
+
+      <hr>
+
+      <h2>Offset, push, and pull resets</h2>
+      <p>Reset offsets, pushes, and pulls at specific breakpoints.</p>
+      <div class="row">
+        <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+        <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">.col-sm-5 .col-sm-offset-2 .col-md-6
+          .col-md-offset-0
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+        <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0">.col-sm-6 .col-md-5 .col-md-offset-2
+          .col-lg-6 .col-lg-offset-0
+        </div>
+      </div>
+      <hr>
+      <h2>Container-wrapper (Adaptive layout)</h2>
+      <p>Container sizes:<br/>XXS: fluid<br/>XS: fluid<br/>SM: 750px<br/>MD: 970px<br/>LG: 1170px<br/>XL: 1570px</p>
+      <p>Container sizes aren't testable in this styleguide view because there is a .container-fluid wrapper around.</p>
+
+    </div>
+
+  {{/freestyle-usage}}
 
 {{/freestyle-subsection}}

@@ -1,0 +1,112 @@
+// BEGIN-FREESTYLE-USAGE e-label
+.e-label {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  color: $color-gray-dark;
+
+  &__text {
+    font-family: $font-family-light; // To distinguish from regular text.
+    vertical-align: middle;
+  }
+
+  &[disabled] {
+    color: $color-gray-light;
+  }
+
+  // All labels which have a width set through col classes.
+  // They get a float style so we're dealing with this here.
+  &[class*='col-'] {
+    padding-right: 0.25em;
+    padding-top: 0.4em;
+    text-align: right;
+  }
+}
+// END-FREESTYLE-USAGE
+
+.e-label__text--layout-nested,
+.e-label__text--layout-horizontal {
+  display: inline-block;
+}
+
+.e-label--leading {
+  color: $color-primary-dark;
+
+  .e-label__text--layout-vertical,
+  .e-label__text--layout-nested,
+  .e-label__text--layout-horizontal {
+    display: block;
+    margin-bottom: $spacing--10;
+    margin-right: $spacing--0;
+  }
+
+  .e-label__text--layout-horizontal {
+    @media #{$media-screen-xs-min} {
+      display: inline-block;
+      margin-right: $spacing--30;
+      margin-bottom: $spacing--0;
+    }
+  }
+}
+
+.e-label__text--checkbox,
+.e-label__text--radio {
+  margin-left: $spacing--5;
+}
+
+.e-label--noinputvisible {
+  display: inline-block;
+  cursor: pointer;
+
+  .e-input-radio {
+    opacity: 0;
+    position: absolute;
+  }
+
+  &:hover {
+    .e-label__text::before {
+      background: $color-primary-dark;
+      color: $color-gray-white;
+    }
+
+    &[disabled] {
+      .e-label__text::before {
+        background: $color-gray-white;
+        color: $color-gray-light;
+        cursor: default;
+      }
+    }
+  }
+}
+
+.e-label--labelup {
+  text-align: center;
+  display: inline-block;
+}
+
+.e-label__text--labelup {
+  display: block;
+  margin: $spacing--0;
+  margin-bottom: $spacing--15;
+}
+
+.e-label__text--labelfirst {
+  margin-left: $spacing--0;
+  margin-right: $spacing--5;
+}
+
+.e-label--labelhidden {
+  .e-label__text {
+    position: absolute;
+    left: -10000em;
+    top: -10000em;
+  }
+}
+
+.e-label--c-value-display {
+  .e-label__text {
+    font-weight: inherit;
+    vertical-align: inherit;
+  }
+}

@@ -1,0 +1,139 @@
+{{! disable all rules for this template }}
+<!-- template-lint disable=true -->
+{{#freestyle-subsection name='e-label' section=section}}
+
+  {{#freestyle-annotation}}
+    <p>The label element is displayed here as a standalone element but should normally always be together with an input element.</p>
+  {{/freestyle-annotation}}
+
+  {{#freestyle-collection title='e-label states' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'e-label' title='e-label' usageTitle=labels.usage.title jsTitle=labels.usage.js scssTitle=labels.usage.scss}}
+        {{e-label
+          for="theId"
+          text="A Label"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='success'}}
+      {{#freestyle-usage 'e-label--state-success' title='e-label state-success' usageTitle=labels.usage.title}}
+        {{e-label
+          for="theId"
+          state="success"
+          text="A Label"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='warning'}}
+      {{#freestyle-usage 'e-label--state-warning' title='e-label state-warning' usageTitle=labels.usage.title}}
+        {{e-label
+          for="theId"
+          state="warning"
+          text="A Label"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='error'}}
+      {{#freestyle-usage 'e-label--state-error' title='e-label state-error' usageTitle=labels.usage.title}}
+        {{e-label
+          for="theId"
+          state="error"
+          text="A Label"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+  {{/freestyle-collection}}
+
+  {{#freestyle-usage 'e-label--leading' title='e-label leading' usageTitle=labels.usage.title}}
+    {{e-label
+      for="theId"
+      leading=true
+      text="A Label"
+    }}
+  {{/freestyle-usage}}
+
+  {{#freestyle-usage 'e-label--leading-vertical' title='e-label leading vertical' usageTitle=labels.usage.title}}
+    {{e-label
+      for="theId"
+      layout="vertical"
+      leading=true
+      text="A Label"
+    }}
+  {{/freestyle-usage}}
+
+  {{#freestyle-usage 'e-label--leading-nested' title='e-label leading nested' usageTitle=labels.usage.title}}
+    {{e-label
+      for="theId"
+      layout="nested"
+      leading=true
+      text="A Label"
+    }}
+  {{/freestyle-usage}}
+
+  {{#freestyle-usage 'e-label--yield' title='e-label with yield' usageTitle=labels.usage.title}}
+    {{#e-label
+      for="theId"
+      text="A Label"
+    }}
+      <span class="test">The yield</span>
+    {{/e-label}}
+  {{/freestyle-usage}}
+
+  {{#freestyle-usage 'e-label--labelup' title='e-label labelup' usageTitle=labels.usage.title}}
+    {{#e-label
+      for="theId"
+      labelUp=true
+      text="A Label"
+    }}
+      <span class="test">The yield</span>
+    {{/e-label}}
+  {{/freestyle-usage}}
+
+  {{#freestyle-usage 'e-label--labelfirst' title='e-label labelfirst' usageTitle=labels.usage.title}}
+    {{#e-label
+      for="theId"
+      labelFirst=true
+      text="A Label"
+    }}
+      <span class="test">The yield</span>
+    {{/e-label}}
+  {{/freestyle-usage}}
+
+  {{#freestyle-usage 'e-label--selected-true' title='e-label selected' usageTitle=labels.usage.title}}
+    {{e-label
+      for="theId"
+      selected=true
+      text="A Label"
+    }}
+  {{/freestyle-usage}}
+
+  {{#freestyle-usage 'e-label--noinputvisible' title='e-label noinputvisible' usageTitle=labels.usage.title}}
+    {{e-label
+      class="e-label--noinputvisible"
+      for="theId"
+      text="A Label"
+    }}
+  {{/freestyle-usage}}
+
+  {{#freestyle-usage 'e-label--buttonlike' title='e-label buttonlike' usageTitle=labels.usage.title}}
+    {{e-label
+      class="e-label--buttonlike"
+      for="theId"
+      text="A Label"
+    }}
+  {{/freestyle-usage}}
+
+  {{#freestyle-usage 'e-label--required' title='e-label required' usageTitle=labels.usage.title}}
+    {{e-label
+      for="theId"
+      text="A Label"
+      required=true
+    }}
+  {{/freestyle-usage}}
+
+{{/freestyle-subsection}}

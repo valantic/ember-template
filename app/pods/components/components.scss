@@ -1,8 +1,10 @@
+@import 'core/normalize/normalize';
+@import 'core/z-index-stack/z-index-stack';
 @import 'core/grid-system/grid-system';
-@import 'core/media-queries/media-queries.scss';
+@import 'core/media-queries/media-queries';
 @import 'core/color-palette/color-palette';
 @import 'core/font/font';
-@import 'core/spacing/settings.scss';
+@import 'core/spacing/settings';
 @import 'core/spacing/spacing';
 
 

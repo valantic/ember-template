@@ -1,26 +1,54 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
-  colours: {
-    primary: {
-      name: 'cyan',
-      base: '#00bcd4'
+  primaryColours: {
+    dark: {
+      name: '$color-primary-dark',
+      base: '#005DAD'
     },
-    accent: {
-      name: 'amber',
-      base: '#ffc107'
+    light: {
+      name: '$color-primary-light',
+      base: '#CCDAEF'
+    }
+  },
+  statusColours: {
+    success: {
+      name: '$color-status-success',
+      base: '#8DC63F'
     },
-    secondary: {
-      name: 'greyish',
-      base: '#b6b6b6'
+    failed: {
+      name: '$color-status-failed',
+      base: '#C60651'
     },
-    foreground: {
-      name: 'blackish',
-      base: '#212121'
+    warning: {
+      name: '$color-status-warning',
+      base: '#FFA500'
+    }
+  },
+  grayColours: {
+    black: {
+      name: '$color-gray-black',
+      base: '#000000'
     },
-    background: {
-      name: 'white',
-      base: '#ffffff'
+    dark: {
+      name: '$color-gray-dark',
+      base: '#444E58'
+    },
+    light: {
+      name: '$color-gray-light',
+      base: '#B1B3B6'
+    },
+    white: {
+      name: '$color-gray-white',
+      base: '#FFFFFF'
+    },
+    whiteOpacityHeavy: {
+      name: '$color-gray-white-opacity-heavy',
+      base: 'rgba(#FFFFFF, 0.75)'
+    },
+    whiteOpacityLight: {
+      name: '$color-gray-white-opacity-light',
+      base: 'rgba(#FFFFFF, 0.3)'
     }
   }
 });

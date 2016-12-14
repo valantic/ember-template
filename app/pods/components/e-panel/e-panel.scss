@@ -1,0 +1,153 @@
+// BEGIN-FREESTYLE-USAGE e-panel-default
+$c-form-combo-gradient-angle: 160deg;
+$e-panel-box-shadow-size: 0px 6px 6px 0px;
+
+@mixin e-panel_border-state($border-state) {
+  -moz-border-image: color($border-state);
+  -webkit-border-image: color($border-state);
+  border-image: color($border-state);
+  border-image-slice: 1;
+}
+
+@mixin e-panel-box-shadow-color ($color, $opacity: 0.1) {
+  -webkit-box-shadow: $e-panel-box-shadow-size rgba($color, $opacity);
+  -moz-box-shadow: $e-panel-box-shadow-size rgba($color, $opacity);
+  box-shadow: $e-panel-box-shadow-size rgba($color, $opacity);
+}
+
+.e-panel {
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.e-panel--inline {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.e-panel--inline-sm-up {
+
+  @media #{$media-screen-sm-min} {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+}
+
+.e-panel--spacing-right{
+  margin-right: $spacing--30;
+
+  &:last-child {
+    margin-right: $spacing--0;
+  }
+}
+
+.e-panel--shadow {
+  @include e-panel-box-shadow-color($color-gray-dark);
+}
+
+.e-panel__inner {
+  position: relative;
+  line-height: 1;
+  padding: $spacing--5;
+  background: transparent;
+  background-clip: padding-box;
+  border: solid $color-gray-light;
+  @include e-panel_border-state($color-gray-white);
+
+  &--background-color{
+
+    &-transparent {
+      background: transparent;
+    }
+
+    &-primary-dark {
+      background: $color-primary-dark;
+    }
+
+    &-primary-light {
+      background: $color-primary-light;
+    }
+
+    &-gray-white {
+      background: $color-gray-white;
+    }
+
+    &-gray-white-opacity-heavy {
+      background: $color-gray-white-opacity-heavy;
+    }
+
+    &-gray-white-opacity-light {
+      background: $color-gray-white-opacity-light;
+    }
+  }
+
+  &--success {
+    border-color: $color-status-success;
+    @include e-panel_border-state($color-status-success);
+  }
+
+  &--error {
+    border-color: $color-status-failed;
+    @include e-panel_border-state($color-status-failed);
+  }
+
+  &--warning {
+    border-color: $color-status-warning;
+    @include e-panel_border-state($color-status-warning);
+  }
+
+  &--info {
+    border-color: $color-primary-dark;
+    @include e-panel_border-state($color-primary-dark);
+  }
+
+  &--border-thin {
+    border-width: 2px;
+  }
+
+  &--border-big {
+    border-width: 4px;
+  }
+
+  &--border-noborder {
+    border-width: 0;
+    padding: 0;
+  }
+
+  &--padding-flank-big {
+    padding-right: $spacing--10;
+    padding-left: $spacing--10;
+  }
+
+  &--insideScroll {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+
+    display: inline-block;
+    width: calc(100% - 100px);
+    margin: 0 50px;
+  }
+
+  &--insideScroll-full-width {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.e-panel__arrow-left {
+  position: absolute;
+  z-index: $z-index-stack-10;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.e-panel__arrow-right {
+  position: absolute;
+  z-index: $z-index-stack-10;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+// END-FREESTYLE-USAGE

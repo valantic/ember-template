@@ -1,0 +1,37 @@
+<div class="{{defaultClassName}}__inner {{stateClassNames}} {{innerClassNames}}">
+  {{#if headingIncluded}}
+    {{#e-heading
+        tagName=tagNameTitle
+        state=titleState
+    }}
+      {{title}}
+    {{/e-heading}}
+  {{/if}}
+  {{#if insideScroll}}
+    {{#if scrollArrows}}
+      <div class="{{defaultClassName}}__arrow-left">
+        {{#e-button
+            transparent=true
+            horScrollButton=true
+            click=(action "scrollX" "left")
+        }}
+          {{svg-jar "#back" class="e-button__icon"}}
+        {{/e-button}}
+      </div>
+    {{/if}}
+    <div class="{{innerScrollClass}} {{innerScrollClassFullWidth}}">{{yield}}</div>
+    {{#if scrollArrows}}
+      <div class="{{defaultClassName}}__arrow-right">
+        {{#e-button
+            transparent=true
+            horScrollButton=true
+            click=(action "scrollX" "right")
+        }}
+          {{svg-jar "#next" class="e-button__icon"}}
+        {{/e-button}}
+      </div>
+    {{/if}}
+  {{else}}
+    {{yield}}
+  {{/if}}
+</div>

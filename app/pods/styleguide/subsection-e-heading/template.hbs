@@ -1,0 +1,105 @@
+{{! disable all rules for this template }}
+<!-- template-lint disable=true -->
+
+{{#freestyle-subsection name='e-heading' section=section}}
+
+  {{#freestyle-annotation}}
+    c-order component description:
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>tagName</code> (String)</dt>
+      <dd>"h1" - "h6"</dd>
+      <dt><code>state</code> (String)</dt>
+      <dd>"default", "success", "warning", "error"</dd>
+    </dl>
+  {{/freestyle-annotation}}
+
+  {{#freestyle-usage 'e-heading-default' title='e-heading-default' usageTitle=labels.usage.title jsTitle=labels.usage.js}}
+
+    {{#e-heading
+      tagName='h1'
+    }}
+      I'm a heading H1
+    {{/e-heading}}
+
+    {{#e-heading
+        tagName='h2'
+    }}
+      I'm a heading H2
+    {{/e-heading}}
+
+    {{#e-heading
+        tagName='h3'
+    }}
+      I'm a heading H3
+    {{/e-heading}}
+
+    {{#e-heading
+        tagName='h4'
+    }}
+      I'm a heading H4
+    {{/e-heading}}
+
+    {{#e-heading
+        tagName='h5'
+    }}
+      I'm a heading H5
+    {{/e-heading}}
+
+    {{#e-heading
+        tagName='h6'
+    }}
+      I'm a heading H6
+    {{/e-heading}}
+
+  {{/freestyle-usage}}
+
+  {{#freestyle-collection title='Heading-states' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'e-heading-state--default' title='Heading with state default'}}
+        {{#e-heading
+          tagName='h1'
+          state="default"
+        }}
+          I'm a heading with state default
+        {{/e-heading}}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='success'}}
+      {{#freestyle-usage 'e-heading-state--success' title='Heading with state success'}}
+        {{#e-heading
+            tagName='h1'
+            state="success"
+        }}
+          I'm a heading with state success
+        {{/e-heading}}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='warning'}}
+      {{#freestyle-usage 'e-heading-state--warning' title='Heading with state warning'}}
+        {{#e-heading
+            tagName='h1'
+            state="warning"
+        }}
+          I'm a heading with state warning
+        {{/e-heading}}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='error'}}
+      {{#freestyle-usage 'e-heading-state--error' title='Heading with state error'}}
+        {{#e-heading
+            tagName='h1'
+            state="error"
+        }}
+          I'm a heading with state error
+        {{/e-heading}}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+  {{/freestyle-collection}}
+
+{{/freestyle-subsection}}

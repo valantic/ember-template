@@ -1,0 +1,28 @@
+{{#unless href}}
+{{!-- Using a button element here to easily assign the "action" to the element. --}}
+{{!-- Without "action" we can still use the button as a normal "submit" button. --}}
+{{!-- See: https://guides.emberjs.com/v2.7.0/components/triggering-changes-with-actions --}}
+  {{#unless clicked}}
+    <button
+        disabled={{disabled}}
+            class="{{defaultClassName}}__button"
+        role="button"
+        type={{type}}
+    >
+      {{yield}}
+    </button>
+  {{else}}
+    <button
+        disabled={{disabled}}
+            class="{{defaultClassName}}__button"
+        role="button"
+        type={{type}}
+          {{action click preventDefault=preventDefault}}
+    >
+      {{yield}}
+    </button>
+  {{/unless}}
+{{else}}
+{{!-- a-tag text --}}
+  {{yield}}
+{{/unless}}

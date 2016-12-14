@@ -1,0 +1,235 @@
+/* BEGIN-FREESTYLE-USAGE e-button-inactive--notes
+
+**NOTE:** The CSS declaration "`width: inherit;`" was added to make Ember FreeStyle recognize the code snippets as SCSS.
+If the block of CSS code does not end with a standard CSS rule, eg. it ends with a SCSS variable, Ember Freestyle recognizes the snippet as HBS,
+and won't render the snippet block using the correct syntax highlighting as SCSS.
+It is not necessary to add the width when the last CSS declaration is normal CSS.
+
+ END-FREESTYLE-USAGE */
+
+$e-button-border-radius: 3px;
+$e-button-padding: 6px 10px 5px;
+
+// BEGIN-FREESTYLE-USAGE e-button-inactive
+.e-button,
+.e-button__button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: $color-gray-white;
+  border: 2px solid $color-primary-dark;
+  border-radius: $e-button-border-radius;
+  color: $color-primary-dark;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-family-light;
+  line-height: 2;
+  margin: $spacing--0;
+  text-align: center;
+  outline: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: baseline;
+  white-space: normal;
+}
+
+.e-button--link {
+  padding: $e-button-padding;
+}
+
+.e-button__button {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: inherit;
+  height: 100%;
+  width: 100%; // Important for the click area
+  padding: $e-button-padding;
+}
+// END-FREESTYLE-USAGE
+
+// BEGIN-FREESTYLE-USAGE e-button-cta-inactive
+.e-button--cta {
+  background-color: $color-gray-white;
+  width: inherit;
+}
+// END-FREESTYLE-USAGE
+
+// BEGIN-FREESTYLE-USAGE e-button-hover
+.e-button--hover,
+.e-button:hover {
+  background-color: $color-primary-dark;
+  color: $color-gray-white;
+}
+// END-FREESTYLE-USAGE
+
+// BEGIN-FREESTYLE-USAGE e-button-click
+.e-button--active,
+.e-button:active {
+  background-color: $color-primary-dark;
+  color: $color-gray-white;
+}
+// END-FREESTYLE-USAGE
+
+// BEGIN-FREESTYLE-USAGE e-button-active
+.e-button--focus,
+.e-button:focus {
+  background-color: $color-primary-dark;
+  color: $color-gray-white;
+}
+// END-FREESTYLE-USAGE
+
+.e-button--transparent {
+  background: transparent;
+  border: 0;
+
+  .e-button__button {
+    padding: 0;
+  }
+
+  &:hover{
+    background: transparent;
+    border: 0;
+    color: $color-primary-dark;
+  }
+}
+
+// BEGIN-FREESTYLE-USAGE e-button-disabled
+//latest modifier to overrule others
+.e-button--disabled,
+.e-button--disabled:hover,
+.e-button[disabled] {
+  background-color: transparent;
+  border-color: $color-gray-light;
+  color: $color-gray-light;
+  cursor: default;
+}
+// END-FREESTYLE-USAGE
+
+.e-button--wide {
+  min-width: 60%;
+}
+
+.e-button--fill {
+  width: 100%;
+  min-height: 0;
+  line-height: 1;
+  font-size: 0;
+
+  .e-button__button {
+    text-align: left;
+    width: 100%;
+    min-height: 0;
+    line-height: 1.5;
+  }
+}
+
+.e-button--full-width {
+  width: 100%;
+}
+
+.e-button--nomargin {
+  margin: 0;
+}
+
+.e-button--success {
+  color: $color-status-success;
+  border-color: $color-status-success;
+
+  &.e-button--hover,
+  &:hover {
+    background-color: $color-status-success;
+    color: $color-gray-white;
+  }
+
+  &.e-button--active,
+  &:active {
+    background-color: $color-status-success;
+    color: $color-gray-white;
+  }
+
+  &.e-button--focus,
+  &:focus {
+    background-color: $color-status-success;
+    color: $color-gray-white;
+  }
+}
+
+.e-button--cancel {
+  color: $color-status-failed;
+  border-color: $color-status-failed;
+
+  &.e-button--hover,
+  &:hover {
+    background-color: $color-status-failed;
+    color: $color-gray-white;
+  }
+
+  &.e-button--active,
+  &:active {
+    background-color: $color-status-failed;
+    color: $color-gray-white;
+  }
+
+  &.e-button--focus,
+  &:focus {
+    background-color: $color-status-failed;
+    color: $color-gray-white;
+  }
+}
+
+.e-button__icon {
+  height: 100%;
+  width: 100%;
+}
+
+.e-button__icon-outer {
+  height: 4em;
+
+  &--square {
+    width: 4em;
+  }
+
+  &--rectangle {
+    width: 8em;
+  }
+
+  &--mini {
+    font-size: $font-size-small;
+  }
+
+  &:last-child {
+    margin-right: $spacing--0;
+
+    .e-button__button {
+      margin-right: $spacing--0;
+    }
+  }
+}
+
+.e-button--small-square {
+  width: 2em;
+  height: 2em;
+  line-height: normal;
+  vertical-align: top;
+
+  .e-button__button {
+    padding: $spacing--5;
+    line-height: inherit;
+  }
+}
+
+.e-button--big-square {
+  width: 3em;
+  height: 3em;
+
+  .e-button__button {
+    padding: $spacing--10;
+  }
+}
+
+.e-button--hor-scroll {
+  height: 50px;
+  width: 50px;
+  padding: $spacing--10;
+}

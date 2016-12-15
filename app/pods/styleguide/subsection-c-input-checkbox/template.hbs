@@ -12,175 +12,106 @@
 
   {{!-- NOTE: Don't use the same model.radioOptions index twice, or you'll get a duplicated ID error --}}
 
-  {{#freestyle-collection title='Horizontal layout' defaultKey='all' inline=false as |collection|}}
+  {{#freestyle-collection title='c-input-checkbox layout' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
-      {{#freestyle-usage 'c-input-checkbox-default' title='Default State' usageTitle=labels.usage.title hbsTitle=labels.usage.hbs jsTitle=labels.usage.js scssTitle=labels.usage.scss}}
+    {{#freestyle-variant collection=collection key='horizontal'}}
+      {{#freestyle-usage 'c-input-checkbox-horizontal' title='horizontal' usageTitle=labels.usage.title}}
         {{c-input-checkbox
-            items=model.selectOptions
-            label="A Label"
-            layout="horizontal"
-            name="c-input-checkbox-1"
+          items=model.selectOptions
+          label="A Label"
+          layout="horizontal"
+          name="c-input-checkbox-01"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
-    {{#freestyle-variant collection=collection key='success'}}
-      {{#freestyle-usage 'c-input-checkbox-success' title='Success State' usageTitle=labels.usage.title}}
+    {{#freestyle-variant collection=collection key='vertical'}}
+      {{#freestyle-usage 'c-input-checkbox-vertical' title='vertical' usageTitle=labels.usage.title}}
         {{c-input-checkbox
-            items=model.selectOptions
-            label="A Label"
-            layout="horizontal"
-            name="c-input-checkbox-2"
-            state="success"
-            value="option1"
+          items=model.selectOptions
+          label="A Label"
+          layout="vertical"
+          name="c-input-checkbox-02"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
-    {{#freestyle-variant collection=collection key='error'}}
-      {{#freestyle-usage 'c-input-checkbox-error' title='Error State' usageTitle=labels.usage.title}}
+    {{#freestyle-variant collection=collection key='nested'}}
+      {{#freestyle-usage 'c-input-checkbox-nested' title='nested' usageTitle=labels.usage.title}}
         {{c-input-checkbox
-            items=model.selectOptions
-            label="A Label"
-            layout="horizontal"
-            name="c-input-checkbox-3"
-            state="error"
-            value="option1"
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-    {{#freestyle-variant collection=collection key='disabled'}}
-      {{#freestyle-usage 'c-input-checkbox-disabled' title='Disabled' usageTitle=labels.usage.title}}
-        {{c-input-checkbox
-            disabled=true
-            items=model.selectOptions
-            label="A Label"
-            layout="horizontal"
-            name="c-input-checkbox-4"
-            value="option1"
+          items=model.selectOptions
+          label="A Label"
+          layout="nested"
+          name="c-input-checkbox-03"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
   {{/freestyle-collection}}
 
-  {{#freestyle-collection title='Vertical layout' defaultKey='all' inline=false as |collection|}}
+  {{#freestyle-collection title='c-input-checkbox states' defaultKey='all' inline=false as |collection|}}
 
     {{#freestyle-variant collection=collection key='default'}}
       {{#freestyle-usage 'c-input-checkbox-vertical-default' title='Default' usageTitle=labels.usage.title}}
         {{c-input-checkbox
-            items=model.selectOptions
-            label="A Label"
-            layout="vertical"
-            name="c-input-checkbox-5"
-            value="option1"
+          items=model.selectOptions
+          label="A Label"
+          state="default"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='success'}}
-      {{#freestyle-usage 'c-input-checkbox-vertical-success' title='Success' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'c-input-checkbox-success' title='success' usageTitle=labels.usage.title}}
         {{c-input-checkbox
-            items=model.selectOptions
-            label="A Label"
-            layout="vertical"
-            name="c-input-checkbox-6"
-            value="option1"
-            state="success"
+          items=model.selectOptions
+          label="A Label"
+          state="success"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='warning'}}
+      {{#freestyle-usage 'c-input-checkbox-warning' title='warning' usageTitle=labels.usage.title}}
+        {{c-input-checkbox
+          items=model.selectOptions
+          label="A Label"
+          state="warning"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='error'}}
-      {{#freestyle-usage 'c-input-checkbox-vertical-error' title='Error' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'c-input-checkbox-error' title='error' usageTitle=labels.usage.title}}
         {{c-input-checkbox
-            items=model.selectOptions
-            label="A Label"
-            layout="vertical"
-            name="c-input-checkbox-7"
-            value="option1"
-            state="error"
+          items=model.selectOptions
+          label="A Label"
+          state="error"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='disabled'}}
-      {{#freestyle-usage 'c-input-checkbox-vertical-disabled' title='Disabled State' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'c-input-checkbox-disabled' title='disabled' usageTitle=labels.usage.title}}
         {{c-input-checkbox
-            disabled=true
-            items=model.selectOptions
-            label="A Label"
-            layout="vertical"
-            name="c-input-checkbox-8"
-            value="option1"
+          items=model.selectOptions
+          label="A Label"
+          disabled=true
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
   {{/freestyle-collection}}
 
-  {{#freestyle-collection title='Nested layout' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
-      {{#freestyle-usage 'c-input-checkbox-nested-default' title='Default State' usageTitle=labels.usage.title}}
-        {{c-input-checkbox
-            items=model.selectOptions
-            label="A Label"
-            layout="nested"
-            name="c-input-checkbox-9"
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
 
-    {{#freestyle-variant collection=collection key='success'}}
-      {{#freestyle-usage 'c-input-checkbox-nested-success' title='Success State' usageTitle=labels.usage.title}}
-        {{c-input-checkbox
-            state="success"
-            items=model.selectOptions
-            label="A Label"
-            layout="nested"
-            name="c-input-checkbox-10"
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-    {{#freestyle-variant collection=collection key='error'}}
-      {{#freestyle-usage 'c-input-checkbox-nested-error' title='Error State' usageTitle=labels.usage.title}}
-        {{c-input-checkbox
-            state="error"
-            items=model.selectOptions
-            label="A Label"
-            layout="nested"
-            name="c-input-checkbox-11"
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-    {{#freestyle-variant collection=collection key='disabled'}}
-      {{#freestyle-usage 'c-input-checkbox-nested-disabled' title='Disabled state' usageTitle=labels.usage.title}}
-        {{c-input-checkbox
-            disabled=true
-            items=model.selectOptions
-            label="A Label"
-            layout="nested"
-            name="c-input-checkbox-12"
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-  {{/freestyle-collection}}
-
-  {{#freestyle-collection title='special layouts' defaultKey='all' inline=false as |collection|}}
+  {{#freestyle-collection title='c-input-checkbox specials' defaultKey='all' inline=false as |collection|}}
 
     {{#freestyle-variant collection=collection key='labelfirst'}}
       {{#freestyle-usage 'c-input-checkbox-labelfirst' title='Label First option' usageTitle=labels.usage.title}}
         {{c-input-checkbox
-            items=model.selectOptions
-            layout="horizontal"
-            labelFirst=true
-            name="c-input-checkbox-16"
+          items=model.selectOptions
+          labelFirst=true
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -188,11 +119,8 @@
     {{#freestyle-variant collection=collection key='labelup'}}
       {{#freestyle-usage 'c-input-checkbox-labelup' title='Label Up option' usageTitle=labels.usage.title}}
         {{c-input-checkbox
-            items=model.selectOptions
-            layout="horizontal"
-            labelUp=true
-            name="c-input-checkbox-17"
-            required=true
+          items=model.selectOptions
+          labelUp=true
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -200,12 +128,11 @@
     {{#freestyle-variant collection=collection key='labelup-border'}}
       {{#freestyle-usage 'c-input-checkbox-labelup-border' title='Label Up option-border' usageTitle=labels.usage.title}}
         {{c-input-checkbox
-            items=model.selectOptions
-            layout="horizontal"
-            labelUp=true
-            insideScroll=true
-            innerPanel=true
-            inline=true
+          items=model.selectOptions
+          labelUp=true
+          insideScroll=true
+          innerPanel=true
+          inline=true
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -213,10 +140,9 @@
     {{#freestyle-variant collection=collection key='inline-outer-panel'}}
       {{#freestyle-usage 'c-input-checkbox-inline-outer-panel' title='inline-outer-panel' usageTitle=labels.usage.title}}
         {{c-input-checkbox
-            items=model.selectOptions
-            layout="horizontal"
-            labelUp=true
-            inlineOuterPanel=true
+          items=model.selectOptions
+          labelUp=true
+          inlineOuterPanel=true
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}

@@ -1,6 +1,5 @@
 import CFormGroup from '../c-form-group/component';
 
-// BEGIN-FREESTYLE-USAGE c-input-text-default
 export default CFormGroup.extend({
   defaultClassName: 'c-input-text',
   labelFirst: true,
@@ -19,4 +18,3 @@ export default CFormGroup.extend({
     }
   }
 });
-// END-FREESTYLE-USAGE

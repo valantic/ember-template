@@ -1,7 +1,6 @@
 import Ember from 'ember';
 import CFormGroup from '../c-form-group/component';
 
-// BEGIN-FREESTYLE-USAGE c-input-checkbox-default
 export default CFormGroup.extend({
   classNameBindings: [
     'labelFirst:c-input-checkbox--labelfirst',
@@ -15,6 +14,7 @@ export default CFormGroup.extend({
   layout: 'horizontal',
   innerPanel: false,
   border: 'thin',
+  value: '',
 
   // Closures
   onCheckboxChange(/* groupValue */) {},
@@ -62,4 +62,3 @@ export default CFormGroup.extend({
     }
   }
 });
-// END-FREESTYLE-USAGE

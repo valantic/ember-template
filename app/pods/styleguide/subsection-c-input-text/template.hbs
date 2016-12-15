@@ -8,148 +8,89 @@
     <p>The <em>c-input-text</em> component exists in these variants: <em>horizontal</em>, <em>vertical</em> and <em>nested</em>.</p>
   {{/freestyle-annotation}}
 
-  {{#freestyle-collection title='Horizontal C-INPUT-TEXT' defaultKey='all' inline=false as |collection|}}
+  {{#freestyle-collection title='c-input-text layouts' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
-      {{#freestyle-usage 'c-input-text-default' title='Default State' usageTitle=labels.usage.title hbsTitle=labels.usage.hbs jsTitle=labels.usage.js}}
+    {{#freestyle-variant collection=collection key='horizontal'}}
+      {{#freestyle-usage 'c-input-text-horizontal' title='horizontal' usageTitle=labels.usage.title}}
         {{c-input-text
-            label="A Label"
-            layout="horizontal"
-            name="c-input-text-1a"
-            placeholder="I'm a placeholder.."
+          label="A Label"
+          layout="horizontal"
+          placeholder="I'm a placeholder.."
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
-    {{#freestyle-variant collection=collection key='success'}}
-      {{#freestyle-usage 'c-input-text-success' title='Validation OK' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+    {{#freestyle-variant collection=collection key='vertical'}}
+      {{#freestyle-usage 'c-input-text-vertical' title='vertical' usageTitle=labels.usage.title}}
         {{c-input-text
-            label="A Label"
-            layout="horizontal"
-            name="c-input-text-3"
-            state="success"
-            value="The field's value"
+          label="A Label"
+          layout="vertical"
+          placeholder="I'm a placeholder.."
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
-    {{#freestyle-variant collection=collection key='error'}}
-      {{#freestyle-usage 'c-input-text-error' title='Validation Error' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+    {{#freestyle-variant collection=collection key='nested'}}
+      {{#freestyle-usage 'c-input-text-nested' title='nested' usageTitle=labels.usage.title}}
         {{c-input-text
-            label="A Label"
-            layout="horizontal"
-            name="c-input-text-4"
-            state="error"
-            value="The field's value"
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-    {{#freestyle-variant collection=collection key='disabled'}}
-      {{#freestyle-usage 'c-input-text-disabled' title='Disabled' usageTitle=labels.usage.title}}
-        {{c-input-text
-            disabled=true
-            label="A Label"
-            layout="horizontal"
-            name="c-input-text-5"
-            value="The field's value"
+          layout="nested"
+          placeholder="I'm a placeholder.."
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
   {{/freestyle-collection}}
 
-  {{#freestyle-collection title='Vertical C-INPUT-TEXT' defaultKey='all' inline=false as |collection|}}
+
+
+  {{#freestyle-collection title='c-input-text states' defaultKey='all' inline=false as |collection|}}
 
     {{#freestyle-variant collection=collection key='default'}}
-      {{#freestyle-usage 'c-input-text-vertical-default' title='Default' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+      {{#freestyle-usage 'c-input-text-default' title='default' usageTitle=labels.usage.title}}
         {{c-input-text
-            label="Unternehmen"
-            layout="vertical"
-            name="c-input-text-6"
-            value="movento AG"
+          label="A Label"
+          placeholder="I'm a placeholder.."
+          state="default"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='success'}}
-      {{#freestyle-usage 'c-input-text-vertical-success' title='Validation OK (Success State)' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+      {{#freestyle-usage 'c-input-text-success' title='success' usageTitle=labels.usage.title}}
         {{c-input-text
-            label="Unternehmen"
-            layout="vertical"
-            name="c-input-text-8"
-            state="success"
-            value="movento AG"
+          label="A Label"
+          placeholder="I'm a placeholder.."
+          state="success"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='warning'}}
+      {{#freestyle-usage 'c-input-text-warning' title='warning' usageTitle=labels.usage.title}}
+        {{c-input-text
+          label="A Label"
+          placeholder="I'm a placeholder.."
+          state="warning"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='error'}}
-      {{#freestyle-usage 'c-input-text-vertical-error' title='Validation Error (Error State)' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+      {{#freestyle-usage 'c-input-text-error' title='error' usageTitle=labels.usage.title}}
         {{c-input-text
-            label="Unternehmen"
-            name="c-input-text-9"
-            layout="vertical"
-            state="error"
+          label="A Label"
+          placeholder="I'm a placeholder.."
+          state="error"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='disabled'}}
-      {{#freestyle-usage 'c-input-text-vertical-disabled' title='Disabled State' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'c-input-text-disabled' title='disabled' usageTitle=labels.usage.title}}
         {{c-input-text
-            disabled=true
-            label="Unternehmen"
-            layout="vertical"
-            name="c-input-text-10"
-            value="movento AG"
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-  {{/freestyle-collection}}
-
-  {{#freestyle-collection title='Nested C-INPUT-TEXT' defaultKey='all' inline=false as |collection|}}
-
-    {{#freestyle-variant collection=collection key='default'}}
-      {{#freestyle-usage 'c-input-text-nested-default' title='Default State' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
-        {{c-input-text
-            placeholder="A Label"
-            layout="nested"
-            name="c-input-text-11"
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-    {{#freestyle-variant collection=collection key='success'}}
-      {{#freestyle-usage 'c-input-text-nested-success' title='Validation OK (Success State)' usageTitle=labels.usage.title}}
-        {{c-input-text
-            placeholder="A Label"
-            layout="nested"
-            name="c-input-text-13"
-            state="success"
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-    {{#freestyle-variant collection=collection key='error'}}
-      {{#freestyle-usage 'c-input-text-nested-error' title='Validation error (Error State)' usageTitle=labels.usage.title}}
-        {{c-input-text
-            placeholder="A Label"
-            layout="nested"
-            name="c-input-text-14"
-            state="error"
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-    {{#freestyle-variant collection=collection key='disabled'}}
-      {{#freestyle-usage 'c-input-text-nested-disabled' title='Disabled state' usageTitle=labels.usage.title}}
-        {{c-input-text
-            disabled=true
-            placeholder="A Label"
-            layout="nested"
-            name="c-input-text-15"
+          label="A Label"
+          placeholder="I'm a placeholder.."
+          disabled=true
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}

@@ -1,9 +1,14 @@
 $FreestyleUsage-maxWidth: 100%;
 
-.FreestyleGuide{
+.FreestyleGuide {
   .FreestyleGuide-content {
     max-width: 100%;
   }
+}
+
+div.FreestyleUsage-title {
+  color: $color-gray-dark;
+  font-weight: normal;
 }
 
 div.FreestyleGuide.ember-view{

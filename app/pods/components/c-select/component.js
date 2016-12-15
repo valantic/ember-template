@@ -1,6 +1,5 @@
 import CFormGroup from '../c-form-group/component';
 
-// BEGIN-FREESTYLE-USAGE c-select
 export default CFormGroup.extend({
   defaultClassName: 'c-select',
 
@@ -10,4 +9,3 @@ export default CFormGroup.extend({
     }
   }
 });
-// END-FREESTYLE-USAGE

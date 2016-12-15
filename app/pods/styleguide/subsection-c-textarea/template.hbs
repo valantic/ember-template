@@ -8,161 +8,89 @@
     <p>The <em>c-input-text</em> component exists in these variants: <em>horizontal</em>, <em>vertical</em> and <em>nested</em>.</p>
   {{/freestyle-annotation}}
 
-  {{#freestyle-collection title='Horizontal C-TEXTAREA' defaultKey='all' inline=false as |collection|}}
+  {{#freestyle-collection title='c-textarea layout' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
-      {{#freestyle-usage 'c-textarea-default' title='Default State' usageTitle=labels.usage.title hbsTitle=labels.usage.hbs jsTitle=labels.usage.js scssTitle=labels.usage.scss}}
+    {{#freestyle-variant collection=collection key='horizontal'}}
+      {{#freestyle-usage 'c-textarea-horizontal' title='horizontal' usageTitle=labels.usage.title}}
         {{c-textarea
-            name="c-textarea-1"
-            label="A Label"
-            layout="horizontal"
-            placeholder="I'm a placeholdertext..."
-            rows=3
+          label="A Label"
+          layout="horizontal"
+          placeholder="I'm a placeholdertext..."
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
-    {{#freestyle-variant collection=collection key='success'}}
-      {{#freestyle-usage 'c-textarea-success' title='Success State' usageTitle=labels.usage.title}}
+    {{#freestyle-variant collection=collection key='vertical'}}
+      {{#freestyle-usage 'c-textarea-vertical' title='vertical' usageTitle=labels.usage.title}}
         {{c-textarea
-            name="c-textarea-2"
-            label="A Label"
-            layout="horizontal"
-            value="Oh what a glorious day!"
-            state="success"
-            rows=3
+          label="A Label"
+          layout="vertical"
+          placeholder="I'm a placeholdertext..."
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
-    {{#freestyle-variant collection=collection key='error'}}
-      {{#freestyle-usage 'c-textarea-error' title='Error State' usageTitle=labels.usage.title}}
+    {{#freestyle-variant collection=collection key='nested'}}
+      {{#freestyle-usage 'c-textarea-nested' title='nested' usageTitle=labels.usage.title}}
         {{c-textarea
-            name="c-textarea-2"
-            label="A Label"
-            layout="horizontal"
-            value="Oh what a glorious day!"
-            state="error"
-            rows=3
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-    {{#freestyle-variant collection=collection key='disabled'}}
-      {{#freestyle-usage 'c-textarea-disabled' title='Disabled' usageTitle=labels.usage.title}}
-        {{c-textarea
-            disabled=true
-            name="c-textarea-3"
-            label="A Label"
-            layout="horizontal"
-            value="Oh what a glorious day!"
-            rows=3
+          layout="nested"
+          placeholder="I'm a placeholdertext..."
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
   {{/freestyle-collection}}
 
-  {{#freestyle-collection title='Vertical C-TEXTAREA' defaultKey='all' inline=false as |collection|}}
+
+
+  {{#freestyle-collection title='c-textarea states' defaultKey='all' inline=false as |collection|}}
 
     {{#freestyle-variant collection=collection key='default'}}
       {{#freestyle-usage 'c-textarea-vertical-default' title='Default State' usageTitle=labels.usage.title}}
         {{c-textarea
-            label="A Label"
-            layout="vertical"
-            name="c-textarea-4"
-            placeholder="I'm the placeholder of this textarea"
-            rows=3
+          label="A Label"
+          placeholder="I'm the placeholder of this textarea"
+          state="default"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='success'}}
-      {{#freestyle-usage 'c-textarea-vertical-success' title='Success State' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'c-textarea-vertical-success' title='success State' usageTitle=labels.usage.title}}
         {{c-textarea
-            label="A Label"
-            layout="vertical"
-            name="c-textarea-5"
-            state="success"
-            value="I'm the value of this textarea"
-            rows=3
+          label="A Label"
+          placeholder="I'm the placeholder of this textarea"
+          state="success"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='warning'}}
+      {{#freestyle-usage 'c-textarea-vertical-warning' title='warning State' usageTitle=labels.usage.title}}
+        {{c-textarea
+          label="A Label"
+          placeholder="I'm the placeholder of this textarea"
+          state="warning"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='error'}}
-      {{#freestyle-usage 'c-textarea-vertical-error' title='Error State' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'c-textarea-vertical-error' title='error State' usageTitle=labels.usage.title}}
         {{c-textarea
-            label="A Label"
-            layout="vertical"
-            name="c-textarea-5"
-            state="error"
-            value="Oh what a glorious day!"
-            rows=3
+          label="A Label"
+          placeholder="I'm the placeholder of this textarea"
+          state="error"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='disabled'}}
-      {{#freestyle-usage 'c-textarea-vertical-disabled' title='Disabled' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'c-textarea-vertical-disabled' title='disabled State' usageTitle=labels.usage.title}}
         {{c-textarea
-            disabled=true
-            label="A Label"
-            layout="vertical"
-            name="c-textarea-6"
-            value="Oh what a glorious day!"
-            rows=3
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-  {{/freestyle-collection}}
-
-  {{#freestyle-collection title='Nested C-TEXTAREA' defaultKey='all' inline=false as |collection|}}
-
-    {{#freestyle-variant collection=collection key='default'}}
-      {{#freestyle-usage 'c-textarea-nested-default' title='Default State' usageTitle=labels.usage.title}}
-        {{c-textarea
-            placeholder="A placeholder"
-            layout="nested"
-            name="c-textarea-7"
-            rows=3
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-    {{#freestyle-variant collection=collection key='success'}}
-      {{#freestyle-usage 'c-textarea-nested-success' title='Success State' usageTitle=labels.usage.title}}
-        {{c-textarea
-            placeholder="A placeholder"
-            layout="nested"
-            name="c-textarea-8"
-            state="success"
-            rows=3
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-    {{#freestyle-variant collection=collection key='error'}}
-      {{#freestyle-usage 'c-textarea-nested-error' title='Error State' usageTitle=labels.usage.title}}
-        {{c-textarea
-            placeholder="A placeholder"
-            layout="nested"
-            name="c-textarea-8"
-            state="error"
-            rows=3
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-    {{#freestyle-variant collection=collection key='disabled'}}
-      {{#freestyle-usage 'c-textarea-nested-disabled' title='Disabled' usageTitle=labels.usage.title}}
-        {{c-textarea
-            disabled=true
-            placeholder="A placeholder"
-            layout="nested"
-            name="c-textarea-9"
-            rows=3
+          label="A Label"
+          placeholder="I'm the placeholder of this textarea"
+          disabled=true
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}

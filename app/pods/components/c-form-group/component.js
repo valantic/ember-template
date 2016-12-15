@@ -1,7 +1,6 @@
 import Ember from 'ember';
 import ComponentUtils from 'ember-project-template/mixins/component-utils';
 
-// BEGIN-FREESTYLE-USAGE c-form-group
 export default Ember.Component.extend(ComponentUtils, {
   tagName: 'div',
   classNames: null,
@@ -83,4 +82,3 @@ export default Ember.Component.extend(ComponentUtils, {
     return this.getPlaceHolder();
   })
 });
-// END-FREESTYLE-USAGE

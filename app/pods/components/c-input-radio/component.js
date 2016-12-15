@@ -1,7 +1,6 @@
 import Ember from 'ember';
 import CFormGroup from '../c-form-group/component';
 
-// BEGIN-FREESTYLE-USAGE c-input-radio-default
 export default CFormGroup.extend({
   classNameBindings: [
     'labelFirst:c-input-radio--labelfirst',
@@ -62,4 +61,3 @@ export default CFormGroup.extend({
     }
   }
 });
-// END-FREESTYLE-USAGE

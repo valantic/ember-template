@@ -1,6 +1,5 @@
 import CFormGroup from '../c-form-group/component';
 
-// BEGIN-FREESTYLE-USAGE c-textarea-default
 export default CFormGroup.extend({
   defaultClassName: 'c-textarea',
   rows: 1,
@@ -14,4 +13,3 @@ export default CFormGroup.extend({
     }
   }
 });
-// END-FREESTYLE-USAGE

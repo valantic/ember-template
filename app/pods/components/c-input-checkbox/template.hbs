@@ -1,0 +1,69 @@
+{{!-- BEGIN-FREESTYLE-USAGE c-input-checkbox-default --}}
+{{#c-form-combo layout=layout state=state insideScroll=insideScroll scrollArrows=scrollArrows border=border inline=inlineOuterPanel}}
+  {{#if label}}
+    {{e-label
+      class=labelClassName
+      layout=layout
+      leading=true
+      noLabelVisible=noLabelVisible
+      required=required
+      state=state
+      text=label
+    }}
+  {{/if}}
+  <span class="{{defaultClassName}}__options {{defaultClassName}}__options--{{layout}}">
+    {{#each items as |item|}}
+      {{#if innerPanel}}
+        {{#e-panel
+          inline=inline
+          spacingRight=true
+        }}
+          {{#e-label
+            class=item.className
+            disabled=disabled
+            labelFirst=labelFirst
+            labelUp=labelUp
+            noLabelVisible=noItemLabelVisible
+            mouseUpped="mouseUpped"
+            text=item.label
+            type="checkbox"
+            layout=layout
+            selected=item.checked
+          }}
+            {{e-input-checkbox
+              onCheckboxChange=(action "onCheckboxChange" item)
+              class=fieldClassName
+              disabled=disabled
+              id=item.alias
+              name=item.value
+              checked=item.checked
+            }}
+          {{/e-label}}
+        {{/e-panel}}
+      {{else}}
+        {{#e-label
+          class=item.className
+          disabled=disabled
+          labelFirst=labelFirst
+          labelUp=labelUp
+          noLabelVisible=noItemLabelVisible
+          mouseUpped="mouseUpped"
+          text=item.label
+          type="checkbox"
+          layout=layout
+          selected=item.checked
+        }}
+          {{e-input-checkbox
+            onCheckboxChange=(action "onCheckboxChange" item)
+            class=fieldClassName
+            disabled=disabled
+            id=item.alias
+            name=item.value
+            checked=item.checked
+          }}
+        {{/e-label}}
+      {{/if}}
+    {{/each}}
+  </span>
+{{/c-form-combo}}
+{{!-- END-FREESTYLE-USAGE --}}

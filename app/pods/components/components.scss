@@ -8,7 +8,7 @@
 @import 'core/spacing/settings';
 @import 'core/spacing/spacing';
 
-//Elements
+// Elements
 @import 'c-form-control/c-form-control';
 @import 'e-heading/e-heading';
 @import 'e-input-text/e-input-text';
@@ -21,6 +21,10 @@
 @import 'e-select/e-select';
 @import 'e-horizontal-ruler/e-horizontal-ruler';
 
+// Components
+@import 'c-form-group/c-form-group';
+@import 'c-input-text/c-input-text';
+@import 'c-input-checkbox/c-input-checkbox';
 
 //IMPORT COMPONENTS HERE
 //@import 'c-my-component/c-mycomponent'; //scss file should have the components name to simplify debugging

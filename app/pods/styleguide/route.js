@@ -22,17 +22,26 @@ export default Ember.Route.extend(StyleguideFunctions, {
         {
           label: 'Option 1',
           value: 'option1',
-          selected: true
+          selected: true,
+          checked: true
         },
         {
           label: 'Option 2',
           value: 'option2',
-          selected: false
+          selected: false,
+          checked: false
         },
         {
           label: 'Option 3',
           value: 'option3',
-          selected: false
+          selected: false,
+          checked: false
+        },
+        {
+          label: 'Option 4',
+          value: 'option4',
+          selected: false,
+          checked: false
         }
       ]
     });

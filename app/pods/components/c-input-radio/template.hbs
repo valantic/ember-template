@@ -1,0 +1,86 @@
+{{!-- BEGIN-FREESTYLE-USAGE c-input-radio-default --}}
+{{#c-form-combo
+  layout=layout
+  state=state
+  inline=inline
+  bigPaddingFlanks=bigPaddingFlanks
+  inlineSmUp=inlineSmUp
+  backgroundColor=backgroundColor
+}}
+  {{#if label}}
+    {{e-label
+      class=labelClassName
+      layout=layout
+      leading=true
+      noLabelVisible=noLabelVisible
+      required=required
+      state=state
+      text=label
+    }}
+  {{/if}}
+  <span class="{{defaultClassName}}__options {{defaultClassName}}__options--{{layout}} {{noInputVisibleClassName}} {{gridClassName}}">
+    {{#if grid}}
+      <div class="row">
+        {{#each items as |item|}}
+          <div class="{{gridClassNames}}">
+            {{#e-label
+              class=item.className
+              clicked="clicked"
+              disabled=disabled
+              labelFirst=labelFirst
+              labelUp=labelUp
+              layout=layout
+              noInputVisible=noInputVisible
+              mouseUpped="mouseUpped"
+              selected=item.selected
+              text=item.label
+              type="radio"
+            }}
+              {{e-input-radio
+                changed="changed"
+                class=fieldClassName
+                disabled=disabled
+                id=item.alias
+                groupValue=groupValue
+                name=name
+                value=item.value
+                noInputVisible=noInputVisible
+                text=item.label
+                grid=grid
+              }}
+            {{/e-label}}
+          </div>
+        {{/each}}
+      </div>
+    {{else}}
+      {{#each items as |item|}}
+        {{#e-label
+          class=item.className
+          clicked="clicked"
+          disabled=disabled
+          labelFirst=labelFirst
+          labelUp=labelUp
+          layout=layout
+          noInputVisible=noInputVisible
+          mouseUpped="mouseUpped"
+          selected=item.selected
+          text=item.label
+          type="radio"
+        }}
+          {{e-input-radio
+            changed="changed"
+            class=fieldClassName
+            disabled=disabled
+            id=item.alias
+            groupValue=groupValue
+            name=name
+            value=item.value
+            noInputVisible=noInputVisible
+            text=item.label
+          }}
+        {{/e-label}}
+      {{/each}}
+    {{/if}}
+  </span>
+{{/c-form-combo}}
+{{!-- END-FREESTYLE-USAGE --}}

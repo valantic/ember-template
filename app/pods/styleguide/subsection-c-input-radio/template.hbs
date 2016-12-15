@@ -1,0 +1,241 @@
+{{! disable all rules for this template }}
+<!-- template-lint disable=true -->
+{{#freestyle-subsection name='c-input-radio' section=section}}
+
+  {{#freestyle-annotation}}
+    <p>Extends: <em>c-form-group</em></p>
+    <p>We're demonstrating the <em>c-input-radio</em> element in these states: <em>default</em>, <em>focus</em> and <em>disabled</em>.</p>
+    <p>The <em>c-input-radio</em> component exists in these variants: <em>horizontal</em>, <em>vertical</em> and <em>nested</em>.</p>
+    <p>Currently the visible element is a default browser rendering. In the light of progressive enhancement, we will replace the standard visual style with our own at a later stage.</p>
+    <p>The element options are set through the <code>items</code> attribute which accepts an <em>array</em>.</p>
+  {{/freestyle-annotation}}
+
+  {{!-- NOTE: Don't use the same model.radioOptions index twice, or you'll get a duplicated ID error --}}
+
+  {{#freestyle-collection title='Horizontal layout' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-input-radio-default' title='Default State' usageTitle=labels.usage.title hbsTitle=labels.usage.hbs jsTitle=labels.usage.js scssTitle=labels.usage.scss}}
+        {{c-input-radio
+          items=model.selectOptions
+          label="A Label"
+          layout="horizontal"
+          name="c-input-radio-20"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='success'}}
+      {{#freestyle-usage 'c-input-radio-success' title='Success State' usageTitle=labels.usage.title}}
+        {{c-input-radio
+          items=model.selectOptions
+          label="A Label"
+          layout="horizontal"
+          name="c-input-radio-21"
+          state="success"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='error'}}
+      {{#freestyle-usage 'c-input-radio-error' title='Error State' usageTitle=labels.usage.title}}
+        {{c-input-radio
+          items=model.selectOptions
+          label="A Label"
+          layout="horizontal"
+          name="c-input-radio-22"
+          state="error"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='disabled'}}
+      {{#freestyle-usage 'c-input-radio-disabled' title='Disabled' usageTitle=labels.usage.title}}
+        {{c-input-radio
+          disabled=true
+          items=model.selectOptions
+          label="A Label"
+          layout="horizontal"
+          name="c-input-radio-23"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+  {{/freestyle-collection}}
+
+  {{#freestyle-collection title='Vertical layout' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-input-radio-vertical-default' title='Default' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+        {{c-input-radio
+          items=model.selectOptions
+          label="A Label"
+          layout="vertical"
+          name="c-input-radio-26"
+          value="option1"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='success'}}
+      {{#freestyle-usage 'c-input-radio-vertical-success' title='Success State' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+        {{c-input-radio
+          items=model.selectOptions
+          label="A Label"
+          layout="vertical"
+          name="c-input-radio-27"
+          value="option1"
+          state="success"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='error'}}
+      {{#freestyle-usage 'c-input-radio-vertical-error' title='Error State' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+        {{c-input-radio
+          items=model.selectOptions
+          label="A Label"
+          layout="vertical"
+          name="c-input-radio-28"
+          value="option1"
+          state="error"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='disabled'}}
+      {{#freestyle-usage 'c-input-radio-vertical-disabled' title='Disabled State' usageTitle=labels.usage.title}}
+        {{c-input-radio
+          disabled=true
+          items=model.selectOptions
+          label="A Label"
+          layout="vertical"
+          name="c-input-radio-29"
+          value="option1"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+  {{/freestyle-collection}}
+
+  {{#freestyle-collection title='Nested layout' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-input-radio-nested-default' title='Default State' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+        {{c-input-radio
+          items=model.selectOptions
+          label="A Label"
+          layout="nested"
+          name="c-input-radio-31"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='success'}}
+      {{#freestyle-usage 'c-input-radio-nested-success' title='Success State' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+        {{c-input-radio
+          items=model.selectOptions
+          label="A Label"
+          layout="nested"
+          name="c-input-radio-32"
+          state="success"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='error'}}
+      {{#freestyle-usage 'c-input-radio-nested-error' title='Error State' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+        {{c-input-radio
+          items=model.selectOptions
+          label="A Label"
+          layout="nested"
+          name="c-input-radio-33"
+          state="error"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='disabled'}}
+      {{#freestyle-usage 'c-input-radio-nested-disabled' title='Disabled state' usageTitle=labels.usage.title}}
+        {{c-input-radio
+          disabled=true
+          items=model.selectOptions
+          label="A Label"
+          layout="nested"
+          name="c-input-radio-34"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+  {{/freestyle-collection}}
+
+  {{#freestyle-collection title='Noinput layout' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='Noinput-default'}}
+      {{#freestyle-usage 'c-input-radio-noinput-default' title='Noinput Default' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+        {{c-input-radio
+          items=model.selectOptions
+          layout="horizontal"
+          name="c-input-radio-35"
+          noInputVisible=true
+          label="A label"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='Noinput-grid'}}
+      {{#freestyle-usage 'c-input-radio-noinput-grid-success' title='Noinput grid Success' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+        {{c-input-radio
+          items=model.selectOptions
+          layout="nested"
+          name="c-input-radio-36"
+          noInputVisible=true
+          label="A label"
+          grid=true
+          gridClassNames="col-xxs-6 col-xs-4 col-sm-3"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='Noinput-success'}}
+      {{#freestyle-usage 'c-input-radio-noinput-success' title='Noinput Success' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+        {{c-input-radio
+          items=model.selectOptions
+          layout="nested"
+          name="c-input-radio-37"
+          noInputVisible=true
+          state="success"
+          label="A label"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='Noinput-error'}}
+      {{#freestyle-usage 'c-input-radio-noinput-error' title='Noinput Error' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+        {{c-input-radio
+          items=model.selectOptions
+          layout="vertical"
+          name="c-input-radio-38"
+          noInputVisible=true
+          state="error"
+          label="A label"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='Noinput-disabled'}}
+      {{#freestyle-usage 'c-input-radio-noinput-disabled' title='Noinput Disabled' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+        {{c-input-radio
+          items=model.selectOptions
+          layout="nested"
+          name="c-input-radio-39"
+          noInputVisible=true
+          disabled=true
+          label="A label"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+  {{/freestyle-collection}}
+
+{{/freestyle-subsection}}

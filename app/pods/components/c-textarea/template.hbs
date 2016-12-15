@@ -1,0 +1,82 @@
+{{!-- BEGIN-FREESTYLE-USAGE c-textarea-default --}}
+{{#c-form-combo layout=layout state=state}}
+  {{#if fieldId}}
+  {{!-- We have a fieldId so we're not wrapping the label --}}
+    {{#if label.length}}
+      {{e-label
+        class=labelClassName
+        for=fieldId
+        layout=layout
+        required=required
+        state=state
+        text=label
+        leading=true
+      }}
+    {{/if}}
+    {{e-textarea
+      autocomplete=autocomplete
+      class=fieldClassName
+      cols=cols
+      disabled=disabled
+      id=fieldId
+      hasHover=hasHover
+      hasFocus=hasFocus
+      isActive=isActive
+      layout=layout
+      name=name
+      placeholder=thePlaceholder
+      rows=rows
+      state=state
+      title=label
+      value=value
+    }}
+  {{else}}
+  {{!-- No fieldId, so we're wrapping the label --}}
+    {{#if label}}
+      {{#e-label
+        class=labelClassName
+        labelFirst=true
+        layout=layout
+        required=required
+        state=state
+        text=label
+        leading=true
+      }}
+        {{e-textarea
+          autocomplete=autocomplete
+          class=fieldClassName
+          cols=cols
+          disabled=disabled
+          hasHover=hasHover
+          hasFocus=hasFocus
+          isActive=isActive
+          layout=layout
+          name=name
+          placeholder=thePlaceholder
+          rows=rows
+          state=state
+          title=label
+          value=value
+        }}
+      {{/e-label}}
+    {{else}}
+      {{e-textarea
+        autocomplete=autocomplete
+        class=fieldClassName
+        cols=cols
+        disabled=disabled
+        hasHover=hasHover
+        hasFocus=hasFocus
+        isActive=isActive
+        layout=layout
+        name=name
+        placeholder=thePlaceholder
+        rows=rows
+        state=state
+        title=label
+        value=value
+      }}
+    {{/if}}
+  {{/if}}
+{{/c-form-combo}}
+{{!-- END-FREESTYLE-USAGE --}}

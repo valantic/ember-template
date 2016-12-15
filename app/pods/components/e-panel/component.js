@@ -109,8 +109,10 @@ export default Ember.Component.extend(ResizeAware, {
   _hasScrollBar() {
     const htmlScrollWrapper = this.element.querySelector('.e-panel__inner');
     const htmlScrollPanel = this.element.querySelector('.e-panel__inner--insideScroll');
-    const paddingLeft = parseInt(window.getComputedStyle(htmlScrollWrapper, null).getPropertyValue('padding-left'), 10);
-    const paddingRight = parseInt(window.getComputedStyle(htmlScrollWrapper, null).getPropertyValue('padding-right'), 10);
+    const paddingLeft
+        = parseInt(window.getComputedStyle(htmlScrollWrapper, null).getPropertyValue('padding-left'), 10);
+    const paddingRight
+        = parseInt(window.getComputedStyle(htmlScrollWrapper, null).getPropertyValue('padding-right'), 10);
     const wrapperWidth = htmlScrollWrapper.clientWidth - paddingLeft - paddingRight;
     const scrollPanelWidth = htmlScrollPanel.scrollWidth;
 

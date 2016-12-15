@@ -1,0 +1,39 @@
+// BEGIN-FREESTYLE-USAGE l-main-header
+.l-main-header {
+  position: relative;
+  width: 100%;
+  background-color: $color-primary-light;
+
+  &__topline {
+    width: 100%;
+    height: 10px;
+    margin-bottom: $spacing--15;
+    background-color: $color-primary-dark;
+  }
+
+  &__title {
+    margin-top: $spacing--30;
+    color: $color-primary-dark;
+
+    @media #{$media-screen-sm-min} {
+      display: inline-block;
+      margin-top: 14px;
+      margin-bottom: $spacing--30;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    z-index: $z-index-stack-10;
+    top: $spacing--30;
+    right: $spacing--15;
+    height: 40px;
+
+    @media #{$media-screen-sm-min} {
+      position: static;
+      float: right;
+      height: 65px;
+    }
+  }
+}
+// END-FREESTYLE-USAGE

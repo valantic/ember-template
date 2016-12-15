@@ -1,0 +1,14 @@
+{{! disable all rules for this template }}
+<!-- template-lint disable=true -->
+{{#freestyle-subsection name='l-main-header' section=section}}
+
+  {{#freestyle-annotation}}
+    <p>Standard Header</p>
+  {{/freestyle-annotation}}
+
+  {{#freestyle-usage 'l-main-header' title='Default' jsTitle=labels.usage.js scssTitle=labels.usage.scss}}
+    {{l-main-header
+        title="Example-title-header"}}
+  {{/freestyle-usage}}
+
+{{/freestyle-subsection}}

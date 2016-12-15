@@ -1,0 +1,95 @@
+{{!-- BEGIN-FREESTYLE-USAGE c-input-text-default --}}
+{{#c-form-combo
+    layout=layout
+    state=state
+    bigPaddingFlanks=bigPaddingFlanks
+}}
+  {{#if fieldId}}
+  {{!-- We have a fieldId so we're not wrapping the label --}}
+    {{#if label}}
+      {{e-label
+          class=labelClassName
+          for=fieldId
+          layout=layout
+          required=required
+          state=state
+          text=label
+          leading=true
+      }}
+    {{/if}}
+    {{e-input-text
+        autocomplete=autocomplete
+        autofocus=autofocus
+        class=fieldClassName
+        disabled=disabled
+        doFocusOut="doFocusOut"
+        hasHover=hasHover
+        hasFocus=hasFocus
+        id=fieldId
+        isActive=isActive
+        layout=layout
+        name=name
+        placeholder=thePlaceholder
+        readonly=readonly
+        required=required
+        state=state
+        title=label
+        type=type
+        value=value
+    }}
+  {{else}}
+  {{!-- No fieldId, so we're wrapping the label --}}
+    {{#if label}}
+      {{#e-label
+          class=labelClassName
+          labelFirst=labelFirst
+          layout=layout
+          required=required
+          state=state
+          text=label
+          leading=true
+      }}
+        {{e-input-text
+            autocomplete=autocomplete
+            autofocus=autofocus
+            class=fieldClassName
+            disabled=disabled
+            doFocusOut="doFocusOut"
+            hasHover=hasHover
+            hasFocus=hasFocus
+            isActive=isActive
+            layout=layout
+            name=name
+            placeholder=thePlaceholder
+            readonly=readonly
+            required=required
+            state=state
+            title=label
+            type=type
+            value=value
+        }}
+      {{/e-label}}
+    {{else}}
+      {{e-input-text
+          autocomplete=autocomplete
+          class=fieldClassName
+          disabled=disabled
+          hasHover=hasHover
+          hasFocus=hasFocus
+          isActive=isActive
+          layout=layout
+          name=name
+          doFocusOut="doFocusOut"
+          placeholder=thePlaceholder
+          readonly=readonly
+          required=required
+          state=state
+          title=label
+          type=type
+          value=value
+      }}
+    {{/if}}
+
+  {{/if}}
+{{!-- END-FREESTYLE-USAGE --}}
+{{/c-form-combo}}

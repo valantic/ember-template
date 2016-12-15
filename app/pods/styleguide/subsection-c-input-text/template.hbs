@@ -1,0 +1,159 @@
+{{! disable all rules for this template }}
+<!-- template-lint disable=true -->
+{{#freestyle-subsection name='c-input-text' section=section}}
+
+  {{#freestyle-annotation}}
+    <p>Extends: <em>c-form-group</em></p>
+    <p>We're demonstrating the <em>c-input-text</em> element in these states: <em>default</em>, <em>focus</em>, <em>validation ok (success)</em>, <em>validation error</em> and <em>disabled</em>.</p>
+    <p>The <em>c-input-text</em> component exists in these variants: <em>horizontal</em>, <em>vertical</em> and <em>nested</em>.</p>
+  {{/freestyle-annotation}}
+
+  {{#freestyle-collection title='Horizontal C-INPUT-TEXT' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-input-text-default' title='Default State' usageTitle=labels.usage.title hbsTitle=labels.usage.hbs jsTitle=labels.usage.js}}
+        {{c-input-text
+            label="A Label"
+            layout="horizontal"
+            name="c-input-text-1a"
+            placeholder="I'm a placeholder.."
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='success'}}
+      {{#freestyle-usage 'c-input-text-success' title='Validation OK' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+        {{c-input-text
+            label="A Label"
+            layout="horizontal"
+            name="c-input-text-3"
+            state="success"
+            value="The field's value"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='error'}}
+      {{#freestyle-usage 'c-input-text-error' title='Validation Error' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+        {{c-input-text
+            label="A Label"
+            layout="horizontal"
+            name="c-input-text-4"
+            state="error"
+            value="The field's value"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='disabled'}}
+      {{#freestyle-usage 'c-input-text-disabled' title='Disabled' usageTitle=labels.usage.title}}
+        {{c-input-text
+            disabled=true
+            label="A Label"
+            layout="horizontal"
+            name="c-input-text-5"
+            value="The field's value"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+  {{/freestyle-collection}}
+
+  {{#freestyle-collection title='Vertical C-INPUT-TEXT' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-input-text-vertical-default' title='Default' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+        {{c-input-text
+            label="Unternehmen"
+            layout="vertical"
+            name="c-input-text-6"
+            value="movento AG"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='success'}}
+      {{#freestyle-usage 'c-input-text-vertical-success' title='Validation OK (Success State)' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+        {{c-input-text
+            label="Unternehmen"
+            layout="vertical"
+            name="c-input-text-8"
+            state="success"
+            value="movento AG"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='error'}}
+      {{#freestyle-usage 'c-input-text-vertical-error' title='Validation Error (Error State)' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+        {{c-input-text
+            label="Unternehmen"
+            name="c-input-text-9"
+            layout="vertical"
+            state="error"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='disabled'}}
+      {{#freestyle-usage 'c-input-text-vertical-disabled' title='Disabled State' usageTitle=labels.usage.title}}
+        {{c-input-text
+            disabled=true
+            label="Unternehmen"
+            layout="vertical"
+            name="c-input-text-10"
+            value="movento AG"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+  {{/freestyle-collection}}
+
+  {{#freestyle-collection title='Nested C-INPUT-TEXT' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-input-text-nested-default' title='Default State' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+        {{c-input-text
+            placeholder="A Label"
+            layout="nested"
+            name="c-input-text-11"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='success'}}
+      {{#freestyle-usage 'c-input-text-nested-success' title='Validation OK (Success State)' usageTitle=labels.usage.title}}
+        {{c-input-text
+            placeholder="A Label"
+            layout="nested"
+            name="c-input-text-13"
+            state="success"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='error'}}
+      {{#freestyle-usage 'c-input-text-nested-error' title='Validation error (Error State)' usageTitle=labels.usage.title}}
+        {{c-input-text
+            placeholder="A Label"
+            layout="nested"
+            name="c-input-text-14"
+            state="error"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='disabled'}}
+      {{#freestyle-usage 'c-input-text-nested-disabled' title='Disabled state' usageTitle=labels.usage.title}}
+        {{c-input-text
+            disabled=true
+            placeholder="A Label"
+            layout="nested"
+            name="c-input-text-15"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+  {{/freestyle-collection}}
+
+{{/freestyle-subsection}}

@@ -1,0 +1,38 @@
+@mixin background-gradient ($color1, $color2) {
+  background: $color2;
+  background: -webkit-linear-gradient($color1, $color2);
+  background: -o-linear-gradient($color1, $color2);
+  background: -moz-linear-gradient($color1, $color2);
+  background: linear-gradient($color1, $color2);
+}
+
+@mixin flex-direction ($direction) {
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+@mixin flex ($value) {
+  -webkit-flex: $value;
+  -ms-flex: $value;
+  flex: $value;
+}
+
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.l-default {
+  @include background-gradient($color-gray-light, $color-gray-white);
+  @include display-flex();
+  @include flex-direction(column);
+  height: 100vh;
+}
+
+.content-wrapper {
+  @include flex(1 0 auto);
+}

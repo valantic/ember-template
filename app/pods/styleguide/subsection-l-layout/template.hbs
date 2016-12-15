@@ -1,0 +1,24 @@
+{{! disable all rules for this template }}
+<!-- template-lint disable=true -->
+{{#freestyle-subsection name='l-layout' section=section}}
+
+  {{#freestyle-annotation}}
+    <h2>Definition</h2>
+    <p>Layouts are build by simple ember components. They are used to wrap content inside route templates.</p>
+    <h2>Naming</h2>
+    <p>Layout ember components are starting with 'l-'</p>
+  {{/freestyle-annotation}}
+
+  {{#freestyle-usage 'l-default' title='l-default' usageTitle=l-default}}
+    {{#l-default}}
+      {{outlet}}
+    {{/l-default}}
+  {{/freestyle-usage}}
+
+  {{#freestyle-usage 'l-styleguide' title='l-styleguide' usageTitle=l-styleguide}}
+    {{#l-styleguide}}
+      {{outlet}}
+    {{/l-styleguide}}
+  {{/freestyle-usage}}
+
+{{/freestyle-subsection}}

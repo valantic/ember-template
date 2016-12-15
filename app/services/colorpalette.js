@@ -4,11 +4,11 @@ export default Ember.Service.extend({
   primaryColours: {
     dark: {
       name: '$color-primary-dark',
-      base: '#005DAD'
+      base: '#9FC204'
     },
     light: {
       name: '$color-primary-light',
-      base: '#CCDAEF'
+      base: '#54666F'
     }
   },
   statusColours: {

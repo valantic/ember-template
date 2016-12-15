@@ -4,40 +4,57 @@
 
   <div class="FreestyleAnnotation">
     <p>This elements are here only visible, they aren't clickable because they reach there functionality in the c-input-radio component together with a "fake-label"</p>
-    <a href="">c-input-radio</a>
+    <a href="styleguide?s=Components&ss=c-input-radio">c-input-radio</a>
   </div>
 
   {{#freestyle-annotation}}
     <p>Extends: <em>e-input</em></p>
   {{/freestyle-annotation}}
 
-  {{#freestyle-usage 'e-input-radio' title='Default' usageTitle=labels.usage.title jsTitle=labels.usage.js}}
-    {{e-input-radio
-        name="radio1"
-    }}
-  {{/freestyle-usage}}
-  {{#freestyle-usage 'e-input-radio-checked' title='Default Checked' usageTitle=labels.usage.title}}
-    {{e-input-radio
-        groupValue="radio1"
-        name="radio1"
-        value="radio1"
-    }}
-  {{/freestyle-usage}}
-  {{#freestyle-usage 'e-input-radio-classname' title='Default with class name' usageTitle=labels.usage.title}}
-    {{e-input-radio
-        groupValue="radio1"
-        class="lolspan-2"
-        name="radio1"
-        value="radio1"
-    }}
-  {{/freestyle-usage}}
+  {{#freestyle-collection title='e-input-radio' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'e-input-radio-default' title='e-input-radio default' usageTitle=labels.usage.title}}
+        {{e-input-radio
+          name="radio1"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='checked'}}
+      {{#freestyle-usage 'e-input-radio-checked' title='e-input-radio checked' usageTitle=labels.usage.title}}
+        {{e-input-radio}}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='with class name'}}
+      {{#freestyle-usage 'e-input-radio-class' title='e-input-radio class' usageTitle=labels.usage.title}}
+        {{e-input-radio
+          name="radio1"
+          class="ExampleClassRadio"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='button style radio'}}
+      {{#freestyle-usage 'e-input-radio-button' title='e-input-radio button' usageTitle=labels.usage.title}}
+        {{e-input-radio
+            name="radio1"
+            noInputVisible=true
+            text="click-me"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+  {{/freestyle-collection}}
+
 
   {{#freestyle-collection title='e-input-radio states' defaultKey='all' inline=false as |collection|}}
 
     {{#freestyle-variant collection=collection key='default'}}
       {{#freestyle-usage 'e-input-radio-default' title='e-input-radio default' usageTitle=labels.usage.title}}
         {{e-input-radio
-            name="radio1"
+          name="radio1"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -45,7 +62,7 @@
     {{#freestyle-variant collection=collection key='success'}}
       {{#freestyle-usage 'e-input-radio-success' title='e-input-radio success' usageTitle=labels.usage.title}}
         {{e-input-radio
-            state="success"
+          state="success"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -53,7 +70,7 @@
     {{#freestyle-variant collection=collection key='warning'}}
       {{#freestyle-usage 'e-input-radio-warning' title='e-input-radio warning' usageTitle=labels.usage.title}}
         {{e-input-radio
-            state="warning"
+          state="warning"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -61,7 +78,15 @@
     {{#freestyle-variant collection=collection key='error'}}
       {{#freestyle-usage 'e-input-radio-error' title='e-input-radio error' usageTitle=labels.usage.title}}
         {{e-input-radio
-            state="error"
+          state="error"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='disabled'}}
+      {{#freestyle-usage 'e-input-radio-disabled' title='e-input-radio disabled' usageTitle=labels.usage.title}}
+        {{e-input-radio
+          disabled=true
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}

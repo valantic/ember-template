@@ -1,16 +1,6 @@
-/* BEGIN-FREESTYLE-USAGE e-button-inactive--notes
-
-**NOTE:** The CSS declaration "`width: inherit;`" was added to make Ember FreeStyle recognize the code snippets as SCSS.
-If the block of CSS code does not end with a standard CSS rule, eg. it ends with a SCSS variable, Ember Freestyle recognizes the snippet as HBS,
-and won't render the snippet block using the correct syntax highlighting as SCSS.
-It is not necessary to add the width when the last CSS declaration is normal CSS.
-
- END-FREESTYLE-USAGE */
-
 $e-button-border-radius: 3px;
 $e-button-padding: 6px 10px 5px;
 
-// BEGIN-FREESTYLE-USAGE e-button-inactive
 .e-button,
 .e-button__button {
   -webkit-appearance: none;
@@ -27,7 +17,6 @@ $e-button-padding: 6px 10px 5px;
   text-align: center;
   outline: 0;
   padding: 0;
-  text-align: center;
   text-decoration: none;
   vertical-align: baseline;
   white-space: normal;
@@ -46,38 +35,29 @@ $e-button-padding: 6px 10px 5px;
   width: 100%; // Important for the click area
   padding: $e-button-padding;
 }
-// END-FREESTYLE-USAGE
 
-// BEGIN-FREESTYLE-USAGE e-button-cta-inactive
 .e-button--cta {
-  background-color: $color-gray-white;
+  background-color: $color-primary-light;
   width: inherit;
 }
-// END-FREESTYLE-USAGE
 
-// BEGIN-FREESTYLE-USAGE e-button-hover
 .e-button--hover,
 .e-button:hover {
   background-color: $color-primary-dark;
   color: $color-gray-white;
 }
-// END-FREESTYLE-USAGE
 
-// BEGIN-FREESTYLE-USAGE e-button-click
 .e-button--active,
 .e-button:active {
   background-color: $color-primary-dark;
   color: $color-gray-white;
 }
-// END-FREESTYLE-USAGE
 
-// BEGIN-FREESTYLE-USAGE e-button-active
 .e-button--focus,
 .e-button:focus {
   background-color: $color-primary-dark;
   color: $color-gray-white;
 }
-// END-FREESTYLE-USAGE
 
 .e-button--transparent {
   background: transparent;
@@ -87,15 +67,13 @@ $e-button-padding: 6px 10px 5px;
     padding: 0;
   }
 
-  &:hover{
+  &:hover {
     background: transparent;
     border: 0;
     color: $color-primary-dark;
   }
 }
 
-// BEGIN-FREESTYLE-USAGE e-button-disabled
-//latest modifier to overrule others
 .e-button--disabled,
 .e-button--disabled:hover,
 .e-button[disabled] {
@@ -104,7 +82,6 @@ $e-button-padding: 6px 10px 5px;
   color: $color-gray-light;
   cursor: default;
 }
-// END-FREESTYLE-USAGE
 
 .e-button--wide {
   min-width: 60%;

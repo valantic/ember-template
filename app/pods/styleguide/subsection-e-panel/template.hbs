@@ -40,7 +40,7 @@
   {{#freestyle-collection title='e-panel states' defaultKey='all' inline=false as |collection|}}
 
     {{#freestyle-variant collection=collection key='default'}}
-      {{#freestyle-usage 'e-panel-default' title='e-panel-default' usageTitle=labels.usage.title jsTitle=labels.usage.js scssTitle=labels.usage.scss}}
+      {{#freestyle-usage 'e-panel-default' title='e-panel-default' usageTitle=labels.usage.title}}
         {{#e-panel}}
           default
         {{/e-panel}}
@@ -50,8 +50,19 @@
     {{#freestyle-variant collection=collection key='success'}}
       {{#freestyle-usage 'e-panel-success' title='e-panel-success' usageTitle=labels.usage.title}}
         {{#e-panel
-        state="success"}}
+          state="success"
+        }}
           success
+        {{/e-panel}}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='warning'}}
+      {{#freestyle-usage 'e-panel-warning' title='e-panel-warning' usageTitle=labels.usage.title}}
+        {{#e-panel
+          state="warning"
+        }}
+          warning
         {{/e-panel}}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -59,7 +70,8 @@
     {{#freestyle-variant collection=collection key='error'}}
       {{#freestyle-usage 'e-panel-error' title='e-panel-error' usageTitle=labels.usage.title}}
         {{#e-panel
-        state="error"}}
+          state="error"
+        }}
           error
         {{/e-panel}}
       {{/freestyle-usage}}
@@ -67,172 +79,107 @@
 
   {{/freestyle-collection}}
 
-  <div class="FreestyleSubsection-name">Shadow</div>
 
-  {{#freestyle-collection title='e-panel shadows' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='shadow-and-default'}}
-      {{#freestyle-usage 'e-panel-shadow-default' title='e-panel-shadow' usageTitle=labels.usage.title}}
+  {{#freestyle-collection title='e-panel styles' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='thin'}}
+      {{#freestyle-usage 'e-panel-style-thin' title='e-panel-style-thin' usageTitle=labels.usage.title}}
         {{#e-panel
-        shadow=true}}
-          shadow & state default
+          border="thin"
+        }}
+          border thin
         {{/e-panel}}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
-    {{#freestyle-variant collection=collection key='shadow-and-success'}}
-      {{#freestyle-usage 'e-panel-shadow-success' title='e-panel-shadow' usageTitle=labels.usage.title}}
+    {{#freestyle-variant collection=collection key='big'}}
+      {{#freestyle-usage 'e-panel-style-big' title='e-panel-style-big' usageTitle=labels.usage.title}}
+        {{#e-panel
+          border="big"
+        }}
+          border big
+        {{/e-panel}}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='no border'}}
+      {{#freestyle-usage 'e-panel-no-border' title='e-panel-no-border' usageTitle=labels.usage.title}}
+        {{#e-panel
+          border="noborder"
+        }}
+          Border no-border
+        {{/e-panel}}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='shadow'}}
+      {{#freestyle-usage 'e-panel-style-shadow' title='e-panel-style-shadow' usageTitle=labels.usage.title}}
         {{#e-panel
           shadow=true
-          state="success"
         }}
-          shadow & state success
-        {{/e-panel}}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-    {{#freestyle-variant collection=collection key='shadow-and-error'}}
-      {{#freestyle-usage 'e-panel-shadow-error' title='e-panel-shadow' usageTitle=labels.usage.title}}
-        {{#e-panel
-        shadow=true
-        state="error"
-        }}
-          shadow & state error
-        {{/e-panel}}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-
-
-    {{#freestyle-variant collection=collection key='shadow-and-default-big-content'}}
-      <div class="FreestyleSubsection-name">Big content</div>
-      {{#freestyle-usage 'e-panel-shadow-default-big-content' title='e-panel-shadow' usageTitle=labels.usage.title}}
-        {{#e-panel
-        shadow=true
-        border="big"}}
-          shadow & state default
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget vestibulum ante, ac dapibus augue.
-            Nulla ornare turpis sit amet ultrices pulvinar. Proin quis efficitur arcu. Nam ac dictum mi. Proin eleifend
-            lit vulputate massa imperdiet, id gravida neque convallis. Phasellus bibendum dui ac diam suscipit
-            convallis. Phasellus vel dapibus tortor. Morbi at mi at erat cursus euismod.
-          </p>
-          <p>
-            Vestibulum neque diam, egestas vel ex non, aliquam accumsan eros. Integer venenatis leo quis purus ornare
-            fringilla. Vivamus vitae erat erat. Vestibulum efficitur malesuada nulla, non pretium nunc pellentesque ac.
-            Cras varius sodales felis et venenatis. Quisque imperdiet, augue id malesuada pharetra, nibh justo maximus
-            urna, sit amet tincidunt arcu diam mollis urna. Nullam eu quam quam. Duis nisl nulla, aliquam sed euismod a,
-            dapibus id nulla. Vestibulum varius placerat purus, ut scelerisque arcu consectetur a. Morbi eget dui eget
-            massa vehicula faucibus non sit amet est. Etiam ac vulputate elit, et tempor nisl.
-          </p>
+          shadow
         {{/e-panel}}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
   {{/freestyle-collection}}
 
-  <div class="FreestyleSubsection-name">Border-styles</div>
-  {{#freestyle-collection title='e-panel border-states' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default-thin'}}
-      {{#freestyle-usage 'e-panel-default-thin' title='e-panel-default-thin' usageTitle=labels.usage.title}}
+
+  {{#freestyle-collection title='e-panel specials' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='inline'}}
+      {{#freestyle-usage 'e-panel-inline' title='e-panel-inline' usageTitle=labels.usage.title}}
         {{#e-panel
-          border="thin"}}
-          Border "thin"
+          inline=true
+        }}
+          Inline
         {{/e-panel}}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
-    {{#freestyle-variant collection=collection key='default-big'}}
-      {{#freestyle-usage 'e-panel-default-big' title='e-panel-default-big' usageTitle=labels.usage.title}}
+    {{#freestyle-variant collection=collection key='inline-sm-up'}}
+      {{#freestyle-usage 'e-panel-inline-sm-up' title='e-panel-inline-sm-up' usageTitle=labels.usage.title}}
         {{#e-panel
-          border="big"}}
-          Border "big"
+          inlineSmUp=true
+        }}
+          Inline (only viepwort sm-up)
         {{/e-panel}}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
-    {{#freestyle-variant collection=collection key='default-inline'}}
-      {{#freestyle-usage 'e-panel-default-inline' title='e-panel-default-inline' usageTitle=labels.usage.title}}
+    {{#freestyle-variant collection=collection key='inline-spacing-right'}}
+      {{#freestyle-usage 'e-panel-inline-spacing-right' title='e-panel-inline-spacing-right' usageTitle=labels.usage.title}}
         {{#e-panel
-        border="thin"
-        inline=true}}
-          Border "inline"
-        {{/e-panel}}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-    {{#freestyle-variant collection=collection key='default-inline-sm-up'}}
-      {{#freestyle-usage 'e-panel-default-inline-sm-up' title='e-panel-default-inline-sm-up' usageTitle=labels.usage.title}}
-        {{#e-panel
-        border="thin"
-        inlineSmUp=true}}
-          Border "inline" (only viepwort sm-up)
-        {{/e-panel}}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-    {{#freestyle-variant collection=collection key='default-inline-spacing-right'}}
-      {{#freestyle-usage 'e-panel-default-inline-spacing-right' title='e-panel-default-inline-spacing-right' usageTitle=labels.usage.title}}
-        {{#e-panel
-        border="thin"
         spacingRight=true
-        inline=true}}
-          Border "inline"
+        inline=true
+        }}
+          Inline Panel A
         {{/e-panel}}
         {{#e-panel
-        border="thin"
-        spacingRight=true
-        inline=true}}
-          Border "inline"
-        {{/e-panel}}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-    {{#freestyle-variant collection=collection key='default-noborder'}}
-      {{#freestyle-usage 'e-panel-default-noborder' title='e-panel-default-noborder' usageTitle=labels.usage.title}}
-        {{#e-panel
-        border="noborder"}}
-          Border "noborder"
+          spacingRight=true
+          inline=true
+        }}
+          Inline Panel B
         {{/e-panel}}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
-  {{/freestyle-collection}}
-
-  <div class="FreestyleSubsection-name">Title</div>
-  {{#freestyle-collection title='e-panel title' defaultKey='all' inline=false as |collection|}}
-
-    {{#freestyle-variant collection=collection key='default-with-title'}}
-      {{#freestyle-usage 'e-panel-default-with-title' title='e-panel-default-with-title' usageTitle=labels.usage.title}}
+    {{#freestyle-variant collection=collection key='title'}}
+      {{#freestyle-usage 'e-panel-title' title='e-panel-title' usageTitle=labels.usage.title}}
         {{#e-panel
-        border="thin"
-        headingIncluded=true
-        title="I'm the heading of this panel"}}
+          headingIncluded=true
+          tagNameTitle="h2"
+          title="I'm the heading of this panel"
+        }}
           Content....
         {{/e-panel}}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
-    {{#freestyle-variant collection=collection key='default-with-title-color'}}
-      {{#freestyle-usage 'e-panel-default-with-title-color' title='e-panel-default-with-title-color' usageTitle=labels.usage.title}}
-        {{#e-panel
-        border="thin"
-        headingIncluded=true
-        tagNameTitle="h2"
-        titleColored=true
-        title="I'm the heading of this panel"}}
-          Content....
-        {{/e-panel}}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-  {{/freestyle-collection}}
-
-  <div class="FreestyleSubsection-name">Inside-scroll</div>
-  {{#freestyle-collection title='e-panel title' defaultKey='all' inline=false as |collection|}}
-
-    {{#freestyle-variant collection=collection key='default-inline-scroll'}}
-      {{#freestyle-usage 'e-panel-default-inline-scroll' title='e-panel-default-inline-scroll' usageTitle=labels.usage.title}}
+    {{#freestyle-variant collection=collection key='inline-scroll'}}
+      {{#freestyle-usage 'e-panel-inline-scroll' title='e-panel-inline-scroll' usageTitle=labels.usage.title}}
         {{#e-panel
           border="thin"
           insideScroll=true
@@ -242,6 +189,52 @@
           Content....Content....Content....Content....Content....Content....Content....Content....<br/>
           Content....Content....Content....Content....Content....Content....Content....Content....<br/>
           Content....Content....Content....Content....Content....Content....Content....Content....
+        {{/e-panel}}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+  {{/freestyle-collection}}
+
+
+
+  {{#freestyle-collection title='e-panel background-colors' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='transparent (default)'}}
+      {{#freestyle-usage 'e-panel-transparent' title='e-panel-transparent' usageTitle=labels.usage.title}}
+        {{#e-panel
+          backgroundColor="transparent"
+        }}
+          transparent (default)
+        {{/e-panel}}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='primary-dark'}}
+      {{#freestyle-usage 'e-panel-primary-dark' title='e-panel-primary-dark' usageTitle=labels.usage.title}}
+        {{#e-panel
+          backgroundColor="primary-dark"
+        }}
+          primary-dark
+        {{/e-panel}}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='primary-light'}}
+      {{#freestyle-usage 'e-panel-primary-light' title='e-panel-primary-light' usageTitle=labels.usage.title}}
+        {{#e-panel
+          backgroundColor="primary-light"
+        }}
+          primary-light
+        {{/e-panel}}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='gray-light'}}
+      {{#freestyle-usage 'e-panel-gray-light' title='e-panel-gray-light' usageTitle=labels.usage.title}}
+        {{#e-panel
+          backgroundColor="gray-light"
+        }}
+          gray-light
         {{/e-panel}}
       {{/freestyle-usage}}
     {{/freestyle-variant}}

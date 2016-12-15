@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import ResizeAware from 'ember-resize/mixins/resize-aware';
-// BEGIN-FREESTYLE-USAGE e-panel-default
+
 export default Ember.Component.extend(ResizeAware, {
   classNames: ['e-panel'],
   defaultClassName: 'e-panel',
@@ -145,4 +145,3 @@ export default Ember.Component.extend(ResizeAware, {
   }
 
 });
-// END-FREESTYLE-USAGE

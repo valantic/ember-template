@@ -1,5 +1,5 @@
 import Ember from 'ember';
-// BEGIN-FREESTYLE-USAGE e-button-inactive
+
 export default Ember.Component.extend({
   tagName: 'span',
   classNames: ['e-button'],
@@ -76,4 +76,3 @@ export default Ember.Component.extend({
     this.set('isActive', false);
   }
 });
-// END-FREESTYLE-USAGE

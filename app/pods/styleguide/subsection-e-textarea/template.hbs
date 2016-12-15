@@ -38,54 +38,57 @@
     </dl>
   {{/freestyle-annotation}}
 
-  {{#freestyle-usage 'e-textarea' title='e-textarea without value nor placeholder' usageTitle=labels.usage.title jsTitle=labels.usage.js}}
-    {{e-textarea
-      id="theTextArea1"
-      name='textarea1'
-    }}
-  {{/freestyle-usage}}
+  {{#freestyle-collection title='e-textarea' defaultKey='all' inline=false as |collection|}}
 
-  {{#freestyle-usage '' title='e-textarea without a value and a placeholder' usageTitle=labels.usage.title}}
-    {{e-textarea
-      name='textarea2'
-      placeholder='A placeholder'
-    }}
-  {{/freestyle-usage}}
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'e-textarea-default' title='e-textarea default' usageTitle=labels.usage.title}}
+        {{e-textarea}}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
 
-  {{#freestyle-usage 'e-textarea-colsrows' title='e-textarea without a cols and rows' usageTitle=labels.usage.title}}
-    {{e-textarea
-      name='textarea2'
-      placeholder='A longer placeholder on multiple lines'
-      rows=5
-    }}
-  {{/freestyle-usage}}
+    {{#freestyle-variant collection=collection key='with class name'}}
+      {{#freestyle-usage 'e-textarea-classname' title='e-textarea classname' usageTitle=labels.usage.title}}
+        {{e-textarea
+          class="TestClassName123"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
 
-  {{#freestyle-usage '-value' title='e-textarea with a value' usageTitle=labels.usage.title}}
-    {{e-textarea
-      name='textarea3'
-      placeholder="Enter your favorit Dicken's quote here"
-      value='It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of classNamelishness, it was the epoch of belief, it was the epoch of incredulity...'
-    }}
-  {{/freestyle-usage}}
-  {{#freestyle-usage '-classname' title='Default with class Name' usageTitle=labels.usage.title}}
-    {{e-textarea
-      class="e-textarea e-textarea--modifier"
-      name="textarea4"
-      placeholder="A Placeholder"
-      value="A Value"
-    }}
-  {{/freestyle-usage}}
+    {{#freestyle-variant collection=collection key='placeholder'}}
+      {{#freestyle-usage 'e-textarea-placeholder' title='e-textarea placeholder' usageTitle=labels.usage.title}}
+        {{e-textarea
+          placeholder="I'm a placeholder"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
 
-  {{#freestyle-note '--notes'}}
-    **NOTE:** We give the _textarea_ its value through the attribute _value_. Ember's' _yield_ output is not used.
-  {{/freestyle-note}}
+    {{#freestyle-variant collection=collection key='value'}}
+      {{#freestyle-usage 'e-textarea-value' title='e-textarea value' usageTitle=labels.usage.title}}
+        {{e-textarea
+            value="A value"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='rows'}}
+      {{#freestyle-usage 'e-textarea-rows' title='e-textarea rows' usageTitle=labels.usage.title}}
+        {{e-textarea
+          rows=10
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+  {{/freestyle-collection}}
+
+
 
   {{#freestyle-collection title='e-textarea states' defaultKey='all' inline=false as |collection|}}
 
     {{#freestyle-variant collection=collection key='default'}}
-      {{#freestyle-usage 'e-textarea-normal' title='e-textarea default' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-textarea-default' title='e-textarea default' usageTitle=labels.usage.title}}
         {{e-textarea
-          value="a value"
+            state="default"
+          placeholder="I'm a placeholder"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -93,8 +96,17 @@
     {{#freestyle-variant collection=collection key='success'}}
       {{#freestyle-usage 'e-textarea-success' title='e-textarea success' usageTitle=labels.usage.title}}
         {{e-textarea
-          state="success"
-          value="a value"
+            state="success"
+            placeholder="I'm a placeholder"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='warning'}}
+      {{#freestyle-usage 'e-textarea-warning' title='e-textarea warning' usageTitle=labels.usage.title}}
+        {{e-textarea
+            state="warning"
+            placeholder="I'm a placeholder"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -102,8 +114,8 @@
     {{#freestyle-variant collection=collection key='error'}}
       {{#freestyle-usage 'e-textarea-error' title='e-textarea error' usageTitle=labels.usage.title}}
         {{e-textarea
-          state="error"
-          value="a value"
+            state="error"
+            placeholder="I'm a placeholder"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -111,8 +123,8 @@
     {{#freestyle-variant collection=collection key='disabled'}}
       {{#freestyle-usage 'e-textarea-disabled' title='e-textarea disabled' usageTitle=labels.usage.title}}
         {{e-textarea
-          value="a value"
-          disabled=true
+            disabled=true
+            placeholder="I'm a placeholder"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}

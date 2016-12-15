@@ -2,7 +2,6 @@
 // Contains style definitions for component
 // spacing
 // -------------------------------------------------
-// BEGIN-FREESTYLE-USAGE spacing
 @mixin spacing-mixin-bottom() {
   &-0 { margin-bottom: $spacing--0; }
   &-5 { margin-bottom: $spacing--5; }
@@ -171,4 +170,3 @@
     }
   }
 }
-// END-FREESTYLE-USAGE

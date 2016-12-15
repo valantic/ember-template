@@ -17,11 +17,12 @@
 }
 
 .e-input-text--state-success {
+  border-color: $color-status-success;
   background-color: $color-gray-white-opacity-heavy;
 }
 
 .e-input-text--state-warning {
-  border-color: $color-status-failed;
+  border-color: $color-status-warning;
   background-color: $color-gray-white-opacity-heavy;
 }
 

@@ -15,8 +15,6 @@
   }
 }
 
-// BEGIN-FREESTYLE-USAGE mediaqueries
-
 @mixin core-grid-system-highlight-mixin {
     background: green;
     color: $color-gray-white;
@@ -139,5 +137,3 @@
     @include core-grid-system-highlight-mixin;
   }
 }
-
-// END-FREESTYLE-USAGE

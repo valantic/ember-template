@@ -6,23 +6,71 @@
     <p>Extends: <em>c-form-control</em></p>
   {{/freestyle-annotation}}
 
+  {{#freestyle-collection title='e-select types' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='single-select'}}
+      {{#freestyle-usage 'e-select-single' title='single' usageTitle=labels.usage.title}}
+        {{e-select
+          label="Select"
+          name="e-select"
+          items=model.selectOptions
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='multiple-select'}}
+      {{#freestyle-usage 'e-select-multiple' title='multiple' usageTitle=labels.usage.title}}
+        {{e-select
+          label="Select"
+          name="e-select-multiple"
+          items=model.selectOptions
+          multiple=true
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+  {{/freestyle-collection}}
+
+
+
   {{#freestyle-collection title='e-select states' defaultKey='all' inline=false as |collection|}}
 
     {{#freestyle-variant collection=collection key='default'}}
-      {{#freestyle-usage 'e-select-default' title='Default' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-select-default' title='default' usageTitle=labels.usage.title}}
         {{e-select
-          id="theSelect1"
           label="Select"
           name="e-select"
           items=model.selectOptions
+          state="default"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='success'}}
+      {{#freestyle-usage 'e-select-success' title='success' usageTitle=labels.usage.title}}
+        {{e-select
+          label="Select"
+          name="e-select"
+          items=model.selectOptions
+          state="success"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='warning'}}
+      {{#freestyle-usage 'e-select-warning' title='warning' usageTitle=labels.usage.title}}
+        {{e-select
+          label="Select"
+          name="e-select"
+          items=model.selectOptions
+          state="warning"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='error'}}
-      {{#freestyle-usage 'e-select-error' title='Error' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-select-error' title='error' usageTitle=labels.usage.title}}
         {{e-select
-          id="theSelect2"
           label="Select"
           name="e-select"
           items=model.selectOptions
@@ -32,9 +80,8 @@
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='disabled'}}
-      {{#freestyle-usage 'e-select-disabled' title='Disabled' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-select-disabled' title='disabled' usageTitle=labels.usage.title}}
         {{e-select
-          id="theSelect3"
           label="Select"
           name="e-select"
           items=model.selectOptions
@@ -45,42 +92,4 @@
 
   {{/freestyle-collection}}
 
-  {{#freestyle-collection title='e-select multi states' defaultKey='all' inline=false as |collection|}}
-
-    {{#freestyle-variant collection=collection key='default'}}
-      {{#freestyle-usage 'e-select-multiple' title='Multiple: true' usageTitle=labels.usage.title}}
-        {{e-select
-          label="Select"
-          multiple=true
-          name="e-select-multiple"
-          items=model.selectOptions
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-    {{#freestyle-variant collection=collection key='error'}}
-      {{#freestyle-usage 'e-select-multiple-error' title='Multiple: true, state=error' usageTitle=labels.usage.title}}
-        {{e-select
-          label="Select"
-          multiple=true
-          name="e-select-multiple"
-          items=model.selectOptions
-          state="error"
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-    {{#freestyle-variant collection=collection key='disabled'}}
-      {{#freestyle-usage 'e-select-multiple-disabled' title='Multiple: true, disabled' usageTitle=labels.usage.title}}
-        {{e-select
-          label="Select"
-          multiple=true
-          name="e-select-multiple"
-          items=model.selectOptions
-          disabled=true
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
-
-  {{/freestyle-collection}}
 {{/freestyle-subsection}}

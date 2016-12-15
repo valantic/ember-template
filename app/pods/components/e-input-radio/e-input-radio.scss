@@ -1,23 +1,49 @@
 $e-input-radio-border: 2px solid $color-gray-white;
 $e-input-radio-size: 1em;
+$e-input-radio-border-circle: 50%;
+$e-input-radio-border-button-style: 1.5px;
 
-@mixin e-input-radio-shadow ($border-size, $color){
-  -webkit-box-shadow: 0 0 0 $border-size $color;
-  -moz-box-shadow: 0 0 0 $border-size $color;
-  box-shadow: 0 0 0 $border-size $color;
+@mixin e-input-radio-shadow ($border-size, $color, $value: 0 0 0) {
+  -webkit-box-shadow: $value $border-size $color;
+  -moz-box-shadow: $value $border-size $color;
+  box-shadow: $value $border-size $color;
 }
 
 .e-input-radio {
   @include c-form-control;
   display: none;
+
+  &--state-default:checked + .e-input-radio__fake-radio {
+    background: $color-primary-dark;
+  }
+
+  &--state-success:checked + .e-input-radio__fake-radio {
+    background: $color-status-success;
+  }
+
+  &--state-warning:checked + .e-input-radio__fake-radio {
+    background: $color-status-warning;
+  }
+
+  &--state-error:checked + .e-input-radio__fake-radio {
+    background: $color-status-failed;
+  }
+
+  &[disabled] + .e-input-radio__fake-radio {
+    cursor: default;
+  }
+
+  &[disabled]:checked + .e-input-radio__fake-radio {
+    background: $color-gray-dark;
+  }
 }
 
 .e-input-radio__fake-radio {
+  @include e-input-radio-shadow(2px, $color-gray-light);
   position: relative;
   content: '';
   vertical-align: middle;
-  border-radius: 50%;
-  @include e-input-radio-shadow(2px, $color-gray-light);
+  border-radius: $e-input-radio-border-circle;
   border: $e-input-radio-border;
   background: $color-gray-white;
   display: inline-block;
@@ -26,25 +52,13 @@ $e-input-radio-size: 1em;
   cursor: pointer;
 }
 
-.e-input-radio:checked + .e-input-radio__fake-radio {
-  background: $color-primary-dark;
-}
-
-.e-input-radio[disabled] + .e-input-radio__fake-radio {
-  cursor: default;
-}
-
-.e-input-radio[disabled]:checked + .e-input-radio__fake-radio {
-  background: $color-gray-dark;
-}
-
 // ---------------------------------------------------
 // Special Styling for Radios who look like buttons
 // ---------------------------------------------------
 .e-input-radio__fake-radio--noinput {
-  border: 0;
-  border-radius: 1.5px;
   @include e-input-radio-shadow(2px, $color-primary-dark);
+  border: 0;
+  border-radius: $e-input-radio-border-button-style;
   color: $color-primary-dark;
   min-width: 7em;
   height: 2em;

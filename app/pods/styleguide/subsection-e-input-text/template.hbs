@@ -40,27 +40,47 @@
     </dl>
   {{/freestyle-annotation}}
 
-  {{#freestyle-usage 'e-input-text' title='E-input-text' usageTitle=labels.usage.title}}
-    {{e-input-text
-      name="e-input1"
-      id="theField1"
-    }}
-  {{/freestyle-usage}}
+  {{#freestyle-collection title='e-input-text-standards' defaultKey='all' inline=false as |collection|}}
 
-  {{#freestyle-usage 'e-input-text-classname' title='E-input-text with class Name' usageTitle=labels.usage.title}}
-    {{e-input-text
-      name="input1"
-      class="lolspan-2"
-    }}
-  {{/freestyle-usage}}
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'e-input-text-default' title='E-input-text' usageTitle=labels.usage.title}}
+        {{e-input-text
+          name="e-input1"
+          id="theField1"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
 
-  {{#freestyle-usage 'e-input-text-default-value' title='Default with value' usageTitle=labels.usage.title}}
-    {{e-input-text
-      name="input1"
-      placeholder="A Placeholder"
-      value="A Value"
-    }}
-  {{/freestyle-usage}}
+    {{#freestyle-variant collection=collection key='with class name'}}
+      {{#freestyle-usage 'e-input-text-classname' title='E-input-text with class Name' usageTitle=labels.usage.title}}
+        {{e-input-text
+          name="input1"
+          class="classNameTest"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='value'}}
+      {{#freestyle-usage 'e-input-text-default-value' title='Default with value' usageTitle=labels.usage.title}}
+        {{e-input-text
+          name="input1"
+          value="A Value"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='placeholder'}}
+      {{#freestyle-usage 'e-input-text-default-value' title='Default with value' usageTitle=labels.usage.title}}
+        {{e-input-text
+          name="input1"
+          placeholder="A placeholder"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+  {{/freestyle-collection}}
+
+
 
   {{#freestyle-collection title='e-input-text states' defaultKey='all' inline=false as |collection|}}
 
@@ -76,6 +96,15 @@
       {{#freestyle-usage 'e-input-text-success' title='e-input-text success' usageTitle=labels.usage.title}}
         {{e-input-text
           state="success"
+          value="a value"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='warning'}}
+      {{#freestyle-usage 'e-input-text-warning' title='e-input-text warning' usageTitle=labels.usage.title}}
+        {{e-input-text
+          state="warning"
           value="a value"
         }}
       {{/freestyle-usage}}
@@ -110,20 +139,9 @@
 
   {{/freestyle-collection}}
 
-  {{#freestyle-collection title='E-INPUT-TEXT' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-annotation}}
-      <p>The <em>input</em> element is displayed here in <em>text</em>, <em>password</em> and <em>search</em> variants.</p>
-    {{/freestyle-annotation}}
 
-    {{#freestyle-variant collection=collection key='default'}}
-      {{#freestyle-usage 'e-input-text-placeholder' title='Default with placeholder'}}
-        {{e-input-text
-          name="input1"
-          placeholder="A Placeholder"
-        }}
-      {{/freestyle-usage}}
-    {{/freestyle-variant}}
+  {{#freestyle-collection title='e-input-text-specials' defaultKey='all' inline=false as |collection|}}
 
     {{#freestyle-variant collection=collection key='password'}}
       {{#freestyle-usage 'e-input-text-password' title='Password' usageTitle=labels.usage.title}}

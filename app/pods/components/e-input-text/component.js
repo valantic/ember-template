@@ -1,7 +1,6 @@
 import Ember from 'ember';
 import CFormControl from '../c-form-control/component';
 
-// BEGIN-FREESTYLE-USAGE e-input-text
 export default CFormControl.extend({
   defaultClassName: 'e-input-text',
   type: 'text',
@@ -34,4 +33,3 @@ export default CFormControl.extend({
     }
   }
 });
-// END-FREESTYLE-USAGE

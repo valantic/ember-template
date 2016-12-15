@@ -6,6 +6,7 @@ module.exports = {
   rules: {
     'block-indentation': false,
     'img-alt-attributes': true,
-    'nested-interactive': true
+    'nested-interactive': true,
+    'bare-strings': false
   }
 };

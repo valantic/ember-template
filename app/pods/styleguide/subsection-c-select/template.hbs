@@ -1,0 +1,318 @@
+{{! disable all rules for this template }}
+<!-- template-lint disable=true -->
+{{#freestyle-subsection name='c-select' section=section}}
+
+  {{#freestyle-annotation}}
+    <p>Extends: <em>c-form-group</em></p>
+    <p>We're demonstrating the <em>c-select</em> element in these states: <em>default</em>, <em>focus</em> and <em>disabled</em>.</p>
+    <p>The <em>c-select</em> component exists in these variants: <em>horizontal</em>, <em>vertical</em> and <em>nested</em>.</p>
+    <p>The element options are set through the <code>items</code> attribute which accepts an <em>array</em>.</p>
+  {{/freestyle-annotation}}
+
+  {{#freestyle-collection title='Horizontal C-SELECT' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-select' title='Default' usageTitle=labels.usage.title hbsTitle=labels.usage.hbs jsTitle=labels.usage.js}}
+        {{c-select
+          items=model.selectOptions
+          label="Select an item"
+          layout="horizontal"
+          name="c-select"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='success'}}
+      {{#freestyle-usage 'c-select-success' title='Success State' usageTitle=labels.usage.title}}
+        {{c-select
+          items=model.selectOptions
+          label="Select an item"
+          layout="horizontal"
+          name="c-select-success"
+          state="success"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='error'}}
+      {{#freestyle-usage 'c-select-error' title='Error State' usageTitle=labels.usage.title}}
+        {{c-select
+          items=model.selectOptions
+          label="Select an item"
+          layout="horizontal"
+          name="c-select-error"
+          state="error"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='disabled'}}
+      {{#freestyle-usage 'c-select-disabled' title='Disabled' usageTitle=labels.usage.title}}
+        {{c-select
+          disabled=true
+          items=model.selectOptions
+          label="Select an item"
+          layout="horizontal"
+          name="c-select-disabled"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-select-multiple' title='Default multiple' usageTitle=labels.usage.title hbsTitle=labels.usage.hbs jsTitle=labels.usage.js}}
+        {{c-select
+          items=model.selectOptions
+          label="Select an item"
+          layout="horizontal"
+          name="c-select"
+          multiple=true
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='success'}}
+      {{#freestyle-usage 'c-select-success-multiple' title='Success State multiple' usageTitle=labels.usage.title}}
+        {{c-select
+          items=model.selectOptions
+          label="Select an item"
+          layout="horizontal"
+          name="c-select-success"
+          state="success"
+          multiple=true
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='error'}}
+      {{#freestyle-usage 'c-select-error-multiple' title='Error State multiple' usageTitle=labels.usage.title}}
+        {{c-select
+          items=model.selectOptions
+          label="Select an item"
+          layout="horizontal"
+          name="c-select-error"
+          state="error"
+          multiple=true
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='disabled'}}
+      {{#freestyle-usage 'c-select-disabled-multiple' title='Disabled multiple' usageTitle=labels.usage.title}}
+        {{c-select
+          disabled=true
+          items=model.selectOptions
+          label="Select an item"
+          layout="horizontal"
+          name="c-select-disabled"
+          multiple=true
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+  {{/freestyle-collection}}
+
+  {{#freestyle-note 'c-select-vertical--notes'}}
+    The vertical layout option renders the component with the primary label above the components items.
+  {{/freestyle-note}}
+
+  {{#freestyle-collection title='Vertical C-SELECT' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-select-vertical' title='Default' usageTitle=labels.usage.title}}
+        {{c-select
+          items=model.selectOptions
+          label="Select an item"
+          layout="vertical"
+          name="c-select-vertical"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='success'}}
+      {{#freestyle-usage 'c-select-vertical-success' title='Success State' usageTitle=labels.usage.title}}
+        {{c-select
+          items=model.selectOptions
+          label="Select an item"
+          layout="vertical"
+          name="c-select-vertical-success"
+          state="success"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='error'}}
+      {{#freestyle-usage 'c-select-vertical-error' title='Error State' usageTitle=labels.usage.title}}
+        {{c-select
+          items=model.selectOptions
+          label="Select an item"
+          layout="vertical"
+          name="c-select-vertical-error"
+          state="error"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='disabled'}}
+      {{#freestyle-usage 'c-select-vertical-disabled' title='Disabled' usageTitle=labels.usage.title}}
+        {{c-select
+          disabled=true
+          items=model.selectOptions
+          label="Select an item"
+          layout="vertical"
+          name="c-select-vertical-disabled"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-select-vertical-multiple' title='Default multiple' usageTitle=labels.usage.title}}
+        {{c-select
+          items=model.selectOptions
+          label="Select an item"
+          layout="vertical"
+          name="c-select-vertical"
+          multiple=true
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='success'}}
+      {{#freestyle-usage 'c-select-vertical-success-multiple' title='Success State multiple' usageTitle=labels.usage.title}}
+        {{c-select
+          items=model.selectOptions
+          label="Select an item"
+          layout="vertical"
+          name="c-select-vertical-success"
+          state="success"
+          multiple=true
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='error'}}
+      {{#freestyle-usage 'c-select-vertical-error-multiple' title='Error State multiple' usageTitle=labels.usage.title}}
+        {{c-select
+          items=model.selectOptions
+          label="Select an item"
+          layout="vertical"
+          name="c-select-vertical-error"
+          state="error"
+          multiple=true
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='disabled'}}
+      {{#freestyle-usage 'c-select-vertical-disabled-multiple' title='Disabled multiple' usageTitle=labels.usage.title}}
+        {{c-select
+          disabled=true
+          items=model.selectOptions
+          label="Select an item"
+          layout="vertical"
+          name="c-select-vertical-disabled"
+          multiple=true
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+  {{/freestyle-collection}}
+
+  {{#freestyle-note 'c-select-nested--notes'}}
+    The nested layout mode renders the object without a visible label on it
+  {{/freestyle-note}}
+
+  {{#freestyle-collection title='Nested C-SELECT' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-select-nested' title='Default' usageTitle=labels.usage.title}}
+        {{c-select
+          items=model.selectOptions
+          layout="nested"
+          name="c-select-nested"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='success'}}
+      {{#freestyle-usage 'c-select-nested-success' title='Success State' usageTitle=labels.usage.title}}
+        {{c-select
+          items=model.selectOptions
+          layout="nested"
+          name="c-select-nested-success"
+          state="success"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='error'}}
+      {{#freestyle-usage 'c-select-nested-error' title='Error State' usageTitle=labels.usage.title}}
+        {{c-select
+          items=model.selectOptions
+          layout="nested"
+          name="c-select-nested-error"
+          state="error"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='disabled'}}
+      {{#freestyle-usage 'c-select-nested-disabled' title='Disabled' usageTitle=labels.usage.title}}
+        {{c-select
+          disabled=true
+          items=model.selectOptions
+          layout="nested"
+          name="c-select-nested-disabled"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-select-nested-multiple' title='Default-multiple' usageTitle=labels.usage.title}}
+        {{c-select
+          items=model.selectOptions
+          layout="nested"
+          name="c-select-nested"
+          multiple=true
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='success'}}
+      {{#freestyle-usage 'c-select-nested-success-multiple' title='Success State multiple' usageTitle=labels.usage.title}}
+        {{c-select
+          items=model.selectOptions
+          layout="nested"
+          name="c-select-nested-success"
+          state="success"
+          multiple=true
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='error'}}
+      {{#freestyle-usage 'c-select-nested-error-multiple' title='Error State multiple' usageTitle=labels.usage.title}}
+        {{c-select
+          items=model.selectOptions
+          layout="nested"
+          name="c-select-nested-error"
+          state="error"
+          multiple=true
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='disabled'}}
+      {{#freestyle-usage 'c-select-nested-disabled-multiple' title='Disabled multiple' usageTitle=labels.usage.title}}
+        {{c-select
+          disabled=true
+          items=model.selectOptions
+          layout="nested"
+          name="c-select-nested-disabled"
+          multiple=true
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+  {{/freestyle-collection}}
+
+{{/freestyle-subsection}}

@@ -1,0 +1,31 @@
+{{!-- BEGIN-FREESTYLE-USAGE c-select --}}
+{{#c-form-combo layout=layout state=state}}
+  {{#if label.length}}
+    {{e-label
+      class=labelClassName
+      for=fieldId
+      layout=layout
+      required=required
+      state=state
+      text=label
+      multiple=multiple
+      leading=true
+    }}
+  {{/if}}
+  {{e-select
+    class=fieldClassName
+    disabled=disabled
+    groupValue=groupValue
+    id=fieldId
+    layout=layout
+    name=name
+    multiple=multiple
+    placeholder=placeholder
+    readonly=readonly
+    items=items
+    size=size
+    state=state
+    title=label
+  }}
+{{/c-form-combo}}
+{{!-- END-FREESTYLE-USAGE --}}

@@ -1,0 +1,87 @@
+{{! disable all rules for this template }}
+<!-- template-lint disable=true -->
+{{#freestyle-subsection name='example-form' section=section}}
+
+  {{#freestyle-annotation}}
+    <p>This form is an example including most of the standard-form-components</p>
+  {{/freestyle-annotation}}
+  <div class="row">
+    <div class="col-xxs-12 col-sm-8 col-sm-offset-2">
+      <form {{action "sendForm" on="submit"}}>
+        {{#c-form-group title="Basic form" headingIncluded=true}}
+          <div class="row">
+            <div class="col-xxs-12 col-xs-6">
+              {{c-input-text
+                  label="Firstname"
+                  placeholder="your firstname"
+                  layout="horizontal"
+                  class="spacing--bottom-15 spacing--bottom-xs-up-0"
+              }}
+            </div>
+            <div class="col-xxs-12 col-xs-6">
+              {{c-input-text
+                  label="Lastname"
+                  placeholder="your lastname"
+                  layout="horizontal"
+              }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xxs-12">
+              {{c-input-text
+                  label="E-Mail"
+                  placeholder="your e-mail address"
+                  layout="nested"
+                  type="email"
+              }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xxs-12">
+              {{c-textarea
+                  label="Message"
+                  placeholder="your message"
+                  layout="vertical"
+                  rows=10
+              }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xxs-12">
+              {{c-select
+                label="Choose option"
+                layout="vertical"
+                items=model.selectOptions
+              }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xxs-12 col-xs-6">
+              {{c-input-radio
+                label="Choose option"
+                layout="vertical"
+                items=model.selectOptions
+                class="spacing--bottom-15 spacing--bottom-xs-up-0"
+              }}
+            </div>
+            <div class="col-xxs-12 col-xs-6">
+              {{c-input-checkbox
+                label="Select options"
+                layout="vertical"
+                items=model.selectOptions
+              }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xxs-12">
+              {{#e-button}}
+                Send message
+              {{/e-button}}
+            </div>
+          </div>
+        {{/c-form-group}}
+      </form>
+    </div>
+  </div>
+
+{{/freestyle-subsection}}

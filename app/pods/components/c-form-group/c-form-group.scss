@@ -1,0 +1,11 @@
+.c-form-group {
+  margin-bottom: $spacing--30;
+
+  .row {
+    margin-bottom: $spacing--15;
+
+    &:last-child {
+      margin-bottom: $spacing--0;
+    }
+  }
+}

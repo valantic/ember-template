@@ -1,5 +1,5 @@
-{{! disable all rules for this template }}
-<!-- template-lint disable=true -->
+{{! template-lint-disable }}
+<!-- disable all rules -->
 {{#freestyle-subsection name='e-input-text' section=section}}
 
   {{#freestyle-annotation}}
@@ -70,7 +70,7 @@
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='placeholder'}}
-      {{#freestyle-usage 'e-input-text-default-value' title='Default with value' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-input-text-default-placeholder' title='Default with placeholder' usageTitle=labels.usage.title}}
         {{e-input-text
           name="input1"
           placeholder="A placeholder"
@@ -85,7 +85,7 @@
   {{#freestyle-collection title='e-input-text states' defaultKey='all' inline=false as |collection|}}
 
     {{#freestyle-variant collection=collection key='default'}}
-      {{#freestyle-usage 'e-input-text-default' title='e-input-text default' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-input-text-state-default' title='e-input-text default' usageTitle=labels.usage.title}}
         {{e-input-text
           value="a value"
         }}
@@ -93,7 +93,7 @@
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='success'}}
-      {{#freestyle-usage 'e-input-text-success' title='e-input-text success' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-input-text-state-success' title='e-input-text success' usageTitle=labels.usage.title}}
         {{e-input-text
           state="success"
           value="a value"
@@ -102,7 +102,7 @@
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='warning'}}
-      {{#freestyle-usage 'e-input-text-warning' title='e-input-text warning' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-input-text-state-warning' title='e-input-text warning' usageTitle=labels.usage.title}}
         {{e-input-text
           state="warning"
           value="a value"
@@ -111,7 +111,7 @@
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='error'}}
-      {{#freestyle-usage 'e-input-text-error' title='e-input-text error' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-input-text-state-error' title='e-input-text error' usageTitle=labels.usage.title}}
         {{e-input-text
           state="error"
           value="a value"
@@ -120,7 +120,7 @@
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='disabled'}}
-      {{#freestyle-usage 'e-input-text-disabled' title='e-input-text disabled' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-input-text-state-disabled' title='e-input-text disabled' usageTitle=labels.usage.title}}
         {{e-input-text
           value="a value"
           disabled=true

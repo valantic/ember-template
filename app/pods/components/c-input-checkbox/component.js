@@ -32,8 +32,8 @@ export default CFormGroup.extend({
 
       return Ember.Object.create({
         // className
-        label: label,
-        value: value,
+        label,
+        value,
         checked: groupValue.indexOf(value) >= 0
       });
     });

@@ -2078,6 +2078,11 @@
       "from": "ember-freestyle@0.2.13",
       "resolved": "https://registry.npmjs.org/ember-freestyle/-/ember-freestyle-0.2.13.tgz",
       "dependencies": {
+        "ember-remarkable": {
+          "version": "3.4.0",
+          "from": "ember-remarkable@3.4.0",
+          "resolved": "https://registry.npmjs.org/ember-remarkable/-/ember-remarkable-3.4.0.tgz"
+        },
         "glob": {
           "version": "6.0.4",
           "from": "glob@>=6.0.4 <7.0.0",
@@ -2121,9 +2126,9 @@
       "resolved": "https://registry.npmjs.org/ember-radio-button/-/ember-radio-button-1.0.7.tgz"
     },
     "ember-remarkable": {
-      "version": "3.0.0",
-      "from": "chrislopresto/ember-remarkable#highlightjs-css-compatibility",
-      "resolved": "git://github.com/chrislopresto/ember-remarkable.git#d75676f1cb0b6924dce1aaf800a6101291316c3b"
+      "version": "3.4.0",
+      "from": "ember-remarkable@3.4.0",
+      "resolved": "https://registry.npmjs.org/ember-remarkable/-/ember-remarkable-3.4.0.tgz"
     },
     "ember-resize": {
       "version": "0.0.17",
@@ -2151,11 +2156,6 @@
           "resolved": "https://registry.npmjs.org/recast/-/recast-0.11.18.tgz"
         }
       }
-    },
-    "ember-runtime-enumerable-includes-polyfill": {
-      "version": "1.0.4",
-      "from": "ember-runtime-enumerable-includes-polyfill@>=1.0.0 <2.0.0",
-      "resolved": "https://registry.npmjs.org/ember-runtime-enumerable-includes-polyfill/-/ember-runtime-enumerable-includes-polyfill-1.0.4.tgz"
     },
     "ember-svg-jar": {
       "version": "0.9.3",

@@ -1,5 +1,5 @@
-{{! disable all rules for this template }}
-<!-- template-lint disable=true -->
+{{! template-lint-disable }}
+<!-- disable all rules -->
 {{#freestyle-subsection name='e-input-checkbox' section=section}}
   <div class="FreestyleAnnotation">
     <p>This elements are here only visible, they aren't clickable because they reach there functionality in the c-input-radio component together with a "fake-label"</p>
@@ -22,7 +22,7 @@
     {{#freestyle-variant collection=collection key='checked'}}
       {{#freestyle-usage 'e-input-checkbox-checked' title='e-input-checkbox checked' usageTitle=labels.usage.title}}
         {{e-input-checkbox
-          name="checkbox1"
+          name="checkbox2"
           checked=true
         }}
       {{/freestyle-usage}}
@@ -31,7 +31,7 @@
     {{#freestyle-variant collection=collection key='with class name'}}
       {{#freestyle-usage 'e-input-checkbox-class' title='e-input-checkbox class' usageTitle=labels.usage.title}}
         {{e-input-checkbox
-          name="checkbox"
+          name="checkbox3"
           class="ExampleClassCheckbox"
         }}
       {{/freestyle-usage}}
@@ -44,7 +44,7 @@
   {{#freestyle-collection title='e-input-checkbox states' defaultKey='all' inline=false as |collection|}}
 
     {{#freestyle-variant collection=collection key='default'}}
-      {{#freestyle-usage 'e-input-checkbox-default' title='e-input-checkbox default' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-input-checkbox-state-default' title='e-input-checkbox default' usageTitle=labels.usage.title}}
         {{e-input-checkbox
           state="default"
           checked=true
@@ -53,8 +53,9 @@
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='success'}}
-      {{#freestyle-usage 'e-input-checkbox-success' title='e-input-checkbox success' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-input-checkbox-state-success' title='e-input-checkbox success' usageTitle=labels.usage.title}}
         {{e-input-checkbox
+          name="checkbox10"
           state="success"
           checked=true
         }}
@@ -62,8 +63,9 @@
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='warning'}}
-      {{#freestyle-usage 'e-input-checkbox-warning' title='e-input-checkbox warning' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-input-checkbox-state-warning' title='e-input-checkbox warning' usageTitle=labels.usage.title}}
         {{e-input-checkbox
+          name="checkbox11"
           state="warning"
           checked=true
         }}
@@ -71,8 +73,9 @@
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='error'}}
-      {{#freestyle-usage 'e-input-checkbox-error' title='e-input-checkbox error' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-input-checkbox-state-error' title='e-input-checkbox error' usageTitle=labels.usage.title}}
         {{e-input-checkbox
+          name="checkbox12"
           state="error"
           checked=true
         }}
@@ -80,8 +83,9 @@
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='disabled'}}
-      {{#freestyle-usage 'e-input-checkbox-disabled' title='e-input-checkbox disabled' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-input-checkbox-state-disabled' title='e-input-checkbox disabled' usageTitle=labels.usage.title}}
         {{e-input-checkbox
+          name="checkbox13"
           disabled=true
           checked=true
         }}

@@ -57,7 +57,7 @@ export default Ember.Component.extend({
   fill: false,
   horScrollButton: false,
 
-  click: function() {
+  click() {
     this.sendAction();
   },
 

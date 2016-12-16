@@ -9,7 +9,7 @@ export default CFormControl.extend({
   onCheckboxChange(/* checked */) {},
 
   actions: {
-    onCheckboxClick: function(checked) {
+    onCheckboxClick(checked) {
       this.get('onCheckboxChange')(!checked);
     }
   }

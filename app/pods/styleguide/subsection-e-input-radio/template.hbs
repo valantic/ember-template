@@ -1,5 +1,5 @@
-{{! disable all rules for this template }}
-<!-- template-lint disable=true -->
+{{! template-lint-disable }}
+<!-- disable all rules -->
 {{#freestyle-subsection name='e-input-radio' section=section}}
 
   <div class="FreestyleAnnotation">
@@ -52,7 +52,7 @@
   {{#freestyle-collection title='e-input-radio states' defaultKey='all' inline=false as |collection|}}
 
     {{#freestyle-variant collection=collection key='default'}}
-      {{#freestyle-usage 'e-input-radio-default' title='e-input-radio default' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-input-radio-state-default' title='e-input-radio default' usageTitle=labels.usage.title}}
         {{e-input-radio
           name="radio1"
         }}
@@ -60,7 +60,7 @@
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='success'}}
-      {{#freestyle-usage 'e-input-radio-success' title='e-input-radio success' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-input-radio-state-success' title='e-input-radio success' usageTitle=labels.usage.title}}
         {{e-input-radio
           state="success"
         }}
@@ -68,7 +68,7 @@
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='warning'}}
-      {{#freestyle-usage 'e-input-radio-warning' title='e-input-radio warning' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-input-radio-state-warning' title='e-input-radio warning' usageTitle=labels.usage.title}}
         {{e-input-radio
           state="warning"
         }}
@@ -76,7 +76,7 @@
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='error'}}
-      {{#freestyle-usage 'e-input-radio-error' title='e-input-radio error' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-input-radio-state-error' title='e-input-radio error' usageTitle=labels.usage.title}}
         {{e-input-radio
           state="error"
         }}
@@ -84,7 +84,7 @@
     {{/freestyle-variant}}
 
     {{#freestyle-variant collection=collection key='disabled'}}
-      {{#freestyle-usage 'e-input-radio-disabled' title='e-input-radio disabled' usageTitle=labels.usage.title}}
+      {{#freestyle-usage 'e-input-radio-state-disabled' title='e-input-radio disabled' usageTitle=labels.usage.title}}
         {{e-input-radio
           disabled=true
         }}

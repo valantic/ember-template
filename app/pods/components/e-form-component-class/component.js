@@ -1,6 +1,11 @@
 import Ember from 'ember';
 import ComponentUtils from 'ember-project-template/mixins/component-utils';
 
+/* e-form-component-class
+* This abstract component will be extended from simple ELEMENTS like for e.g. "e-input-text".
+* It manages the state-handling for the element.
+ */
+
 export default Ember.Component.extend(ComponentUtils, {
   autofocus: false,
   class: '',

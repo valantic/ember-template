@@ -1,4 +1,11 @@
-{{#c-form-combo layout=layout state=state insideScroll=insideScroll scrollArrows=scrollArrows border=border inline=inlineOuterPanel}}
+{{#e-panel
+  layout=layout
+  state=state
+  insideScroll=insideScroll
+  scrollArrows=scrollArrows
+  border=border
+  inline=inlineOuterPanel
+}}
   {{#if label}}
     {{e-label
       class=labelClassName
@@ -64,4 +71,4 @@
       {{/if}}
     {{/each}}
   </span>
-{{/c-form-combo}}
+{{/e-panel}}

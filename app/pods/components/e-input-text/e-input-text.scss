@@ -1,5 +1,5 @@
 .e-input-text {
-  @include c-form-control;
+  @include e-form-component-class;
   width: 100%;
   height: 2em;
 }

@@ -1,4 +1,4 @@
-import CFormControl from '../c-form-control/component';
+import CFormControl from '../e-form-component-class/component';
 
 export default CFormControl.extend({
   cols: 25,

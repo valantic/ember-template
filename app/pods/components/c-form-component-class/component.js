@@ -1,6 +1,11 @@
 import Ember from 'ember';
 import ComponentUtils from 'ember-project-template/mixins/component-utils';
 
+/* c-form-component-class
+ * This abstract component will be extended from COMPONENTS like for e.g. "c-input-text".
+ * It manages the state-handling for the element.
+ */
+
 export default Ember.Component.extend(ComponentUtils, {
   tagName: 'div',
   classNames: null,
@@ -11,7 +16,7 @@ export default Ember.Component.extend(ComponentUtils, {
     'hasFocus:focus',
     'isActive:active'
   ],
-  defaultClassName: 'c-form-group',
+  defaultClassName: 'c-form-component-class',
   fieldClassName: '',
 
   state: Ember.computed('hasSuccess', 'hasFeedback', 'hasWarning', 'hasError', function() {

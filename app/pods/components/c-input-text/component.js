@@ -1,4 +1,4 @@
-import CFormGroup from '../c-form-group/component';
+import CFormGroup from '../c-form-component-class/component';
 
 export default CFormGroup.extend({
   defaultClassName: 'c-input-text',

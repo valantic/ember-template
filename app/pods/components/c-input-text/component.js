@@ -1,7 +1,7 @@
 import cFormComponentClass from '../c-form-component-class/component';
 
 export default cFormComponentClass.extend({
-  defaultClassName: 'c-input-text',
+  bemBlockName: 'c-input-text',
   labelFirst: true,
   noLabel: false,
   bigPaddingFlanks: false,

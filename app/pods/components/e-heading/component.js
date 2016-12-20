@@ -3,14 +3,13 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   tagName: 'h1',
   classNames: ['e-heading'],
-  defaultClassName: 'e-heading',
+  bemBlockName: 'e-heading',
   classNameBindings: ['stateClass'],
   state: 'default',
 
   stateClass: function() {
-    const defaultClassName = this.get('defaultClassName');
-    const theState = `${defaultClassName}--${this.get('state')}`;
+    const bemBlockName = this.get('bemBlockName');
 
-    return theState;
+    return `${bemBlockName}--${this.get('state')}`;
   }.property()
 });

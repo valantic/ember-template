@@ -7,7 +7,7 @@ export default cFormComponentClass.extend({
     'labelUp:c-input-radio--labelup',
     'noInputVisible:c-input-radio--noinputvisible'
   ],
-  defaultClassName: 'c-input-radio',
+  bemBlockName: 'c-input-radio',
   tagName: 'div',
   items: [],
   noInputVisible: false,

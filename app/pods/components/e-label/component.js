@@ -4,7 +4,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   tagName: 'label',
   classNames: ['e-label'],
-  defaultClassName: 'e-label',
+  bemBlockName: 'e-label',
   attributeBindings: [
     'disabled',
     'for'

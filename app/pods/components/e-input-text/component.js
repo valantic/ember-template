@@ -2,20 +2,20 @@ import Ember from 'ember';
 import eFormComponentClass from '../e-form-component-class/component';
 
 export default eFormComponentClass.extend({
-  defaultClassName: 'e-input-text',
+  bemBlockName: 'e-input-text',
   type: 'text',
   textCentered: false,
   noFocus: false,
 
   class: Ember.computed('textCentered', 'noFocus', function() {
-    const defaultClassName = this.get('defaultClassName');
+    const bemBlockName = this.get('bemBlockName');
     const textCentered = this.get('textCentered');
     const classValue = '--text-center ';
     const noFocusClass = 'e-input-text--no-focus';
     let className = '';
 
     if (textCentered) {
-      className = defaultClassName + classValue;
+      className = bemBlockName + classValue;
     } else {
       className = '';
     }

@@ -1,7 +1,7 @@
 import cFormComponentClass from '../c-form-component-class/component';
 
 export default cFormComponentClass.extend({
-  defaultClassName: 'c-textarea',
+  bemBlockName: 'c-textarea',
   rows: 1,
   cols: 25,
   focusOnInsert: false,

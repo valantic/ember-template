@@ -26,10 +26,10 @@ export default Ember.Mixin.create({
    */
   getCurrentLayout() {
     const layout = this.get('layout').toString();
-    const defaultClassName = this.get('defaultClassName').toString();
+    const bemBlockName = this.get('bemBlockName').toString();
 
     // Returns a BEM modifier class name
-    return `${defaultClassName}--${layout}`;
+    return `${bemBlockName}--${layout}`;
   },
 
   setSelection() {

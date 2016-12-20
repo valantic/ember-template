@@ -16,7 +16,7 @@ export default Ember.Component.extend(ComponentUtils, {
     'hasFocus:focus',
     'isActive:active'
   ],
-  defaultClassName: 'c-form-component-class',
+  bemBlockName: 'c-form-component-class',
   fieldClassName: '',
 
   state: Ember.computed('hasSuccess', 'hasFeedback', 'hasWarning', 'hasError', function() {
@@ -65,9 +65,9 @@ export default Ember.Component.extend(ComponentUtils, {
   }),
 
   computedClassName: Ember.computed('state', function() {
-    const defaultClassName = this.get('defaultClassName');
+    const bemBlockName = this.get('bemBlockName');
 
-    return `${defaultClassName} ${defaultClassName}--state-${this.get('state')}`.trim();
+    return `${bemBlockName} ${bemBlockName}--state-${this.get('state')}`.trim();
   }),
 
   currentLayout: Ember.computed('layout', function() {

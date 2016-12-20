@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   tagName: 'span',
   classNames: ['e-button'],
-  defaultClassName: 'e-button',
+  bemBlockName: 'e-button',
   classNameBindings: [
     'isCTA:e-button--cta:e-button--default',
     'isActive:e-button--active',

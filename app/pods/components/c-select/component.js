@@ -1,7 +1,7 @@
 import cFormComponentClass from '../c-form-component-class/component';
 
 export default cFormComponentClass.extend({
-  defaultClassName: 'c-select',
+  bemBlockName: 'c-select',
 
   actions: {
     changed(newValue) {

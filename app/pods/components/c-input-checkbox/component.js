@@ -7,7 +7,7 @@ export default cFormComponentClass.extend({
     'labelUp:c-input-checkbox--labelup',
     'noInputVisible:c-input-checkbox--noinputvisible'
   ],
-  defaultClassName: 'c-input-checkbox',
+  bemBlockName: 'c-input-checkbox',
   tagName: 'div',
   items: [],
   groupValue: [],

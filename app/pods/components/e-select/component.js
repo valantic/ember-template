@@ -2,7 +2,7 @@ import eFormComponentClass from '../e-form-component-class/component';
 
 // BEGIN-FREESTYLE-USAGE e-select
 export default eFormComponentClass.extend({
-  defaultClassName: 'e-select',
+  bemBlockName: 'e-select',
   items: [],
   multiple: null,
   size: 0,

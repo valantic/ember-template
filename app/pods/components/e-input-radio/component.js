@@ -2,7 +2,7 @@ import Ember from 'ember';
 import eFormComponentClass from '../e-form-component-class/component';
 
 export default eFormComponentClass.extend({
-  defaultClassName: 'e-input-radio',
+  bemBlockName: 'e-input-radio',
   type: 'radio',
   noInputVisible: false,
   text: null,

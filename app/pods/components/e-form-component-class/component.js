@@ -9,7 +9,7 @@ import ComponentUtils from 'ember-project-template/mixins/component-utils';
 export default Ember.Component.extend(ComponentUtils, {
   autofocus: false,
   class: '',
-  defaultClassName: '',
+  bemBlockName: '',
   disabled: false,
   form: null,
   layout: 'default',
@@ -25,10 +25,10 @@ export default Ember.Component.extend(ComponentUtils, {
   }),
 
   computedClassName: Ember.computed('state', 'layout', function() {
-    const defaultClassName = this.get('defaultClassName');
-    const theState = `${defaultClassName}--state-${this.get('state')}`;
-    const theLayout = `${defaultClassName}--layout-${this.get('layout')}`;
+    const bemBlockName = this.get('bemBlockName');
+    const theState = `${bemBlockName}--state-${this.get('state')}`;
+    const theLayout = `${bemBlockName}--layout-${this.get('layout')}`;
 
-    return `${this.get('class')} ${defaultClassName} ${theState} ${theLayout}`.trim();
+    return `${this.get('class')} ${bemBlockName} ${theState} ${theLayout}`.trim();
   })
 });

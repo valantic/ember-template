@@ -4,20 +4,20 @@
 {{!-- See: https://guides.emberjs.com/v2.7.0/components/triggering-changes-with-actions --}}
   {{#unless clicked}}
     <button
-        disabled={{disabled}}
-            class="{{defaultClassName}}__button"
-        role="button"
-        type={{type}}
+      disabled={{disabled}}
+      class="{{bemBlockName}}__button"
+      role="button"
+      type={{type}}
     >
       {{yield}}
     </button>
   {{else}}
     <button
-        disabled={{disabled}}
-            class="{{defaultClassName}}__button"
-        role="button"
-        type={{type}}
-          {{action click preventDefault=preventDefault}}
+      disabled={{disabled}}
+      class="{{bemBlockName}}__button"
+      role="button"
+      type={{type}}
+      {{action click preventDefault=preventDefault}}
     >
       {{yield}}
     </button>

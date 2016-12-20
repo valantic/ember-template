@@ -3,7 +3,7 @@ import ResizeAware from 'ember-resize/mixins/resize-aware';
 
 export default Ember.Component.extend(ResizeAware, {
   classNames: ['e-panel'],
-  defaultClassName: 'e-panel',
+  bemBlockName: 'e-panel',
   classNameBindings: [
     'computedClassName',
     'shadow:e-panel--shadow',

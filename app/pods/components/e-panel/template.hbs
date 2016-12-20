@@ -1,4 +1,4 @@
-<div class="{{defaultClassName}}__inner {{stateClassNames}} {{innerClassNames}}">
+<div class="{{bemBlockName}}__inner {{stateClassNames}} {{innerClassNames}}">
   {{#if headingIncluded}}
     {{#e-heading
         tagName=tagNameTitle
@@ -9,7 +9,7 @@
   {{/if}}
   {{#if insideScroll}}
     {{#if scrollArrows}}
-      <div class="{{defaultClassName}}__arrow-left">
+      <div class="{{bemBlockName}}__arrow-left">
         {{#e-button
             transparent=true
             horScrollButton=true
@@ -21,7 +21,7 @@
     {{/if}}
     <div class="{{innerScrollClass}} {{innerScrollClassFullWidth}}">{{yield}}</div>
     {{#if scrollArrows}}
-      <div class="{{defaultClassName}}__arrow-right">
+      <div class="{{bemBlockName}}__arrow-right">
         {{#e-button
             transparent=true
             horScrollButton=true

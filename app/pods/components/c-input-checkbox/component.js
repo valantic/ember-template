@@ -1,7 +1,7 @@
 import Ember from 'ember';
-import CFormGroup from '../c-form-component-class/component';
+import cFormComponentClass from '../c-form-component-class/component';
 
-export default CFormGroup.extend({
+export default cFormComponentClass.extend({
   classNameBindings: [
     'labelFirst:c-input-checkbox--labelfirst',
     'labelUp:c-input-checkbox--labelup',

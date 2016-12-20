@@ -1,7 +1,7 @@
-import CFormControl from '../e-form-component-class/component';
+import eFormComponentClass from '../e-form-component-class/component';
 
 // BEGIN-FREESTYLE-USAGE e-input-checkbox
-export default CFormControl.extend({
+export default eFormComponentClass.extend({
   checked: false,
   defaultClassName: 'e-input-checkbox',
   type: 'checkbox',

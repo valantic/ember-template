@@ -1,7 +1,7 @@
-import CFormControl from '../e-form-component-class/component';
+import eFormComponentClass from '../e-form-component-class/component';
 
 // BEGIN-FREESTYLE-USAGE e-select
-export default CFormControl.extend({
+export default eFormComponentClass.extend({
   defaultClassName: 'e-select',
   items: [],
   multiple: null,

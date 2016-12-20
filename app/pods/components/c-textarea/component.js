@@ -1,6 +1,6 @@
-import CFormGroup from '../c-form-component-class/component';
+import cFormComponentClass from '../c-form-component-class/component';
 
-export default CFormGroup.extend({
+export default cFormComponentClass.extend({
   defaultClassName: 'c-textarea',
   rows: 1,
   cols: 25,

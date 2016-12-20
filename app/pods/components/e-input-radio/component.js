@@ -1,7 +1,7 @@
 import Ember from 'ember';
-import CFormControl from '../e-form-component-class/component';
+import eFormComponentClass from '../e-form-component-class/component';
 
-export default CFormControl.extend({
+export default eFormComponentClass.extend({
   defaultClassName: 'e-input-radio',
   type: 'radio',
   noInputVisible: false,

@@ -1,12 +1,7 @@
 import Ember from 'ember';
 import ComponentUtils from 'ember-project-template/mixins/component-utils';
 
-/* c-form-component-class
- * This abstract component will be extended from COMPONENTS like for e.g. "c-input-text".
- * It manages the state-handling for the element.
- */
-
-export default Ember.Component.extend(ComponentUtils, {
+export default Ember.Mixin.create(ComponentUtils, {
   tagName: 'div',
   classNames: null,
   classNameBindings: [
@@ -16,7 +11,7 @@ export default Ember.Component.extend(ComponentUtils, {
     'hasFocus:focus',
     'isActive:active'
   ],
-  bemBlockName: 'c-form-component-class',
+  bemBlockName: 'c-form-component',
   fieldClassName: '',
 
   state: Ember.computed('hasSuccess', 'hasFeedback', 'hasWarning', 'hasError', function() {
@@ -78,7 +73,7 @@ export default Ember.Component.extend(ComponentUtils, {
     const layout = this.get('layout');
     const placeholder = this.get('placeholder');
 
-    // No placeholder for horizonal and vertical layouts if placeholder is not defined
+    // No placeholder for horizontal and vertical layouts if placeholder is not defined
     if (layout !== 'nested') {
       // would return undefined when the placeholder is not set
       return placeholder;

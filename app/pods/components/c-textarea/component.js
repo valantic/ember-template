@@ -1,8 +1,9 @@
-import cFormComponentClass from '../c-form-component-class/component';
+import Ember from 'ember';
+import cFormComponent from 'ember-project-template/mixins/c-form-component';
 
-export default cFormComponentClass.extend({
+export default Ember.Component.extend(cFormComponent, {
   bemBlockName: 'c-textarea',
-  rows: 1,
+  rows: 5,
   cols: 25,
   focusOnInsert: false,
 

@@ -1,7 +1,8 @@
-import eFormComponentClass from '../e-form-component-class/component';
+import Ember from 'ember';
+import eFormComponent from 'ember-project-template/mixins/e-form-component';
 
 // BEGIN-FREESTYLE-USAGE e-select
-export default eFormComponentClass.extend({
+export default Ember.Component.extend(eFormComponent, {
   bemBlockName: 'e-select',
   items: [],
   multiple: null,

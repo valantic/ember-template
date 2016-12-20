@@ -1,7 +1,7 @@
 import Ember from 'ember';
-import cFormComponentClass from '../c-form-component-class/component';
+import cFormComponent from 'ember-project-template/mixins/c-form-component';
 
-export default cFormComponentClass.extend({
+export default Ember.Component.extend(cFormComponent, {
   classNameBindings: [
     'labelFirst:c-input-radio--labelfirst',
     'labelUp:c-input-radio--labelup',

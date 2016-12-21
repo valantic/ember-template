@@ -1,0 +1,28 @@
+{{! disable all rules for this template }}
+<!-- template-lint disable=true -->
+{{#freestyle-subsection name='alignment' section=section}}
+
+  {{#freestyle-annotation}}
+    <h4>Alignment classes</h4>
+    <ul>
+      <li>.align--left</li>
+      <li>.align--center</li>
+      <li>.align--right</li>
+    </ul>
+  {{/freestyle-annotation}}
+
+  {{#freestyle-usage 'alignment' title='alignment examples' usageTitle=labels.usage.title scssTitle=labels.usage.scss}}
+    <div style="border: 1px solid black">
+      <div class="align--left">
+        {{#e-button}}Button{{/e-button}}
+      </div>
+      <div class="align--center">
+        {{#e-button}}Button{{/e-button}}
+      </div>
+      <div class="align--right">
+        {{#e-button}}Button{{/e-button}}
+      </div>
+    </div>
+  {{/freestyle-usage}}
+
+{{/freestyle-subsection}}

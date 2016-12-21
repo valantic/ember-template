@@ -1,11 +1,10 @@
-// BEGIN-FREESTYLE-USAGE e-form-component-class
-$e-form-component-class-border-radius: 0.15em;
+$e-form-base-border-radius: 0.15em;
 
-@mixin e-form-component-class($padding: 0 5px) {
+@mixin e-form-base($padding: 0 5px) {
   border: 2px solid $color-gray-light;
-  -webkit-border-radius: $e-form-component-class-border-radius;
-  -moz-border-radius: $e-form-component-class-border-radius;
-  border-radius: $e-form-component-class-border-radius;
+  -webkit-border-radius: $e-form-base-border-radius;
+  -moz-border-radius: $e-form-base-border-radius;
+  border-radius: $e-form-base-border-radius;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -27,4 +26,3 @@ $e-form-component-class-border-radius: 0.15em;
   }
 
 }
-// END-FREESTYLE-USAGE

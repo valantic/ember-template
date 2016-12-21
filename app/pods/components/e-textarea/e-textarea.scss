@@ -1,5 +1,5 @@
 .e-textarea {
-  @include e-form-component-class($padding: 5px);
+  @include e-form-base($padding: 5px);
   width: 100%;
   max-width: 100%;
 }

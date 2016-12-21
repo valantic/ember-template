@@ -10,7 +10,7 @@ $e-input-radio-border-button-style: 1.5px;
 }
 
 .e-input-radio {
-  @include e-form-component-class;
+  @include e-form-base;
   display: none;
 
   &--state-default:checked + .e-input-radio__fake-radio {

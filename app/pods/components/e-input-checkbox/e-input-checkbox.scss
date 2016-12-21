@@ -8,7 +8,7 @@ $e-input-checkbox-size: 1em;
 }
 
 .e-input-checkbox {
-  @include e-form-component-class;
+  @include e-form-base;
   display: none;
 
   &--state-default:checked + .e-input-checkbox__fake-checkbox {

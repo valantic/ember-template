@@ -19,5 +19,6 @@ export default {
   'label.form.email': 'E-mail',
   'label.form.phone': 'Phone',
   'label.form.mobile': 'Mobile',
-  'label.form.fax': 'Fax'
+  'label.form.fax': 'Fax',
+  'e-select.placeholder': 'placeholder exp.'
 };

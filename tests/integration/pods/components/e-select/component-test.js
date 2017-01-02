@@ -35,6 +35,8 @@ test('it renders', function(assert) {
         items=items
         label="Select"
         placeholder="Select from the list"
+        dataValueField="value"
+        dataTextField="label"
       }}
     </div>
   `);

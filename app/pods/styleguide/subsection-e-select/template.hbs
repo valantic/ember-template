@@ -4,6 +4,17 @@
 
   {{#freestyle-annotation}}
     <p>Extends: <em>e-form-components</em></p>
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>disabled</code> (Boolean)</dt>
+      <dd>sets select on disabled</dd>
+      <dt><code>multiple</code> (Boolean)</dt>
+      <dd>allows multiple selection</dd>
+      <dt><code>items</code> (Array)</dt>
+      <dd>Array with select options</dd>
+      <dt><code>groupValue</code> (String)</dt>
+      <dd>value will be compared with the option-value, when it's the same it will select this value</dd>
+    </dl>
   {{/freestyle-annotation}}
 
   {{#freestyle-collection title='e-select types' defaultKey='all' inline=false as |collection|}}
@@ -14,6 +25,8 @@
           label="Select"
           name="e-select"
           items=model.selectOptions
+          dataTextField="label"
+          dataValueField="value"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -25,6 +38,8 @@
           name="e-select-multiple"
           items=model.selectOptions
           multiple=true
+          dataTextField="label"
+          dataValueField="value"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -42,6 +57,8 @@
           name="e-select"
           items=model.selectOptions
           state="default"
+          dataTextField="label"
+          dataValueField="value"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -53,6 +70,8 @@
           name="e-select"
           items=model.selectOptions
           state="success"
+          dataTextField="label"
+          dataValueField="value"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -64,6 +83,8 @@
           name="e-select"
           items=model.selectOptions
           state="warning"
+          dataTextField="label"
+          dataValueField="value"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -75,6 +96,8 @@
           name="e-select"
           items=model.selectOptions
           state="error"
+          dataTextField="label"
+          dataValueField="value"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -86,6 +109,8 @@
           name="e-select"
           items=model.selectOptions
           disabled=true
+          dataTextField="label"
+          dataValueField="value"
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}

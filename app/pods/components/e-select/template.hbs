@@ -11,10 +11,14 @@
   title={{title}}
 >
   {{#unless multiple}}
-    <option selected={{if groupValue true false}}>{{placeholder}}</option>
+    <option selected={{if groupValue true false}}>
+      {{if placeholder placeholder (t "e-select.placeholder")}}
+    </option>
   {{/unless}}
 
   {{#each items as |option|}}
-    <option value={{option.value}} selected={{eq option.value groupValue}}>{{option.label}}</option>
+    <option value={{get option dataValueField}} selected={{eq (get option dataValueField) groupValue}}>
+      {{get option dataTextField}}
+    </option>
   {{/each}}
 </select>

@@ -1793,6 +1793,11 @@
         }
       }
     },
+    "ember-cli-deprecation-workflow": {
+      "version": "0.2.3",
+      "from": "ember-cli-deprecation-workflow@latest",
+      "resolved": "https://registry.npmjs.org/ember-cli-deprecation-workflow/-/ember-cli-deprecation-workflow-0.2.3.tgz"
+    },
     "ember-cli-eslint": {
       "version": "3.0.0",
       "from": "ember-cli-eslint@>=3.0.0 <4.0.0",
@@ -2068,6 +2073,11 @@
         }
       }
     },
+    "ember-debug-handlers-polyfill": {
+      "version": "1.0.3",
+      "from": "ember-debug-handlers-polyfill@>=1.0.2 <2.0.0",
+      "resolved": "https://registry.npmjs.org/ember-debug-handlers-polyfill/-/ember-debug-handlers-polyfill-1.0.3.tgz"
+    },
     "ember-export-application-global": {
       "version": "1.1.1",
       "from": "ember-export-application-global@>=1.0.5 <2.0.0",
@@ -2156,6 +2166,11 @@
           "resolved": "https://registry.npmjs.org/recast/-/recast-0.11.18.tgz"
         }
       }
+    },
+    "ember-runtime-enumerable-includes-polyfill": {
+      "version": "1.0.4",
+      "from": "ember-runtime-enumerable-includes-polyfill@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/ember-runtime-enumerable-includes-polyfill/-/ember-runtime-enumerable-includes-polyfill-1.0.4.tgz"
     },
     "ember-svg-jar": {
       "version": "0.9.3",

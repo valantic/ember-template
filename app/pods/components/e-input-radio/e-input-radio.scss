@@ -2,12 +2,8 @@ $e-input-radio-border: 2px solid $color-gray-white;
 $e-input-radio-size: 1em;
 $e-input-radio-border-circle: 50%;
 $e-input-radio-border-button-style: 1.5px;
-
-@mixin e-input-radio-shadow ($border-size, $color, $value: 0 0 0) {
-  -webkit-box-shadow: $value $border-size $color;
-  -moz-box-shadow: $value $border-size $color;
-  box-shadow: $value $border-size $color;
-}
+$e-input-radio-shadow-light: 0 0 0 2px $color-gray-light;
+$e-input-radio-shadow-dark: 0 0 0 2px $color-primary-dark;
 
 .e-input-radio {
   @include e-form-base;
@@ -39,7 +35,7 @@ $e-input-radio-border-button-style: 1.5px;
 }
 
 .e-input-radio__fake-radio {
-  @include e-input-radio-shadow(2px, $color-gray-light);
+  box-shadow: $e-input-radio-shadow-light;
   position: relative;
   content: '';
   vertical-align: middle;
@@ -56,7 +52,7 @@ $e-input-radio-border-button-style: 1.5px;
 // Special Styling for Radios who look like buttons
 // ---------------------------------------------------
 .e-input-radio__fake-radio--noinput {
-  @include e-input-radio-shadow(2px, $color-primary-dark);
+  box-shadow: $e-input-radio-shadow-dark;
   border: 0;
   border-radius: $e-input-radio-border-button-style;
   color: $color-primary-dark;
@@ -83,7 +79,7 @@ $e-input-radio-border-button-style: 1.5px;
 }
 
 .e-input-radio[disabled] + .e-input-radio__fake-radio--noinput {
-  @include e-input-radio-shadow(2px, $color-gray-light);
+  box-shadow: $e-input-radio-shadow-light;
   color: $color-gray-light;
   cursor: default;
 }

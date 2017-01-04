@@ -1,15 +1,11 @@
 $e-panel-box-shadow-size: 0px 6px 6px 0px;
 
 @mixin e-panel_border-state($border-state) {
-  -moz-border-image: color($border-state);
-  -webkit-border-image: color($border-state);
   border-image-source: color($border-state);
   border-image-slice: 1;
 }
 
 @mixin e-panel-box-shadow-color ($color, $opacity: 0.1) {
-  -webkit-box-shadow: $e-panel-box-shadow-size rgba($color, $opacity);
-  -moz-box-shadow: $e-panel-box-shadow-size rgba($color, $opacity);
   box-shadow: $e-panel-box-shadow-size rgba($color, $opacity);
 }
 

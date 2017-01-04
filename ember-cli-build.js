@@ -1,13 +1,23 @@
-/*jshint node:true*/
-/* global require, module */
-var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+/*
+jshint node:true
+global require, module */
+const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 const isProduction = EmberApp.env() === 'production';
 
 module.exports = function(defaults) {
-  var app = new EmberApp(defaults, {
+  const app = new EmberApp(defaults, {
     // Add options here
-    svgJar: {
+    'autoprefixer': {
+      browsers: [
+        'last 3 versions',
+        'ie 10',
+        'iOS 8',
+        'Android 4.4'
+      ],
+      cascade: false
+    },
+    'svgJar': {
       strategy: ['symbol', 'inline'],
 
       symbol: {
@@ -20,14 +30,14 @@ module.exports = function(defaults) {
         sourceDirs: ['svgs', 'public/assets/svg/inline']
       }
     },
-    storeConfigInMeta: false,
-    sassOptions: {
+    'storeConfigInMeta': false,
+    'sassOptions': {
       includePaths: [
         'app/pods/components',
         'bower_components/bootstrap-sass/assets/stylesheets/'
       ]
     },
-    outputPaths: {
+    'outputPaths': {
       app: {
         css: {
           // default: 'app': '/assets/project-name.css' has not to be here

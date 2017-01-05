@@ -73,6 +73,14 @@ Currently, there is no working solution to test your *.scss files with the ember
 
 Read here how to [install scss-lint](https://github.com/brigade/scss-lint#installation). The linter is already configured with the `.scss-lint.yml` file inside the project root. Just run `$ scss-lint` from the command line or use your IDE to lint the project style files.
 
+### SCSS Autoprefixer
+
+We are using a Autoprefixer for vendor prefixes. So you don't have to care about vendor prefixes in writing css / scss.
+The config about browser support you can set in the ember-cli-build.js file in the root directory.
+
+- Documentation (https://github.com/kimroen/ember-cli-autoprefixer)
+- Browser specification (https://github.com/ai/browserslist#queries)
+
 ## Getting Started with EmberJS
 
 We have gathered Ember JS tutorials and videos which should help you understand how Ember works.

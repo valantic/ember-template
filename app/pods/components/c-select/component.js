@@ -4,9 +4,11 @@ import cFormComponent from 'ember-project-template/mixins/c-form-component';
 export default Ember.Component.extend(cFormComponent, {
   bemBlockName: 'c-select',
 
+  // onChange() {},
+
   actions: {
-    changed(newValue) {
-      this.sendAction('changed', newValue);
+    onChange(newValue) {
+      this.sendAction('onChange', newValue);
     }
   }
 });

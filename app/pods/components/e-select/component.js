@@ -9,10 +9,13 @@ export default Ember.Component.extend(eFormComponent, {
   size: 0,
   state: 'default',
 
+  // onChange() {},
+
   actions: {
-    changed(newValue) {
+    onChange(newValue) {
       this.set('groupValue', newValue);
-      this.sendAction('changed', newValue);
+
+      this.sendAction('onChange', newValue);
     }
   }
 });

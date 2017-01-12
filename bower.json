@@ -1,7 +1,7 @@
 {
   "name": "ember-project-template",
   "dependencies": {
-    "ember": "~2.8.0",
+    "ember": "lts-2-8",
     "ember-cli-shims": "0.1.1",
     "ember-qunit-notifications": "0.1.0",
     "remarkable": "1.6.2",

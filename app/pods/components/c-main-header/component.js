@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames: ['l-main-header'],
-  bemBlockName: 'l-main-header',
+  classNames: ['c-main-header'],
+  bemBlockName: 'c-main-header',
   tagName: 'div',
   title: 'default-title'
 });

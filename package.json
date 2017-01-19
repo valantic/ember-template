@@ -21,7 +21,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "babel-eslint": "^6.0.4",
+    "babel-eslint": "^7.1.1",
     "broccoli-asset-rev": "^2.4.2",
     "ember-ajax": "^2.0.1",
     "ember-cli": "^2.8.0",
@@ -54,10 +54,10 @@
     "ember-resolver": "^2.0.3",
     "ember-svg-jar": "^0.9.3",
     "ember-template-lint": "^0.5.14",
-    "eslint": "^3.7.1",
-    "eslint-config-airbnb-base": "^8.0.0",
-    "eslint-config-movento": "git+https://movento2.codebasehq.com/frontend-configs/javascript.git",
-    "eslint-plugin-import": "^1.8.1",
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-config-movento": "git+https://movento2.codebasehq.com/frontend-configs/javascript.git#1.5.0",
+    "eslint-plugin-import": "^2.2.0",
     "loader.js": "^4.0.1"
   },
   "ember-addon": {

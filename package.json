@@ -66,6 +66,6 @@
     ]
   },
   "dependencies": {
-    "ember-intl": "^2.16.3"
+    "ember-intl": "2.16.3"
   }
 }

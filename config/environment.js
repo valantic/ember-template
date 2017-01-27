@@ -14,7 +14,12 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
-
+    'polyfill-io': {
+      features: [
+        'Intl.~locale.en',
+        'Intl.~locale.de'
+      ]
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

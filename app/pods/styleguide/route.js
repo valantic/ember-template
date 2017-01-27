@@ -14,6 +14,9 @@ export default Ember.Route.extend(StyleguideFunctions, {
     },
     willTransition() {
       this.send('toggleStylesheet', false);
+
+      // Clear store data to prevent polluting application
+      this.get('store').unloadAll();
     }
   },
 

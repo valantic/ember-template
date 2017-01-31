@@ -2,5 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'div',
-  classNames: ['container-fluid']
+  classNames: [
+    'container-fluid',
+    'l-styleguide'
+  ]
 });

@@ -41,7 +41,6 @@ module.exports = function(defaults) {
       app: {
         css: {
           // default: 'app': '/assets/project-name.css' has not to be here
-          'style-guide': '/assets/style-guide.css'
         }
       }
     },
@@ -55,8 +54,9 @@ module.exports = function(defaults) {
   });
 
   // Removes the style-guide CSS when building for production
-  if (isProduction) {
-    delete app.options.outputPaths.app.css['style-guide'];
+  if (!isProduction) {
+    delete app.options.outputPaths.app.css['app'];
+    app.options.outputPaths.app.css = { 'app-and-styleguide': '/assets/ember-project-template.css' };
   }
 
   // Use `app.import` to add additional libraries to the generated

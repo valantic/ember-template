@@ -18,7 +18,7 @@ test('visiting /styleguide', (assert) => {
 test('toggleStylesheet should work on styleguide pages', (assert) => {
   let styleSheetTag = '';
   let currentStyleSheet = '';
-  const expectedStyleSheet = '/assets/style-guide.css';
+  const expectedStyleSheet = '/assets/ember-project-template.css';
   // styleGuideIsActive = true
   visit('/styleguide');
   andThen(() => {
@@ -38,7 +38,7 @@ test('toggleStylesheet should work on styleguide pages', (assert) => {
 test('toggleStylesheet should work on regular pages', (assert) => {
   let styleSheetTag = '';
   let currentStyleSheet = '';
-  const expectedStyleSheet = 'assets/ember-project-template.css';
+  const expectedStyleSheet = '/assets/ember-project-template.css';
   // styleGuideIsActive = false
   visit('/readme');
   andThen(() => {

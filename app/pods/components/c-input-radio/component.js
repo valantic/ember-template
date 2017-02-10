@@ -3,9 +3,9 @@ import cFormComponent from 'ember-project-template/mixins/c-form-component';
 
 export default Ember.Component.extend(cFormComponent, {
   classNameBindings: [
-    'labelFirst:c-input-radio--labelfirst',
-    'labelUp:c-input-radio--labelup',
-    'noInputVisible:c-input-radio--noinputvisible'
+    'labelFirst:c-input-radio--label-first',
+    'labelUp:c-input-radio--label-up',
+    'noInputVisible:c-input-radio--no-input-visible'
   ],
   bemBlockName: 'c-input-radio',
   tagName: 'div',
@@ -41,7 +41,7 @@ export default Ember.Component.extend(cFormComponent, {
   }),
 
   noInputVisibleClassName: Ember.computed('noInputVisible', function() {
-    const noInputClass = 'c-input-radio__options--noinputvisible';
+    const noInputClass = 'c-input-radio__options--no-input-visible';
 
     if (this.get('noInputVisible')) {
       return noInputClass;

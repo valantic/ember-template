@@ -61,6 +61,6 @@ test('it renders', function(assert) {
     }}
   `);
 
-  assert.equal(this.$().find('.e-label--noinputvisible').length > 0, true,
+  assert.equal(this.$().find('.e-label--no-input-visible').length > 0, true,
       'labels with invisible input elements');
 });

@@ -74,8 +74,8 @@ test('it renders', function(assert) {
   `);
   assert.equal(this.$().find('.e-label > .e-label__text').length, 1,
       'it renders a label with the e-label__text before the yield');
-  assert.equal(this.$().find('.e-label.e-label--labelup').length, 1,
-      'it renders a label with e-label--labelup');
+  assert.equal(this.$().find('.e-label.e-label--label-up').length, 1,
+      'it renders a label with e-label--label-up');
 
   this.render(hbs`
     {{e-label
@@ -92,7 +92,7 @@ test('it renders', function(assert) {
       noInputVisible=true
     }}
   `);
-  assert.equal(this.$().find('.e-label.e-label--noinputvisible').length, 1,
+  assert.equal(this.$().find('.e-label.e-label--no-input-visible').length, 1,
       'it renders a no input visible label');
 
   this.render(hbs`

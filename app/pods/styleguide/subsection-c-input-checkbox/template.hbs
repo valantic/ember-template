@@ -107,8 +107,8 @@
 
   {{#freestyle-collection title='c-input-checkbox specials' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='labelfirst'}}
-      {{#freestyle-usage 'c-input-checkbox-labelfirst' title='Label First option' usageTitle=labels.usage.title}}
+    {{#freestyle-variant collection=collection key='label-first'}}
+      {{#freestyle-usage 'c-input-checkbox-label-first' title='Label First option' usageTitle=labels.usage.title}}
         {{c-input-checkbox
           items=model.selectOptions
           labelFirst=true
@@ -116,8 +116,8 @@
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
-    {{#freestyle-variant collection=collection key='labelup'}}
-      {{#freestyle-usage 'c-input-checkbox-labelup' title='Label Up option' usageTitle=labels.usage.title}}
+    {{#freestyle-variant collection=collection key='label-up'}}
+      {{#freestyle-usage 'c-input-checkbox-label-up' title='Label Up option' usageTitle=labels.usage.title}}
         {{c-input-checkbox
           items=model.selectOptions
           labelUp=true
@@ -125,8 +125,8 @@
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
-    {{#freestyle-variant collection=collection key='labelup-border'}}
-      {{#freestyle-usage 'c-input-checkbox-labelup-border' title='Label Up option-border' usageTitle=labels.usage.title}}
+    {{#freestyle-variant collection=collection key='label-up-border'}}
+      {{#freestyle-usage 'c-input-checkbox-label-up-border' title='Label Up option-border' usageTitle=labels.usage.title}}
         {{c-input-checkbox
           items=model.selectOptions
           labelUp=true

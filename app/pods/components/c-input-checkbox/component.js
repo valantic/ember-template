@@ -3,9 +3,9 @@ import cFormComponent from 'ember-project-template/mixins/c-form-component';
 
 export default Ember.Component.extend(cFormComponent, {
   classNameBindings: [
-    'labelFirst:c-input-checkbox--labelfirst',
-    'labelUp:c-input-checkbox--labelup',
-    'noInputVisible:c-input-checkbox--noinputvisible'
+    'labelFirst:c-input-checkbox--label-first',
+    'labelUp:c-input-checkbox--label-up',
+    'noInputVisible:c-input-checkbox--no-input-visible'
   ],
   bemBlockName: 'c-input-checkbox',
   tagName: 'div',

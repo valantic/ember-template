@@ -54,7 +54,7 @@
   margin-left: $spacing--5;
 }
 
-.e-label--noinputvisible {
+.e-label--no-input-visible {
   display: inline-block;
   cursor: pointer;
 
@@ -77,23 +77,23 @@
   }
 }
 
-.e-label--labelup {
+.e-label--label-up {
   text-align: center;
   display: inline-block;
 }
 
-.e-label__text--labelup {
+.e-label__text--label-up {
   display: block;
   margin: $spacing--0;
   margin-bottom: $spacing--15;
 }
 
-.e-label__text--labelfirst {
+.e-label__text--label-first {
   margin-left: $spacing--0;
   margin-right: $spacing--5;
 }
 
-.e-label--labelhidden {
+.e-label--label-hidden {
   .e-label__text {
     position: absolute;
     left: -10000em;

@@ -12,10 +12,10 @@ export default Ember.Component.extend({
   class: 'e-label',
   classNameBindings: [
     'leading:e-label--leading',
-    'labelUp:e-label--labelup',
+    'labelUp:e-label--label-up',
     'selected:e-label--selected',
-    'noInputVisible:e-label--noinputvisible',
-    'noLabelVisible:e-label--labelhidden',
+    'noInputVisible:e-label--no-input-visible',
+    'noLabelVisible:e-label--label-hidden',
     'required:e-label--required',
     'nested:e-label--layout-nested',
     'multiple:e-label-select--multiple',
@@ -42,65 +42,74 @@ export default Ember.Component.extend({
     this.initialState = this.state;
   },
 
-  typeClassName: Ember.computed('type', function() {
-    const typeClass = `e-label__text--${this.get('type')}`;
+  innerClassNames: Ember.computed(
+      'type',
+      'selected',
+      'disabled',
+      'noInputVisible',
+      'labelUp',
+      'state',
+      'labelFirst',
+      'layout',
+      function() {
+        let classNames = '';
+        const bemElementName = `${this.get('bemBlockName')}__text`;
+        const layoutClass = `${bemElementName}--layout-${this.get('layout')}`;
+        const typeClass = `${bemElementName}--${this.get('type')}`;
+        const selectedClass = `${bemElementName}--selected`;
+        const disabledClass = `${bemElementName}--disabled`;
+        const noInputVisibleClass = `${bemElementName}--no-input-visible`;
+        const labelUpClass = `${bemElementName}--label-up`;
+        const stateClass = `${bemElementName}--${this.get('state')}`;
+        const labelFirstClass = `${bemElementName}--label-first`;
 
-    if (this.get('type')) {
-      return typeClass;
-    }
+        if (this.get('layout')) {
+          classNames += ' ';
+          classNames += layoutClass;
+        }
 
-    return null;
-  }),
+        if (this.get('type')) {
+          classNames += ' ';
+          classNames += typeClass;
+        }
 
-  statusClassNames: Ember.computed('selected', function() {
-    const selectClass = 'e-label__text--selected';
+        if (this.get('selected')) {
+          classNames += ' ';
+          classNames += selectedClass;
+        }
 
-    if (this.get('selected')) {
-      return selectClass;
-    }
+        if (this.get('disabled')) {
+          classNames += ' ';
+          classNames += disabledClass;
+        }
 
-    return null;
-  }),
+        if (this.get('noInputVisible')) {
+          classNames += ' ';
+          classNames += noInputVisibleClass;
+        }
 
-  disabledClassNames: Ember.computed('disabled', function() {
-    const disabledClass = 'e-label__text--disabled';
+        if (this.get('labelUp')) {
+          classNames += ' ';
+          classNames += labelUpClass;
+        }
 
-    if (this.get('disabled')) {
-      return disabledClass;
-    }
+        if (this.get('labelUp')) {
+          classNames += ' ';
+          classNames += labelUpClass;
+        }
 
-    return null;
-  }),
+        if (this.get('state')) {
+          classNames += ' ';
+          classNames += stateClass;
+        }
 
-  noInputClassNames: Ember.computed('noInputVisible', function() {
-    const noInputClass = 'e-label__text--noinputvisible';
+        if (this.get('labelFirst')) {
+          classNames += ' ';
+          classNames += labelFirstClass;
+        }
 
-    if (this.get('noInputVisible')) {
-      return noInputClass;
-    }
-
-    return null;
-  }),
-
-  labelUpClassNames: Ember.computed('labelUp', function() {
-    const labelUpClass = 'e-label__text--labelup';
-
-    if (this.get('labelUp')) {
-      return labelUpClass;
-    }
-
-    return null;
-  }),
-
-  labelfirstClassNames: Ember.computed('labelFirst', function() {
-    const labelfirstClass = 'e-label__text--labelfirst';
-
-    if (this.get('labelFirst')) {
-      return labelfirstClass;
-    }
-
-    return null;
-  })
-
+        return classNames;
+      }
+  )
 });
 // END-FREESTYLE-USAGE

@@ -1,5 +1,5 @@
 {{#if labelFirst}}
-  <span class="{{bemBlockName}}__text {{bemBlockName}}__text--layout-{{layout}} {{typeClassName}} {{statusClassNames}} {{disabledClassNames}} {{noInputClassNames}} {{labelfirstClassNames}}" data-value="{{text}}">
+  <span class="{{bemBlockName}}__text {{innerClassNames}}" data-value="{{text}}">
     {{text}}
     {{#if required}}
       <span class="{{bemBlockName}}__required">*</span>
@@ -7,7 +7,7 @@
   </span>
   {{yield}}
 {{else if labelUp}}
-  <span class="{{bemBlockName}}__text {{bemBlockName}}__text--layout-{{layout}} {{typeClassName}} {{statusClassNames}} {{disabledClassNames}} {{noInputClassNames}} {{labelUpClassNames}}" data-value="{{text}}">
+  <span class="{{bemBlockName}}__text {{innerClassNames}}" data-value="{{text}}">
     {{text}}
     {{#if required}}
       <span class="{{bemBlockName}}__required">*</span>
@@ -17,7 +17,7 @@
 {{else}}
   {{yield}}
   {{#unless noInputVisible}}
-    <span class="{{bemBlockName}}__text {{bemBlockName}}__text--layout-{{layout}} {{typeClassName}} {{statusClassNames}} {{disabledClassNames}} {{noInputClassNames}}" data-value="{{text}}">
+    <span class="{{bemBlockName}}__text {{innerClassNames}}" data-value="{{text}}">
       {{text}}
       {{#if required}}
         <span class="{{bemBlockName}}__required">*</span>

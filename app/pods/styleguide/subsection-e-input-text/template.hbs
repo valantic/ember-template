@@ -35,8 +35,10 @@
       <dd>this value will be display as value in the input-field</dd>
       <dt><code>type</code> (String)</dt>
       <dd>"default", "password", "search", "email"</dd>
-      <dt><code>textCentered</code> (Boolean)</dt>
+      <dt><code>hasTextCentered</code> (Boolean)</dt>
       <dd>sets the text centered in the input-field</dd>
+      <dt><code>hasNoFocus</code> (Boolean)</dt>
+      <dd>shows no focus while typing (background: transparent)</dd>
     </dl>
   {{/freestyle-annotation}}
 
@@ -132,7 +134,7 @@
       {{#freestyle-usage 'e-input-text-no-focus' title='e-input-text no focus' usageTitle=labels.usage.title}}
         {{e-input-text
           value="a value"
-          noFocus=true
+          hasNoFocus=true
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -178,7 +180,7 @@
         {{e-input-text
           name="text-center"
           value="Tetx-centered-value"
-          textCentered=true
+          hasTextCentered=true
         }}
       {{/freestyle-usage}}
     {{/freestyle-variant}}

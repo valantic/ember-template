@@ -10,7 +10,10 @@ const { Component } = Ember;
 // Because fastboot.isFastboot is no longer working
 
 export default Component.extend({
+  // Component setup
   tagName: '',
+
+  // Internal properties
   isFastBoot: Ember.computed(() => {
     const fastBootIsRunning = !(typeof FastBoot === 'undefined');
 

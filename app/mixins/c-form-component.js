@@ -5,8 +5,7 @@ export default Ember.Mixin.create(ComponentUtils, {
   tagName: 'div',
   classNames: null,
   classNameBindings: [
-    'computedClassName',
-    'currentLayout',
+    '_computedClassNames',
     'hasHover:hover',
     'hasFocus:focus',
     'isActive:active'
@@ -14,22 +13,28 @@ export default Ember.Mixin.create(ComponentUtils, {
   bemBlockName: 'c-form-component',
   fieldClassName: '',
 
-  state: Ember.computed('hasSuccess', 'hasFeedback', 'hasWarning', 'hasError', function() {
-    if (this.get('hasSuccess')) {
-      return 'success';
-    }
-    if (this.get('hasFeedback')) {
-      return 'feedback';
-    }
-    if (this.get('hasWarning')) {
-      return 'warning';
-    }
-    if (this.get('hasError')) {
-      return 'error';
-    }
+  state: Ember.computed(
+    'hasSuccess',
+    'hasFeedback',
+    'hasWarning',
+    'hasError',
+    function() {
+      if (this.get('hasSuccess')) {
+        return 'success';
+      }
+      if (this.get('hasFeedback')) {
+        return 'feedback';
+      }
+      if (this.get('hasWarning')) {
+        return 'warning';
+      }
+      if (this.get('hasError')) {
+        return 'error';
+      }
 
-    return 'default';
-  }),
+      return 'default';
+    }
+  ),
 
   // rendering options
   layout: 'vertical', // horizontal, vertical, nested
@@ -59,17 +64,31 @@ export default Ember.Mixin.create(ComponentUtils, {
     return this.get('fieldId') && this.get('fieldId').length;
   }),
 
-  computedClassName: Ember.computed('state', function() {
-    const bemBlockName = this.get('bemBlockName');
+  // Internal properties
+  _computedClassNames: Ember.computed(
+    'state',
+    'layout',
+    function() {
+      const bemBlockName = this.get('bemBlockName');
+      const classNames = [];
 
-    return `${bemBlockName} ${bemBlockName}--state-${this.get('state')}`.trim();
-  }),
+      if (this.get('bemBlockName')) {
+        classNames.push(bemBlockName);
+      }
 
-  currentLayout: Ember.computed('layout', function() {
-    return this.getCurrentLayout();
-  }),
+      if (this.get('state')) {
+        classNames.push(`${bemBlockName}--state-${this.get('state')}`);
+      }
 
-  thePlaceholder: Ember.computed('placeholder', function() {
+      if (this.get('layout')) {
+        classNames.push(`${bemBlockName}--${this.get('layout')}`);
+      }
+
+      return classNames.join(' ');
+    }
+  ),
+
+  _thePlaceholder: Ember.computed('placeholder', function() {
     const layout = this.get('layout');
     const placeholder = this.get('placeholder');
 

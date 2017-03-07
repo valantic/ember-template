@@ -2,6 +2,7 @@ import Ember from 'ember';
 import cFormComponent from 'ember-project-template/mixins/c-form-component';
 
 export default Ember.Component.extend(cFormComponent, {
+  // Component setup
   classNameBindings: [
     'labelFirst:c-input-checkbox--label-first',
     'labelUp:c-input-checkbox--label-up',
@@ -9,6 +10,8 @@ export default Ember.Component.extend(cFormComponent, {
   ],
   bemBlockName: 'c-input-checkbox',
   tagName: 'div',
+
+  // Handed in properties
   items: [],
   groupValue: [],
   layout: 'horizontal',
@@ -16,10 +19,10 @@ export default Ember.Component.extend(cFormComponent, {
   border: 'thin',
   value: '',
 
-  // Closures
+  // Handed in closures
   onCheckboxChange(/* groupValue */) {},
 
-  // For internal use only
+  // Internal properties
   _items: Ember.computed('items', function() {
     const items = this.get('items') || [];
     const groupValue = this.get('groupValue') || [];
@@ -39,6 +42,7 @@ export default Ember.Component.extend(cFormComponent, {
     });
   }),
 
+  // Internal methods
   _updateGroupValue(item, checked) {
     const groupValue = this.get('groupValue') || Ember.A([]);
     const value = item.get('value');

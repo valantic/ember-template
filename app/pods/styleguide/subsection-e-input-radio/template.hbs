@@ -8,7 +8,24 @@
   </div>
 
   {{#freestyle-annotation}}
-    <p>Extends: <em>e-input</em></p>
+    <p>Extends: <em>eFormComponent</em></p>
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>disabled</code> (Boolean)</dt>
+      <dd>sets element-state to disabled</dd>
+      <dt><code>groupValue</code> (String)</dt>
+      <dd>if GroupValue = value the element is selected</dd>
+      <dt><code>value</code> (String)</dt>
+      <dd>value attribute of element</dd>
+      <dt><code>name</code> (String)</dt>
+      <dd>name attribute of element</dd>
+      <dt><code>text</code> (String)</dt>
+      <dd>text which is display by radios of type "noInputVisible"</dd>
+      <dt><code>noInputVisible</code> (Boolean)</dt>
+      <dd>renders radios who looks like buttons</dd>
+      <dt><code>grid</code> (Boolean)</dt>
+      <dd>for radiobuttons (noInputVisible) which are aligned on grid</dd>
+    </dl>
   {{/freestyle-annotation}}
 
   {{#freestyle-collection title='e-input-radio' defaultKey='all' inline=false as |collection|}}

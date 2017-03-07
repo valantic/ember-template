@@ -2,8 +2,13 @@ import Ember from 'ember';
 import ResizeAware from 'ember-resize/mixins/resize-aware';
 
 export default Ember.Component.extend(ResizeAware, {
+  // Services
+  resizeService: Ember.inject.service('resize'),
+  
+  // Component setup
   classNames: ['e-panel'],
   bemBlockName: 'e-panel',
+  tagName: 'div',
   classNameBindings: [
     'computedClassName',
     'shadow:e-panel--shadow',
@@ -11,85 +16,83 @@ export default Ember.Component.extend(ResizeAware, {
     'inlineSmUp:e-panel--inline-sm-up',
     'spacingRight:e-panel--spacing-right'
   ],
+  
+  // Handed in properties
   state: 'default',
   shadow: false,
   border: 'thin',
   bigPaddingFlanks: false,
   insideScroll: false,
+  scrollWidthPerClick: 200,
   inline: false,
   inlineSmUp: false,
   spacingRight: false,
-  title: '',
   headingIncluded: false,
+  title: '',
   tagNameTitle: 'h3',
+  titleState: 'default',
   backgroundColor: 'transparent',
   scrollArrows: false,
-  scrollWidthPerClick: 200,
-
-  // Variables used for the ember-resize-addon
-  resizeService: Ember.inject.service('resize'),
-  resizeWidthSensitive: true,
-  resizeHeightSensitive: false,
-
-  computedClassName: Ember.computed('state', function() {
+  
+  // Internal properties
+  resizeWidthSensitive: true, // used for "resizeAware" Addon
+  resizeHeightSensitive: false, // used for "resizeAware" Addon
+  _computedClassName: Ember.computed('state', function() {
     return `e-panel--${this.get('state')}`;
   }),
+  _innerClassNames: Ember.computed(
+    'shadow',
+    'border',
+    'bigPaddingFlanks',
+    'backgroundColor',
+    'state',
+    function() {
+      const classNames = [];
+      const bemElementName = `${this.get('bemBlockName')}__inner`;
 
-  stateClassNames: Ember.computed('state', function() {
-    const baseClass = 'e-panel__inner';
+      if (this.get('shadow')) {
+        classNames.push(`${bemElementName}--shadow`);
+      }
 
-    return `${baseClass}--${this.get('state')}`;
-  }),
+      if (this.get('border')) {
+        classNames.push(`${bemElementName}--border-${this.get('border')}`);
+      }
 
-  innerClassNames: Ember.computed('shadow', 'border', 'bigPaddingFlanks', 'backgroundColor', function() {
-    let combinedClassNames = '';
-    const shadowClass = 'e-panel__inner--shadow';
-    const borderClass = `e-panel__inner--border-${this.get('border')}`;
-    const paddingFlankClass = 'e-panel__inner--padding-flank-big';
-    const backgroundColorClass = `e-panel__inner--background-color-${this.get('backgroundColor')}`;
+      if (this.get('bigPaddingFlanks')) {
+        classNames.push(`${bemElementName}--padding-flank-big`);
+      }
 
-    if (this.get('shadow')) {
-      combinedClassNames += shadowClass;
-      combinedClassNames += ' ';
+      if (this.get('backgroundColor')) {
+        classNames.push(`${bemElementName}--background-color-${this.get('backgroundColor')}`);
+      }
+
+      if (this.get('state')) {
+        classNames.push(`${bemElementName}--${this.get('state')}`);
+      }
+
+      return classNames.join(' ');
     }
+  ),
+  _innerScrollClassNames: Ember.computed(
+    'insideScroll',
+    'insideScrollFullWidth',
+    function() {
+      const classNames = [];
+      const bemElementName = `${this.get('bemBlockName')}__inner`;
 
-    if (this.get('border')) {
-      combinedClassNames += borderClass;
-      combinedClassNames += ' ';
+      if (this.get('insideScroll')) {
+        classNames.push(`${bemElementName}--insideScroll`);
+      }
+
+      if (this.get('insideScrollFullWidth')) {
+        classNames.push(`${bemElementName}--insideScroll-full-width`);
+      }
+
+      return classNames.join(' ');
     }
+  ),
 
-    if (this.get('bigPaddingFlanks')) {
-      combinedClassNames += paddingFlankClass;
-      combinedClassNames += ' ';
-    }
-
-    if (this.get('backgroundColor')) {
-      combinedClassNames += backgroundColorClass;
-    }
-
-    return combinedClassNames;
-  }),
-
-  innerScrollClass: Ember.computed('insideScroll', function() {
-    let className = '';
-
-    if (this.get('insideScroll')) {
-      className = 'e-panel__inner--insideScroll';
-    }
-
-    return className;
-  }),
-
-  innerScrollClassFullWidth: Ember.computed('insideScrollFullWidth', function() {
-    let className = '';
-
-    if (this.get('insideScrollFullWidth') === true) {
-      className = 'e-panel__inner--insideScroll-full-width';
-    }
-
-    return className;
-  }),
-
+  // Handed in closures
   didRender() {
     if (this.get('insideScroll') === true) {
       Ember.run.later(this, () => {
@@ -97,7 +100,6 @@ export default Ember.Component.extend(ResizeAware, {
       });
     }
   },
-
   // Fires events when User changes the window-size
   didResize() {
     if (this.get('insideScroll') === true) {
@@ -105,6 +107,7 @@ export default Ember.Component.extend(ResizeAware, {
     }
   },
 
+  // Internal methods
   // Checks if the "insideScroll" element has more width than his parent-container
   _hasScrollBar() {
     const htmlScrollWrapper = this.element.querySelector('.e-panel__inner');
@@ -138,6 +141,7 @@ export default Ember.Component.extend(ResizeAware, {
     }
   },
 
+  // Actions
   actions: {
     scrollX(direction) {
       this._scrollInside(direction);

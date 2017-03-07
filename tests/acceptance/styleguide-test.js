@@ -1,7 +1,7 @@
 import { test } from 'qunit';
 import moduleForAcceptance from 'ember-project-template/tests/helpers/module-for-acceptance';
 
-moduleForAcceptance('Acceptance | toggle stylesheet');
+moduleForAcceptance('Acceptance | rendering stylesheet');
 
 test('visiting /styleguide', (assert) => {
   visit('/styleguide');

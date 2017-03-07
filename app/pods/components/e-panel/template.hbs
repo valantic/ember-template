@@ -1,8 +1,8 @@
-<div class="{{bemBlockName}}__inner {{stateClassNames}} {{innerClassNames}}">
+<div class="{{bemBlockName}}__inner {{_innerClassNames}}">
   {{#if headingIncluded}}
     {{#e-heading
-        tagName=tagNameTitle
-        state=titleState
+      tagName=tagNameTitle
+      state=titleState
     }}
       {{title}}
     {{/e-heading}}
@@ -15,11 +15,11 @@
             horScrollButton=true
             click=(action "scrollX" "left")
         }}
-          {{svg-jar "#back" class="e-button__icon"}}
+          {{svg-jar "#demo_i-back" class="e-button__icon"}}
         {{/e-button}}
       </div>
     {{/if}}
-    <div class="{{innerScrollClass}} {{innerScrollClassFullWidth}}">{{yield}}</div>
+    <div class="{{_innerScrollClassNames}}">{{yield}}</div>
     {{#if scrollArrows}}
       <div class="{{bemBlockName}}__arrow-right">
         {{#e-button
@@ -27,7 +27,7 @@
             horScrollButton=true
             click=(action "scrollX" "right")
         }}
-          {{svg-jar "#next" class="e-button__icon"}}
+          {{svg-jar "#demo_i-next" class="e-button__icon"}}
         {{/e-button}}
       </div>
     {{/if}}

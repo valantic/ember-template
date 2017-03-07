@@ -3,13 +3,25 @@
 {{#freestyle-subsection name='e-select' section=section}}
 
   {{#freestyle-annotation}}
-    <p>Extends: <em>e-form-components</em></p>
+    <p>Extends: <em>eFormComponents</em></p>
     <h4>Attributes</h4>
     <dl>
       <dt><code>disabled</code> (Boolean)</dt>
-      <dd>sets select on disabled</dd>
+      <dd>sets disabled attribute to element</dd>
+      <dt><code>required</code> (Boolean)</dt>
+      <dd>sets required attribute to element</dd>
+      <dt><code>readonly</code> (Boolean)</dt>
+      <dd>sets readonly attribute to element</dd>
+      <dt><code>id</code> (String)</dt>
+      <dd>id attribute of select element</dd>
+      <dt><code>name</code> (String)</dt>
+      <dd>name attribute of select element</dd>
+      <dt><code>title</code> (String)</dt>
+      <dd>title attribute of select element</dd>
       <dt><code>multiple</code> (Boolean)</dt>
       <dd>allows multiple selection</dd>
+      <dt><code>size</code> (Number)</dt>
+      <dd>Number how many option it should show (only multiple)</dd>
       <dt><code>items</code> (Array)</dt>
       <dd>Array with select options</dd>
       <dt><code>groupValue</code> (String)</dt>

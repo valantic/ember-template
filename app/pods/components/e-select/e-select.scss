@@ -13,7 +13,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-progress-appearance: none;
-    background: $color-gray-white-opacity-light url('./svg/inline/icon_arrow-down--dark.svg') no-repeat right 0.5em center;
+    background: $color-gray-white-opacity-light url('./svg/inline/demo_i-down-dark.svg') no-repeat right 0.5em center;
     background-size: 1.2em;
   }
 
@@ -39,7 +39,7 @@
     min-height: 2em;
 
     &:not([multiple]) {
-      background: $color-gray-white-opacity-heavy url('./svg/inline/icon_arrow-down--light.svg') no-repeat right 0.5em center;
+      background: $color-gray-white-opacity-heavy url('./svg/inline/demo_i-down-light.svg') no-repeat right 0.5em center;
       background-size: 1.2em;
     }
   }

@@ -6,6 +6,27 @@
     <p>Extends: <em>c-form-component</em></p>
     <p>We're demonstrating the <em>c-textarea</em> element in these states: <em>default</em>, <em>focus</em>, and <em>disabled</em>.</p>
     <p>The <em>c-input-text</em> component exists in these variants: <em>horizontal</em>, <em>vertical</em> and <em>nested</em>.</p>
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>label</code> (String)</dt>
+      <dd>leading label for the component</dd>
+      <dt><code>layout</code> (String)</dt>
+      <dd>layout options: "horizontal", "vertical", "nested"</dd>
+      <dt><code>placeholder</code> (String)</dt>
+      <dd>placeholder text for the input-field</dd>
+      <dt><code>value</code> (String)</dt>
+      <dd>value for the input-field</dd>
+      <dt><code>state</code> (String)</dt>
+      <dd>state of the component, options: "default", "error", "warning", "success"</dd>
+      <dt><code>disabled</code> (Boolean)</dt>
+      <dd>disabled state for the component</dd>
+      <dt><code>required</code> (Boolean)</dt>
+      <dd>required attribute for component</dd>
+      <dt><code>rows</code> (Number)</dt>
+      <dd>number of rows visible</dd>
+      <dt><code>cols</code> (Number)</dt>
+      <dd>Number of cols visible</dd>
+    </dl>
   {{/freestyle-annotation}}
 
   {{#freestyle-collection title='c-textarea layout' defaultKey='all' inline=false as |collection|}}

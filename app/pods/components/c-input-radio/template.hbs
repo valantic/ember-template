@@ -17,8 +17,8 @@
       text=label
     }}
   {{/if}}
-  <span class="{{bemBlockName}}__options {{bemBlockName}}__options--{{layout}} {{noInputVisibleClassName}} {{gridClassName}}">
-    {{#if grid}}
+  <span class="{{bemBlockName}}__options {{_optionsClassNames}}">
+    {{#if gridClassNames}}
       <div class="row">
         {{#each items as |item|}}
           <div class="{{gridClassNames}}">
@@ -45,7 +45,7 @@
                 value=item.value
                 noInputVisible=noInputVisible
                 text=item.label
-                grid=grid
+                grid=true
               }}
             {{/e-label}}
           </div>

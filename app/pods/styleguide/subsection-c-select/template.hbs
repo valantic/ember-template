@@ -7,6 +7,23 @@
     <p>We're demonstrating the <em>c-select</em> element in these states: <em>default</em>, <em>focus</em> and <em>disabled</em>.</p>
     <p>The <em>c-select</em> component exists in these variants: <em>horizontal</em>, <em>vertical</em> and <em>nested</em>.</p>
     <p>The element options are set through the <code>items</code> attribute which accepts an <em>array</em>.</p>
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>label</code> (String)</dt>
+      <dd>leading label for the component</dd>
+      <dt><code>layout</code> (String)</dt>
+      <dd>layout options: "horizontal", "vertical", "nested"</dd>
+      <dt><code>placeholder</code> (String)</dt>
+      <dd>placeholder text for the input-field</dd>
+      <dt><code>state</code> (String)</dt>
+      <dd>state of the component, options: "default", "error", "warning", "success"</dd>
+      <dt><code>disabled</code> (Boolean)</dt>
+      <dd>disabled state for the component</dd>
+      <dt><code>required</code> (Boolean)</dt>
+      <dd>required attribute for component</dd>
+      <dt><code>multiple</code> (Boolean)</dt>
+      <dd>option for multiple selection</dd>
+    </dl>
   {{/freestyle-annotation}}
 
   {{#freestyle-collection title='c-select single-layout' defaultKey='all' inline=false as |collection|}}

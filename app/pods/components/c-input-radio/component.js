@@ -2,6 +2,7 @@ import Ember from 'ember';
 import cFormComponent from 'ember-project-template/mixins/c-form-component';
 
 export default Ember.Component.extend(cFormComponent, {
+  // Component setup
   classNameBindings: [
     'labelFirst:c-input-radio--label-first',
     'labelUp:c-input-radio--label-up',
@@ -9,12 +10,14 @@ export default Ember.Component.extend(cFormComponent, {
   ],
   bemBlockName: 'c-input-radio',
   tagName: 'div',
+
+  // Handed in properties
   items: [],
   noInputVisible: false,
   layout: 'horizontal',
-  grid: false,
-  gridClassNames: 'col-xxs-12',
+  gridClassNames: '',
 
+  // Handed in closures
   init(...args) {
     this._super(...args);
     this.setSelection();
@@ -30,26 +33,32 @@ export default Ember.Component.extend(cFormComponent, {
     this.setSelection();
   },
 
-  gridClassName: Ember.computed('grid', function() {
-    const gridClass = 'c-input-radio__options--grid';
+  // Internal properties
+  _optionsClassNames: Ember.computed(
+    'layout',
+    'noInputVisible',
+    'gridClassNames',
+    function() {
+      const classNames = [];
+      const bemElementName = `${this.get('bemBlockName')}__options`;
 
-    if (this.get('grid')) {
-      return gridClass;
+      if (this.get('layout')) {
+        classNames.push(`${bemElementName}--${this.get('layout')}`);
+      }
+
+      if (this.get('noInputVisible')) {
+        classNames.push(`${bemElementName}--no-input-visible`);
+      }
+
+      if (this.get('gridClassNames')) {
+        classNames.push(`${bemElementName}--grid`);
+      }
+
+      return classNames.join(' ');
     }
+  ),
 
-    return null;
-  }),
-
-  noInputVisibleClassName: Ember.computed('noInputVisible', function() {
-    const noInputClass = 'c-input-radio__options--no-input-visible';
-
-    if (this.get('noInputVisible')) {
-      return noInputClass;
-    }
-
-    return null;
-  }),
-
+  // Actions
   actions: {
     changed(newValue) {
       this.set('groupValue', newValue);

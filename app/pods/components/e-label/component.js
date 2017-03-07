@@ -1,15 +1,14 @@
 import Ember from 'ember';
 
-// BEGIN-FREESTYLE-USAGE e-label
 export default Ember.Component.extend({
-  tagName: 'label',
+  // Component setup
   classNames: ['e-label'],
   bemBlockName: 'e-label',
+  tagName: 'label',
   attributeBindings: [
     'disabled',
     'for'
   ],
-  class: 'e-label',
   classNameBindings: [
     'leading:e-label--leading',
     'labelUp:e-label--label-up',
@@ -21,95 +20,78 @@ export default Ember.Component.extend({
     'multiple:e-label-select--multiple',
     'disabled:e-label--disabled'
   ],
-  disabled: false,
-  initialState: '',
-  for: null,
-  labelFirst: false,
-  labelUp: false,
-  layout: 'default',
+
+  // Handed in properties
   leading: false,
+  labelUp: false,
+  selected: false,
   noInputVisible: false,
   noLabelVisible: false,
+  required: false,
   nested: false,
   multiple: false,
-  selected: false,
+  disabled: false,
+  for: null,
+  initialState: '',
+  labelFirst: false,
+  layout: 'default',
   state: 'default',
   text: null,
   type: null,
 
+  // Handed in properties
   init() {
     this._super(...arguments); // eslint-disable-line prefer-rest-params
     this.initialState = this.state;
   },
 
-  innerClassNames: Ember.computed(
-      'type',
-      'selected',
-      'disabled',
-      'noInputVisible',
-      'labelUp',
-      'state',
-      'labelFirst',
-      'layout',
-      function() {
-        let classNames = '';
-        const bemElementName = `${this.get('bemBlockName')}__text`;
-        const layoutClass = `${bemElementName}--layout-${this.get('layout')}`;
-        const typeClass = `${bemElementName}--${this.get('type')}`;
-        const selectedClass = `${bemElementName}--selected`;
-        const disabledClass = `${bemElementName}--disabled`;
-        const noInputVisibleClass = `${bemElementName}--no-input-visible`;
-        const labelUpClass = `${bemElementName}--label-up`;
-        const stateClass = `${bemElementName}--${this.get('state')}`;
-        const labelFirstClass = `${bemElementName}--label-first`;
+  // Internal properties
+  _innerClassNames: Ember.computed(
+    'layout',
+    'state',
+    'type',
+    'selected',
+    'disabled',
+    'noInputVisible',
+    'labelUp',
+    'labelFirst',
+    function() {
+      const classNames = [];
+      const bemElementName = `${this.get('bemBlockName')}__text`;
 
-        if (this.get('layout')) {
-          classNames += ' ';
-          classNames += layoutClass;
-        }
-
-        if (this.get('type')) {
-          classNames += ' ';
-          classNames += typeClass;
-        }
-
-        if (this.get('selected')) {
-          classNames += ' ';
-          classNames += selectedClass;
-        }
-
-        if (this.get('disabled')) {
-          classNames += ' ';
-          classNames += disabledClass;
-        }
-
-        if (this.get('noInputVisible')) {
-          classNames += ' ';
-          classNames += noInputVisibleClass;
-        }
-
-        if (this.get('labelUp')) {
-          classNames += ' ';
-          classNames += labelUpClass;
-        }
-
-        if (this.get('labelUp')) {
-          classNames += ' ';
-          classNames += labelUpClass;
-        }
-
-        if (this.get('state')) {
-          classNames += ' ';
-          classNames += stateClass;
-        }
-
-        if (this.get('labelFirst')) {
-          classNames += ' ';
-          classNames += labelFirstClass;
-        }
-
-        return classNames;
+      if (this.get('layout')) {
+        classNames.push(`${bemElementName}--layout-${this.get('layout')}`);
       }
+
+      if (this.get('state')) {
+        classNames.push(`${bemElementName}--${this.get('state')}`);
+      }
+
+      if (this.get('type')) {
+        classNames.push(`${bemElementName}--${this.get('type')}`);
+      }
+
+      if (this.get('selected')) {
+        classNames.push(`${bemElementName}--selected`);
+      }
+
+      if (this.get('disabled')) {
+        classNames.push(`${bemElementName}--disabled`);
+      }
+
+      if (this.get('noInputVisible')) {
+        classNames.push(`${bemElementName}--no-input-visible`);
+      }
+
+      if (this.get('labelUp')) {
+        classNames.push(`${bemElementName}--label-up`);
+      }
+
+      if (this.get('labelFirst')) {
+        classNames.push(`${bemElementName}--label-first`);
+      }
+
+      return classNames.join(' ');
+    }
   )
 });
-// END-FREESTYLE-USAGE

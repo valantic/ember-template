@@ -8,6 +8,27 @@
     <p>The <em>c-input-radio</em> component exists in these variants: <em>horizontal</em>, <em>vertical</em> and <em>nested</em>.</p>
     <p>Currently the visible element is a default browser rendering. In the light of progressive enhancement, we will replace the standard visual style with our own at a later stage.</p>
     <p>The element options are set through the <code>items</code> attribute which accepts an <em>array</em>.</p>
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>label</code> (String)</dt>
+      <dd>leading label for the component</dd>
+      <dt><code>layout</code> (String)</dt>
+      <dd>layout options: "horizontal", "vertical", "nested"</dd>
+      <dt><code>name</code> (String)</dt>
+      <dd>name attribute of the component</dd>
+      <dt><code>state</code> (String)</dt>
+      <dd>state of the component, options: "default", "error", "warning", "success"</dd>
+      <dt><code>disabled</code> (Boolean)</dt>
+      <dd>disabled state for the component</dd>
+      <dt><code>required</code> (Boolean)</dt>
+      <dd>required attribute for component</dd>
+      <dt><code>items</code> (Array)</dt>
+      <dd>Array with the options as checkboxes</dd>
+      <dt><code>noInputVisible</code> (Boolean)</dt>
+      <dd>radiobutton which looks like buttons</dd>
+      <dt><code>gridClassNames</code> (String)</dt>
+      <dd>gridclasses if the radios should display in a grid layout, e.g. "col-xxs-12 col-sm-6"</dd>
+    </dl>
   {{/freestyle-annotation}}
 
   {{!-- NOTE: Don't use the same model.radioOptions index twice, or you'll get a duplicated ID error --}}
@@ -123,7 +144,6 @@
           label="A label"
           layout="nested"
           noInputVisible=true
-          grid=true
           gridClassNames="col-xxs-6 col-xs-4 col-sm-3"
         }}
       {{/freestyle-usage}}

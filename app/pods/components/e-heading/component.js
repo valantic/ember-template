@@ -1,15 +1,26 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  tagName: 'h1',
+  // Component setup
   classNames: ['e-heading'],
   bemBlockName: 'e-heading',
-  classNameBindings: ['stateClass'],
+  tagName: 'h1',
+  classNameBindings: [
+    '_stateClass'
+  ],
+
+  // Handed in properties
   state: 'default',
 
-  stateClass: function() {
-    const bemBlockName = this.get('bemBlockName');
+  // Internal properties
+  _stateClass: Ember.computed(
+    'state',
+    function() {
+      if (this.get('state')) {
+        return `${this.get('bemBlockName')}--${this.get('state')}`;
+      }
 
-    return `${bemBlockName}--${this.get('state')}`;
-  }.property()
+      return null;
+    }
+  )
 });

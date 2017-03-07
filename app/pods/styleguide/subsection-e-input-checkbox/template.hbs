@@ -6,7 +6,22 @@
     <a href="styleguide?s=Components&ss=c-input-checkbox">c-input-checkbox</a>
   </div>
   {{#freestyle-annotation}}
-    <p>Extends: <em>e-input</em></p>
+    <p>Extends: <em>eFormComponent</em></p>
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>disabled</code> (Boolean)</dt>
+      <dd>sets element-state to disabled</dd>
+      <dt><code>checked</code> (Boolean)</dt>
+      <dd>state of the checkbox</dd>
+      <dt><code>required</code> (Boolean)</dt>
+      <dd>required attribute of element</dd>
+      <dt><code>autofocus</code> (Boolean)</dt>
+      <dd>sets autofocus attribute to element</dd>
+      <dt><code>name</code> (String)</dt>
+      <dd>name attribute of element</dd>
+      <dt><code>id</code> (String)</dt>
+      <dd>id attribute of element</dd>
+    </dl>
   {{/freestyle-annotation}}
 
   {{#freestyle-collection title='e-input-checkbox' defaultKey='all' inline=false as |collection|}}

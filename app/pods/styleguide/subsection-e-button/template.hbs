@@ -5,6 +5,57 @@
   {{#freestyle-annotation}}
     <p>Buttons are displayed here in four states which demo user interaction.</p>
     <p>The states: <em>hover</em>, <em>click</em> and <em>active</em> can be demoed using attribute flags.</p>
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>isCTA</code> (Boolean)</dt>
+      <dd>call-top-action button</dd>
+      <dt><code>isActive</code> (Boolean)</dt>
+      <dd>active state for button</dd>
+      <dt><code>hasHover</code> (Boolean)</dt>
+      <dd>hover state for button</dd>
+      <dt><code>hasFocus</code> (Boolean)</dt>
+      <dd>focus state for button</dd>
+      <dt><code>disabled</code> (Boolean)</dt>
+      <dd>disabled state for button</dd>
+      <dt><code>isSuccess</code> (Boolean)</dt>
+      <dd>success state for button</dd>
+      <dt><code>isCancel</code> (Boolean)</dt>
+      <dd>cancel state for button</dd>
+      <dt><code>isIconButton</code> (Boolean)</dt>
+      <dd>general icon button</dd>
+      <dt><code>iconButtonSquare</code> (Boolean)</dt>
+      <dd>square format of icon button</dd>
+      <dt><code>iconButtonRectangle</code> (Boolean)</dt>
+      <dd>rectangle format of icon button</dd>
+      <dt><code>iconButtonMini</code> (Boolean)</dt>
+      <dd>small version of icon button</dd>
+      <dt><code>fullWidth</code> (Boolean)</dt>
+      <dd>button with full width of it's container</dd>
+      <dt><code>smallSquare</code> (Boolean)</dt>
+      <dd>small square format of button</dd>
+      <dt><code>bigSquare</code> (Boolean)</dt>
+      <dd>big square format of button</dd>
+      <dt><code>transparent</code> (Boolean)</dt>
+      <dd>button with transparent background and without border</dd>
+      <dt><code>fill</code> (Boolean)</dt>
+      <dd>button with full width and size of it's content</dd>
+      <dt><code>horScrollButton</code> (Boolean)</dt>
+      <dd>button for the horizontal scroll arrows</dd>
+      <dt><code>href</code> (String)</dt>
+      <dd>href attribute for a href-link that looks like a button</dd>
+      <dt><code>target</code> (String)</dt>
+      <dd>target attribute of a-tag button</dd>
+      <dt><code>preventDefault</code> (Boolean)</dt>
+      <dd>preventDefault attribute for the button element</dd>
+      <dt><code>title</code> (String)</dt>
+      <dd>title attribute of the button-wrapper element</dd>
+      <dt><code>type</code> (String)</dt>
+      <dd>type attribute of button</dd>
+      <dt><code>id</code> (String)</dt>
+      <dd>id attribute of the button wrapper element</dd>
+      <dt><code>class</code> (String)</dt>
+      <dd>class attribute of the button wrapper element</dd>
+    </dl>
   {{/freestyle-annotation}}
 
   {{#freestyle-collection title='E-Button (states)' defaultKey='all' inline=false as |collection|}}
@@ -396,7 +447,7 @@
           isIconButton=true
           iconButtonSquare=true
         }}
-          {{svg-jar "#cancel" class="e-button__icon"}}
+          {{svg-jar "#demo_i-cancel" class="e-button__icon"}}
         {{/e-button}}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -409,7 +460,7 @@
           isIconButton=true
           iconButtonRectangle=true
         }}
-          {{svg-jar "#cancel" class="e-button__icon"}}
+          {{svg-jar "#demo_i-cancel" class="e-button__icon"}}
         {{/e-button}}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -423,7 +474,7 @@
           iconButtonSquare=true
           iconButtonMini=true
         }}
-          {{svg-jar "#cancel" class="e-button__icon"}}
+          {{svg-jar "#demo_i-cancel" class="e-button__icon"}}
         {{/e-button}}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -437,7 +488,7 @@
           iconButtonRectangle=true
           iconButtonMini=true
         }}
-          {{svg-jar "#cancel" class="e-button__icon"}}
+          {{svg-jar "#demo_i-cancel" class="e-button__icon"}}
         {{/e-button}}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -453,7 +504,7 @@
           clicked="clicked"
           smallSquare=true
         }}
-          {{svg-jar "#cancel" class="e-button__icon"}}
+          {{svg-jar "#demo_i-cancel" class="e-button__icon"}}
         {{/e-button}}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -465,7 +516,7 @@
           clicked="clicked"
           bigSquare=true
         }}
-          {{svg-jar "#cancel" class="e-button__icon"}}
+          {{svg-jar "#demo_i-cancel" class="e-button__icon"}}
         {{/e-button}}
       {{/freestyle-usage}}
     {{/freestyle-variant}}
@@ -477,7 +528,7 @@
           clicked="clicked"
           transparent=true
         }}
-          {{svg-jar "#cancel" class="e-button__icon"}}
+          {{svg-jar "#demo_i-cancel" class="e-button__icon"}}
         {{/e-button}}
       {{/freestyle-usage}}
     {{/freestyle-variant}}

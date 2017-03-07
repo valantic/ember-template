@@ -15,15 +15,40 @@ export default Ember.Mixin.create(ComponentUtils, {
   tagName: '',  // No tag name prevents `spanitis`
   title: null,
 
-  thePlaceholder: Ember.computed('placeholder', function() {
+  _thePlaceholder: Ember.computed('placeholder', function() {
     return this.getPlaceHolder();
   }),
 
-  computedClassName: Ember.computed('state', 'layout', function() {
-    const bemBlockName = this.get('bemBlockName');
-    const theState = `${bemBlockName}--state-${this.get('state')}`;
-    const theLayout = `${bemBlockName}--layout-${this.get('layout')}`;
+  computedClassName: Ember.computed(
+    'state',
+    'layout',
+    'class',
+    '_class',
+    function() {
+      const bemBlockName = this.get('bemBlockName');
+      const classNames = [];
 
-    return `${this.get('class')} ${bemBlockName} ${theState} ${theLayout}`.trim();
-  })
+      if (this.get('bemBlockName')) {
+        classNames.push(bemBlockName);
+      }
+
+      if (this.get('state')) {
+        classNames.push(`${bemBlockName}--state-${this.get('state')}`);
+      }
+
+      if (this.get('layout')) {
+        classNames.push(`${bemBlockName}--layout-${this.get('layout')}`);
+      }
+
+      if (this.get('class')) {
+        classNames.push(this.get('class'));
+      }
+
+      if (this.get('_class')) {
+        classNames.push(this.get('_class'));
+      }
+
+      return classNames.join(' ');
+    }
+  )
 });

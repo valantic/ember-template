@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  // Component setup
   tagName: 'span',
   classNames: ['e-button'],
   bemBlockName: 'e-button',
@@ -32,13 +33,8 @@ export default Ember.Component.extend({
     'disabled',
     'target'
   ],
-  href: null,
-  name: null,
-  preventDefault: false,
-  title: null,
-  type: null,
-  target: null,
-  // Flags
+
+  // Handed in properties
   isCTA: false,
   isActive: false,
   hasHover: false,
@@ -56,7 +52,16 @@ export default Ember.Component.extend({
   transparent: false,
   fill: false,
   horScrollButton: false,
+  href: null,
+  target: null,
+  preventDefault: false,
+  title: '',
+  name: '',
+  type: '',
+  id: '',
+  class: '',
 
+  // Handed in closures
   click() {
     this.sendAction();
   },

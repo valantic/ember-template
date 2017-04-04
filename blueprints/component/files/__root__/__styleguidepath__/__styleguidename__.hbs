@@ -1,0 +1,26 @@
+{{! template-lint-disable }}
+<!-- disable all rules -->
+{{#freestyle-subsection name='<%= dasherizedModuleName %>' section=section}}
+
+  {{#freestyle-annotation}}
+    <p>The <code><%= dasherizedModuleName %></code> Component is used for...</p>
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>attribute</code> (type)</dt>
+      <dd>description</dd>
+    </dl>
+  {{/freestyle-annotation}}
+
+  {{#freestyle-collection title='<%= dasherizedModuleName %>' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage '<%= dasherizedModuleName %>-default' title='<%= dasherizedModuleName %> default' usageTitle=labels.usage.title}}
+
+        {{<%= dasherizedModuleName %>}}
+
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+
+  {{/freestyle-collection}}
+{{/freestyle-subsection}}

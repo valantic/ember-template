@@ -49,7 +49,8 @@ module.exports = function(defaults) {
         '/',
         '/styleguide',
         '/test-page'
-      ]
+      ],
+      includeClientScripts: false
     }
   });
 

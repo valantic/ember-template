@@ -16,7 +16,8 @@ function formToJsObject(escapedHTMLJSON) {
       .replace(/&#39;/g, "'")
       .replace(/&lt;/g, '<')
       .replace(/&gt;/g, '>')
-      .replace(/&amp;/g, '&');
+      .replace(/&amp;/g, '&')
+      .replace(/\n/g, '\\n');
 
   return JSON.parse(unescapedHTML);
 }

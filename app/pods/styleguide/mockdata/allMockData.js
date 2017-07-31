@@ -2,6 +2,7 @@
 import selectOptions from './selectOptions';
 import cMediaContainer from './cMediaContainer';
 import cTabs from './cTabs';
+import cProcessSteps from './cProcessSteps';
 
 /* eslint-disable no-unused-vars */
 
@@ -29,7 +30,8 @@ function formToJsObject(escapedHTMLJSON) {
 const mockdata = {
   selectOptions,
   cMediaContainer,
-  cTabs
+  cTabs,
+  cProcessSteps
 };
 
 export default mockdata;

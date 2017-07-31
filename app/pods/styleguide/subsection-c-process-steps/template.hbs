@@ -1,0 +1,36 @@
+{{! template-lint-disable }}
+<!-- disable all rules -->
+{{#freestyle-subsection name='c-process-steps' section=section}}
+
+  {{#freestyle-annotation}}
+    <p>The <code>c-process-steps</code> Component is used for rendering process steps for e.g. in a checkout process.</p>
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>steps</code> (Array)</dt>
+      <dd>Array with step objects {stepNumber, active, clickable, directUrl}</dd>
+    </dl>
+  {{/freestyle-annotation}}
+
+  {{#freestyle-collection title='c-process-steps' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-process-steps-default' title='c-process-steps default' usageTitle=labels.usage.title}}
+
+        {{c-process-steps
+          steps=model.mockdata.cProcessSteps.steps
+        }}
+
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    <!-- JSON EXAMPLE (Mockdata) -->
+    <div class="FreestyleUsage-snippet FreestyleUsage-snippet--zenburn col-xxs-12">
+      <p>JSON Mockdata:</p>
+      <pre class="hljs crystal">
+      <code>
+        {{stringify model.mockdata.cProcessSteps}}
+      </code>
+    </pre>
+    </div>
+  {{/freestyle-collection}}
+{{/freestyle-subsection}}

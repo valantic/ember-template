@@ -1,0 +1,14 @@
+<ul class="{{bemBlockName}}__list">
+  {{#each _steps as |step|}}
+    <li class="{{bemBlockName}}__item {{if step.isSelected 'is-selected'}} {{unless (or step.isSelected step.isClickable) 'not-clickable'}}">
+      {{#if step.isClickable}}
+        <a href="{{step.link}}" class="{{bemBlockName}}__step">{{step.step}}</a>
+      {{else}}
+        <span class="{{bemBlockName}}__step">{{step.step}}</span>
+      {{/if}}
+    </li>
+    {{#unless step.isLastItem}}
+      <li class="{{bemBlockName}}__seperator-item">&nbsp;</li>
+    {{/unless}}
+  {{/each}}
+</ul>

@@ -1,0 +1,36 @@
+{{#ivy-tabs selection=selection as |tabs|}}
+  {{#tabs.tablist as |tablist|}}
+    <ul role="presentation">
+      {{#each items as |tab index|}}
+        <li role="presentation">
+          {{#tablist.tab index on-select=(action (mut selection))}}{{tab.title}}{{/tablist.tab}}
+        </li>
+      {{/each}}
+    </ul>
+  {{/tabs.tablist}}
+
+  {{#each items as |tab index|}}
+    {{#tabs.tabpanel index}}
+
+      {{#if tab.components}}
+
+        {{#each tab.components as |component|}}
+          {{#if component.content}}
+            {{component
+              component.componentName
+              data=component.content
+              showTitles=component.showTitles
+            }}
+          {{/if}}
+        {{/each}}
+
+      {{else}}
+      {{! template-lint-disable }}
+        {{{tab.content}}}
+      {{! template-lint-enable }}
+      {{/if}}
+
+    {{/tabs.tabpanel}}
+  {{/each}}
+
+{{/ivy-tabs}}

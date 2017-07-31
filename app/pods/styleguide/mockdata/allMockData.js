@@ -1,6 +1,7 @@
 // MOCKDATA IMPORT
 import selectOptions from './selectOptions';
 import cMediaContainer from './cMediaContainer';
+import cTabs from './cTabs';
 
 /* eslint-disable no-unused-vars */
 
@@ -27,7 +28,8 @@ function formToJsObject(escapedHTMLJSON) {
 
 const mockdata = {
   selectOptions,
-  cMediaContainer
+  cMediaContainer,
+  cTabs
 };
 
 export default mockdata;

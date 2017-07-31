@@ -1,0 +1,36 @@
+{{! template-lint-disable }}
+<!-- disable all rules -->
+{{#freestyle-subsection name='c-tabs' section=section}}
+
+  {{#freestyle-annotation}}
+    <p>The <code>c-tabs</code> Component can be used to render Tabs with content, the content can be simple text or a component</p>
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>items</code> (Array)</dt>
+      <dd>List of items with title and content (for text tabs) or components (Array for components). For the details of using it with components see the mockdata files </dd>
+    </dl>
+  {{/freestyle-annotation}}
+
+  {{#freestyle-collection title='c-tabs' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-tabs-default' title='c-tabs default' usageTitle=labels.usage.title}}
+
+        {{c-tabs
+          items=model.mockdata.cTabs.items
+        }}
+
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='with component'}}
+      {{#freestyle-usage 'c-tabs-with-component' title='c-tabs with component' usageTitle=labels.usage.title}}
+        {{c-tabs
+          items=model.mockdata.cTabs.itemsWithComponents
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+
+  {{/freestyle-collection}}
+{{/freestyle-subsection}}

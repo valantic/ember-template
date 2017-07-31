@@ -1,4 +1,5 @@
 /* jshint node: true */
+/* eslint-disable */
 
 module.exports = function(environment) {
   const ENV = {
@@ -23,6 +24,7 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      rootElement: '#ember-application'
     }
   };
 
@@ -51,3 +53,5 @@ module.exports = function(environment) {
 
   return ENV;
 };
+
+/* eslint-enable */

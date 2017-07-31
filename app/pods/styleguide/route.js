@@ -15,7 +15,8 @@ export default Ember.Route.extend({
 
   model() {
     return {
-      selectOptions: mockData.selectOptions
+      selectOptions: mockData.selectOptions,
+      mockdata: mockData
     };
   }
 

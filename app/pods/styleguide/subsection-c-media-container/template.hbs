@@ -1,0 +1,34 @@
+{{! template-lint-disable }}
+<!-- disable all rules -->
+{{#freestyle-subsection name='c-media-container' section=section}}
+
+  {{#freestyle-annotation}}
+    <p>The <code>c-media-container</code> Component is used for...</p>
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>attribute</code> (type)</dt>
+      <dd>description</dd>
+    </dl>
+  {{/freestyle-annotation}}
+
+  {{#freestyle-collection title='c-media-container' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-media-container-default' title='c-media-container default' usageTitle=labels.usage.title}}
+
+        {{c-media-container
+          medias=model.mockdata.cMediaContainer.medias
+          selectorXXS="imageXXS"
+          selectorXS="imageXS"
+          selectorSM="imageSM"
+          selectorMD="imageMD"
+          selectorLG="imageLG"
+          selectorXL="imageXL"
+        }}
+
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+
+  {{/freestyle-collection}}
+{{/freestyle-subsection}}

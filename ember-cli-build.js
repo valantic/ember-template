@@ -50,13 +50,13 @@ module.exports = function(defaults) {
         '/styleguide',
         '/test-page'
       ],
-      includeClientScripts: false
+      includeClientScripts: true
     }
   });
 
   // Removes the style-guide CSS when building for production
   if (!isProduction) {
-    delete app.options.outputPaths.app.css['app'];
+    delete app.options.outputPaths.app.css.app;
     app.options.outputPaths.app.css = { 'app-and-styleguide': '/assets/ember-project-template.css' };
   }
 

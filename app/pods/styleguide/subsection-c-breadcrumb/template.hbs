@@ -1,0 +1,36 @@
+{{! template-lint-disable }}
+<!-- disable all rules -->
+{{#freestyle-subsection name='c-breadcrumb' section=section}}
+
+  {{#freestyle-annotation}}
+    <p>The <code>c-breadcrumb</code> Component is used for rendering the breadcrumbs</p>
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>items</code> (Array)</dt>
+      <dd>List of item objects {title, url}, url: false => current page</dd>
+    </dl>
+  {{/freestyle-annotation}}
+
+  {{#freestyle-collection title='c-breadcrumb' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-breadcrumb-default' title='c-breadcrumb default' usageTitle=labels.usage.title}}
+
+        {{c-breadcrumb
+          items=model.mockdata.cBreadcrumb.items
+        }}
+
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    <!-- JSON EXAMPLE (Mockdata) -->
+    <div class="FreestyleUsage-snippet FreestyleUsage-snippet--zenburn col-xxs-12">
+      <p>JSON Mockdata:</p>
+      <pre class="hljs crystal">
+      <code>
+        {{stringify model.mockdata.cBreadcrumb}}
+      </code>
+    </pre>
+    </div>
+  {{/freestyle-collection}}
+{{/freestyle-subsection}}

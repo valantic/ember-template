@@ -3,6 +3,7 @@ import selectOptions from './selectOptions';
 import cMediaContainer from './cMediaContainer';
 import cTabs from './cTabs';
 import cProcessSteps from './cProcessSteps';
+import cBreadcrumb from './cBreadcrumb';
 
 /* eslint-disable no-unused-vars */
 
@@ -31,7 +32,8 @@ const mockdata = {
   selectOptions,
   cMediaContainer,
   cTabs,
-  cProcessSteps
+  cProcessSteps,
+  cBreadcrumb
 };
 
 export default mockdata;

@@ -1,0 +1,11 @@
+<ul class="{{bemBlockName}}__list">
+  {{#each items as |item|}}
+    <li class="{{bemBlockName}}__item">
+      {{#if item.url}}
+        <a href={{item.url}} class="{{bemBlockName}}__link">{{item.title}}</a>
+      {{else}}
+        <span class="{{bemBlockName}}__link is-active">{{item.title}}</span>
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>

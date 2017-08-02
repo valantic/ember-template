@@ -15,7 +15,11 @@
       keyup=(action "onKeyUp")
     }}
   {{else}}
-    {{value}} {{unit}}
+    {{#if unit}}
+      {{value}}&nbsp;{{unit}}
+    {{else}}
+      {{value}}
+    {{/if}}
   {{/if}}
 </div>
 <button

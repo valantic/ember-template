@@ -16,6 +16,10 @@
   }
 }
 
+.e-input-text--no-border {
+  border: 0;
+}
+
 .e-input-text--state-success {
   border-color: $color-status-success;
   background-color: $color-gray-white-opacity-heavy;

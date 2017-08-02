@@ -1,0 +1,27 @@
+<button
+  class="{{bemBlockName}}__button {{bemBlockName}}__button--left {{_buttonStateDownClass}}"
+  disabled={{disabled}}
+  onclick={{action "onCountDownClick"}}
+>
+  {{svg-jar "i-minus" class="e-counter__icon e-counter__icon--left"}}
+</button>
+<div class="{{bemBlockName}}__center">
+  {{#if hasInputField}}
+    {{e-input-text
+      hasNoBorder=true
+      hasTextCentered=true
+      value=value
+      type="number"
+      keyup=(action "onKeyUp")
+    }}
+  {{else}}
+    {{value}} {{unit}}
+  {{/if}}
+</div>
+<button
+  class="{{bemBlockName}}__button {{bemBlockName}}__button--right {{_buttonStateUpClass}}"
+  disabled={{disabled}}
+  onclick={{action "onCountUpClick"}}
+>
+  {{svg-jar "i-plus" class="e-counter__icon e-counter__icon--right"}}
+</button>

@@ -1,0 +1,62 @@
+.e-counter {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 55px;
+  color: $color-gray-dark;
+  width: 100%;
+  
+  &__button {
+    width: 25%;
+    max-width: 60px;
+    height: 100%;
+    padding: $spacing--10;
+    background-color: $color-gray-white;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+
+    path, rect {
+      fill: $color-gray-dark;
+    }
+  }
+  
+  &__button--disabled {
+    cursor: default;
+
+    path, rect {
+      fill: $color-gray-light;
+    }
+  }
+
+  &__button--left {
+    border: 2px solid $color-gray-dark;
+  }
+
+  &__button--right {
+    border: 2px solid $color-gray-dark;
+  }
+
+  &__center {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    font-size: $font-size-large;
+    line-height: 55px;
+    background-color: $color-gray-white;
+    user-select: none;
+    cursor: default;
+    border-bottom: 2px solid $color-gray-dark;
+    border-top: 2px solid $color-gray-dark;
+
+    input {
+      height: 51px;
+    }
+  }
+
+  &__icon {
+    width: 75%;
+    height: 75%;
+  }
+}

@@ -14,16 +14,19 @@ export default Ember.Component.extend(eFormComponent, {
   maxlength: -1,
   id: '',
   name: '',
+  type: 'text',
   placeholder: '',
   title: '',
   value: '',
   hasTextCentered: false,
   hasNoFocus: false,
+  hasNoBorder: false,
 
   // Internal properties
   _class: Ember.computed(
     'hasTextCentered',
     'hasNoFocus',
+    'hasNoBorder',
     function() {
       const bemBlockName = this.get('bemBlockName');
       const classNames = [];
@@ -36,6 +39,10 @@ export default Ember.Component.extend(eFormComponent, {
         classNames.push(`${bemBlockName}--no-focus`);
       }
 
+      if (this.get('hasNoBorder')) {
+        classNames.push(`${bemBlockName}--no-border`);
+      }
+
       return classNames.join(' ');
     }
   ),
@@ -44,6 +51,9 @@ export default Ember.Component.extend(eFormComponent, {
   actions: {
     doFocusOut(event) {
       this.sendAction('doFocusOut', event);
+    },
+    keyup() {
+      this.sendAction('keyup');
     }
   }
 });

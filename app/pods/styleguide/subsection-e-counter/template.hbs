@@ -1,0 +1,62 @@
+{{! template-lint-disable }}
+<!-- disable all rules -->
+{{#freestyle-subsection name='e-counter' section=section}}
+
+  {{#freestyle-annotation}}
+    <p>The <code>e-counter</code> Component is used as a simple counter for counting Numbers</p>
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>minValue</code> (Number)</dt>
+      <dd>minimum allowed value</dd>
+      <dt><code>maxValue</code> (Number)</dt>
+      <dd>maximum allowed value</dd>
+      <dt><code>value</code> (Number)</dt>
+      <dd>current value</dd>
+      <dt><code>unit</code> (String)</dt>
+      <dd>Unit to display next to the value (not availlable for input fields)</dd>
+      <dt><code>hasInputField</code> (Boolean)</dt>
+      <dd>show the value in a input field that the user can insert a value by keyboard</dd>
+    </dl>
+  {{/freestyle-annotation}}
+
+  {{#freestyle-collection title='e-counter' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'e-counter' title='e-counter' usageTitle=labels.usage.title}}
+        {{e-counter
+          minValue=0
+          maxValue=20
+          value=2
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='input'}}
+      {{#freestyle-usage 'e-counter-input' title='e-counter-input' usageTitle=labels.usage.title}}
+        {{e-counter
+          minValue=0
+          maxValue=20
+          value=2
+          hasInputField=true
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='unit'}}
+      {{#freestyle-usage 'e-counter-unit' title='e-counter-unit' usageTitle=labels.usage.title}}
+        {{e-counter
+          minValue=0
+          maxValue=20
+          value=2
+          unit=" Stück"
+        }}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+
+  {{/freestyle-collection}}
+{{/freestyle-subsection}}
+
+
+
+

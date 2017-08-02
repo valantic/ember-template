@@ -12,5 +12,6 @@
   "label.form.phone": "Telefon",
   "label.form.mobile": "Mobil",
   "label.form.fax": "Fax",
-  "e-select.placeholder": "Platzhalter exp."
+  "e-select.placeholder": "Platzhalter exp.",
+  "cart.add-to-cart": "{numArticles, plural,\n =0 {}\n =1 {# Produkt}\n other {# Produkte}} in den Warenkorb"
 }

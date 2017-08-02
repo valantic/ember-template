@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  height: 55px;
+  height: 50px;
   color: $color-gray-dark;
   width: 100%;
   
@@ -43,7 +43,7 @@
     justify-content: center;
     text-align: center;
     font-size: $font-size-large;
-    line-height: 55px;
+    line-height: 50px;
     background-color: $color-gray-white;
     user-select: none;
     cursor: default;
@@ -51,7 +51,7 @@
     border-top: 2px solid $color-gray-dark;
 
     input {
-      height: 51px;
+      height: calc(50px - 4px);
     }
   }
 

@@ -1,0 +1,40 @@
+{{! template-lint-disable }}
+<!-- disable all rules -->
+{{#freestyle-subsection name='c-add-to-cart' section=section}}
+
+  {{#freestyle-annotation}}
+    <p>The <code>c-add-to-cart</code> Component is used for add products into cart. It have to be connected with a
+      store or the backend. If user clicks on the button he gets the opportunity to change pcs with the counter.</p>
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>mini</code> (Boolean)</dt>
+      <dd>Shows the Button with the icon</dd>
+      <dt><code>pcs</code> (Number)</dt>
+      <dd>Shows a default number (already in the basket)</dd>
+    </dl>
+  {{/freestyle-annotation}}
+
+  {{#freestyle-collection title='c-add-to-cart' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-add-to-cart-default' title='c-add-to-cart default' usageTitle=labels.usage.title}}
+
+        {{c-add-to-cart}}
+
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='mini'}}
+      {{#freestyle-usage 'c-add-to-cart-mini' title='c-add-to-cart mini' usageTitle=labels.usage.title}}
+
+        {{c-add-to-cart
+          mini=true
+          pcs=3
+        }}
+
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+
+  {{/freestyle-collection}}
+{{/freestyle-subsection}}

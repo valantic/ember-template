@@ -12,5 +12,6 @@
   "label.form.phone": "Phone",
   "label.form.mobile": "Mobile",
   "label.form.fax": "Fax",
-  "e-select.placeholder": "placeholder exp."
+  "e-select.placeholder": "placeholder exp.",
+  "cart.add-to-cart": "{numArticles, plural,\n =1 {# Product}\n other {# Products}} in to the basket"
 }

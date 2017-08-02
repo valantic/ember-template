@@ -20,6 +20,7 @@ $e-button-padding: 6px 10px 5px;
   text-decoration: none;
   vertical-align: baseline;
   white-space: normal;
+  height: 50px;
 }
 
 .e-button--link {
@@ -161,7 +162,7 @@ $e-button-padding: 6px 10px 5px;
 }
 
 .e-button__icon-outer {
-  height: 4em;
+  height: 50px;
 
   &--square {
     width: 4em;
@@ -181,6 +182,10 @@ $e-button-padding: 6px 10px 5px;
     .e-button__button {
       margin-right: $spacing--0;
     }
+  }
+
+  svg {
+    height: 100%;
   }
 }
 

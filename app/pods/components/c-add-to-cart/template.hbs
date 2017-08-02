@@ -1,0 +1,26 @@
+{{#unless value}}
+  {{#if mini}}
+    {{#e-button
+      isIconButton=true
+      fullWidth=true
+      onclick=(action 'addToCart')
+      class="c-add-to-cart__button--mini"
+    }}
+      {{svg-jar "i-cart"}}
+    {{/e-button}}
+  {{else}}
+    {{#e-button
+      fullWidth=true
+      onclick=(action "addToCart")
+    }}
+      {{t 'cart.add-to-cart' numArticles=pcs}}
+    {{/e-button}}
+  {{/if}}
+{{else}}
+  {{e-counter
+    value=value
+    maxValue=99999
+    minValue=0
+    owner=this
+  }}
+{{/unless}}

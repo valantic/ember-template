@@ -63,7 +63,7 @@ export default Ember.Component.extend({
 
   // Handed in closures
   click() {
-    this.sendAction();
+    this.sendAction('onclick');
   },
 
   // This will change the class name of the component according to active state.

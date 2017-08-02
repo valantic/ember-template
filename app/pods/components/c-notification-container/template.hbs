@@ -1,0 +1,3 @@
+{{#each notificationService.notifications as |notification|}}
+  {{c-notification data=notification owner=this notificationClosed=(action 'notificationClosed')}}
+{{/each}}

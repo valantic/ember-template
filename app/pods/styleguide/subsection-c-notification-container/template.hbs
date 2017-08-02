@@ -1,0 +1,28 @@
+{{! template-lint-disable }}
+<!-- disable all rules -->
+{{#freestyle-subsection name='c-notification-container' section=section}}
+
+  {{#freestyle-annotation}}
+    <p>The <code>c-notification-container</code> Component can be placed anywhere on the page. It renders notification messages when you set a new message into the notification service.</p>
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>messages</code> (Object)</dt>
+      <dd>optional! (container renders messages from service "notification"</dd>
+    </dl>
+  {{/freestyle-annotation}}
+
+  {{#freestyle-collection title='c-notification-container' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-notification-container-default' title='c-notification-container default' usageTitle=labels.usage.title}}
+
+        {{c-notification-container
+          messages=model.mockdata.cNotificationContainer.messages
+        }}
+
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+
+  {{/freestyle-collection}}
+{{/freestyle-subsection}}

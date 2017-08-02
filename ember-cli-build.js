@@ -8,7 +8,7 @@ const isProduction = EmberApp.env() === 'production';
 module.exports = function(defaults) {
   const app = new EmberApp(defaults, {
     // Add options here
-    'autoprefixer': {
+    autoprefixer: {
       browsers: [
         'last 3 versions',
         'ie 10',
@@ -17,7 +17,7 @@ module.exports = function(defaults) {
       ],
       cascade: false
     },
-    'svgJar': {
+    svgJar: {
       strategy: ['symbol', 'inline'],
 
       symbol: {
@@ -30,28 +30,29 @@ module.exports = function(defaults) {
         sourceDirs: ['svgs', 'public/assets/svg/inline']
       }
     },
-    'storeConfigInMeta': false,
-    'sassOptions': {
+    storeConfigInMeta: false,
+    sassOptions: {
       includePaths: [
         'app/pods/components',
         'bower_components/bootstrap-sass/assets/stylesheets/'
       ]
     },
-    'outputPaths': {
+    outputPaths: {
       app: {
         css: {
           // default: 'app': '/assets/project-name.css' has not to be here
         }
       }
-    },
-    'ember-cli-staticboot': {
+    }/*
+    ,
+    ember-cli-staticboot: {
       paths: [
         '/',
         '/styleguide',
         '/test-page'
       ],
       includeClientScripts: true
-    }
+    }*/
   });
 
   // Removes the style-guide CSS when building for production

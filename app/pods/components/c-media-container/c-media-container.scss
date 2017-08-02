@@ -1,4 +1,8 @@
 .c-media-container {
   display: block;
   max-width: 100%;
+
+  &__fallback-img {
+    max-width: 100%;
+  }
 }

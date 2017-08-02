@@ -1,1 +1,9 @@
-{{yield}}
+<picture>
+  <source srcset="{{imageXL.url}}, {{imageXL.urlRetina}} 2x" media="(min-width: 1600px)">
+  <source srcset="{{imageLG.url}}, {{imageLG.urlRetina}} 2x" media="(min-width: 1200px)">
+  <source srcset="{{imageMD.url}}, {{imageMD.urlRetina}} 2x" media="(min-width: 992px)">
+  <source srcset="{{imageSM.url}}, {{imageSM.urlRetina}} 2x" media="(min-width: 768px)">
+  <source srcset="{{imageXS.url}}, {{imageXS.urlRetina}} 2x" media="(min-width: 480px)">
+  <source srcset="{{imageXXS.url}}, {{imageXXS.urlRetina}} 2x" media="(min-width: 0px)">
+  <img src="{{imageXL.url}}" alt="{{altText}}" class="{{bemBlockName}}__fallback-img">
+</picture>

@@ -1,0 +1,71 @@
+{{! template-lint-disable }}
+<!-- disable all rules -->
+{{#freestyle-subsection name='c-notification' section=section}}
+
+  {{#freestyle-annotation}}
+    <p>The <code>c-notification</code> Component is used for rendering notification messages with different states.
+    You can use the auto hide with the "secondsToShow" attribute.</p>
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>message</code> (String)</dt>
+      <dd>The message which you want to display</dd>
+      <dt><code>isInfo</code> (Boolean)</dt>
+      <dd>renders the info-style</dd>
+      <dt><code>isError</code> (Boolean)</dt>
+      <dd>renders the error-style</dd>
+      <dt><code>isSuccess</code> (Boolean)</dt>
+      <dd>renders the error-style</dd>
+      <dt><code>secondsToShow</code> (Number)</dt>
+      <dd>set the seconds that the message will be displayed</dd>
+    </dl>
+  {{/freestyle-annotation}}
+
+  {{#freestyle-collection title='c-notification' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='info'}}
+      {{#freestyle-usage 'c-notification-info' title='c-notification info' usageTitle=labels.usage.title}}
+
+        {{c-notification
+          message="This is a info-state notification!"
+          isInfo=true
+        }}
+
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='error'}}
+      {{#freestyle-usage 'c-notification-error' title='c-notification error' usageTitle=labels.usage.title}}
+
+        {{c-notification
+          message="This is a error-state notification!"
+          isError=true
+        }}
+
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='success'}}
+      {{#freestyle-usage 'c-notification-success' title='c-notification success' usageTitle=labels.usage.title}}
+
+        {{c-notification
+          message="This is a info-state notification!"
+          isSuccess=true
+        }}
+
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='auto-hide'}}
+      {{#freestyle-usage 'c-notification-auto-hide' title='c-notification auto-hide' usageTitle=labels.usage.title}}
+
+        {{c-notification
+          message="This message will hide after 3 seconds..."
+          secondsToShow=3
+        }}
+
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+
+  {{/freestyle-collection}}
+{{/freestyle-subsection}}

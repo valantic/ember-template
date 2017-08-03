@@ -1,0 +1,30 @@
+{{#swiper-container
+  speed=speed
+  autoplay=(if speed true false)
+  pagination=(if (gt items.length 1) pagination false)
+  loop=(if (gt items.length 1) loop false)
+  slidesPerView=slidesPerView
+  spaceBetween=spaceBetween
+  centered=centered
+  onChange=(action "onChange")
+  onlyExternal=(if (gt items.length 1) false true)
+  navigation=(if (gt items.length 1) navigation false)
+}}
+  {{#each items as | item |}}
+    {{#swiper-slide}}
+      <div class="{{bemBlockName}}__item">
+        {{c-media-container
+          medias=item.medias
+          selectorXXS="imageXXS"
+          selectorXS="imageXS"
+          selectorSM="imageSM"
+          selectorMD="imageMD"
+          selectorLG="imageLG"
+          selectorXL="imageXL"
+        }}
+      </div>
+    {{/swiper-slide}}
+  {{/each}}
+{{/swiper-container}}
+
+{{log "items" items.length}}

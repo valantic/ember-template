@@ -5,6 +5,7 @@ import cTabs from './cTabs';
 import cProcessSteps from './cProcessSteps';
 import cBreadcrumb from './cBreadcrumb';
 import cNotificationContainer from './cNotificationContainer';
+import cImageSlider from './cImageSlider';
 
 /* eslint-disable no-unused-vars */
 
@@ -35,7 +36,8 @@ const mockdata = {
   cTabs,
   cProcessSteps,
   cBreadcrumb,
-  cNotificationContainer
+  cNotificationContainer,
+  cImageSlider
 };
 
 export default mockdata;

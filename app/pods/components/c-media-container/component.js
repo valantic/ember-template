@@ -16,12 +16,12 @@ export default Ember.Component.extend({
   selectorXL: '',
   showDefault: false,
   altText: '',
-  imageXXS: {}, // {url, urlRetina}
-  imageXS: {},
-  imageSM: {},
-  imageMD: {},
-  imageLG: {},
-  imageXL: {},
+  imageXXS: Ember.computed(() => ({})), // {url, urlRetina}
+  imageXS: Ember.computed(() => ({})),
+  imageSM: Ember.computed(() => ({})),
+  imageMD: Ember.computed(() => ({})),
+  imageLG: Ember.computed(() => ({})),
+  imageXL: Ember.computed(() => ({})),
 
   // Closures
   didReceiveAttrs(...args) {

@@ -1,0 +1,77 @@
+{{! template-lint-disable }}
+<!-- disable all rules -->
+{{#freestyle-subsection name='c-image-slider' section=section}}
+
+  {{#freestyle-annotation}}
+    <p>The <code>c-image-slider</code> Component is used as a simple slider component. If it gets more than 1 item it's a slider, otherwise it renders a simple image. (It works with the c-media-container component)</p>
+    <p>more on <a href="http://suven.github.io/ember-cli-swiper/">http://suven.github.io/ember-cli-swiper/</a></p>
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>items</code> (Array)</dt>
+      <dd>List of slider items { medias: [] }</dd>
+      <dt><code>speed</code> (Number)</dt>
+      <dd>Speed of autoplay in MS (if speed=0 => no autoplay)</dd>
+      <dt><code>pagination</code> (Boolean)</dt>
+      <dd>Shows/Hides the bullet points on the bottom</dd>
+      <dt><code>loop</code> (Boolean)</dt>
+      <dd>Loops the slides or not</dd>
+      <dt><code>slidesPerView</code> (Number)</dt>
+      <dd>Number of slides who should be show per slide</dd>
+      <dt><code>spaceBetween</code> (Number)</dt>
+      <dd>Amount of pixels who should be between each slide</dd>
+      <dt><code>centered</code> (Boolean)</dt>
+      <dd>centered slides (use this when you have more then 1 slides per view</dd>
+      <dt><code>navigation</code> (Boolean)</dt>
+      <dd>show the arrows for next/prev button</dd>
+    </dl>
+  {{/freestyle-annotation}}
+
+  {{#freestyle-collection title='c-image-slider' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-image-slider-default' title='c-image-slider default' usageTitle=labels.usage.title}}
+
+        {{c-image-slider
+          items=model.mockdata.cImageSlider.items
+        }}
+
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='autoplay'}}
+      {{#freestyle-usage 'c-image-slider-autoplay' title='c-image-slider autoplay' usageTitle=labels.usage.title}}
+
+        {{c-image-slider
+          items=model.mockdata.cImageSlider.items
+          speed=2000
+        }}
+
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='single-item'}}
+      {{#freestyle-usage 'c-image-slider-single-item' title='c-image-slider single-item' usageTitle=labels.usage.title}}
+
+        {{c-image-slider
+          items=model.mockdata.cImageSlider.singleItem
+        }}
+
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='multiple slides'}}
+      {{#freestyle-usage 'c-image-slider-multiple-slides' title='c-image-slider multiple slides' usageTitle=labels.usage.title}}
+
+        {{c-image-slider
+          items=model.mockdata.cImageSlider.items
+          slidesPerView=3
+          spaceBetween=5
+          centered=true
+        }}
+
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+
+  {{/freestyle-collection}}
+{{/freestyle-subsection}}

@@ -23,6 +23,10 @@
       <dd>centered slides (use this when you have more then 1 slides per view</dd>
       <dt><code>navigation</code> (Boolean)</dt>
       <dd>show the arrows for next/prev button</dd>
+      <dt><code>showThumbnails</code> (Boolean)</dt>
+      <dd>Renders thumbnails (need to be in the items object!)</dd>
+      <dt><code>thumbsPerView</code> (Number)</dt>
+      <dd>Number of thumbnails to show per view</dd>
     </dl>
   {{/freestyle-annotation}}
 
@@ -38,12 +42,27 @@
       {{/freestyle-usage}}
     {{/freestyle-variant}}
 
-    {{#freestyle-variant collection=collection key='autoplay'}}
-      {{#freestyle-usage 'c-image-slider-autoplay' title='c-image-slider autoplay' usageTitle=labels.usage.title}}
+    {{#freestyle-variant collection=collection key='thumbnails'}}
+      {{#freestyle-usage 'c-image-slider-thumbnails' title='c-image-slider thumbnails' usageTitle=labels.usage.title}}
 
         {{c-image-slider
           items=model.mockdata.cImageSlider.items
-          speed=2000
+          showThumbnails=true
+          thumbsPerView=5
+        }}
+
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+    {{#freestyle-variant collection=collection key='autoplay'}}
+      {{#freestyle-usage 'c-image-slider-autoplay' title='c-image-slider autoplay' usageTitle=labels.usage.title}}
+
+        {{#freestyle-annotation}}
+          <p>Information! => This is not to display in styleguide bcs otherwise the tests failed.</p>
+        {{/freestyle-annotation}}
+        {{c-image-slider
+          items=model.mockdata.cImageSlider.items
+          speed=0
         }}
 
       {{/freestyle-usage}}

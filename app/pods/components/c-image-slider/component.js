@@ -15,6 +15,9 @@ export default Ember.Component.extend({
   centered: true,
   items: null,
   navigation: true,
+  showThumbnails: false,
+  currentSlide: null,
+  thumbsPerView: 5,
 
   // Closures
 
@@ -26,6 +29,11 @@ export default Ember.Component.extend({
   actions: {
     onChange() {
       this.sendAction('onChange');
+    },
+    goToIndex(event) {
+      const index = event.target.getAttribute('index');
+
+      this.set('currentSlide', index);
     }
   }
 });

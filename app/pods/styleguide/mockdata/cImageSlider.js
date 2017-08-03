@@ -65,7 +65,11 @@ const cImageSlider = {
           url: 'http://via.placeholder.com/4000x2000/FF0000?text=Example-XL-Retina',
           mediaFormat: 'imageXLRetina'
         }
-      ]
+      ],
+      thumbnail: {
+        altText: 'thumbnail-example',
+        url: 'http://via.placeholder.com/200x200/FF0000?text=Thumb1'
+      }
     },
     {
       linkHref: 'https://movento.com',
@@ -132,7 +136,11 @@ const cImageSlider = {
           url: 'http://via.placeholder.com/4000x2000/FFA500?text=Example-XL-Retina',
           mediaFormat: 'imageXLRetina'
         }
-      ]
+      ],
+      thumbnail: {
+        altText: 'thumbnail-example',
+        url: 'http://via.placeholder.com/200x200/FFA500?text=Thumb2'
+      }
     },
     {
       linkHref: 'https://movento.com',
@@ -199,7 +207,11 @@ const cImageSlider = {
           url: 'http://via.placeholder.com/4000x2000/FF0000?text=Example-XL-Retina',
           mediaFormat: 'imageXLRetina'
         }
-      ]
+      ],
+      thumbnail: {
+        altText: 'thumbnail-example',
+        url: 'http://via.placeholder.com/200x200/FF0000?text=Thumb3'
+      }
     },
     {
       linkHref: 'https://movento.com',
@@ -266,7 +278,153 @@ const cImageSlider = {
           url: 'http://via.placeholder.com/4000x2000/FFA500?text=Example-XL-Retina',
           mediaFormat: 'imageXLRetina'
         }
-      ]
+      ],
+      thumbnail: {
+        altText: 'thumbnail-example',
+        url: 'http://via.placeholder.com/200x200/FFA500?text=Thumb4'
+      }
+    },
+    {
+      linkHref: 'https://movento.com',
+      linkTitle: 'example link 5',
+      linkText: 'Test this link 5',
+      medias: [
+        {
+          altText: 'example image xxs',
+          url: 'http://via.placeholder.com/500x400/FF0000?text=Example-XXS',
+          mediaFormat: 'imageXXS'
+        },
+        {
+          altText: 'example image xs',
+          url: 'http://via.placeholder.com/800x500/FF0000?text=Example-XS',
+          mediaFormat: 'imageXS'
+        },
+        {
+          altText: 'example image sm',
+          url: 'http://via.placeholder.com/1000x700/FF0000?text=Example-SM',
+          mediaFormat: 'imageSM'
+        },
+        {
+          altText: 'example image md',
+          url: 'http://via.placeholder.com/1200x600/FF0000?text=Example-MD',
+          mediaFormat: 'imageMD'
+        },
+        {
+          altText: 'example image lg',
+          url: 'http://via.placeholder.com/1600x800/FF0000?text=Example-LG',
+          mediaFormat: 'imageLG'
+        },
+        {
+          altText: 'example image xl',
+          url: 'http://via.placeholder.com/2000x1000/FF0000?text=Example-XL',
+          mediaFormat: 'imageXL'
+        },
+        {
+          altText: 'example image xxs retina',
+          url: 'http://via.placeholder.com/1000x800/FF0000?text=Example-XXS-Retina',
+          mediaFormat: 'imageXXSRetina'
+        },
+        {
+          altText: 'example image xs Retina',
+          url: 'http://via.placeholder.com/1600x1000/FF0000?text=Example-XS-Retina',
+          mediaFormat: 'imageXSRetina'
+        },
+        {
+          altText: 'example image sm Retina',
+          url: 'http://via.placeholder.com/2000x1400/FF0000?text=Example-SM-Retina',
+          mediaFormat: 'imageSMRetina'
+        },
+        {
+          altText: 'example image md Retina',
+          url: 'http://via.placeholder.com/2400x1200/FF0000?text=Example-MD-Retina',
+          mediaFormat: 'imageMDRetina'
+        },
+        {
+          altText: 'example image lg Retina',
+          url: 'http://via.placeholder.com/3200x1600/FF0000?text=Example-LG-Retina',
+          mediaFormat: 'imageLGRetina'
+        },
+        {
+          altText: 'example image xl Retina',
+          url: 'http://via.placeholder.com/4000x2000/FF0000?text=Example-XL-Retina',
+          mediaFormat: 'imageXLRetina'
+        }
+      ],
+      thumbnail: {
+        altText: 'thumbnail-example',
+        url: 'http://via.placeholder.com/200x200/FF0000?text=Thumb5'
+      }
+    },
+    {
+      linkHref: 'https://movento.com',
+      linkTitle: 'example link 6',
+      linkText: 'Test this link 6',
+      medias: [
+        {
+          altText: 'example image xxs',
+          url: 'http://via.placeholder.com/500x400/FFA500?text=Example-XXS',
+          mediaFormat: 'imageXXS'
+        },
+        {
+          altText: 'example image xs',
+          url: 'http://via.placeholder.com/800x500/FFA500?text=Example-XS',
+          mediaFormat: 'imageXS'
+        },
+        {
+          altText: 'example image sm',
+          url: 'http://via.placeholder.com/1000x700/FFA500?text=Example-SM',
+          mediaFormat: 'imageSM'
+        },
+        {
+          altText: 'example image md',
+          url: 'http://via.placeholder.com/1200x600/FFA500?text=Example-MD',
+          mediaFormat: 'imageMD'
+        },
+        {
+          altText: 'example image lg',
+          url: 'http://via.placeholder.com/1600x800/FFA500?text=Example-LG',
+          mediaFormat: 'imageLG'
+        },
+        {
+          altText: 'example image xl',
+          url: 'http://via.placeholder.com/2000x1000/FFA500?text=Example-XL',
+          mediaFormat: 'imageXL'
+        },
+        {
+          altText: 'example image xxs retina',
+          url: 'http://via.placeholder.com/1000x800/FFA500?text=Example-XXS-Retina',
+          mediaFormat: 'imageXXSRetina'
+        },
+        {
+          altText: 'example image xs Retina',
+          url: 'http://via.placeholder.com/1600x1000/FFA500?text=Example-XS-Retina',
+          mediaFormat: 'imageXSRetina'
+        },
+        {
+          altText: 'example image sm Retina',
+          url: 'http://via.placeholder.com/2000x1400/FFA500?text=Example-SM-Retina',
+          mediaFormat: 'imageSMRetina'
+        },
+        {
+          altText: 'example image md Retina',
+          url: 'http://via.placeholder.com/2400x1200/FFA500?text=Example-MD-Retina',
+          mediaFormat: 'imageMDRetina'
+        },
+        {
+          altText: 'example image lg Retina',
+          url: 'http://via.placeholder.com/3200x1600/FFA500?text=Example-LG-Retina',
+          mediaFormat: 'imageLGRetina'
+        },
+        {
+          altText: 'example image xl Retina',
+          url: 'http://via.placeholder.com/4000x2000/FFA500?text=Example-XL-Retina',
+          mediaFormat: 'imageXLRetina'
+        }
+      ],
+      thumbnail: {
+        altText: 'thumbnail-example',
+        url: 'http://via.placeholder.com/200x200/FFA500?text=Thumb6'
+      }
     }
   ],
   singleItem: [

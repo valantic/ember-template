@@ -9,6 +9,7 @@
   onChange=(action "onChange")
   onlyExternal=(if (gt items.length 1) false true)
   navigation=(if (gt items.length 1) navigation false)
+  currentSlide=currentSlide
 }}
   {{#each items as | item |}}
     {{#swiper-slide}}
@@ -27,4 +28,25 @@
   {{/each}}
 {{/swiper-container}}
 
-{{log "items" items.length}}
+{{#if showThumbnails}}
+  <div class="{{bemBlockName}}__thumbnails">
+  {{#swiper-container
+    centered=false
+    spaceBetween=5
+    slidesPerView=thumbsPerView
+    currentSlide=currentSlide
+  }}
+    {{#each items as |item index|}}
+      {{#swiper-slide}}
+        <img class="{{bemBlockName}}__thumbnail-image"
+         src={{item.thumbnail.url}}
+         alt={{item.thumbnail.altText}}
+         onclick={{action 'goToIndex'}}
+         index={{index}}
+         role="button"
+        >
+      {{/swiper-slide}}
+    {{/each}}
+  {{/swiper-container}}
+  </div>
+{{/if}}

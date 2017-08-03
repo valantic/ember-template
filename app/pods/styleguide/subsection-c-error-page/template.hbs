@@ -1,0 +1,40 @@
+{{! template-lint-disable }}
+<!-- disable all rules -->
+{{#freestyle-subsection name='c-error-page' section=section}}
+
+  {{#freestyle-annotation}}
+    <p>The <code>c-error-page</code> Component is used for rendering an error (404, 500, etc). Mostly it has to be rendered static and implement by backend. But needs the styling from frontend.</p>
+    <h4>Attributes</h4>
+    <dl>
+      <dt><code>errorCode</code> (String)</dt>
+      <dd>the error code like 404, 500, etc.</dd>
+      <dt><code>subTitle</code> (String)</dt>
+      <dd>a sub title</dd>
+      <dt><code>description</code> (String)</dt>
+      <dd>a description for the user what's the problem</dd>
+      <dt><code>linkHref</code> (String)</dt>
+      <dd>the link for the button on the page</dd>
+      <dt><code>linkText</code> (String)</dt>
+      <dd>the text who should be displays on the button</dd>
+    </dl>
+  {{/freestyle-annotation}}
+
+  {{#freestyle-collection title='c-error-page' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='default'}}
+      {{#freestyle-usage 'c-error-page-default' title='c-error-page default' usageTitle=labels.usage.title}}
+
+        {{c-error-page
+          errorCode="404"
+          subTitle="uuups, something went wrong..."
+          description="The page you are looking can't be found."
+          linkHref="https://movento.com"
+          linkText="Back to the homepage"
+        }}
+
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+
+  {{/freestyle-collection}}
+{{/freestyle-subsection}}

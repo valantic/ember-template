@@ -1,6 +1,8 @@
 import Ember from 'ember';
 import config from './config/environment';
 
+const isProduction = config.environment === 'production';
+const isDebug = config.environment === 'debug';
 const Router = Ember.Router.extend({
   location: config.locationType,
   rootURL: config.rootURL
@@ -8,10 +10,13 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('page-404', { path: '/*wildcard' });
-  if (config.environment !== 'production') {
+
+  // Routes created only for styleguide (development environment)
+  if (!isProduction && !isDebug) {
     this.route('styleguide');
+    this.route('test-page');
+    this.route('index');
   }
-  this.route('test-page');
 });
 
 export default Router;

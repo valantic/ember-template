@@ -15,7 +15,7 @@ Router.map(function() {
   if (!isProduction && !isDebug) {
     this.route('styleguide');
     this.route('test-page');
-    this.route('index');
+    this.route('index', { path: '/' });
   }
 });
 

@@ -20,6 +20,8 @@
       <dd>the string that is used in the medias array as "mediaFormat"</dd>
       <dt><code>selectorXL</code> (String)</dt>
       <dd>the string that is used in the medias array as "mediaFormat"</dd>
+      <dt><code>lazyLoading</code> (Boolean)</dt>
+      <dd>State if the media will be loaded lazy or not (default: true)</dd>
     </dl>
   {{/freestyle-annotation}}
 
@@ -28,15 +30,15 @@
     {{#freestyle-variant collection=collection key='default'}}
       {{#freestyle-usage 'c-media-container-default' title='c-media-container default' usageTitle=labels.usage.title}}
 
-        {{c-media-container
-          medias=model.mockdata.cMediaContainer.medias1
-          selectorXXS="imageXXS"
-          selectorXS="imageXS"
-          selectorSM="imageSM"
-          selectorMD="imageMD"
-          selectorLG="imageLG"
-          selectorXL="imageXL"
-        }}
+          {{c-media-container
+            medias=model.mockdata.cMediaContainer.medias1
+            selectorXXS="imageXXS"
+            selectorXS="imageXS"
+            selectorSM="imageSM"
+            selectorMD="imageMD"
+            selectorLG="imageLG"
+            selectorXL="imageXL"
+          }}
 
       {{/freestyle-usage}}
     {{/freestyle-variant}}

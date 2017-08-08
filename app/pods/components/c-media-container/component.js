@@ -16,6 +16,7 @@ export default Ember.Component.extend({
   selectorXL: '',
   showDefault: false,
   altText: '',
+  lazyLoading: true,
   imageXXS: Ember.computed(() => ({})), // {url, urlRetina}
   imageXS: Ember.computed(() => ({})),
   imageSM: Ember.computed(() => ({})),

@@ -10,6 +10,8 @@
       <dd>"h1" - "h6"</dd>
       <dt><code>state</code> (String)</dt>
       <dd>"default", "success", "warning", "error"</dd>
+      <dt><code>noSpacing</code> (Boolean)</dt>
+      <dd>sets a 0 margin to the heading</dd>
     </dl>
   {{/freestyle-annotation}}
 
@@ -95,6 +97,21 @@
             state="error"
         }}
           I'm a heading with state error
+        {{/e-heading}}
+      {{/freestyle-usage}}
+    {{/freestyle-variant}}
+
+  {{/freestyle-collection}}
+
+  {{#freestyle-collection title='Heading-specials' defaultKey='all' inline=false as |collection|}}
+
+    {{#freestyle-variant collection=collection key='no-spacings'}}
+      {{#freestyle-usage 'e-heading--no-spacings' title='Heading with no-spacings'}}
+        {{#e-heading
+          tagName='h1'
+          noSpacing=true
+        }}
+          I'm a heading with state default
         {{/e-heading}}
       {{/freestyle-usage}}
     {{/freestyle-variant}}

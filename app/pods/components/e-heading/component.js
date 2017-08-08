@@ -6,11 +6,14 @@ export default Ember.Component.extend({
   bemBlockName: 'e-heading',
   tagName: 'h1',
   classNameBindings: [
-    '_stateClass'
+    '_stateClass',
+    '_tagNameClass',
+    'noSpacing:e-heading--no-spacing'
   ],
 
   // Handed in properties
   state: 'default',
+  noSpacing: false,
 
   // Internal properties
   _stateClass: Ember.computed(
@@ -22,5 +25,8 @@ export default Ember.Component.extend({
 
       return null;
     }
-  )
+  ),
+  _tagNameClass: Ember.computed('tagName', function() {
+    return `${this.get('bemBlockName')}--${this.get('tagName')}`;
+  })
 });

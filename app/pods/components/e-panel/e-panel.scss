@@ -1,4 +1,4 @@
-$e-panel-box-shadow-size: 0px 6px 6px 0px;
+$e-panel-box-shadow-size: 0 6px 6px 0;
 
 @mixin e-panel_border-state($border-state) {
   border-image-source: color($border-state);
@@ -20,14 +20,13 @@ $e-panel-box-shadow-size: 0px 6px 6px 0px;
 }
 
 .e-panel--inline-sm-up {
-
   @media #{$media-screen-sm-min} {
     display: inline-block;
     vertical-align: bottom;
   }
 }
 
-.e-panel--spacing-right{
+.e-panel--spacing-right {
   margin-right: $spacing--30;
 
   &:last-child {
@@ -46,10 +45,10 @@ $e-panel-box-shadow-size: 0px 6px 6px 0px;
   background: transparent;
   background-clip: padding-box;
   border: solid $color-gray-light;
+
   @include e-panel_border-state($color-gray-white);
 
-  &--background-color{
-
+  &--background-color {
     &-transparent {
       background: transparent;
     }
@@ -90,16 +89,19 @@ $e-panel-box-shadow-size: 0px 6px 6px 0px;
 
   &--error {
     border-color: $color-status-failed;
+
     @include e-panel_border-state($color-status-failed);
   }
 
   &--warning {
     border-color: $color-status-warning;
+
     @include e-panel_border-state($color-status-warning);
   }
 
   &--info {
     border-color: $color-primary-dark;
+
     @include e-panel_border-state($color-primary-dark);
   }
 

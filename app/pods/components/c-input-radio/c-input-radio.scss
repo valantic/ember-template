@@ -1,5 +1,4 @@
 .c-input-radio__options {
-
   &--horizontal,
   &--nested {
     display: block;
@@ -17,7 +16,6 @@
   }
 
   &--horizontal {
-
     @media #{$media-screen-xs-min} {
       display: inline-block;
     }
@@ -39,7 +37,6 @@
   }
 
   &--nested {
-
     @media #{$media-screen-xs-min} {
       display: inline-block;
       margin-bottom: -$spacing--10;

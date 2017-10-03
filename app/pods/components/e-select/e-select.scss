@@ -1,9 +1,10 @@
 .e-select {
   @include e-form-base;
+
   background-color: $color-gray-white-opacity-light;
   padding-right: 30px;
 
-  //Removes the standard icon on IE 10+
+  // Removes the standard icon on IE 10+
   &::-ms-expand {
     display: none;
   }

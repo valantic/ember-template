@@ -35,7 +35,6 @@
 }
 
 .spacing {
-
   &--bottom {
     @include spacing-mixin-bottom();
   }

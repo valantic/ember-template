@@ -1,5 +1,4 @@
 .c-input-checkbox__options {
-
   &--horizontal,
   &--nested {
     display: block;
@@ -17,13 +16,11 @@
   }
 
   &--horizontal {
-
     @media #{$media-screen-xs-min} {
       display: inline-block;
     }
 
     .e-label {
-
       @media #{$media-screen-xs-min} {
         display: inline-block;
         margin-right: $spacing--15;
@@ -42,7 +39,6 @@
   }
 
   &--nested {
-
     @media #{$media-screen-xs-min} {
       display: inline-block;
       margin-bottom: -$spacing--10;

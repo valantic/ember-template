@@ -16,8 +16,11 @@ test('it renders', function(assert) {
   `);
 
   assert.equal(this.$().text().trim(), '');
-  assert.equal(this.$().find('#single-input input[type="checkbox"].e-input-checkbox').length, 1,
-      'an input element with type checkbox and class name e-input-checkbox');
+  assert.equal(
+    this.$().find('#single-input input[type="checkbox"].e-input-checkbox').length,
+    1,
+    'an input element with type checkbox and class name e-input-checkbox'
+  );
 
   this.render(hbs`
     <div id="single-input">
@@ -28,9 +31,15 @@ test('it renders', function(assert) {
     </div>
   `);
 
-  assert.equal(this.$().find('#single-input input.e-input-checkbox.e-input-checkbox--modifier').length, 1,
-      'an input element with type checkbox and class name e-input-checkbox including custom class');
+  assert.equal(
+    this.$().find('#single-input input.e-input-checkbox.e-input-checkbox--modifier').length,
+    1,
+    'an input element with type checkbox and class name e-input-checkbox including custom class'
+  );
 
-  assert.equal(this.$().find('#single-input input#theCheckbox').length, 1,
-      'an input element with an id');
+  assert.equal(
+    this.$().find('#single-input input#theCheckbox').length,
+    1,
+    'an input element with an id'
+  );
 });

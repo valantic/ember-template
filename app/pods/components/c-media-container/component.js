@@ -31,11 +31,7 @@ export default Ember.Component.extend({
     let medias;
 
     if (data) {
-      if (data.medias) {
-        medias = data.medias;
-      } else {
-        medias = data;
-      }
+      medias = data.medias || data;
     } else {
       medias = this.get('medias');
     }

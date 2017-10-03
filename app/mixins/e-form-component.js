@@ -12,7 +12,7 @@ export default Ember.Mixin.create(ComponentUtils, {
   required: null,
   readonly: false,
   state: 'default',
-  tagName: '',  // No tag name prevents `spanitis`
+  tagName: '', // No tag name prevents `spanitis`
   title: null,
 
   _thePlaceholder: Ember.computed('placeholder', function() {

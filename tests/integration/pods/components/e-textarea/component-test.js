@@ -12,8 +12,11 @@ test('it renders', function(assert) {
   this.render(hbs`<div id="single-input">{{e-textarea}}</div>`);
 
   assert.equal(this.$().text().trim(), '');
-  assert.equal(this.$().find('#single-input textarea.e-textarea').length, 1,
-      'a textarea element and class name e-textarea');
+  assert.equal(
+    this.$().find('#single-input textarea.e-textarea').length,
+    1,
+    'a textarea element and class name e-textarea'
+  );
 
   this.render(hbs`
     <div id="single-input">
@@ -21,8 +24,15 @@ test('it renders', function(assert) {
     </div>
   `);
 
-  assert.equal(this.$().find('#single-input textarea.e-textarea.e-textarea--modifier').length, 1,
-      'a textarea element and a custom class name');
-  assert.equal(this.$().find('textarea#theTextarea').length, 1,
-      'a textarea with an id');
+  assert.equal(
+    this.$().find('#single-input textarea.e-textarea.e-textarea--modifier').length,
+    1,
+    'a textarea element and a custom class name'
+  );
+
+  assert.equal(
+    this.$().find('textarea#theTextarea').length,
+    1,
+    'a textarea with an id'
+  );
 });

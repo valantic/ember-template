@@ -46,14 +46,33 @@ test('it renders', function(assert) {
     </div>
   `);
 
-  assert.equal(this.$().text().indexOf('Option') !== -1, true,
-      'expecting labels');
-  assert.equal(this.$().find('#single-input select.e-select').length, 1,
-      'a select element and class name e-select');
-  assert.equal(this.$().find('#single-input select.e-select--modifier').length, 1,
-      'a select element and a custom class name');
-  assert.equal(this.$().find('#single-input option').length, 4,
-      'four options');
-  assert.equal(this.$().find('#single-input select#theSelect').length, 1,
-      'a select with an id');
+  assert.equal(
+    this.$().text().indexOf('Option') !== -1,
+    true,
+    'expecting labels'
+  );
+
+  assert.equal(
+    this.$().find('#single-input select.e-select').length,
+    1,
+    'a select element and class name e-select'
+  );
+
+  assert.equal(
+    this.$().find('#single-input select.e-select--modifier').length,
+    1,
+    'a select element and a custom class name'
+  );
+
+  assert.equal(
+    this.$().find('#single-input option').length,
+    4,
+    'four options'
+  );
+
+  assert.equal(
+    this.$().find('#single-input select#theSelect').length,
+    1,
+    'a select with an id'
+  );
 });

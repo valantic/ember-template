@@ -28,8 +28,7 @@ test('it renders', function(assert) {
       text="Another Test Label"
     }}`);
 
-  assert.equal(this.$().text().trim(), 'Another Test Label',
-      'it renders a label with attribute text');
+  assert.equal(this.$().text().trim(), 'Another Test Label', 'it renders a label with attribute text');
 
   this.render(hbs`
     {{e-label
@@ -38,10 +37,8 @@ test('it renders', function(assert) {
       text="Another Test Label"
     }}`);
 
-  assert.equal(this.$().find('label.e-label.e-label--modifier').length, 1,
-      'it renders a label with a custom class');
-  assert.equal(this.$().find('label[for="theId"]').length, 1,
-      'it renders a label with a for attribute');
+  assert.equal(this.$().find('label.e-label.e-label--modifier').length, 1, 'it renders a label with a custom class');
+  assert.equal(this.$().find('label[for="theId"]').length, 1, 'it renders a label with a for attribute');
 
   this.render(hbs`
     {{#e-label
@@ -50,8 +47,7 @@ test('it renders', function(assert) {
     <span class="yield">Testing Yield</span>
     {{/e-label}}
   `);
-  assert.equal(this.$().find('.e-label > .yield').length, 1,
-      'it renders a label with the yield before the e-label__text');
+  assert.equal(this.$().find('.e-label > .yield').length, 1, 'it renders a label with the yield before the e-label__text');
 
   this.render(hbs`
     {{#e-label
@@ -61,8 +57,12 @@ test('it renders', function(assert) {
     <span class="yield">Testing Yield</span>
     {{/e-label}}
   `);
-  assert.equal(this.$().find('.e-label > .e-label__text').length, 1,
-      'it renders a label with the e-label__text before the yield');
+
+  assert.equal(
+    this.$().find('.e-label > .e-label__text').length,
+    1,
+    'it renders a label with the e-label__text before the yield'
+  );
 
   this.render(hbs`
     {{#e-label
@@ -72,10 +72,18 @@ test('it renders', function(assert) {
     <span class="yield">Testing Yield</span>
     {{/e-label}}
   `);
-  assert.equal(this.$().find('.e-label > .e-label__text').length, 1,
-      'it renders a label with the e-label__text before the yield');
-  assert.equal(this.$().find('.e-label.e-label--label-up').length, 1,
-      'it renders a label with e-label--label-up');
+
+  assert.equal(
+    this.$().find('.e-label > .e-label__text').length,
+    1,
+    'it renders a label with the e-label__text before the yield'
+  );
+
+  assert.equal(
+    this.$().find('.e-label.e-label--label-up').length,
+    1,
+    'it renders a label with e-label--label-up'
+  );
 
   this.render(hbs`
     {{e-label
@@ -83,8 +91,7 @@ test('it renders', function(assert) {
       selected=true
     }}
   `);
-  assert.equal(this.$().find('.e-label.e-label--selected').length, 1,
-      'it renders a selected label');
+  assert.equal(this.$().find('.e-label.e-label--selected').length, 1, 'it renders a selected label');
 
   this.render(hbs`
     {{e-label
@@ -92,8 +99,7 @@ test('it renders', function(assert) {
       noInputVisible=true
     }}
   `);
-  assert.equal(this.$().find('.e-label.e-label--no-input-visible').length, 1,
-      'it renders a no input visible label');
+  assert.equal(this.$().find('.e-label.e-label--no-input-visible').length, 1, 'it renders a no input visible label');
 
   this.render(hbs`
     {{e-label
@@ -101,6 +107,5 @@ test('it renders', function(assert) {
       required=true
     }}
   `);
-  assert.equal(this.$().find('.e-label.e-label--required').length, 1,
-      'it renders a required label');
+  assert.equal(this.$().find('.e-label.e-label--required').length, 1, 'it renders a required label');
 });

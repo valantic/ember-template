@@ -12,7 +12,8 @@
     "start": "ember server",
     "test": "ember test",
     "eslint": "eslint app/ tests/",
-    "nodengine": "nodengine"
+    "nodengine": "nodengine",
+    "stylelint": "stylelint 'app/**/*.scss' --config .stylelintrc; exit 0"
   },
   "repository": "",
   "engines": {
@@ -61,7 +62,8 @@
     "eslint-config-movento": "git+https://movento2.codebasehq.com/frontend-configs/javascript.git#1.5.0",
     "eslint-plugin-import": "^2.2.0",
     "ivy-tabs": "^3.1.0",
-    "loader.js": "^4.0.1"
+    "loader.js": "^4.0.1",
+    "stylelint-config-movento": "git+https://git.movento.com/movento-public/stylelint-config-movento.git#2.1.2"
   },
   "ember-addon": {
     "paths": [

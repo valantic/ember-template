@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='c-image-slider' section=section}}
+{{#section.subsection name='c-image-slider'}}
 
   {{#freestyle-annotation}}
     <p>The <code>c-image-slider</code> Component is used as a simple slider component. If it gets more than 1 item it's a slider, otherwise it renders a simple image. (It works with the c-media-container component)</p>
@@ -32,7 +32,7 @@
 
   {{#freestyle-collection title='c-image-slider' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'c-image-slider-default' title='c-image-slider default' usageTitle=labels.usage.title}}
 
         {{c-image-slider
@@ -40,9 +40,9 @@
         }}
 
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='thumbnails'}}
+    {{#collection.variant key='thumbnails'}}
       {{#freestyle-usage 'c-image-slider-thumbnails' title='c-image-slider thumbnails' usageTitle=labels.usage.title}}
 
         {{c-image-slider
@@ -52,9 +52,9 @@
         }}
 
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='autoplay'}}
+    {{#collection.variant key='autoplay'}}
       {{#freestyle-usage 'c-image-slider-autoplay' title='c-image-slider autoplay' usageTitle=labels.usage.title}}
 
         {{#freestyle-annotation}}
@@ -66,9 +66,9 @@
         }}
 
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='single-item'}}
+    {{#collection.variant key='single-item'}}
       {{#freestyle-usage 'c-image-slider-single-item' title='c-image-slider single-item' usageTitle=labels.usage.title}}
 
         {{c-image-slider
@@ -76,9 +76,9 @@
         }}
 
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='multiple slides'}}
+    {{#collection.variant key='multiple slides'}}
       {{#freestyle-usage 'c-image-slider-multiple-slides' title='c-image-slider multiple slides' usageTitle=labels.usage.title}}
 
         {{c-image-slider
@@ -89,8 +89,8 @@
         }}
 
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
 
   {{/freestyle-collection}}
-{{/freestyle-subsection}}
+{{/section.subsection}}

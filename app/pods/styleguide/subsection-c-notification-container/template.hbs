@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='c-notification-container' section=section}}
+{{#section.subsection name='c-notification-container'}}
 
   {{#freestyle-annotation}}
     <p>The <code>c-notification-container</code> Component can be placed anywhere on the page. It renders notification messages when you set a new message into the notification service.</p>
@@ -13,7 +13,7 @@
 
   {{#freestyle-collection title='c-notification-container' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'c-notification-container-default' title='c-notification-container default' usageTitle=labels.usage.title}}
 
         {{c-notification-container
@@ -21,8 +21,8 @@
         }}
 
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
 
   {{/freestyle-collection}}
-{{/freestyle-subsection}}
+{{/section.subsection}}

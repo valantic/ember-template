@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='c-breadcrumb' section=section}}
+{{#section.subsection name='c-breadcrumb'}}
 
   {{#freestyle-annotation}}
     <p>The <code>c-breadcrumb</code> Component is used for rendering the breadcrumbs</p>
@@ -13,7 +13,7 @@
 
   {{#freestyle-collection title='c-breadcrumb' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'c-breadcrumb-default' title='c-breadcrumb default' usageTitle=labels.usage.title}}
 
         {{c-breadcrumb
@@ -21,7 +21,7 @@
         }}
 
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
     <!-- JSON EXAMPLE (Mockdata) -->
     <div class="FreestyleUsage-snippet FreestyleUsage-snippet--zenburn col-xxs-12">
@@ -33,4 +33,4 @@
     </pre>
     </div>
   {{/freestyle-collection}}
-{{/freestyle-subsection}}
+{{/section.subsection}}

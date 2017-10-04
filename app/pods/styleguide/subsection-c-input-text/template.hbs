@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='c-input-text' section=section}}
+{{#section.subsection name='c-input-text'}}
 
   {{#freestyle-annotation}}
     <p>Extends: <em>cFormComponent</em></p>
@@ -27,7 +27,7 @@
 
   {{#freestyle-collection title='c-input-text layouts' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='horizontal'}}
+    {{#collection.variant key='horizontal'}}
       {{#freestyle-usage 'c-input-text-horizontal' title='horizontal' usageTitle=labels.usage.title}}
         {{c-input-text
           label="A Label"
@@ -35,9 +35,9 @@
           placeholder="I'm a placeholder.."
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='vertical'}}
+    {{#collection.variant key='vertical'}}
       {{#freestyle-usage 'c-input-text-vertical' title='vertical' usageTitle=labels.usage.title}}
         {{c-input-text
           label="A Label"
@@ -45,16 +45,16 @@
           placeholder="I'm a placeholder.."
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='nested'}}
+    {{#collection.variant key='nested'}}
       {{#freestyle-usage 'c-input-text-nested' title='nested' usageTitle=labels.usage.title}}
         {{c-input-text
           layout="nested"
           placeholder="I'm a placeholder.."
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -62,7 +62,7 @@
 
   {{#freestyle-collection title='c-input-text states' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'c-input-text-default' title='default' usageTitle=labels.usage.title}}
         {{c-input-text
           label="A Label"
@@ -70,9 +70,9 @@
           state="default"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='success'}}
+    {{#collection.variant key='success'}}
       {{#freestyle-usage 'c-input-text-success' title='success' usageTitle=labels.usage.title}}
         {{c-input-text
           label="A Label"
@@ -80,9 +80,9 @@
           state="success"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='warning'}}
+    {{#collection.variant key='warning'}}
       {{#freestyle-usage 'c-input-text-warning' title='warning' usageTitle=labels.usage.title}}
         {{c-input-text
           label="A Label"
@@ -90,9 +90,9 @@
           state="warning"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='error'}}
+    {{#collection.variant key='error'}}
       {{#freestyle-usage 'c-input-text-error' title='error' usageTitle=labels.usage.title}}
         {{c-input-text
           label="A Label"
@@ -100,9 +100,9 @@
           state="error"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='disabled'}}
+    {{#collection.variant key='disabled'}}
       {{#freestyle-usage 'c-input-text-disabled' title='disabled' usageTitle=labels.usage.title}}
         {{c-input-text
           label="A Label"
@@ -110,8 +110,8 @@
           disabled=true
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
-{{/freestyle-subsection}}
+{{/section.subsection}}

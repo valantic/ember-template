@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='e-select' section=section}}
+{{#section.subsection name='e-select'}}
 
   {{#freestyle-annotation}}
     <p>Extends: <em>eFormComponents</em></p>
@@ -31,7 +31,7 @@
 
   {{#freestyle-collection title='e-select types' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='single-select'}}
+    {{#collection.variant key='single-select'}}
       {{#freestyle-usage 'e-select-single' title='single' usageTitle=labels.usage.title}}
         {{e-select
           label="Select"
@@ -41,9 +41,9 @@
           dataValueField="value"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='multiple-select'}}
+    {{#collection.variant key='multiple-select'}}
       {{#freestyle-usage 'e-select-multiple' title='multiple' usageTitle=labels.usage.title}}
         {{e-select
           label="Select"
@@ -54,7 +54,7 @@
           dataValueField="value"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -62,7 +62,7 @@
 
   {{#freestyle-collection title='e-select states' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'e-select-default' title='default' usageTitle=labels.usage.title}}
         {{e-select
           label="Select"
@@ -73,9 +73,9 @@
           dataValueField="value"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='success'}}
+    {{#collection.variant key='success'}}
       {{#freestyle-usage 'e-select-success' title='success' usageTitle=labels.usage.title}}
         {{e-select
           label="Select"
@@ -86,9 +86,9 @@
           dataValueField="value"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='warning'}}
+    {{#collection.variant key='warning'}}
       {{#freestyle-usage 'e-select-warning' title='warning' usageTitle=labels.usage.title}}
         {{e-select
           label="Select"
@@ -99,9 +99,9 @@
           dataValueField="value"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='error'}}
+    {{#collection.variant key='error'}}
       {{#freestyle-usage 'e-select-error' title='error' usageTitle=labels.usage.title}}
         {{e-select
           label="Select"
@@ -112,9 +112,9 @@
           dataValueField="value"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='disabled'}}
+    {{#collection.variant key='disabled'}}
       {{#freestyle-usage 'e-select-disabled' title='disabled' usageTitle=labels.usage.title}}
         {{e-select
           label="Select"
@@ -125,8 +125,8 @@
           dataValueField="value"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
-{{/freestyle-subsection}}
+{{/section.subsection}}

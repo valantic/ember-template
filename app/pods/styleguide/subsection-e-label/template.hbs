@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='e-label' section=section}}
+{{#section.subsection name='e-label'}}
 
   {{#freestyle-annotation}}
     <p>The label element is displayed here as a standalone element but should normally always be together with an input element.</p>
@@ -8,16 +8,16 @@
 
   {{#freestyle-collection title='e-label states' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'e-label' title='e-label' usageTitle=labels.usage.title jsTitle=labels.usage.js scssTitle=labels.usage.scss}}
         {{e-label
           for="theId"
           text="A Label"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='success'}}
+    {{#collection.variant key='success'}}
       {{#freestyle-usage 'e-label--state-success' title='e-label state-success' usageTitle=labels.usage.title}}
         {{e-label
           for="theId"
@@ -25,9 +25,9 @@
           text="A Label"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='warning'}}
+    {{#collection.variant key='warning'}}
       {{#freestyle-usage 'e-label--state-warning' title='e-label state-warning' usageTitle=labels.usage.title}}
         {{e-label
           for="theId"
@@ -35,9 +35,9 @@
           text="A Label"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='error'}}
+    {{#collection.variant key='error'}}
       {{#freestyle-usage 'e-label--state-error' title='e-label state-error' usageTitle=labels.usage.title}}
         {{e-label
           for="theId"
@@ -45,7 +45,7 @@
           text="A Label"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -136,4 +136,4 @@
     }}
   {{/freestyle-usage}}
 
-{{/freestyle-subsection}}
+{{/section.subsection}}

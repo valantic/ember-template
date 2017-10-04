@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='e-button' section=section}}
+{{#section.subsection name='e-button'}}
 
   {{#freestyle-annotation}}
     <p>Buttons are displayed here in four states which demo user interaction.</p>
@@ -60,7 +60,7 @@
 
   {{#freestyle-collection title='E-Button (states)' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'e-button-inactive' title='default state' usageTitle=labels.usage.title}}
         {{#e-button
           id="testing"
@@ -70,9 +70,9 @@
           Button Label
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='hover'}}
+    {{#collection.variant key='hover'}}
       {{#freestyle-usage 'e-button-hover' title='on hover' usageTitle=labels.usage.title}}
         {{#e-button
           hasHover=true
@@ -80,9 +80,9 @@
           Button Label
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='click'}}
+    {{#collection.variant key='click'}}
       {{#freestyle-usage 'e-button-click' title='on click' usageTitle=labels.usage.title}}
         {{#e-button
           isActive=true
@@ -90,9 +90,9 @@
           Button Label
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='active'}}
+    {{#collection.variant key='active'}}
       {{#freestyle-usage 'e-button-active' title='active state' usageTitle=labels.usage.title}}
         {{#e-button
           hasFocus=true
@@ -100,9 +100,9 @@
           Button Label
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='disabled'}}
+    {{#collection.variant key='disabled'}}
       {{#freestyle-usage 'e-button-disabled' title='diabled state' usageTitle=labels.usage.title}}
         {{#e-button
           disabled=true
@@ -110,7 +110,7 @@
           Button Label
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -118,7 +118,7 @@
 
   {{#freestyle-collection title='E-Button (call-to-action)' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'e-button-cta-inactive' title='default state' usageTitle=labels.usage.title}}
         {{#e-button
           isCTA=true
@@ -126,9 +126,9 @@
           Button Label
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='hover'}}
+    {{#collection.variant key='hover'}}
       {{#freestyle-usage 'e-button-cta-over' title='on hover' usageTitle=labels.usage.title}}
         {{#e-button
           isCTA=true
@@ -137,9 +137,9 @@
           Button Label
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='click'}}
+    {{#collection.variant key='click'}}
       {{#freestyle-usage 'e-button-cta-click' title='on click' usageTitle=labels.usage.title}}
         {{#e-button
           isCTA=true
@@ -148,9 +148,9 @@
           Button Label
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='active'}}
+    {{#collection.variant key='active'}}
       {{#freestyle-usage 'e-button-cta-active' title='active state' usageTitle=labels.usage.title}}
         {{#e-button
           isCTA=true
@@ -159,9 +159,9 @@
           Button Label
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='disabled'}}
+    {{#collection.variant key='disabled'}}
       {{#freestyle-usage 'e-button-cta-disabled' title='disabled state' usageTitle=labels.usage.title}}
         {{#e-button
           isCTA=true
@@ -170,7 +170,7 @@
           Button Label
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -184,7 +184,7 @@
 
   {{#freestyle-collection title='E-Button A-Tag (default)' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'e-button-a-inactive' title='default state' usageTitle=labels.usage.title}}
         {{#e-button
           tagName="a"
@@ -195,9 +195,9 @@
           Button Label
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='hover'}}
+    {{#collection.variant key='hover'}}
       {{#freestyle-usage 'e-button-a-hover' title='on hover' usageTitle=labels.usage.title}}
         {{#e-button
           tagName="a"
@@ -207,9 +207,9 @@
           Button Label
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='click'}}
+    {{#collection.variant key='click'}}
       {{#freestyle-usage 'e-button-a-click' title='on click' usageTitle=labels.usage.title}}
         {{#e-button
           tagName="a"
@@ -219,9 +219,9 @@
           Button Label
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='active'}}
+    {{#collection.variant key='active'}}
       {{#freestyle-usage 'e-button-a-active' title='active state' usageTitle=labels.usage.title}}
         {{#e-button
           tagName="a"
@@ -231,9 +231,9 @@
           Button Label
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='disabled'}}
+    {{#collection.variant key='disabled'}}
       {{#freestyle-usage 'e-button-a-disabled' title='disabled state' usageTitle=labels.usage.title}}
         {{#e-button
           tagName="a"
@@ -243,7 +243,7 @@
           Button Label
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -251,7 +251,7 @@
 
   {{#freestyle-collection title='E-Button states' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       <div class="row">
         <div class="col-xs-4">
           {{#freestyle-usage 'e-button-state-default-default' title='button default-default' usageTitle=labels.usage.title}}
@@ -283,9 +283,9 @@
           {{/freestyle-usage}}
         </div>
       </div>
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='hover'}}
+    {{#collection.variant key='hover'}}
       <div class="row">
         <div class="col-xs-4">
           {{#freestyle-usage 'e-button-state-hover-default' title='button hover-default' usageTitle=labels.usage.title}}
@@ -320,9 +320,9 @@
           {{/freestyle-usage}}
         </div>
       </div>
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='click'}}
+    {{#collection.variant key='click'}}
       <div class="row">
         <div class="col-xs-4">
           {{#freestyle-usage 'e-button-state-click-default' title='button click-default' usageTitle=labels.usage.title}}
@@ -357,9 +357,9 @@
           {{/freestyle-usage}}
         </div>
       </div>
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='active'}}
+    {{#collection.variant key='active'}}
       <div class="row">
         <div class="col-xs-4">
           {{#freestyle-usage 'e-button-state-active-default' title='button active-default' usageTitle=labels.usage.title}}
@@ -394,9 +394,9 @@
           {{/freestyle-usage}}
         </div>
       </div>
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='disabled'}}
+    {{#collection.variant key='disabled'}}
       <div class="row">
         <div class="col-xs-4">
           {{#freestyle-usage 'e-button-state-disabled-default' title='button disabled-default' usageTitle=labels.usage.title}}
@@ -431,7 +431,7 @@
           {{/freestyle-usage}}
         </div>
       </div>
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -439,7 +439,7 @@
 
   {{#freestyle-collection title='Buttons with icon' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='icon-square'}}
+    {{#collection.variant key='icon-square'}}
       {{#freestyle-usage 'e-button-icon-square' title='icon-square' usageTitle=labels.usage.title}}
         {{#e-button
           title="Button with svg icon"
@@ -450,9 +450,9 @@
           {{svg-jar "#demo_i-cancel" class="e-button__icon"}}
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='icon-rectangle'}}
+    {{#collection.variant key='icon-rectangle'}}
       {{#freestyle-usage 'e-button-icon-rectangle' title='icon-rectangle' usageTitle=labels.usage.title}}
         {{#e-button
           title="Button with svg icon"
@@ -463,9 +463,9 @@
           {{svg-jar "#demo_i-cancel" class="e-button__icon"}}
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='icon-square-mini'}}
+    {{#collection.variant key='icon-square-mini'}}
       {{#freestyle-usage 'e-button-icon-square-mini' title='icon-square-mini' usageTitle=labels.usage.title}}
         {{#e-button
           title="Button with svg icon"
@@ -477,9 +477,9 @@
           {{svg-jar "#demo_i-cancel" class="e-button__icon"}}
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='icon-rectangle-mini'}}
+    {{#collection.variant key='icon-rectangle-mini'}}
       {{#freestyle-usage 'e-button-icon-rectangle-mini' title='icon-rectangle-mini' usageTitle=labels.usage.title}}
         {{#e-button
           title="Button with svg icon"
@@ -491,13 +491,13 @@
           {{svg-jar "#demo_i-cancel" class="e-button__icon"}}
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
   {{#freestyle-collection title='Buttons specials' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='small-square'}}
+    {{#collection.variant key='small-square'}}
       {{#freestyle-usage 'e-button-small-square' title='small-square' usageTitle=labels.usage.title}}
         {{#e-button
           title="Button small square"
@@ -507,9 +507,9 @@
           {{svg-jar "#demo_i-cancel" class="e-button__icon"}}
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='big-square'}}
+    {{#collection.variant key='big-square'}}
       {{#freestyle-usage 'e-button-big-square' title='big-square' usageTitle=labels.usage.title}}
         {{#e-button
           title="Button big square"
@@ -519,9 +519,9 @@
           {{svg-jar "#demo_i-cancel" class="e-button__icon"}}
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='transparent'}}
+    {{#collection.variant key='transparent'}}
       {{#freestyle-usage 'e-button--transparent' title='transparent' usageTitle=labels.usage.title}}
         {{#e-button
           title="Button transparent"
@@ -531,8 +531,8 @@
           {{svg-jar "#demo_i-cancel" class="e-button__icon"}}
         {{/e-button}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
-{{/freestyle-subsection}}
+{{/section.subsection}}

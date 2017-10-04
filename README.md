@@ -277,7 +277,7 @@ This way we only need to include the files we want to display.
 **Example:** the contents of the _styleguide-freestyle/subsection-buttons/template.hbs_:
 
 ```
-{{#freestyle-subsection name='buttons' section=section}}
+{{#section.subsection name='buttons'}}
 
   {{#freestyle-usage "c-button1" title="Default Button"}}
     {{c-button title="My Button"}}
@@ -289,7 +289,7 @@ This way we only need to include the files we want to display.
     {{/c-button}}
   {{/freestyle-usage}}
 
-{{/freestyle-subsection}}
+{{/section.subsection}}
 
 ```
 

@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='e-counter' section=section}}
+{{#section.subsection name='e-counter'}}
 
   {{#freestyle-annotation}}
     <p>The <code>e-counter</code> Component is used as a simple counter for counting Numbers</p>
@@ -21,7 +21,7 @@
 
   {{#freestyle-collection title='e-counter' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'e-counter' title='e-counter' usageTitle=labels.usage.title}}
         {{e-counter
           minValue=0
@@ -29,9 +29,9 @@
           value=2
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='input'}}
+    {{#collection.variant key='input'}}
       {{#freestyle-usage 'e-counter-input' title='e-counter-input' usageTitle=labels.usage.title}}
         {{e-counter
           minValue=0
@@ -40,9 +40,9 @@
           hasInputField=true
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='unit'}}
+    {{#collection.variant key='unit'}}
       {{#freestyle-usage 'e-counter-unit' title='e-counter-unit' usageTitle=labels.usage.title}}
         {{e-counter
           minValue=0
@@ -51,11 +51,11 @@
           unit="Stück"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
 
   {{/freestyle-collection}}
-{{/freestyle-subsection}}
+{{/section.subsection}}
 
 
 

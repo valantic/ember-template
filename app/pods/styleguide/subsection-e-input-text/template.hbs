@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='e-input-text' section=section}}
+{{#section.subsection name='e-input-text'}}
 
   {{#freestyle-annotation}}
     <p>Extends: <em>eFormComponent</em></p>
@@ -38,41 +38,41 @@
 
   {{#freestyle-collection title='e-input-text-standards' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'e-input-text-default' title='E-input-text' usageTitle=labels.usage.title}}
         {{e-input-text
           name="e-input1"
           id="theField1"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='with class name'}}
+    {{#collection.variant key='with class name'}}
       {{#freestyle-usage 'e-input-text-classname' title='E-input-text with class Name' usageTitle=labels.usage.title}}
         {{e-input-text
           name="input1"
           class="classNameTest"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='value'}}
+    {{#collection.variant key='value'}}
       {{#freestyle-usage 'e-input-text-default-value' title='Default with value' usageTitle=labels.usage.title}}
         {{e-input-text
           name="input1"
           value="A Value"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='placeholder'}}
+    {{#collection.variant key='placeholder'}}
       {{#freestyle-usage 'e-input-text-default-placeholder' title='Default with placeholder' usageTitle=labels.usage.title}}
         {{e-input-text
           name="input1"
           placeholder="A placeholder"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -80,58 +80,58 @@
 
   {{#freestyle-collection title='e-input-text states' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'e-input-text-state-default' title='e-input-text default' usageTitle=labels.usage.title}}
         {{e-input-text
           value="a value"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='success'}}
+    {{#collection.variant key='success'}}
       {{#freestyle-usage 'e-input-text-state-success' title='e-input-text success' usageTitle=labels.usage.title}}
         {{e-input-text
           state="success"
           value="a value"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='warning'}}
+    {{#collection.variant key='warning'}}
       {{#freestyle-usage 'e-input-text-state-warning' title='e-input-text warning' usageTitle=labels.usage.title}}
         {{e-input-text
           state="warning"
           value="a value"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='error'}}
+    {{#collection.variant key='error'}}
       {{#freestyle-usage 'e-input-text-state-error' title='e-input-text error' usageTitle=labels.usage.title}}
         {{e-input-text
           state="error"
           value="a value"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='disabled'}}
+    {{#collection.variant key='disabled'}}
       {{#freestyle-usage 'e-input-text-state-disabled' title='e-input-text disabled' usageTitle=labels.usage.title}}
         {{e-input-text
           value="a value"
           disabled=true
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='no focus'}}
+    {{#collection.variant key='no focus'}}
       {{#freestyle-usage 'e-input-text-no-focus' title='e-input-text no focus' usageTitle=labels.usage.title}}
         {{e-input-text
           value="a value"
           hasNoFocus=true
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -139,7 +139,7 @@
 
   {{#freestyle-collection title='e-input-text-specials' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='password'}}
+    {{#collection.variant key='password'}}
       {{#freestyle-usage 'e-input-text-password' title='Password' usageTitle=labels.usage.title}}
         {{e-input-text
           name="input2"
@@ -147,9 +147,9 @@
           value="123456789"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='search'}}
+    {{#collection.variant key='search'}}
       {{#freestyle-usage 'e-input-text-search' title='Search' usageTitle=labels.usage.title}}
         {{e-input-text
           name="input3"
@@ -157,9 +157,9 @@
           value="Customer Ref"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='email'}}
+    {{#collection.variant key='email'}}
       {{#freestyle-usage 'e-input-text-email' title='Email' usageTitle=labels.usage.title}}
         {{e-input-text
           name="email"
@@ -167,9 +167,9 @@
           value="someone@domain.com"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='text-centered'}}
+    {{#collection.variant key='text-centered'}}
       {{#freestyle-usage 'e-input-text-centered' title='text-centered' usageTitle=labels.usage.title}}
         {{e-input-text
           name="text-center"
@@ -177,8 +177,8 @@
           hasTextCentered=true
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
-{{/freestyle-subsection}}
+{{/section.subsection}}

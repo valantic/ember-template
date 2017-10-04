@@ -57,7 +57,6 @@
     "ember-svg-jar": "^0.9.3",
     "ember-template-lint": "^0.5.14",
     "eslint-config-movento": "git+https://git.movento.com/movento-public/eslint-config-movento.git#3.0.0",
-    "eslint-plugin-import": "^2.2.0",
     "ivy-tabs": "^3.1.0",
     "loader.js": "^4.0.1",
     "stylelint-config-movento": "git+https://git.movento.com/movento-public/stylelint-config-movento.git#2.1.2"

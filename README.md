@@ -9,8 +9,8 @@ The style guide is applying [the Ember Freestyle living styleguide](https://gith
 ### System requirements
 
 * ember-cli version 2.12.3
-* node version: 6.2.1 (There is a warning in ember-cli, but no restriction at package.json. It seems to work. "WARNING: Node v6.2.1 has currently not been tested against Ember CLI and may result in unexpected behaviour")
-* npm version: 3.8.0
+* node version: 6.7.0
+* npm version: 3.10.3
 
 ### Developers Prerequisites
 

@@ -1,9 +1,9 @@
 /**
  * @param {object} app The Application
  */
-export function initialize(app) {
+export function initialize(app) { // TODO: refactor as described on https://github.com/jasonmit/ember-intl#setting-runtime-locale
   const intl = app.lookup('service:intl');
-  const locales = intl.getLocalesByTranslations();
+  const locales = intl.get('locales');
   const fallbackLang = 'en'; // It seems not possible to get this from ember-intl
   const navigator = window.navigator || {};
   const userLanguages = navigator.languages || [navigator.language || navigator.userLanguage];

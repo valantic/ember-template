@@ -1,12 +1,12 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
-import instanceInitializer from 'ember-project-template/instance-initializers/ember-intl';
 
 moduleForComponent('c-main-header', 'Integration | Component | c main header', {
   integration: true,
   setup() {
-    instanceInitializer.initialize(this);
-    this.container.lookup('service:intl').setLocale('en');
+    const service = this.container.lookup('service:intl');
+
+    service.setLocale(service.get('locales')[0]);
   }
 });
 

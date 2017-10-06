@@ -26,6 +26,19 @@ You will need the following things properly installed on your computer (Mac OSX)
 * [scss-lint](https://github.com/brigade/scss-lint)
 * [Watchman](https://ember-cli.com/user-guide/#watchman)
 
+### Browser support
+
+| Operating systems | Browser |
+| --- | --- |
+| Windows | ?? |
+| Mac OS X | ?? |
+
+| Devices | Browser | Viewport |
+| --- | --- | --- |
+| Phone 1 | ?? | ?? |
+| Tablet 1 | ?? | ?? |
+
+
 ## Quick Getting Started
 
 After installing Ember and all its dependencies you can have the application running locally after executing the following commands.:
@@ -67,11 +80,17 @@ We don't recommend to use other linting tools, because we customize just the esl
 
 When installing the project for the first time running `npm install`, the system will install our own _eslint-config-movento_ configuration project which includes the required settings for ESLint.
 
+- More information about ESLint can be found at <https://eslint.org>
+- The movento configuration for Stylelint can be found at <https://git.movento.com/movento-public/eslint-config-movento>
+
 ### SCSS Linting
 
-Currently, there is no working solution to test your *.scss files with the ember-cli. Please use the the ruby gem itself or (if supported) your IDE to validate your SCSS code.
+We're using Stylelint to lint our stylesheets. Unfortunately Stylelint can currently not be integrated into `ember test`. So please set up your IDE to lint your styles while working on them or use the console command `npm run stylelint`.
 
-Read here how to [install scss-lint](https://github.com/brigade/scss-lint#installation). The linter is already configured with the `.scss-lint.yml` file inside the project root. Just run `$ scss-lint` from the command line or use your IDE to lint the project style files.
+When installing the project for the first time running `npm install`, the system will install our own _stylelint-config-movento_ configuration project which includes the required settings for Stylelint.
+
+- More information about Stylelint can be found at <https://stylelint.io>
+- The movento configuration for Stylelint can be found at <https://git.movento.com/movento-public/stylelint-config-movento>
 
 ### SCSS Autoprefixer
 

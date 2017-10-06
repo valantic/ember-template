@@ -1,14 +1,11 @@
-/* jshint node: true */
-/* eslint-disable */
-
 module.exports = function(environment) {
   const ENV = {
-    modulePrefix: 'ember-project-template',
-    podModulePrefix: 'ember-project-template/pods',
+    'modulePrefix': 'ember-project-template',
+    'podModulePrefix': 'ember-project-template/pods',
     environment,
-    rootURL: '/',
-    locationType: 'auto',
-    EmberENV: {
+    'rootURL': '/',
+    'locationType': 'auto',
+    'EmberENV': {
       LOG_STACKTRACE_ON_DEPRECATION: false, // Turns off extremely long deprecation warnings
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -21,37 +18,39 @@ module.exports = function(environment) {
         'Intl.~locale.de'
       ]
     },
-    APP: {
+    'remarkable': {
+      excludeHighlightJs: environment === 'production' // Excludes highlightjs from vendor.js (has only impact if freestyle is also removed)
+    },
+    'APP': {
       // Here you can pass flags/options to your application instance
       // when it is created
       rootElement: '#ember-application'
     }
   };
 
-  if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
-  }
+  switch (environment) {
+    case 'test':
+      // Testem prefers this...
+      ENV.locationType = 'none';
 
-  if (environment === 'test') {
-    // Testem prefers this...
-    ENV.locationType = 'none';
+      // Keep test console output quieter
+      ENV.APP.LOG_ACTIVE_GENERATION = false;
+      ENV.APP.LOG_VIEW_LOOKUPS = false;
 
-    // keep test console output quieter
-    ENV.APP.LOG_ACTIVE_GENERATION = false;
-    ENV.APP.LOG_VIEW_LOOKUPS = false;
+      ENV.APP.rootElement = '#ember-testing';
 
-    ENV.APP.rootElement = '#ember-testing';
-  }
+      break;
 
-  if (environment === 'production') {
-    // ....
+    case 'production':
+      break;
+
+    default: // development
+      // ENV.APP.LOG_RESOLVER = true;
+      // ENV.APP.LOG_ACTIVE_GENERATION = true;
+      // ENV.APP.LOG_TRANSITIONS = true;
+      // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+      // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
   return ENV;
 };
-
-/* eslint-enable */

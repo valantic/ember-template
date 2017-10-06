@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='c-error-page' section=section}}
+{{#section.subsection name='c-error-page'}}
 
   {{#freestyle-annotation}}
     <p>The <code>c-error-page</code> Component is used for rendering an error (404, 500, etc). Mostly it has to be rendered static and implement by backend. But needs the styling from frontend.</p>
@@ -21,7 +21,7 @@
 
   {{#freestyle-collection title='c-error-page' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'c-error-page-default' title='c-error-page default' usageTitle=labels.usage.title}}
 
         {{c-error-page
@@ -33,8 +33,8 @@
         }}
 
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
 
   {{/freestyle-collection}}
-{{/freestyle-subsection}}
+{{/section.subsection}}

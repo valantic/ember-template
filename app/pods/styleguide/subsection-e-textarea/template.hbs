@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='e-textarea' section=section}}
+{{#section.subsection name='e-textarea'}}
 
   {{#freestyle-annotation}}
     <p>Extends: <em>eFormComponent</em></p>
@@ -42,43 +42,43 @@
 
   {{#freestyle-collection title='e-textarea' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'e-textarea-default' title='e-textarea default' usageTitle=labels.usage.title}}
         {{e-textarea}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='with class name'}}
+    {{#collection.variant key='with class name'}}
       {{#freestyle-usage 'e-textarea-classname' title='e-textarea classname' usageTitle=labels.usage.title}}
         {{e-textarea
           class="TestClassName123"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='placeholder'}}
+    {{#collection.variant key='placeholder'}}
       {{#freestyle-usage 'e-textarea-placeholder' title='e-textarea placeholder' usageTitle=labels.usage.title}}
         {{e-textarea
           placeholder="I'm a placeholder"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='value'}}
+    {{#collection.variant key='value'}}
       {{#freestyle-usage 'e-textarea-value' title='e-textarea value' usageTitle=labels.usage.title}}
         {{e-textarea
             value="A value"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='rows'}}
+    {{#collection.variant key='rows'}}
       {{#freestyle-usage 'e-textarea-rows' title='e-textarea rows' usageTitle=labels.usage.title}}
         {{e-textarea
           rows=10
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -86,51 +86,51 @@
 
   {{#freestyle-collection title='e-textarea states' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'e-textarea-state-default' title='e-textarea default' usageTitle=labels.usage.title}}
         {{e-textarea
             state="default"
           placeholder="I'm a placeholder"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='success'}}
+    {{#collection.variant key='success'}}
       {{#freestyle-usage 'e-textarea-state-success' title='e-textarea success' usageTitle=labels.usage.title}}
         {{e-textarea
             state="success"
             placeholder="I'm a placeholder"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='warning'}}
+    {{#collection.variant key='warning'}}
       {{#freestyle-usage 'e-textarea-state-warning' title='e-textarea warning' usageTitle=labels.usage.title}}
         {{e-textarea
             state="warning"
             placeholder="I'm a placeholder"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='error'}}
+    {{#collection.variant key='error'}}
       {{#freestyle-usage 'e-textarea-state-error' title='e-textarea error' usageTitle=labels.usage.title}}
         {{e-textarea
             state="error"
             placeholder="I'm a placeholder"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='disabled'}}
+    {{#collection.variant key='disabled'}}
       {{#freestyle-usage 'e-textarea-state-disabled' title='e-textarea disabled' usageTitle=labels.usage.title}}
         {{e-textarea
             disabled=true
             placeholder="I'm a placeholder"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
-{{/freestyle-subsection}}
+{{/section.subsection}}

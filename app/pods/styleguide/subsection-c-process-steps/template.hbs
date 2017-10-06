@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='c-process-steps' section=section}}
+{{#section.subsection name='c-process-steps'}}
 
   {{#freestyle-annotation}}
     <p>The <code>c-process-steps</code> Component is used for rendering process steps for e.g. in a checkout process.</p>
@@ -13,7 +13,7 @@
 
   {{#freestyle-collection title='c-process-steps' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'c-process-steps-default' title='c-process-steps default' usageTitle=labels.usage.title}}
 
         {{c-process-steps
@@ -21,7 +21,7 @@
         }}
 
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
     <!-- JSON EXAMPLE (Mockdata) -->
     <div class="FreestyleUsage-snippet FreestyleUsage-snippet--zenburn col-xxs-12">
@@ -33,4 +33,4 @@
     </pre>
     </div>
   {{/freestyle-collection}}
-{{/freestyle-subsection}}
+{{/section.subsection}}

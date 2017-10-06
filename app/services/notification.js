@@ -46,11 +46,11 @@ export default Ember.Service.extend({
   
   // Internal function
   _reloadPageNow() {
-    location.reload();
+    window.location.reload();
   },
   _reloadPageLater() {
     Ember.run.later(() => {
-      location.reload();
+      window.location.reload();
     }, 4000);
   }
 });

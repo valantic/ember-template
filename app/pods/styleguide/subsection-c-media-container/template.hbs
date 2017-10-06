@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='c-media-container' section=section}}
+{{#section.subsection name='c-media-container'}}
 
   {{#freestyle-annotation}}
     <p>The <code>c-media-container</code> Component is used for rendering a seperate image for each viewport</p>
@@ -27,7 +27,7 @@
 
   {{#freestyle-collection title='c-media-container' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'c-media-container-default' title='c-media-container default' usageTitle=labels.usage.title}}
 
           {{c-media-container
@@ -41,7 +41,7 @@
           }}
 
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
 
     <!-- JSON EXAMPLE (Mockdata) -->
@@ -54,4 +54,4 @@
     </pre>
     </div>
   {{/freestyle-collection}}
-{{/freestyle-subsection}}
+{{/section.subsection}}

@@ -1,12 +1,12 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
-import instanceInitializer from 'ember-project-template/instance-initializers/ember-intl';
 
 moduleForComponent('e-select', 'Integration | Component | e select', {
   integration: true,
   setup() {
-    instanceInitializer.initialize(this);
-    this.container.lookup('service:intl').setLocale('en');
+    const service = this.container.lookup('service:intl');
+
+    service.setLocale(service.get('locales')[0]);
   }
 });
 
@@ -46,14 +46,33 @@ test('it renders', function(assert) {
     </div>
   `);
 
-  assert.equal(this.$().text().indexOf('Option') !== -1, true,
-      'expecting labels');
-  assert.equal(this.$().find('#single-input select.e-select').length, 1,
-      'a select element and class name e-select');
-  assert.equal(this.$().find('#single-input select.e-select--modifier').length, 1,
-      'a select element and a custom class name');
-  assert.equal(this.$().find('#single-input option').length, 4,
-      'four options');
-  assert.equal(this.$().find('#single-input select#theSelect').length, 1,
-      'a select with an id');
+  assert.equal(
+    this.$().text().indexOf('Option') !== -1,
+    true,
+    'expecting labels'
+  );
+
+  assert.equal(
+    this.$().find('#single-input select.e-select').length,
+    1,
+    'a select element and class name e-select'
+  );
+
+  assert.equal(
+    this.$().find('#single-input select.e-select--modifier').length,
+    1,
+    'a select element and a custom class name'
+  );
+
+  assert.equal(
+    this.$().find('#single-input option').length,
+    4,
+    'four options'
+  );
+
+  assert.equal(
+    this.$().find('#single-input select#theSelect').length,
+    1,
+    'a select with an id'
+  );
 });

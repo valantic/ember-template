@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='c-input-radio' section=section}}
+{{#section.subsection name='c-input-radio'}}
 
   {{#freestyle-annotation}}
     <p>Extends: <em>c-form-component</em></p>
@@ -35,7 +35,7 @@
 
   {{#freestyle-collection title='c-input-radio layout' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='horizontal'}}
+    {{#collection.variant key='horizontal'}}
       {{#freestyle-usage 'c-input-radio-horizontal' title='horizontal' usageTitle=labels.usage.title}}
         {{c-input-radio
           items=model.selectOptions
@@ -43,9 +43,9 @@
           layout="horizontal"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='vertical'}}
+    {{#collection.variant key='vertical'}}
       {{#freestyle-usage 'c-input-radio-vertical' title='vertical' usageTitle=labels.usage.title}}
         {{c-input-radio
           items=model.selectOptions
@@ -53,9 +53,9 @@
           layout="vertical"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='nested'}}
+    {{#collection.variant key='nested'}}
       {{#freestyle-usage 'c-input-radio-nested' title='nested' usageTitle=labels.usage.title}}
         {{c-input-radio
           items=model.selectOptions
@@ -63,7 +63,7 @@
           layout="nested"
       }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -71,7 +71,7 @@
 
   {{#freestyle-collection title='c-input-radio states' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'c-input-radio-default' title='default' usageTitle=labels.usage.title}}
         {{c-input-radio
           items=model.selectOptions
@@ -79,9 +79,9 @@
           state="default"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='success'}}
+    {{#collection.variant key='success'}}
       {{#freestyle-usage 'c-input-radio-success' title='success' usageTitle=labels.usage.title}}
         {{c-input-radio
           items=model.selectOptions
@@ -89,9 +89,9 @@
           state="success"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='warning'}}
+    {{#collection.variant key='warning'}}
       {{#freestyle-usage 'c-input-radio-warning' title='warning' usageTitle=labels.usage.title}}
         {{c-input-radio
           items=model.selectOptions
@@ -99,9 +99,9 @@
           state="warning"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='error'}}
+    {{#collection.variant key='error'}}
       {{#freestyle-usage 'c-input-radio-error' title='error' usageTitle=labels.usage.title}}
         {{c-input-radio
           items=model.selectOptions
@@ -109,9 +109,9 @@
           state="error"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='disabled'}}
+    {{#collection.variant key='disabled'}}
       {{#freestyle-usage 'c-input-radio-disabled' title='disabled' usageTitle=labels.usage.title}}
         {{c-input-radio
           items=model.selectOptions
@@ -119,7 +119,7 @@
           disabled=true
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -127,7 +127,7 @@
 
   {{#freestyle-collection title='c-input-radio "no input"' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='Noinput-default'}}
+    {{#collection.variant key='Noinput-default'}}
       {{#freestyle-usage 'c-input-radio-noinput-default' title='Noinput Default' usageTitle=labels.usage.title}}
         {{c-input-radio
           items=model.selectOptions
@@ -135,9 +135,9 @@
           noInputVisible=true
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='Noinput-grid'}}
+    {{#collection.variant key='Noinput-grid'}}
       {{#freestyle-usage 'c-input-radio-noinput-grid' title='Noinput grid' usageTitle=labels.usage.title}}
         {{c-input-radio
           items=model.selectOptions
@@ -147,8 +147,8 @@
           gridClassNames="col-xxs-6 col-xs-4 col-sm-3"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
-{{/freestyle-subsection}}
+{{/section.subsection}}

@@ -1,22 +1,32 @@
-/*
-jshint node:true
-global require, module */
-/* eslint-disable */
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 const isProduction = EmberApp.env() === 'production';
 
 module.exports = function(defaults) {
+  const addonBlacklist = isProduction
+    ? ['ember-freestyle'] // Excludes addons from vendor.js in production
+    : []; // Excludes addons from vendor.js
+
   const app = new EmberApp(defaults, {
     // Add options here
     'autoprefixer': {
       browsers: [
         'last 3 versions',
-        'ie 10',
-        'iOS 8',
-        'Android 4.4'
+        'ie >= 11',
+        'iOS >= 10',
+        'Android >= 6'
       ],
       cascade: false
+    },
+    'funnel': {
+      enabled: isProduction,
+      exclude: [
+        `${defaults.project.pkg.name}/pods/styleguide/**/*`, // Remove ember-freestyle route from <app>.js in production
+        `${defaults.project.pkg.name}/pods/test-page/**/*` // TODO: extend with pages, which are not needed in your project on production
+      ]
+    },
+    'freestyle': {
+      snippetSearchPaths: isProduction ? [] : null // Remove ember-freestyle snippets from <app>.js in production
     },
     'svgJar': {
       strategy: ['symbol', 'inline'],
@@ -52,6 +62,9 @@ module.exports = function(defaults) {
         '/test-page'
       ],
       includeClientScripts: true
+    },
+    'addons': {
+      blacklist: addonBlacklist
     }
   });
 
@@ -76,4 +89,3 @@ module.exports = function(defaults) {
 
   return app.toTree();
 };
-/* eslint-enable */

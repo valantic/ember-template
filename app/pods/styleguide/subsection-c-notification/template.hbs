@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='c-notification' section=section}}
+{{#section.subsection name='c-notification'}}
 
   {{#freestyle-annotation}}
     <p>The <code>c-notification</code> Component is used for rendering notification messages with different states.
@@ -22,7 +22,7 @@
 
   {{#freestyle-collection title='c-notification' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='info'}}
+    {{#collection.variant key='info'}}
       {{#freestyle-usage 'c-notification-info' title='c-notification info' usageTitle=labels.usage.title}}
 
         {{c-notification
@@ -31,9 +31,9 @@
         }}
 
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='error'}}
+    {{#collection.variant key='error'}}
       {{#freestyle-usage 'c-notification-error' title='c-notification error' usageTitle=labels.usage.title}}
 
         {{c-notification
@@ -42,9 +42,9 @@
         }}
 
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='success'}}
+    {{#collection.variant key='success'}}
       {{#freestyle-usage 'c-notification-success' title='c-notification success' usageTitle=labels.usage.title}}
 
         {{c-notification
@@ -53,9 +53,9 @@
         }}
 
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='auto-hide'}}
+    {{#collection.variant key='auto-hide'}}
       {{#freestyle-usage 'c-notification-auto-hide' title='c-notification auto-hide' usageTitle=labels.usage.title}}
 
         {{c-notification
@@ -64,8 +64,8 @@
         }}
 
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
 
   {{/freestyle-collection}}
-{{/freestyle-subsection}}
+{{/section.subsection}}

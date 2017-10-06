@@ -63,27 +63,23 @@ test('it renders a button with a tagname of a and an href attribute', function(a
 test('it renders a button with a title attribute', function(assert) {
   this.render(hbs`{{e-button title="testing"}}`);
 
-  assert.ok(this.$().find('.e-button[title="testing"]').length,
-      'a btn element with a title attribute');
+  assert.ok(this.$().find('.e-button[title="testing"]').length, 'a btn element with a title attribute');
 });
 
 test('it renders a button with a type attribute', function(assert) {
   this.render(hbs`{{e-button type="button"}}`);
 
-  assert.ok(this.$().find('.e-button[type="button"]').length,
-      'a e-button with a type attribute set to button');
+  assert.ok(this.$().find('.e-button[type="button"]').length, 'a e-button with a type attribute set to button');
 });
 
 test('it renders a button with a title attribute', function(assert) {
   this.render(hbs`{{e-button name="testing"}}`);
 
-  assert.ok(this.$().find('.e-button[name="testing"]').length,
-      'a e-button with a name attribute');
+  assert.ok(this.$().find('.e-button[name="testing"]').length, 'a e-button with a name attribute');
 });
 
 test('it renders a button with an id attribute', function(assert) {
   this.render(hbs`{{e-button id="testing"}}`);
 
-  assert.ok(this.$().find('#testing button').length,
-      'an element with an id and a nested sbutton');
+  assert.ok(this.$().find('#testing button').length, 'an element with an id and a nested sbutton');
 });

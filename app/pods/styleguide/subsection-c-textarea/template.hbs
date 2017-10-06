@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='c-textarea' section=section}}
+{{#section.subsection name='c-textarea'}}
 
   {{#freestyle-annotation}}
     <p>Extends: <em>c-form-component</em></p>
@@ -31,7 +31,7 @@
 
   {{#freestyle-collection title='c-textarea layout' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='horizontal'}}
+    {{#collection.variant key='horizontal'}}
       {{#freestyle-usage 'c-textarea-horizontal' title='horizontal' usageTitle=labels.usage.title}}
         {{c-textarea
           label="A Label"
@@ -39,9 +39,9 @@
           placeholder="I'm a placeholdertext..."
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='vertical'}}
+    {{#collection.variant key='vertical'}}
       {{#freestyle-usage 'c-textarea-vertical' title='vertical' usageTitle=labels.usage.title}}
         {{c-textarea
           label="A Label"
@@ -49,16 +49,16 @@
           placeholder="I'm a placeholdertext..."
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='nested'}}
+    {{#collection.variant key='nested'}}
       {{#freestyle-usage 'c-textarea-nested' title='nested' usageTitle=labels.usage.title}}
         {{c-textarea
           layout="nested"
           placeholder="I'm a placeholdertext..."
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -66,7 +66,7 @@
 
   {{#freestyle-collection title='c-textarea states' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'c-textarea-vertical-default' title='Default State' usageTitle=labels.usage.title}}
         {{c-textarea
           label="A Label"
@@ -74,9 +74,9 @@
           state="default"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='success'}}
+    {{#collection.variant key='success'}}
       {{#freestyle-usage 'c-textarea-vertical-success' title='success State' usageTitle=labels.usage.title}}
         {{c-textarea
           label="A Label"
@@ -84,9 +84,9 @@
           state="success"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='warning'}}
+    {{#collection.variant key='warning'}}
       {{#freestyle-usage 'c-textarea-vertical-warning' title='warning State' usageTitle=labels.usage.title}}
         {{c-textarea
           label="A Label"
@@ -94,9 +94,9 @@
           state="warning"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='error'}}
+    {{#collection.variant key='error'}}
       {{#freestyle-usage 'c-textarea-vertical-error' title='error State' usageTitle=labels.usage.title}}
         {{c-textarea
           label="A Label"
@@ -104,9 +104,9 @@
           state="error"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='disabled'}}
+    {{#collection.variant key='disabled'}}
       {{#freestyle-usage 'c-textarea-vertical-disabled' title='disabled State' usageTitle=labels.usage.title}}
         {{c-textarea
           label="A Label"
@@ -114,8 +114,8 @@
           disabled=true
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
-{{/freestyle-subsection}}
+{{/section.subsection}}

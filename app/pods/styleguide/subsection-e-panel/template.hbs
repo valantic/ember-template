@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='e-panel' section=section}}
+{{#section.subsection name='e-panel'}}
 
   {{#freestyle-annotation}}
     <p>Panel component</p>
@@ -41,15 +41,15 @@
 
   {{#freestyle-collection title='e-panel states' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'e-panel-default' title='e-panel-default' usageTitle=labels.usage.title}}
         {{#e-panel}}
           default
         {{/e-panel}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='success'}}
+    {{#collection.variant key='success'}}
       {{#freestyle-usage 'e-panel-success' title='e-panel-success' usageTitle=labels.usage.title}}
         {{#e-panel
           state="success"
@@ -57,9 +57,9 @@
           success
         {{/e-panel}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='warning'}}
+    {{#collection.variant key='warning'}}
       {{#freestyle-usage 'e-panel-warning' title='e-panel-warning' usageTitle=labels.usage.title}}
         {{#e-panel
           state="warning"
@@ -67,9 +67,9 @@
           warning
         {{/e-panel}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='error'}}
+    {{#collection.variant key='error'}}
       {{#freestyle-usage 'e-panel-error' title='e-panel-error' usageTitle=labels.usage.title}}
         {{#e-panel
           state="error"
@@ -77,7 +77,7 @@
           error
         {{/e-panel}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -85,7 +85,7 @@
 
   {{#freestyle-collection title='e-panel styles' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='thin'}}
+    {{#collection.variant key='thin'}}
       {{#freestyle-usage 'e-panel-style-thin' title='e-panel-style-thin' usageTitle=labels.usage.title}}
         {{#e-panel
           border="thin"
@@ -93,9 +93,9 @@
           border thin
         {{/e-panel}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='big'}}
+    {{#collection.variant key='big'}}
       {{#freestyle-usage 'e-panel-style-big' title='e-panel-style-big' usageTitle=labels.usage.title}}
         {{#e-panel
           border="big"
@@ -103,9 +103,9 @@
           border big
         {{/e-panel}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='no border'}}
+    {{#collection.variant key='no border'}}
       {{#freestyle-usage 'e-panel-no-border' title='e-panel-no-border' usageTitle=labels.usage.title}}
         {{#e-panel
           border="noborder"
@@ -113,9 +113,9 @@
           Border no-border
         {{/e-panel}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='shadow'}}
+    {{#collection.variant key='shadow'}}
       {{#freestyle-usage 'e-panel-style-shadow' title='e-panel-style-shadow' usageTitle=labels.usage.title}}
         {{#e-panel
           shadow=true
@@ -123,7 +123,7 @@
           shadow
         {{/e-panel}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -131,7 +131,7 @@
 
   {{#freestyle-collection title='e-panel specials' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='inline'}}
+    {{#collection.variant key='inline'}}
       {{#freestyle-usage 'e-panel-inline' title='e-panel-inline' usageTitle=labels.usage.title}}
         {{#e-panel
           inline=true
@@ -139,9 +139,9 @@
           Inline
         {{/e-panel}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='inline-sm-up'}}
+    {{#collection.variant key='inline-sm-up'}}
       {{#freestyle-usage 'e-panel-inline-sm-up' title='e-panel-inline-sm-up' usageTitle=labels.usage.title}}
         {{#e-panel
           inlineSmUp=true
@@ -149,9 +149,9 @@
           Inline (only viepwort sm-up)
         {{/e-panel}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='inline-spacing-right'}}
+    {{#collection.variant key='inline-spacing-right'}}
       {{#freestyle-usage 'e-panel-inline-spacing-right' title='e-panel-inline-spacing-right' usageTitle=labels.usage.title}}
         {{#e-panel
         spacingRight=true
@@ -166,9 +166,9 @@
           Inline Panel B
         {{/e-panel}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='title'}}
+    {{#collection.variant key='title'}}
       {{#freestyle-usage 'e-panel-title' title='e-panel-title' usageTitle=labels.usage.title}}
         {{#e-panel
           headingIncluded=true
@@ -178,9 +178,9 @@
           Content....
         {{/e-panel}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='inline-scroll'}}
+    {{#collection.variant key='inline-scroll'}}
       {{#freestyle-usage 'e-panel-inline-scroll' title='e-panel-inline-scroll' usageTitle=labels.usage.title}}
         {{#e-panel
           border="thin"
@@ -193,9 +193,9 @@
           Content....Content....Content....Content....Content....Content....Content....Content....
         {{/e-panel}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='bigPaddingFlanks'}}
+    {{#collection.variant key='bigPaddingFlanks'}}
       {{#freestyle-usage 'e-panel-bigPaddingFlanks' title='e-panel-bigPaddingFlanks' usageTitle=labels.usage.title}}
         {{#e-panel
           bigPaddingFlanks=true
@@ -203,7 +203,7 @@
           Content....
         {{/e-panel}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -211,7 +211,7 @@
 
   {{#freestyle-collection title='e-panel background-colors' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='transparent (default)'}}
+    {{#collection.variant key='transparent (default)'}}
       {{#freestyle-usage 'e-panel-transparent' title='e-panel-transparent' usageTitle=labels.usage.title}}
         {{#e-panel
           backgroundColor="transparent"
@@ -219,9 +219,9 @@
           transparent (default)
         {{/e-panel}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='primary-dark'}}
+    {{#collection.variant key='primary-dark'}}
       {{#freestyle-usage 'e-panel-primary-dark' title='e-panel-primary-dark' usageTitle=labels.usage.title}}
         {{#e-panel
           backgroundColor="primary-dark"
@@ -229,9 +229,9 @@
           primary-dark
         {{/e-panel}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='primary-light'}}
+    {{#collection.variant key='primary-light'}}
       {{#freestyle-usage 'e-panel-primary-light' title='e-panel-primary-light' usageTitle=labels.usage.title}}
         {{#e-panel
           backgroundColor="primary-light"
@@ -239,9 +239,9 @@
           primary-light
         {{/e-panel}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='gray-light'}}
+    {{#collection.variant key='gray-light'}}
       {{#freestyle-usage 'e-panel-gray-light' title='e-panel-gray-light' usageTitle=labels.usage.title}}
         {{#e-panel
           backgroundColor="gray-light"
@@ -249,8 +249,8 @@
           gray-light
         {{/e-panel}}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
-{{/freestyle-subsection}}
+{{/section.subsection}}

@@ -1,3 +1,4 @@
+// stylelint-disable selector-class-pattern
 $FreestyleUsage-maxWidth: 100%;
 
 .FreestyleGuide {
@@ -11,11 +12,11 @@ div.FreestyleUsage-title {
   font-weight: normal;
 }
 
-div.FreestyleGuide.ember-view{
+div.FreestyleGuide.ember-view {
   min-width: initial;
 }
 
-.FreestyleGuide>main.FreestyleGuide-body {
+.FreestyleGuide > main.FreestyleGuide-body {
   background-color: transparent;
 }
 

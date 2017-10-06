@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='c-select' section=section}}
+{{#section.subsection name='c-select'}}
 
   {{#freestyle-annotation}}
     <p>Extends: <em>c-form-component</em></p>
@@ -28,7 +28,7 @@
 
   {{#freestyle-collection title='c-select single-layout' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='horizontal'}}
+    {{#collection.variant key='horizontal'}}
       {{#freestyle-usage 'c-select-single-horizontal' title='single-horizontal' usageTitle=labels.usage.title}}
         {{c-select
           items=model.selectOptions
@@ -36,9 +36,9 @@
           layout="horizontal"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='vertical'}}
+    {{#collection.variant key='vertical'}}
       {{#freestyle-usage 'c-select-single-vertical' title='single-vertical' usageTitle=labels.usage.title}}
         {{c-select
           items=model.selectOptions
@@ -46,16 +46,16 @@
           layout="vertical"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='nested'}}
+    {{#collection.variant key='nested'}}
       {{#freestyle-usage 'c-select-single-nested' title='single-nested' usageTitle=labels.usage.title}}
         {{c-select
           items=model.selectOptions
           layout="nested"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -63,7 +63,7 @@
 
   {{#freestyle-collection title='c-select multiple-layout' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='horizontal'}}
+    {{#collection.variant key='horizontal'}}
       {{#freestyle-usage 'c-select-multiple-horizontal' title='multiple-horizontal' usageTitle=labels.usage.title}}
         {{c-select
           items=model.selectOptions
@@ -72,9 +72,9 @@
           multiple=true
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='vertical'}}
+    {{#collection.variant key='vertical'}}
       {{#freestyle-usage 'c-select-multiple-vertical' title='multiple-vertical' usageTitle=labels.usage.title}}
         {{c-select
           items=model.selectOptions
@@ -83,9 +83,9 @@
           multiple=true
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='nested'}}
+    {{#collection.variant key='nested'}}
       {{#freestyle-usage 'c-select-multiple-nested' title='multiple-nested' usageTitle=labels.usage.title}}
         {{c-select
           items=model.selectOptions
@@ -93,7 +93,7 @@
           multiple=true
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -101,7 +101,7 @@
 
   {{#freestyle-collection title='c-select states' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'c-select-default' title='default' usageTitle=labels.usage.title}}
         {{c-select
           items=model.selectOptions
@@ -109,9 +109,9 @@
           state="default"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='success'}}
+    {{#collection.variant key='success'}}
       {{#freestyle-usage 'c-select-success' title='success' usageTitle=labels.usage.title}}
         {{c-select
           items=model.selectOptions
@@ -119,9 +119,9 @@
           state="success"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='warning'}}
+    {{#collection.variant key='warning'}}
       {{#freestyle-usage 'c-select-warning' title='warning' usageTitle=labels.usage.title}}
         {{c-select
           items=model.selectOptions
@@ -129,9 +129,9 @@
           state="warning"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='error'}}
+    {{#collection.variant key='error'}}
       {{#freestyle-usage 'c-select-error' title='error' usageTitle=labels.usage.title}}
         {{c-select
           items=model.selectOptions
@@ -139,9 +139,9 @@
           state="error"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='disabled'}}
+    {{#collection.variant key='disabled'}}
       {{#freestyle-usage 'c-select-disabled' title='disabled' usageTitle=labels.usage.title}}
         {{c-select
           items=model.selectOptions
@@ -149,8 +149,8 @@
           disabled=true
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
-{{/freestyle-subsection}}
+{{/section.subsection}}

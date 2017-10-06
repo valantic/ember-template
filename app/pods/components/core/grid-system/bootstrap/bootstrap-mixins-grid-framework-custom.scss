@@ -8,12 +8,13 @@
   @for $i from (1 + 1) through $grid-columns {
     $list: "#{$list}, .col-xxs-#{$i}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}, .col-xl-#{$i}";
   }
+
   #{$list} {
     position: relative;
     // Prevent columns from collapsing when empty
     min-height: 1px;
     // Inner gutter via padding
-    padding-left:  ceil(($grid-gutter-width / 2));
+    padding-left: ceil(($grid-gutter-width / 2));
     padding-right: floor(($grid-gutter-width / 2));
   }
 }
@@ -24,6 +25,7 @@
   @for $i from (1 + 1) through $grid-columns {
     $list: "#{$list}, .col-#{$class}-#{$i}";
   }
+
   #{$list} {
     float: left;
   }
@@ -36,26 +38,31 @@
       width: percentage(($index / $grid-columns));
     }
   }
+
   @if ($type == push) and ($index > 0) {
     .col-#{$class}-push-#{$index} {
       left: percentage(($index / $grid-columns));
     }
   }
+
   @if ($type == push) and ($index == 0) {
     .col-#{$class}-push-0 {
       left: auto;
     }
   }
+
   @if ($type == pull) and ($index > 0) {
     .col-#{$class}-pull-#{$index} {
       right: percentage(($index / $grid-columns));
     }
   }
+
   @if ($type == pull) and ($index == 0) {
     .col-#{$class}-pull-0 {
       right: auto;
     }
   }
+
   @if ($type == offset) {
     .col-#{$class}-offset-#{$index} {
       margin-left: percentage(($index / $grid-columns));

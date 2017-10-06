@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='c-input-checkbox' section=section}}
+{{#section.subsection name='c-input-checkbox'}}
 
   {{#freestyle-annotation}}
     <p>Extends: <em>c-form-component</em></p>
@@ -43,7 +43,7 @@
 
   {{#freestyle-collection title='c-input-checkbox layout' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='horizontal'}}
+    {{#collection.variant key='horizontal'}}
       {{#freestyle-usage 'c-input-checkbox-horizontal' title='horizontal' usageTitle=labels.usage.title}}
         {{c-input-checkbox
           items=model.selectOptions
@@ -52,9 +52,9 @@
           name="c-input-checkbox-01"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='vertical'}}
+    {{#collection.variant key='vertical'}}
       {{#freestyle-usage 'c-input-checkbox-vertical' title='vertical' usageTitle=labels.usage.title}}
         {{c-input-checkbox
           items=model.selectOptions
@@ -63,9 +63,9 @@
           name="c-input-checkbox-02"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='nested'}}
+    {{#collection.variant key='nested'}}
       {{#freestyle-usage 'c-input-checkbox-nested' title='nested' usageTitle=labels.usage.title}}
         {{c-input-checkbox
           items=model.selectOptions
@@ -74,13 +74,13 @@
           name="c-input-checkbox-03"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
   {{#freestyle-collection title='c-input-checkbox states' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'c-input-checkbox-vertical-default' title='Default' usageTitle=labels.usage.title}}
         {{c-input-checkbox
           items=model.selectOptions
@@ -88,9 +88,9 @@
           state="default"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='success'}}
+    {{#collection.variant key='success'}}
       {{#freestyle-usage 'c-input-checkbox-success' title='success' usageTitle=labels.usage.title}}
         {{c-input-checkbox
           items=model.selectOptions
@@ -98,9 +98,9 @@
           state="success"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='warning'}}
+    {{#collection.variant key='warning'}}
       {{#freestyle-usage 'c-input-checkbox-warning' title='warning' usageTitle=labels.usage.title}}
         {{c-input-checkbox
           items=model.selectOptions
@@ -108,9 +108,9 @@
           state="warning"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='error'}}
+    {{#collection.variant key='error'}}
       {{#freestyle-usage 'c-input-checkbox-error' title='error' usageTitle=labels.usage.title}}
         {{c-input-checkbox
           items=model.selectOptions
@@ -118,9 +118,9 @@
           state="error"
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='disabled'}}
+    {{#collection.variant key='disabled'}}
       {{#freestyle-usage 'c-input-checkbox-disabled' title='disabled' usageTitle=labels.usage.title}}
         {{c-input-checkbox
           items=model.selectOptions
@@ -128,7 +128,7 @@
           disabled=true
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
@@ -136,25 +136,25 @@
 
   {{#freestyle-collection title='c-input-checkbox specials' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='label-first'}}
+    {{#collection.variant key='label-first'}}
       {{#freestyle-usage 'c-input-checkbox-label-first' title='Label First option' usageTitle=labels.usage.title}}
         {{c-input-checkbox
           items=model.selectOptions
           labelFirst=true
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='label-up'}}
+    {{#collection.variant key='label-up'}}
       {{#freestyle-usage 'c-input-checkbox-label-up' title='Label Up option' usageTitle=labels.usage.title}}
         {{c-input-checkbox
           items=model.selectOptions
           labelUp=true
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='label-up-border'}}
+    {{#collection.variant key='label-up-border'}}
       {{#freestyle-usage 'c-input-checkbox-label-up-border' title='Label Up option-border' usageTitle=labels.usage.title}}
         {{c-input-checkbox
           items=model.selectOptions
@@ -164,9 +164,9 @@
           inline=true
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='inline-outer-panel'}}
+    {{#collection.variant key='inline-outer-panel'}}
       {{#freestyle-usage 'c-input-checkbox-inline-outer-panel' title='inline-outer-panel' usageTitle=labels.usage.title}}
         {{c-input-checkbox
           items=model.selectOptions
@@ -174,8 +174,8 @@
           inlineOuterPanel=true
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
   {{/freestyle-collection}}
 
-{{/freestyle-subsection}}
+{{/section.subsection}}

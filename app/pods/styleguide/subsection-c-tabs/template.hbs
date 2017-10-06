@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='c-tabs' section=section}}
+{{#section.subsection name='c-tabs'}}
 
   {{#freestyle-annotation}}
     <p>The <code>c-tabs</code> Component can be used to render Tabs with content, the content can be simple text or a component</p>
@@ -13,7 +13,7 @@
 
   {{#freestyle-collection title='c-tabs' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage 'c-tabs-default' title='c-tabs default' usageTitle=labels.usage.title}}
 
         {{c-tabs
@@ -21,15 +21,15 @@
         }}
 
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
-    {{#freestyle-variant collection=collection key='with component'}}
+    {{#collection.variant key='with component'}}
       {{#freestyle-usage 'c-tabs-with-component' title='c-tabs with component' usageTitle=labels.usage.title}}
         {{c-tabs
           items=model.mockdata.cTabs.itemsWithComponents
         }}
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
     <!-- JSON EXAMPLE (Mockdata) -->
     <div class="FreestyleUsage-snippet FreestyleUsage-snippet--zenburn col-xxs-12">
@@ -42,4 +42,4 @@
     </div>
 
   {{/freestyle-collection}}
-{{/freestyle-subsection}}
+{{/section.subsection}}

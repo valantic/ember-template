@@ -1,6 +1,6 @@
 {{! template-lint-disable }}
 <!-- disable all rules -->
-{{#freestyle-subsection name='<%= dasherizedModuleName %>' section=section}}
+{{#section.subsection name='<%= dasherizedModuleName %>'}}
 
   {{#freestyle-annotation}}
     <p>The <code><%= dasherizedModuleName %></code> Component is used for...</p>
@@ -13,14 +13,14 @@
 
   {{#freestyle-collection title='<%= dasherizedModuleName %>' defaultKey='all' inline=false as |collection|}}
 
-    {{#freestyle-variant collection=collection key='default'}}
+    {{#collection.variant key='default'}}
       {{#freestyle-usage '<%= dasherizedModuleName %>-default' title='<%= dasherizedModuleName %> default' usageTitle=labels.usage.title}}
 
         {{<%= dasherizedModuleName %>}}
 
       {{/freestyle-usage}}
-    {{/freestyle-variant}}
+    {{/collection.variant}}
 
 
   {{/freestyle-collection}}
-{{/freestyle-subsection}}
+{{/section.subsection}}

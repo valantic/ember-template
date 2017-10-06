@@ -4,6 +4,7 @@ $e-input-checkbox-shadow: 0 0 0 2px $color-gray-light;
 
 .e-input-checkbox {
   @include e-form-base;
+
   display: none;
 
   &--state-default:checked + .e-input-checkbox__fake-checkbox {

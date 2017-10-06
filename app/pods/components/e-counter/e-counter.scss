@@ -16,7 +16,8 @@
     cursor: pointer;
     outline: none;
 
-    path, rect {
+    path,
+    rect {
       fill: $color-gray-dark;
     }
   }
@@ -24,7 +25,8 @@
   &__button--disabled {
     cursor: default;
 
-    path, rect {
+    path,
+    rect {
       fill: $color-gray-light;
     }
   }

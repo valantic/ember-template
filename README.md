@@ -8,9 +8,9 @@ The style guide is applying [the Ember Freestyle living styleguide](https://gith
 
 ### System requirements
 
-* ember-cli version 2.7.0
-* node version: 6.2.1 (There is a warning in ember-cli, but no restriction at package.json. It seems to work. "WARNING: Node v6.2.1 has currently not been tested against Ember CLI and may result in unexpected behaviour")
-* npm version: 3.8.0
+* ember-cli version 2.12.3
+* node version: 6.7.0
+* npm version: 3.10.3
 
 ### Developers Prerequisites
 
@@ -25,6 +25,19 @@ You will need the following things properly installed on your computer (Mac OSX)
 * [ESLint](http://eslint.org)
 * [scss-lint](https://github.com/brigade/scss-lint)
 * [Watchman](https://ember-cli.com/user-guide/#watchman)
+
+### Browser support
+
+| Operating systems | Browser |
+| --- | --- |
+| Windows | ?? |
+| Mac OS X | ?? |
+
+| Devices | Browser | Viewport |
+| --- | --- | --- |
+| Phone 1 | ?? | ?? |
+| Tablet 1 | ?? | ?? |
+
 
 ## Quick Getting Started
 
@@ -67,11 +80,17 @@ We don't recommend to use other linting tools, because we customize just the esl
 
 When installing the project for the first time running `npm install`, the system will install our own _eslint-config-movento_ configuration project which includes the required settings for ESLint.
 
+- More information about ESLint can be found at <https://eslint.org>
+- The movento configuration for Stylelint can be found at <https://git.movento.com/movento-public/eslint-config-movento>
+
 ### SCSS Linting
 
-Currently, there is no working solution to test your *.scss files with the ember-cli. Please use the the ruby gem itself or (if supported) your IDE to validate your SCSS code.
+We're using Stylelint to lint our stylesheets. Unfortunately Stylelint can currently not be integrated into `ember test`. So please set up your IDE to lint your styles while working on them or use the console command `npm run stylelint`.
 
-Read here how to [install scss-lint](https://github.com/brigade/scss-lint#installation). The linter is already configured with the `.scss-lint.yml` file inside the project root. Just run `$ scss-lint` from the command line or use your IDE to lint the project style files.
+When installing the project for the first time running `npm install`, the system will install our own _stylelint-config-movento_ configuration project which includes the required settings for Stylelint.
+
+- More information about Stylelint can be found at <https://stylelint.io>
+- The movento configuration for Stylelint can be found at <https://git.movento.com/movento-public/stylelint-config-movento>
 
 ### SCSS Autoprefixer
 
@@ -277,7 +296,7 @@ This way we only need to include the files we want to display.
 **Example:** the contents of the _styleguide-freestyle/subsection-buttons/template.hbs_:
 
 ```
-{{#freestyle-subsection name='buttons' section=section}}
+{{#section.subsection name='buttons'}}
 
   {{#freestyle-usage "c-button1" title="Default Button"}}
     {{c-button title="My Button"}}
@@ -289,7 +308,7 @@ This way we only need to include the files we want to display.
     {{/c-button}}
   {{/freestyle-usage}}
 
-{{/freestyle-subsection}}
+{{/section.subsection}}
 
 ```
 

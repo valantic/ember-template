@@ -16,8 +16,11 @@ test('it renders', function(assert) {
   `);
 
   assert.equal(this.$().text().trim(), '');
-  assert.equal(this.$().find('#single-input input[type="radio"].e-input-radio').length, 1,
-      'an input element with type radio and class name e-input-radio');
+  assert.equal(
+    this.$().find('#single-input input[type="radio"].e-input-radio').length,
+    1,
+    'an input element with type radio and class name e-input-radio'
+  );
 
   this.render(hbs`
     <div id="single-input">
@@ -25,6 +28,9 @@ test('it renders', function(assert) {
     </div>
   `);
 
-  assert.equal(this.$().find('#single-input input.e-input-radio.e-input-radio--modifier').length, 1,
-      'an input element with type radio and class name e-input-radio including custom class');
+  assert.equal(
+    this.$().find('#single-input input.e-input-radio.e-input-radio--modifier').length,
+    1,
+    'an input element with type radio and class name e-input-radio including custom class'
+  );
 });

@@ -16,8 +16,11 @@ test('it renders', function(assert) {
   `);
 
   assert.equal(this.$().text().trim(), '');
-  assert.equal(this.$().find('#single-input input[type="text"].e-input-text').length, 1,
-      'an input element with type text and class name e-input-text');
+  assert.equal(
+    this.$().find('#single-input input[type="text"].e-input-text').length,
+    1,
+    'an input element with type text and class name e-input-text'
+  );
 
   this.render(hbs`
     <div id="single-input">
@@ -25,6 +28,9 @@ test('it renders', function(assert) {
     </div>
   `);
 
-  assert.equal(this.$().find('#single-input input.e-input-text.e-input-text--modifier').length, 1,
-      'an input element with type text and class name e-input-text including custom class');
+  assert.equal(
+    this.$().find('#single-input input.e-input-text.e-input-text--modifier').length,
+    1,
+    'an input element with type text and class name e-input-text including custom class'
+  );
 });

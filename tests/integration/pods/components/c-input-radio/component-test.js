@@ -38,18 +38,16 @@ test('it renders', function(assert) {
     }}
   `);
 
-  assert.equal(this.$().text().trim()
-          .indexOf('A Label') !== -1, true, 'Label text');
-  assert.equal(this.$().find('input[name="c-input-radio-1"]').length, 3,
-      '3 input elements with name c-input-radio-1');
-  assert.equal(this.$().find('input[type="radio"].e-input-radio').length, 3,
-      '3 input elements with type radio and class name e-input-radio');
-  assert.equal(this.$().find('.e-label').length, 4,
-      '3 e-label elements');
-  assert.equal(this.$().find('label.e-label--modifier').length, 1,
-      'label with labelClass');
-  assert.equal(this.$().find('input.e-input-radio--modifier').length, 3,
-      'input with fieldClass');
+  assert.equal(this.$().text().trim().indexOf('A Label') !== -1, true, 'Label text');
+  assert.equal(this.$().find('input[name="c-input-radio-1"]').length, 3, '3 input elements with name c-input-radio-1');
+  assert.equal(
+    this.$().find('input[type="radio"].e-input-radio').length,
+    3,
+    '3 input elements with type radio and class name e-input-radio'
+  );
+  assert.equal(this.$().find('.e-label').length, 4, '3 e-label elements');
+  assert.equal(this.$().find('label.e-label--modifier').length, 1, 'label with labelClass');
+  assert.equal(this.$().find('input.e-input-radio--modifier').length, 3, 'input with fieldClass');
 
   this.render(hbs`
     {{c-input-radio
@@ -61,6 +59,9 @@ test('it renders', function(assert) {
     }}
   `);
 
-  assert.equal(this.$().find('.e-label--no-input-visible').length > 0, true,
-      'labels with invisible input elements');
+  assert.equal(
+    this.$().find('.e-label--no-input-visible').length > 0,
+    true,
+    'labels with invisible input elements'
+  );
 });

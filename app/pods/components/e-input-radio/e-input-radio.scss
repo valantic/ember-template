@@ -7,6 +7,7 @@ $e-input-radio-shadow-dark: 0 0 0 2px $color-primary-dark;
 
 .e-input-radio {
   @include e-form-base;
+
   display: none;
 
   &--state-default:checked + .e-input-radio__fake-radio {

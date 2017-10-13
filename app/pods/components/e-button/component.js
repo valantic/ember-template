@@ -55,11 +55,11 @@ export default Ember.Component.extend({
   href: null,
   target: null,
   preventDefault: false,
-  title: '',
-  name: '',
-  type: '',
-  id: '',
-  class: '',
+  title: null,
+  name: null,
+  type: null,
+  id: null,
+  class: null,
 
   // Handed in closures
   click() {

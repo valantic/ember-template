@@ -63,21 +63,25 @@ export default Ember.Component.extend({
 
   // Handed in closures
   click() {
-    this.sendAction('onclick');
+    this.sendAction('onClick');
   },
 
   // This will change the class name of the component according to active state.
   // The CSS states will take care of the design normally.
   mouseEnter() {
     this.set('hasHover', true);
+    this.sendAction('onMouseEnter');
   },
   mouseLeave() {
     this.set('hasHover', false);
+    this.sendAction('onMouseLeave');
   },
   mouseDown() {
     this.set('isActive', true);
+    this.sendAction('onMouseDown');
   },
   mouseUp() {
     this.set('isActive', false);
+    this.sendAction('onMouseUp');
   }
 });

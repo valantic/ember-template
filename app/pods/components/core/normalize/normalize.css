@@ -241,6 +241,13 @@ svg:not(:root) {
   overflow: hidden;
 }
 
+/**
+ * No pointer events on use element bcs could be a bug on IE11
+ */
+svg use {
+  pointer-events: none;
+}
+
 /* Forms
    ========================================================================== */
 

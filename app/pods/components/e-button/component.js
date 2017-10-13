@@ -1,5 +1,7 @@
 import Ember from 'ember';
 
+// TODO: Should be refactored from ground up
+
 export default Ember.Component.extend({
   // Component setup
   tagName: 'span',

@@ -3,6 +3,8 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const isProduction = EmberApp.env() === 'production';
 
 module.exports = function(defaults) {
+  console.error("defaults.project.pkg.name", defaults.project.pkg.name);
+
   const addonBlacklist = isProduction
     ? ['ember-freestyle'] // Excludes addons from vendor.js in production
     : []; // Excludes addons from vendor.js

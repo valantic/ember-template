@@ -1,5 +1,7 @@
 import Ember from 'ember';
 
+// TODO: Should be refactored from ground up
+
 export default Ember.Component.extend({
   // Component setup
   tagName: 'span',
@@ -55,29 +57,33 @@ export default Ember.Component.extend({
   href: null,
   target: null,
   preventDefault: false,
-  title: '',
-  name: '',
-  type: '',
-  id: '',
-  class: '',
+  title: null,
+  name: null,
+  type: null,
+  id: null,
+  class: null,
 
   // Handed in closures
   click() {
-    this.sendAction('onclick');
+    this.sendAction('onClick');
   },
 
   // This will change the class name of the component according to active state.
   // The CSS states will take care of the design normally.
   mouseEnter() {
     this.set('hasHover', true);
+    this.sendAction('onMouseEnter');
   },
   mouseLeave() {
     this.set('hasHover', false);
+    this.sendAction('onMouseLeave');
   },
   mouseDown() {
     this.set('isActive', true);
+    this.sendAction('onMouseDown');
   },
   mouseUp() {
     this.set('isActive', false);
+    this.sendAction('onMouseUp');
   }
 });

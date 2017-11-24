@@ -3,7 +3,7 @@
     {{#e-button
       isIconButton=true
       fullWidth=true
-      onclick=(action 'addToCart')
+      onClick=(action 'addToCart')
       class="c-add-to-cart__button--mini"
     }}
       {{svg-jar "i-cart"}}
@@ -11,7 +11,7 @@
   {{else}}
     {{#e-button
       fullWidth=true
-      onclick=(action "addToCart")
+      onClick=(action "addToCart")
     }}
       {{t 'cart.add-to-cart' numArticles=pcs}}
     {{/e-button}}

@@ -7,10 +7,10 @@ export default Ember.Service.extend({
    * @param {object} messages an object with object.INFO, object.ERROR, object.SUCCESS
    */
   getNotificationsFrom(messages) {
-    const notifications = Ember.A();
+    const notifications = this.get('notifications');
 
     if (messages) {
-      if (messages.INFO && messages.INFO.length > 0) {
+      if (Ember.isArray(messages.INFO) && messages.INFO.length > 0) {
         messages.INFO.forEach((message) => {
           if (message.showToUser) {
             message.isInfo = true;
@@ -18,7 +18,7 @@ export default Ember.Service.extend({
           }
         });
       }
-      if (messages.ERROR && messages.ERROR.length > 0) {
+      if (Ember.isArray(messages.ERROR) && messages.ERROR.length > 0) {
         messages.ERROR.forEach((message) => {
           if (message.showToUser) {
             message.isError = true;
@@ -31,7 +31,7 @@ export default Ember.Service.extend({
           }
         });
       }
-      if (messages.SUCCESS && messages.SUCCESS.length > 0) {
+      if (Ember.isArray(messages.SUCCESS) && messages.SUCCESS.length > 0) {
         messages.SUCCESS.forEach((message) => {
           if (message.showToUser) {
             message.isSuccess = true;

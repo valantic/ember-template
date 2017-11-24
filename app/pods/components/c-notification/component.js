@@ -47,10 +47,12 @@ export default Ember.Component.extend({
 
     if (secondsToShow !== -1) {
       Ember.run.later(() => {
-        this.triggerAction({
-          action: 'close',
-          target: this
-        });
+        if (!this.isDestroyed) { // Component could be destroyed in the meantime
+          this.triggerAction({
+            action: 'close',
+            target: this
+          });
+        }
       }, 1000 * secondsToShow);
     }
   },

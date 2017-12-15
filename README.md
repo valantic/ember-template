@@ -442,6 +442,7 @@ The _scrape.sh_ will also generate a _deliver_ folder where it will gather zip f
 - [x] Add check to the script to see if the required tools are available. _Update 2017-07-13 : scrape.sh does a check for wget and zip._
 - [x] Add zip generation to the script to automatize the HTML delivery process. _Update 2017-07-13 : scrape.sh will now generate zip files._
 - [ ] Automatically generate a list of routes to go through.
+- [ ] Refactor c-/e-input-radio and c-/e-input-radio (simplify, remove addon or only use addon)
 
 ## Credits
 

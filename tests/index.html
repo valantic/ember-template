@@ -18,8 +18,10 @@
     {{content-for "test-head-footer"}}
   </head>
   <body>
-    {{content-for "body"}}
-    {{content-for "test-body"}}
+    <div id="ember-application">
+      {{content-for "body"}}
+      {{content-for "test-body"}}
+    </div>
 
     <script src="{{rootURL}}assets/intl/intl.complete.js"></script>
     <script src="{{rootURL}}testem.js" integrity=""></script>

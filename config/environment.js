@@ -24,7 +24,7 @@ module.exports = function(environment) {
     'APP': {
       // Here you can pass flags/options to your application instance
       // when it is created
-      rootElement: '#ember-application'
+      rootElement: '#ember-application' // NOTE: it's MANDATORY to also add an item with this id to /tests/index.html!
     }
   };
 
